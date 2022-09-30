@@ -18,35 +18,37 @@ Use the Gitter channel linked above.
 ## ☑️ Instructions
 
 1. clone the repository
-2. install the `sphinx` Python package and other required packages (themes, etc.). A template conda environment yaml file is provided for convenience at
+2. install the `sphinx` Python package and other required packages (themes, etc.). A template conda yaml file is provided [for convenient environment setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at
 
 ```
 setup/sphinx_environment.yml
 ```
 
 3. edit content or add new files
-4. [build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) by running, from within the repository root
+4. [build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) by running from within the `sphinx` directory:
 
 ```
-make html
+make clean html
 ```
 
-6. preview the documentation by opening
+5. preview the documentation by opening
 
 ```
 _build/html/index.html
 ```
 
+6. the `documentation.brightway.dev` site is based on `readthedocs.org`, which triggers it own builds of the documentation. a new build is triggered with every merge into the `master` branch of this repository.
+
 ## 📚 References
 
 Compare the `sphinx`:
 
-1. [documentation](https://jupyterbook.org/en/stable/intro.html)
-2. [feature requests queue](https://executablebooks.org/en/latest/feature-vote.html)
-3. [discussions on GitHub](https://github.com/orgs/executablebooks/discussions)
+1. [documentation](https://www.sphinx-doc.org/en/master/)
+2. [getting started (from readthedocs)](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
+3. [issues on GitHub](https://github.com/sphinx-doc/sphinx/issues)
 
 Compare the `readthedocs.org`:
 
-1. [documentation](https://jupyterbook.org/en/stable/intro.html)
-2. [feature requests queue](https://executablebooks.org/en/latest/feature-vote.html)
-3. [discussions on GitHub](https://github.com/orgs/executablebooks/discussions)
+1. [documentation](https://docs.readthedocs.io/en/stable/index.html)
+2. [tutorial](https://docs.readthedocs.io/en/stable/tutorial/)
+3. [issues on GitHub](https://github.com/readthedocs/readthedocs.org/issues)

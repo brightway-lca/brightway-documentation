@@ -10,4 +10,6 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   source/learning
+   source/setup/index
+   source/learning/learning
+   source/reference/index
