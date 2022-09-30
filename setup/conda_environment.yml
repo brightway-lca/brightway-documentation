@@ -7,10 +7,7 @@ dependencies:
   - python=3.10
   # dependency management
   # data science
-  - jupyterlab
-  - scipy
-  - pandas
-  - numpy
+  - ipython
   # plotting
   - matplotlib
   # sphinx
