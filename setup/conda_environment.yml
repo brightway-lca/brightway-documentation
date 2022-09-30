@@ -14,6 +14,6 @@ dependencies:
   - sphinx
   - nbsphinx
   - pydata-sphinx-theme
-  - sphinx-gallery     
+  - sphinx-gallery
   # pip packages
   - pip
