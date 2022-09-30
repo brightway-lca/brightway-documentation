@@ -69,7 +69,7 @@ html_theme_options = {
             "name": "Interactive Training",
         },
     ],
-    "header_links_before_dropdown": 4,
+    "header_links_before_dropdown": 6,
     "icon_links": [
         {
             "name": "GitHub",
@@ -94,6 +94,7 @@ html_theme_options = {
     ],
     "use_edit_page_button": False,
     "collapse_navigation": True,
+    "header_links_before_dropdown": 5,
     "footer_items": ["copyright"],
     "left_sidebar_end": [],
     "logo": {

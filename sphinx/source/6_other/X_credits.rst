@@ -31,7 +31,7 @@ Authors
 * Jan Machacek
 * Paul Baustert
 * Aleksandra Kim
-* `Michael Weinold <https://michael.weinold.ch>``
+* `Michael Weinold <https://michael.weinold.ch>`__
 
 Logo by `eightz <http://www.fiverr.com/ei8htz>`__.
 

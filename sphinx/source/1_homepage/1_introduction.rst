@@ -1,7 +1,7 @@
 .. _intro:
 
-Introduction and key concepts
-=============================
+Introduction
+============
 
 Python
 ------
