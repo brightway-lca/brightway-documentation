@@ -1,0 +1,22 @@
+name: sphinx
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # core funcitonality
+  - python=3.10
+  # dependency management
+  # data science
+  - jupyterlab
+  - scipy
+  - pandas
+  - numpy
+  # plotting
+  - matplotlib
+  # sphinx
+  - sphinx
+  - nbsphinx
+  - pydata-sphinx-theme
+  - sphinx-gallery     
+  # pip packages
+  - pip
