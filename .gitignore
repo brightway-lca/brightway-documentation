@@ -65,7 +65,6 @@ instance/
 
 # Sphinx documentation
 _build/
-_static/
 _templates/
 
 
@@ -107,3 +106,4 @@ venv.bak/
 .mypy_cache/
 
 sync-docs.sh
+.DS_Store
