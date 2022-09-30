@@ -17,21 +17,21 @@ Use the Gitter channel linked above.
 
 ## ☑️ Instructions
 
-1. clone the repository
-2. install the `sphinx` Python package and other required packages (themes, etc.). A template conda environment yaml file is provided for convenience at
+1. Clone the repository
+2. Install the `sphinx` Python package and other required packages (themes, etc.). A template conda environment yaml file is provided for convenience at [``setup/conda_environment.yml``](setup/conda_environment.yml)
 
 ```
-setup/sphinx_environment.yml
+conda env create -f setup/conda_environment.yml
 ```
 
-3. edit content or add new files
-4. [build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) by running, from within the repository root
+3. Edit content or add new files
+4. [Build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) by running, from within the repository root
 
 ```
 make html
 ```
 
-6. preview the documentation by opening
+6. Preview the documentation by opening
 
 ```
 _build/html/index.html
