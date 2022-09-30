@@ -62,7 +62,7 @@ html_theme = "pydata_sphinx_theme"
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
-    "announcement": "<p>⚠️ Work in Progress! ⚠️</p>",
+    "announcement": "<p>⚠️ Work in Progress! If you find errors, open an issue on GitHub. ⚠️</p>",
     "external_links": [
         {
             "url": "https://training.brightway.dev/",

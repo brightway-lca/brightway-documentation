@@ -1,7 +1,7 @@
 .. _windows-scripts:
 
-Scripts in the installation package
------------------------------------
+Advanced Installation
+---------------------
 
 bw2-env.bat
 ```````````
