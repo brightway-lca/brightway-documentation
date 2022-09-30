@@ -97,8 +97,8 @@ html_theme_options = {
     "footer_items": ["copyright"],
     "left_sidebar_end": [],
     "logo": {
-      "image_light": "_static/BW_BlackandWhite_transparent.png",
-      "image_dark": "_static/BW_WhiteandBlack_transparent.png"
+      "image_light": "BW_BlackandWhite_transparent_horizontal.png",
+      "image_dark": "BW_BlackandWhite_transparent_horizontal.png"
     }
 }
 
