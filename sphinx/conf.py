@@ -49,6 +49,8 @@ copyright = 'Brightway Developers'
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build']
 
+html_static_path = ["source/_static"]
+
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
@@ -57,8 +59,6 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = "pydata_sphinx_theme"
-
-html_static_path = ["_static"]
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
@@ -97,9 +97,21 @@ html_theme_options = {
     "footer_items": ["copyright"],
     "left_sidebar_end": [],
     "logo": {
-      "image_light": "_static/BW_BlackandWhite_transparent.png",
-      "image_dark": "_static/BW_WhiteandBlack_transparent.png"
-    }
+      "image_light": "BW_clear_transparent_landscape.png",
+      "image_dark": "BW_dark_transparent_landscape.png"
+    },
+    "favicons": [
+      {
+         "rel": "icon",
+         "sizes": "100x100",
+         "href": "BW_favicon_100x100.png",
+      },
+      {
+         "rel": "apple-touch-icon",
+         "sizes": "500x500",
+         "href": "BW_favicon_500x500.png"
+      },
+   ]
 }
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
