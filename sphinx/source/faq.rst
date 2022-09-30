@@ -1,5 +1,7 @@
-Frequently Asked Questions
-**************************
+.. _faq:
+
+F.A.Q.
+******
 
 Why the 2 in Brightway2?
 ========================
