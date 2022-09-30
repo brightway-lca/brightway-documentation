@@ -1,3 +1,5 @@
+.. _creditsandlicense:
+
 Credits & License
 =================
 

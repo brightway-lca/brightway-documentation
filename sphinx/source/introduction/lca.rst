@@ -1,3 +1,5 @@
+.. _introlca:
+
 LCA calculations
 ================
 
