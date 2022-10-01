@@ -98,22 +98,24 @@ html_theme_options = {
     "footer_items": ["copyright"],
     "left_sidebar_end": [],
     "logo": {
-      "image_light": "BW_clear_transparent_landscape.png",
-      "image_dark": "BW_dark_transparent_landscape.png"
+      "image_light": "logo/BW_all_black_transparent_landscape.svg",
+      "image_dark": "logo/BW_all_white_transparent_landscape.svg"
     },
     "favicons": [
       {
          "rel": "icon",
          "sizes": "100x100",
-         "href": "BW_favicon_100x100.png",
+         "href": "logo/BW_favicon_100x100.png",
       },
       {
          "rel": "apple-touch-icon",
          "sizes": "500x500",
-         "href": "BW_favicon_500x500.png"
+         "href": "logo/BW_favicon_500x500.png"
       },
    ]
 }
+
+html_css_files = ['css/custom.css']
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
