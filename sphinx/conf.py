@@ -1,3 +1,7 @@
+# General information about the project.
+project = 'Brightway'
+copyright = 'Brightway Developers'
+
 # The short X.Y version.
 version = '2.0'
 # The full version, including alpha/beta/rc tags.
@@ -26,30 +30,15 @@ extensions = [
     'sphinx_gallery.load_style'
 ]
 
-# Load mathjax through https so it works on RTD/Chrome. See:
-# http://sphinx-doc.org/ext/math.html
-# http://docs.mathjax.org/en/latest/start.html#secure-access-to-the-cdn
-# https://github.com/rtfd/readthedocs.org/issues/283
-mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"
-
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['source/_templates']
+html_static_path = ["source/_static"]
+exclude_patterns = ['_build']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
-
-# General information about the project.
-project = 'Brightway'
-copyright = 'Brightway Developers'
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-exclude_patterns = ['_build']
-
-html_static_path = ["source/_static"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -62,14 +51,16 @@ html_theme = "pydata_sphinx_theme"
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
+    "header_links_before_dropdown": 5,
     "announcement": "<p>⚠️ Work in Progress! If you find errors, open an issue on GitHub. ⚠️</p>",
+    "collapse_navigation": True,
+    "footer_items": ["copyright"],
     "external_links": [
         {
             "url": "https://training.brightway.dev/",
             "name": "Interactive Training",
         },
     ],
-    "header_links_before_dropdown": 6,
     "icon_links": [
         {
             "name": "GitHub",
@@ -92,11 +83,6 @@ html_theme_options = {
             "icon": "fab fa-gitter",
         }
     ],
-    "use_edit_page_button": False,
-    "collapse_navigation": True,
-    "header_links_before_dropdown": 5,
-    "footer_items": ["copyright"],
-    "left_sidebar_end": [],
     "logo": {
       "image_light": "logo/BW_all_black_transparent_landscape.svg",
       "image_dark": "logo/BW_all_white_transparent_landscape.svg"

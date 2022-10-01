@@ -6,7 +6,7 @@ Citing Brightway
 
 Brightway has been published in the `Journal of Open Source Software <http://joss.theoj.org/papers/6c24869ed7f1e66b3b837c31579c6fe5>`__. You can find a bibtex reference in the journal, or use the following cite:
 
-Mutel, C. 2017. Brightway: An open source framework for Life Cycle Assessment. Journal of Open Source Software, 12:2. https://doi.org/10.21105%2Fjoss.00236.
+    Mutel, C. 2017. Brightway: An open source framework for Life Cycle Assessment. Journal of Open Source Software, 12:2. https://doi.org/10.21105%2Fjoss.00236.
 
 .. _authors:
 
@@ -33,8 +33,6 @@ Authors
 * Aleksandra Kim
 * `Michael Weinold <https://michael.weinold.ch>`__
 
-Logo by `eightz <http://www.fiverr.com/ei8htz>`__.
-
 Acknowledgements
 ----------------
 
@@ -45,18 +43,21 @@ Brightway2 would not be possible without the incredibly generous support of `Pro
 Contact the developers
 ----------------------
 
-.. note:: Please subscribe to the `brightway2 updates mailing list <https://brightway.groups.io/g/updates>`__ to be informed of new releases.
+.. note:: Subscribe to the `Brightway updates mailing list <https://brightway.groups.io/g/updates>`__ to be informed of new releases.
 
-Brightway2 has a `development mailing list <https://brightway.groups.io/g/development>`__. You can also email Chris directly at ``cmutel@gmail.com``.
+.. note:: Join the `Gitter community chat <https://gitter.im/brightway-lca/community>`__ for simple interaction with the Brightway community.
+
+Brightway2 has a `development mailing list <https://brightway.groups.io/g/development>`__.
+You can also email Chris directly at ``cmutel@gmail.com``.
 
 License
 -------
 
-Brightway2 is licensed under the `BSD license <http://opensource.org/licenses/BSD-3-Clause>`_.
+Different parts of the Brightway software are licensed under variations of the the `BSD license <http://opensource.org/licenses/BSD-3-Clause>`_. For more information, compare the license files in the respective repositories. The most recent general license terms:
 
 ::
 
-    Copyright (c) 2016, Chris Mutel and ETH Zürich
+    Copyright (c) 2022, Brightway Developers
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without

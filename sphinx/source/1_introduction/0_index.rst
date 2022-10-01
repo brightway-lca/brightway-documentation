@@ -1,5 +1,5 @@
 #############
-Homepage
+Introduction
 #############
 
 .. toctree::
