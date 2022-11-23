@@ -1,0 +1,9 @@
+[submodule "brightway2-io"]
+	path = brightway2-io
+	url = https://github.com/brightway-lca/brightway2-io
+[submodule "brightway2-data"]
+	path = brightway2-data
+	url = https://github.com/brightway-lca/brightway2-data
+[submodule "brightway2-calc"]
+	path = brightway2-calc
+	url = https://github.com/brightway-lca/brightway2-calc
