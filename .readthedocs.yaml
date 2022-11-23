@@ -23,4 +23,6 @@ sphinx:
 python:
    install:
    - requirements: setup/pip_requirements.txt
-   
+  
+submodules:
+  include: all 
