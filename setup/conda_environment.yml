@@ -4,7 +4,7 @@ channels:
   - nodefaults
 dependencies:
   # core funcitonality
-  - python=3.10
+  - python=3.11
   # dependency management
   # data science
   - ipython
@@ -12,9 +12,10 @@ dependencies:
   - matplotlib
   # sphinx
   - sphinx
-  - nbsphinx
-  - pydata-sphinx-theme
-  - sphinx-gallery
-  - myst-parser
+  - nbsphinx # Jupyter notebook support
+  - pydata-sphinx-theme # website theme
+  - sphinx-gallery # support for a specific part of the website theme
+  - myst-parser # Markdown support
+  - sphinx-autobuild # live-html support
   # pip packages
   - pip

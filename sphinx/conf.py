@@ -23,12 +23,12 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
     'sphinx.ext.autosummary',
-    'sphinx.ext.myst_parser'
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     'sphinx.ext.doctest',
     'nbsphinx',
-    'sphinx_gallery.load_style'
+    'sphinx_gallery.load_style',
+    'myst_parser'
 ]
 
 templates_path = ['source/_templates']

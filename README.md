@@ -28,7 +28,20 @@ Use the Gitter channel linked above.
 make clean html
 ```
 
-5. preview the documentation by opening
+or, alternatively run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild):
+
+```
+sphinx-autobuild -a sphinx _build/html None
+```
+
+| positional argument | option |
+| ------------------- | ------ |
+| sourcedir | `./sphinx` |
+| outdir | `./_build/html` |
+
+This will start watching all changes in the `./sphinx` directory and provide a live html preview of the Sphinx documentation at http://127.0.0.1:8000/. The Sphinx flag `-a` ensures the documentation is build in full.
+
+1. preview the documentation by opening
 
 ```
 _build/html/index.html
