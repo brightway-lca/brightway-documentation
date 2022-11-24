@@ -15,5 +15,6 @@ dependencies:
   - nbsphinx
   - pydata-sphinx-theme
   - sphinx-gallery
+  - myst-parser
   # pip packages
   - pip

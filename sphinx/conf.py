@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
     'sphinx.ext.autosummary',
+    'sphinx.ext.myst_parser'
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     'sphinx.ext.doctest',
@@ -35,8 +36,10 @@ html_static_path = ["source/_static"]
 exclude_patterns = ['_build']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
-
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 # The master toctree document.
 master_doc = 'index'
 
