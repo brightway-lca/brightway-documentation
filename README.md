@@ -17,37 +17,53 @@ Use the Gitter channel linked above.
 
 ## ☑️ Instructions
 
-1. clone the repository
-2. install the `sphinx` Python package and other required packages (themes, etc.). A template conda yaml file is provided [for convenient environment setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml)
-
-
-1. edit content or add new files
-2. [build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) by running from within the `sphinx` directory:
+1. Clone this repository
+2. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
 
 ```
-make clean html
+conda env create -f 'setup/conda_environment.yml'
 ```
 
-or, alternatively run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild):
+and activate the environment:
 
 ```
-sphinx-autobuild -a sphinx _build/html None
+conda activate sphinx
+```
+3. [Build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) (manually). To trigger the build manually, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
+
+```
+sphinx-build sphinx _build/html -b singlehtml -a
 ```
 
-| positional argument | option |
-| ------------------- | ------ |
-| sourcedir | `./sphinx` |
-| outdir | `./_build/html` |
+| positional argument or option| value | description |
+| ---------------------------- | ----- | ----------- |
+| sourcedir | `./sphinx` | N/A |
+| outdir | `./_build/html` | N/A |
+| -b | `singlehtml` | create only a single html page |
+| -a | N/A | always write all output files |
 
-This will start watching all changes in the `./sphinx` directory and provide a live html preview of the Sphinx documentation at http://127.0.0.1:8000/. The Sphinx flag `-a` ensures the documentation is build in full.
-
-1. preview the documentation by opening
+and preview the documentation by opening:
 
 ```
 _build/html/index.html
 ```
 
-6. the `documentation.brightway.dev` site is based on `readthedocs.org`, which triggers it own builds of the documentation. a new build is triggered with every merge into the `master` branch of this repository.
+4. [Build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) (automatically): For automatic builds, providing a live preview of changes, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
+
+```
+sphinx-autobuild sphinx _build/html -a
+```
+
+| positional argument or option| value | description |
+| ---------------------------- | ----- | ----------- |
+| sourcedir | `./sphinx` | N/A |
+| outdir | `./_build/html` | N/A |
+| -a | N/A | always write all output files |
+
+
+This will start watching all changes in the `./sphinx` directory and provide a live html preview of the Sphinx documentation at http://127.0.0.1:8000/.
+
+5. Push changes to the documentation website `documentation.brightway.dev`. The site is based on `readthedocs.org`, which triggers it own builds of the documentation. A new build is triggered with every merge into the `master` branch of this repository.
 
 ## 📚 References
 
