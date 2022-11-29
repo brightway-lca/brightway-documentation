@@ -7,3 +7,9 @@
 [submodule "brightway2-calc"]
 	path = brightway2-calc
 	url = https://github.com/brightway-lca/brightway2-calc
+[submodule "brightway2-regional"]
+	path = brightway2-regional
+	url = https://github.com/brightway-lca/brightway2-regional.git
+[submodule "brightway2-analyzer"]
+	path = brightway2-analyzer
+	url = https://github.com/brightway-lca/brightway2-analyzer.git
