@@ -17,7 +17,7 @@ Use the Gitter channel linked above.
 
 ## ☑️ Instructions
 
-1. Clone this repository
+1. Clone this repository (use `git clone --recursive`, because the repository has submodules. See below).
 2. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
 
 ```
@@ -67,7 +67,39 @@ This will start watching all changes in the `./sphinx` directory and provide a l
 
 ## 📁 `git` submodules
 
+### clonning
 
+If you are **clonning for the first time the repository**, clone it with:
+
+```
+# for ssh based clonning
+git clone --recursive git@github.com:brightway-lca/brightway-documentation.git
+```
+or
+```
+# for https based clonning
+git clone --recursive https://github.com/brightway-lca/brightway-documentation.git
+```
+If you already have a working copy of the repository, update your copy with:
+
+```
+git submodule update --init
+```
+### updating
+
+If you have set up the submodules, you can update the repository with pull like you would normally do.
+**To pull everything including the submodules**, add `--recurse-submodules` to `git pull`
+
+```
+# pull the changes in the brightway documentation repo and changes in the submodules
+git pull --recurse-submodules
+```
+
+**To pull the changes in the submodules only**, use:
+```
+# pull the changes in the submodules
+git submodule update --remote
+```
 
 ## 📚 References
 
