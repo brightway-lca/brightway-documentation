@@ -17,7 +17,18 @@ Use the Gitter channel linked above.
 
 ## ☑️ Instructions
 
-1. Clone this repository
+1. Clone this repository recursively, thus populating all submodule directories
+
+```
+git clone https://github.com/brightway-lca/brightway-documentation.git --recursive
+```
+
+or, if the submodule directories are still empty, populate them with
+
+```
+git submodule update --init
+```
+
 2. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
 
 ```
