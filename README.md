@@ -65,6 +65,10 @@ This will start watching all changes in the `./sphinx` directory and provide a l
 
 5. Push changes to the documentation website `documentation.brightway.dev`. The site is based on `readthedocs.org`, which triggers it own builds of the documentation. A new build is triggered with every merge into the `master` branch of this repository.
 
+## 📁 `git` submodules
+
+
+
 ## 📚 References
 
 Compare the `sphinx`:

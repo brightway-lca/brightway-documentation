@@ -1,8 +1,7 @@
 Brightway Life-Cycle Assessment Framework
 ==========================================
 
-
-Brightway is software!
+Brightway is software - or something!
 
 Contents
 ========
@@ -10,11 +9,11 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   source/1_introduction/0_index
-   source/2_setup/0_index
-   source/3_reference/0_index
-   source/4_lca/0_index
-   source/5_changelog/0_index
-   source/6_other/6_1_credits.rst
-   source/6_other/X_learning.rst
+   source/introduction/index
+   source/setup/index
+   source/reference/index
+   source/lca/index
+   source/changelog/index
+   source/other/credits
+   source/other/learning
 
