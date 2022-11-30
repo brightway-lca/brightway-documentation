@@ -17,7 +17,7 @@ Use the Gitter channel linked above.
 
 ## ☑️ Instructions
 
-1. Clone this repository recursively, thus populating all submodule directories
+1. Clone this repository recursively, thus populating all submodule directories...
 
 ```
 git clone https://github.com/brightway-lca/brightway-documentation.git --recursive
