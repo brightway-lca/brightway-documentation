@@ -105,5 +105,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-sync-docs.sh
+# macOS system files
 .DS_Store
+
+sync-docs.sh
+
+# autoapi build files
+/sphinx/source/api/*

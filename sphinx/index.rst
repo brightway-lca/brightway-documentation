@@ -11,7 +11,6 @@ Contents
 
    source/introduction/index
    source/setup/index
-   source/reference/index
    source/lca/index
    source/changelog/index
    source/other/credits
