@@ -10,6 +10,7 @@ Contents
    :maxdepth: 2
 
    source/introduction/index
+   source/api/index
    source/setup/index
    source/lca/index
    source/changelog/index
