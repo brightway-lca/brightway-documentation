@@ -44,6 +44,7 @@ autoapi_dirs = [
 
 autoapi_template_dir = '_autoapi_templates'
 autoapi_root = 'source/api'
+autoapi_keep_files = True
 
 # The suffix of source filenames.
 source_suffix = {

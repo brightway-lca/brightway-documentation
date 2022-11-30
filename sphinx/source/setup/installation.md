@@ -1,13 +1,99 @@
-::: {#installation}
-`add prerequisites here!  Installation ************  Brightway2 can be installed using`pip`with an existing Python installation; however, until very recently we recommended using`anaconda`` , as the fast sparse linear algebra library `pardiso <https://www.pardiso-project.org/>`__ was only easily installed using the ``conda`ecosystem. This guide uses`conda`; if you use`pip`, make sure to also install the`pypardiso`` library as well to get that sweet, sweet multithreading speed.  For the time being (October 2021), the latest version of Python is 3.10, but as this is brand new many useful libraries are not yet compiled against it, and 3.9 works just fine, so we use that.  Quickstart ==========  1. Install `Miniconda version 3.10 64-bit <https://docs.conda.io/en/latest/miniconda.html>`__.  2. In a terminal window or command line shell, create a new `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`__. A conda environment is like a separate computer where software packages don't conflict with each other. You can call it whatever your want:  .. code-block:: bash      conda create -n bw2 -c conda-forge -c cmutel brightway2 jupyterlab  You can also change the environment name from ``bw2`` if you want.  3. Activate your environment:  .. code-block:: bash      conda activate bw2  You will need to activate this environment every time you start a new terminal or command line shell.  4. If you are on Windows, you also need to do:  .. code-block:: bash      conda install pywin32  Installation on Mac M1 ======================  Brightway and the Activity Browser work on M1 Macs, but they can't run the super-fast linear solver. These instructions were developed by `Romain Sacchi and Adrian Haas <https://github.com/LCA-ActivityBrowser/activity-browser/issues/705>`__.  1. Install `Rosetta <https://support.apple.com/en-us/HT211861>`__.  2. Create a new conda environment - the name given below is `ab`, but this can be changed. As this environment will use x64 instructions, we install it into its own subdirectory:  .. code-block:: bash      CONDA_SUBDIR=osx-64 conda create -n bw_rosetta python=3.9     conda activate bw_rosetta     conda env config vars set CONDA_SUBDIR=osx-64  3. Install Brightway and the UMFPACK sparse linear algebra library:  .. code-block:: bash      conda install -c conda-forge -c cmutel brightway2 scikit-umfpack  4. Remove pypardiso:  .. code-block:: bash      conda remove pypardiso --force  .. _anaconda:  Running the Miniconda installer ===============================  Windows -------  Double click the installer file ``Miniconda3-latest-Windows-x86_64.exe`.  Install just for yourself:  .. image:: images/windows-1.png     :align: center  Next, change the default installation location to somewhere easy to type, like in your home directory or`C:miniconda\`\`:
-:::
+---
+title: Installation
+---
+
+Brightway2 can be installed using `pip` with an existing Python
+installation; however, until very recently we recommended using
+`anaconda`, as the fast sparse linear algebra library
+[pardiso](https://www.pardiso-project.org/) was only easily installed
+using the `conda` ecosystem. This guide uses `conda`; if you use `pip`,
+make sure to also install the `pypardiso` library as well to get that
+sweet, sweet multithreading speed.
+
+For the time being (October 2021), the latest version of Python is 3.10,
+but as this is brand new many useful libraries are not yet compiled
+against it, and 3.9 works just fine, so we use that.
+
+# Quickstart
+
+1.  Install [Miniconda version 3.10
+    64-bit](https://docs.conda.io/en/latest/miniconda.html).
+2.  In a terminal window or command line shell, create a new [conda
+    environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+    A conda environment is like a separate computer where software
+    packages don\'t conflict with each other. You can call it whatever
+    your want:
+
+``` bash
+conda create -n bw2 -c conda-forge -c cmutel brightway2 jupyterlab
+```
+
+You can also change the environment name from `bw2` if you want.
+
+3.  Activate your environment:
+
+``` bash
+conda activate bw2
+```
+
+You will need to activate this environment every time you start a new
+terminal or command line shell.
+
+4.  If you are on Windows, you also need to do:
+
+``` bash
+conda install pywin32
+```
+
+# Installation on Mac M1
+
+Brightway and the Activity Browser work on M1 Macs, but they can\'t run
+the super-fast linear solver. These instructions were developed by
+[Romain Sacchi and Adrian
+Haas](https://github.com/LCA-ActivityBrowser/activity-browser/issues/705).
+
+1.  Install [Rosetta](https://support.apple.com/en-us/HT211861).
+2.  Create a new conda environment - the name given below is
+    [ab]{.title-ref}, but this can be changed. As this environment will
+    use x64 instructions, we install it into its own subdirectory:
+
+``` bash
+CONDA_SUBDIR=osx-64 conda create -n bw_rosetta python=3.9
+conda activate bw_rosetta
+conda env config vars set CONDA_SUBDIR=osx-64
+```
+
+3.  Install Brightway and the UMFPACK sparse linear algebra library:
+
+``` bash
+conda install -c conda-forge -c cmutel brightway2 scikit-umfpack
+```
+
+4.  Remove pypardiso:
+
+``` bash
+conda remove pypardiso --force
+```
+
+# Running the Miniconda installer {#anaconda}
+
+## Windows
+
+Double click the installer file `Miniconda3-latest-Windows-x86_64.exe`.
+
+Install just for yourself:
+
+![image](images/windows-1.png){.align-center}
+
+Next, change the default installation location to somewhere easy to
+type, like in your home directory or `C:\miniconda\`:
 
 ![image](images/windows-2.png){.align-center}
 
 Unless you have other Python versions installed, it is fine to make this
 your default Python.
 
-# Launching and using a command shell
+## Launching and using a command shell
 
 You can also manually launch Python in a command shell using the
 application launcher. The launch procedure varies depending on the
@@ -36,7 +122,7 @@ In the command shell, you can enter the ipython interpreter with
 can\'t launch the notebook server from the root `C:\` drive, you must be
 in a directory, e.g. `C:\my-notebooks\`.
 
-# OS X/Linux
+## OS X/Linux
 
 ::: note
 ::: title
@@ -87,7 +173,7 @@ like `cd ~/miniconda/bin/`.
 
 ![image](images/osx-4.png){.align-center}
 
-## Python 2 or 3
+# Python 2 or 3
 
 Brightway2 supports python 2 and 3, but really, just use Python 3.
 Python 3 versions less than 3.4 are not supported.
@@ -107,20 +193,20 @@ list](https://brightway.groups.io/g/updates) to be informed of new
 releases.
 :::
 
-## Notebook directory
+# Notebook directory
 
 It is best practice to store your notebooks in separate directories for
 each project you are working on. One reasonable place would be in your
 `Documents` or `Desktop`.
 
-## Cloud installs
+# Cloud installs
 
 Brightway2 is designed to run without too much fuss on servers in the
 cloud. See the instructions for using
 `Docker <docker>`{.interpreted-text role="ref"} and specific
 instructions for `Cloud Nine <c9>`{.interpreted-text role="ref"}.
 
-## Activity-browser
+# Activity-browser
 
 ![image](images/activity-browser-new.png){.align-center}
 
@@ -128,7 +214,7 @@ The activity browser is an graphical user interface for Brightway2.
 Please follow the [official installation
 instructions](https://github.com/LCA-ActivityBrowser/activity-browser#installation).
 
-## Developers
+# Developers
 
 If you want to develop with Brightway, then you should also install the
 following:
@@ -136,7 +222,7 @@ following:
 -   pytest
 -   sphinx
 
-## Upgrading Brightway2 {#upgrading}
+# Upgrading Brightway2 {#upgrading}
 
 Brightway2 is being actively developed, and new releases come
 frequently.
@@ -162,13 +248,13 @@ conda update conda
 conda update -c conda-forge -c cmutel -c haasad brightway2 bw2data bw2io bw2calc bw2analyzer
 ```
 
-## Brightway2 Packages {#packages}
+# Brightway2 Packages {#packages}
 
 Brightway2 is split into several packages, where each package fulfills a
 certain role in the framework. The idea is that you can be an expert on
 a certain package, but not have to learn anything about other packages.
 
-# Core packages
+## Core packages
 
 ### brightway2
 
@@ -198,7 +284,7 @@ databases, LCIA methods, and LCA results.
 
 -   [source code](https://github.com/brightway-lca/brightway2-analyzer)
 
-# Secondary packages
+## Secondary packages
 
 These packages are extensions to Brightway2, and have lower standards
 for documentation and test coverage. They show how Brightway2 can be
