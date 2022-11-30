@@ -78,6 +78,18 @@ This will start watching all changes in the `./sphinx` directory and provide a l
 
 ## 📁 `git` submodules
 
+1. pull latest changes to submodules that have been updated by `dependabot`:
+
+```
+git pull --recurse-submodules
+```
+
+or, to make this the default `pull` behaviour:
+
+```
+git config --global submodule.recurse true
+```
+
 `dependabot` is [set up to track changes in the submodule parent repositories](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#registries):
 
 ```
