@@ -17,5 +17,6 @@ dependencies:
   - sphinx-gallery # support for a specific part of the website theme
   - myst-parser # Markdown support
   - sphinx-autobuild # live-html support
+  - sphinx-autoapi # to build docs from source code instead of package import
   # pip packages
   - pip

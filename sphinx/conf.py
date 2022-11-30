@@ -16,24 +16,34 @@ needs_sphinx = '5.0'
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
-    'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
-    'sphinx.ext.autosummary',
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
-    'sphinx.ext.doctest',
     'nbsphinx',
     'sphinx_gallery.load_style',
-    'myst_parser'
+    'myst_parser',
+    'autoapi'
 ]
 
 templates_path = ['source/_templates']
 html_static_path = ["source/_static"]
 exclude_patterns = ['_build']
+
+autoapi_dirs = [
+    '../brightway2-analyzer',
+    '../brightway2-calc',
+    '../brightway2-data',
+    '../brightway2-io',
+    '../brightway2-regional'
+]
+
+autoapi_template_dir = '_autoapi_templates'
+autoapi_root = 'technical/api'
 
 # The suffix of source filenames.
 source_suffix = {

@@ -3,3 +3,4 @@ nbsphinx
 sphinx-gallery
 pydata-sphinx-theme
 myst-parser
+sphinx-autoapi
