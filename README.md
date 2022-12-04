@@ -1,35 +1,43 @@
 # Brightway Documentation (Sphinx/readthedocs.org)
 
-[![Join the chat at https://gitter.im/brightway-lca/documentation](https://badges.gitter.im/brightway-lca/documentation.svg)](https://gitter.im/brightway-lca/documentation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Read the Docs](https://readthedocs.org/projects/brightway-documentation/badge/?version=latest)](https://brightway-documentation.readthedocs.io/en/latest/)
+[![Dependabot auto-approve](https://github.com/brightway-lca/brightway-documentation/actions/workflows/dependabot_auto_approve.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/dependabot_auto_approve.yml)
+[![Dependabot auto-merge](https://github.com/brightway-lca/brightway-documentation/actions/workflows/dependabot_auto_merge.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/dependabot_auto_merge.yml)
+
+
+
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/brightway-lca/brightway-documentation-readthedocs/discussions)
+[![Join the chat at https://gitter.im/brightway-lca/documentation](https://badges.gitter.im/brightway-lca/documentation.svg)](https://gitter.im/brightway-lca/documentation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## ⁉️ FAQ
+[![icense](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-_"Where can I find more beginner-friendly documentation?"_ \
-The interactive training part of the documentation is at [`training.brightway.dev`](https://training.brightway.dev/).
 
-_"How can I contribute to the documentation?"_ \
-If you are familiar with [Sphinx](https://www.sphinx-doc.org/en/master/), you can add your changes to a fork of this repo and open a pull request. \
-If you would rather get help from a developer, please [start a new discussion here](https://github.com/brightway-lca/brightway-documentation/discussions). Your suggestions/additions will be added for you.
 
-_"Where can I get help beyond the documentation?"_ \
-Use the Gitter channel linked above.
+## Quickstart
 
-## ☑️ Instructions
+### Setup
 
-1. Clone this repository recursively, thus populating all submodule directories...
+1. Clone this repository [recursively, thus populating all submodule directories](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
 
 ```
 git clone https://github.com/brightway-lca/brightway-documentation.git --recursive
 ```
 
-or, if the submodule directories are still empty, populate them with
+If you cloned the repository and the submodule directories (`brightway-2-analyzer`, `brightway2-calc`, etc.) are still empty, populate them with:
 
 ```
 git submodule update --init
 ```
 
-2. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
+2. Ensure the submodule directories are up-to-date:
+
+```
+git pull --recurse-submodules
+```
+
+> They are updated automatically on the remote by [Dependabot](https://github.com/dependabot) + [GitHub Actions](https://github.com/features/actions), so there is no need to push changes to the submodules to the remote.
+
+3. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
 
 ```
 conda env create -f 'setup/conda_environment.yml'
@@ -40,7 +48,10 @@ and activate the environment:
 ```
 conda activate sphinx
 ```
-3. [Build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) (manually). To trigger the build manually, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
+
+### Documentation Build
+
+1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
 ```
 sphinx-build sphinx _build/html -b singlehtml -a
@@ -53,13 +64,13 @@ sphinx-build sphinx _build/html -b singlehtml -a
 | -b | `singlehtml` | create only a single html page |
 | -a | N/A | always write all output files |
 
-and preview the documentation by opening:
+You can now preview the documentation, built as a single html page at:
 
 ```
 _build/html/index.html
 ```
 
-4. [Build the documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html) (automatically): For automatic builds, providing a live preview of changes, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
+1. You can build the documentation by triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
 ```
 sphinx-autobuild sphinx _build/html -a
@@ -72,41 +83,14 @@ sphinx-autobuild sphinx _build/html -a
 | -a | N/A | always write all output files |
 
 
-This will start watching all changes in the `./sphinx` directory and provide a live html preview of the Sphinx documentation at http://127.0.0.1:8000/.
+You can now preview the documentation at:
+http://127.0.0.1:8000/
 
-5. Push changes to the documentation website `documentation.brightway.dev`. The site is based on `readthedocs.org`, which triggers it own builds of the documentation. A new build is triggered with every merge into the `master` branch of this repository.
+### Contributing
 
-## 📁 `git` submodules
-
-1. pull latest changes to submodules that have been updated by `dependabot`:
-
-```
-git pull --recurse-submodules
-```
-
-or, to make this the default `pull` behaviour:
-
-```
-git config --global submodule.recurse true
-```
-
-`dependabot` is [set up to track changes in the submodule parent repositories](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#registries):
-
-```
-.github/dependabot.yml
-```
-
-`dependabot` pull requests are [approved](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions#approve-a-pull-request) and [merged](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) automatically through GitHub actions.
-
-[Automatically merging a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request):
-
-```
-.github/workflows/dependabot_auto_approve.yml
-.github/workflows/dependabot_auto_merge.yml
-```
-
-📚 [Getting started with GitHub actions](https://docs.github.com/en/actions/quickstart)
-
+1. Fork this repository, create an aptly named branch and add your contributions.
+2. Open a pull request and tag Brightway contributors.
+3. Your changes will go live at https://documentation.brightway.dev after your branch is merged into main.
 
 ## 📚 References
 
