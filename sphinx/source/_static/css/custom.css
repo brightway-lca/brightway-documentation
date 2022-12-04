@@ -1,7 +1,13 @@
 /* https://pydata-sphinx-theme.readthedocs.io/en/v0.8.1/user_guide/customizing.html */
 
 html[data-theme="light"] {
-    --pst-color-primary: #2b2b2b;
+    --pst-color-primary: #000000;
+
     --pst-color-success: #28a745;
     --pst-color-info: #007bff;
+    --pst-color-warning: #ffc107;
+    --pst-color-danger: #dc3546;
+  
+    --pst-color-link: #006996;
+    --pst-color-link-hover: #00701c;
 }
