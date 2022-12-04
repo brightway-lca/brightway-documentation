@@ -11,7 +11,15 @@
 
 [![icense](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
+The primary documentation for the Brightway life-cycle assessment software package. Sphinx and readthedocs.org are used to build/host the documentation.
 
+## Repository Structure
+
+Brightway modules are split up into different repositories (`brightway-2-analyzer`, `brightway2-calc`, etc.). These repositories are included as [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in this repository in order to e.g. enable Sphinx to build a combined changelog page.
+
+## Sphinx/readthedocs.org Structure
+
+All content pages of the documentation are Markdown formatted for reasons of simplicity. The API documentation is build from source automatically by the readthedocs.org Sphinx extension [`AutoAPI`](https://sphinx-autoapi.readthedocs.io/en/latest/).
 
 ## Quickstart
 

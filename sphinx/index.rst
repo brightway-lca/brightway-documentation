@@ -14,6 +14,8 @@ Contents
    source/setup/index
    source/lca/index
    source/changelog/index
+   source/contributing/index
    source/other/credits
    source/other/learning
+
 
