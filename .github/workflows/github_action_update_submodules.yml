@@ -18,7 +18,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.DOCUMENTATION_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         submodules: true
 
     - name: Update Submodules
