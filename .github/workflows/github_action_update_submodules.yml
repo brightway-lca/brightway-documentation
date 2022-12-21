@@ -1,11 +1,13 @@
-name: 'Submodules Update'
+# compare: https://stackoverflow.com/a/67059629/
+
+name: 'Update Submodules'
 
 on:
   workflow_dispatch:
 
 jobs:
   sync:
-    name: 'Submodules Update'
+    name: 'Update Submodules'
     runs-on: ubuntu-latest
 
     defaults:
@@ -19,13 +21,12 @@ jobs:
         token: ${{ secrets.DOCUMENTATION_TOKEN }}
         submodules: true
 
-    # Update references
-    - name: Git Sumbodule Update
+    - name: Update Submodules
       run: |
         git pull --recurse-submodules
         git submodule update --remote --recursive
 
-    - name: Commit update
+    - name: Commit Update
       run: |
         git config --global user.name 'GitHub Actions Submodule Updater'
         git config --global user.email 'bot@noreply.github.com'
