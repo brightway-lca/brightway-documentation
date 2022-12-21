@@ -7,9 +7,12 @@ on:
   repository_dispatch:
     types: update
   workflow_dispatch:
-  
+
 jobs:
   update:
+    runs:
+      using: 'node16'
+      main: 'main.js'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +20,7 @@ jobs:
           token: ${{ secrets.PAT }}
           submodules: recursive
       - name: Update Submodules
-        run: |
+        run:
           git submodule update --init --recursive --checkout -f --remote -- "${{github.event.client_payload.module}}"
           git config --global user.name "GitHub Action"
           git config --global user.email "noreply@github.com"
