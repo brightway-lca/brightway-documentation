@@ -2,15 +2,10 @@
 # GitHub PAT (personal access token): https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 # for further reference, compare: http://web.archive.org/web/20221002183002/https://tommoa.me/blog/github-auto-update-submodules/
 
-runs:
-  using: 'node16'
-  main: 'main.js'
-
 name: Update Submodules
 on:
   repository_dispatch:
     types: update
-  workflow_dispatch:
     
 jobs:
   update:
