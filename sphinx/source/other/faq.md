@@ -1,6 +1,24 @@
 # FAQ
 
-## Brightway2 vs. Brightway2.5
+## Data Management
+
+### Which `Ecoinvent` file should I download?
+
+Ecoinvent makes several versions of each system model available. For instance:
+
+```
+ecoinvent 3.3_xxx_ecoSpold02.7z
+ecoinvent 3.3_xxx_lci_ecoSpold02.7z
+ecoinvent 3.3_xxx_lcia_ecoSpold02.7z
+ecoinvent 3.3_xxx_lcia-cumulated-matrices_xls.7z
+ecoinvent 3.3_xxx_lci-cumulated-matrices_xls.7z
+```
+
+You want to download and import `ecoinvent 3.3_xxx_ecoSpold02.7z`. If your import process is taking a long time or a lot of memory, double check to make sure you have the right version.
+
+## Brightway Versions and Compatibility
+
+## Brightway2 vs. Brightway25
 
 > Brightway 2.5 is the next generation of the [Brightway2](https://brightway.dev/) framework for life cycle assessment. It provides new capabilities for cloud computing and model interaction, with the use of a new [processed data library](https://github.com/brightway-lca/bw_processing) and a separation between the calculation library and a library for [matrix construction and manipulation](https://github.com/brightway-lca/matrix_utils).
 

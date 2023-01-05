@@ -1,18 +1,8 @@
 # Credits & License
 
+Brightway is an open-source software package. Over the years, many people have contributed to its development.
 
-## Citing Brightway
-
-Brightway has been published in the [Journal of Open Source
-Software](http://joss.theoj.org/papers/6c24869ed7f1e66b3b837c31579c6fe5).
-You can find a bibtex reference in the journal, or use the following
-cite:
-
-> Mutel, C. 2017. Brightway: An open source framework for Life Cycle
-> Assessment. Journal of Open Source Software, 12:2.
-> <https://doi.org/10.21105%2Fjoss.00236>.
-
-## Authors
+## Contributors
 
 -   [Chris Mutel](http://chris.mutel.org/)
 -   [Adrian
@@ -39,28 +29,6 @@ cite:
 -   Aleksandra Kim
 -   [Michael Weinold](https://michael.weinold.ch)
 
-## Acknowledgements
-
-Brightway2 would not be possible without the incredibly generous support
-of [Professor Stefanie
-Hellweg](http://www.esd.ifu.ethz.ch/the-group/people/person-detail.html?persid=63817)
-of ETH Zürich. Brightway2 was (indirectly) funded by the people of
-Switzerland.
-
-## Contact the developers
-
-Subscribe to the [Brightway updates mailing
-list](https://brightway.groups.io/g/updates) to be informed of new
-releases.
-
-Join the [Gitter community
-chat](https://gitter.im/brightway-lca/community) for simple interaction
-with the Brightway community.
-
-Brightway2 has a [development mailing
-list](https://brightway.groups.io/g/development). You can also email
-Chris directly at `cmutel@gmail.com`.
-
 ## License
 
 Different parts of the Brightway software are licensed under variations
@@ -68,7 +36,7 @@ of the the [BSD license](http://opensource.org/licenses/BSD-3-Clause).
 For more information, compare the license files in the respective
 repositories. The most recent general license terms:
 
-    Copyright (c) 2022, Brightway Developers
+    Copyright © 2023, Brightway Developers
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -94,3 +62,7 @@ repositories. The most recent general license terms:
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+## Acknowledgements
+
+Brightway would not be possible without the incredibly generous support of [Professor Stefanie Hellweg](http://www.esd.ifu.ethz.ch/the-group/people/person-detail.html?persid=63817) of ETH Zürich.
