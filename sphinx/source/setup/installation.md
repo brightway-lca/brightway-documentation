@@ -6,10 +6,10 @@ For the time being (October 2021), the latest version of Python is 3.10, but as 
 
 ## Quickstart
 
-### Prerequisites
-
+```{admonition} Prerequisites
 1. a working installation of [Conda](https://docs.conda.io/en/latest/)
 2. basic knowledge of [Conda environments]((https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html))
+```
 
 ### Instructions
 
