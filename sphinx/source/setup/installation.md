@@ -25,8 +25,10 @@ conda create -n bw -c conda-forge brightway2 jupyterlab
 conda activate bw
 ```
 
-⚠️ You will need to activate this environment every time you start a new
+```{attention}
+You will need to activate this environment every time you start a new
 terminal or command line shell.
+```
 
 ## Platforms
 
