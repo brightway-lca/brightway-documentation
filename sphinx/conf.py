@@ -10,7 +10,7 @@ release = '2.0'
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '5.0'
+needs_sphinx = '4.5'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -27,12 +27,14 @@ extensions = [
     'nbsphinx',
     'sphinx_gallery.load_style',
     'myst_parser',
-    'autoapi'
+    'autoapi',
+    'sphinx_tabs.tabs'
 ]
 
 templates_path = ['source/_templates']
 html_static_path = ["source/_static"]
 exclude_patterns = ['_build']
+sphinx_tabs_disable_tab_closing = True # compare https://sphinx-tabs.readthedocs.io/en/latest/
 
 autoapi_dirs = [
     '../brightway2-analyzer',

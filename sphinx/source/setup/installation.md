@@ -9,59 +9,87 @@ Brightway supports Python 2 and 3 (>3.4). However, we recommend you use Python 3
 ## Quickstart
 
 ```{admonition} Prerequisites
-1) a working installation of [Conda](https://docs.conda.io/en/latest/)
-2) basic knowledge of [Conda environments]((https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html))
+1. a working installation of [Conda](https://docs.conda.io/en/latest/)
+2. basic knowledge of [Conda environments]((https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html))
 ```
 
-```{warning}
-For instructions specific to the novel Apple M1 ARM architecture, see below.
+```{eval-rst}
+.. tabs::
+
+    .. tab:: Unix (x64)
+
+        .. NOTE::
+
+            Brightway runs natively on Unix (x64) systems, including Ubuntu and macOS.
+
+        1. Create a new Conda environment (in this example named :code:`bw`):
+
+        .. code-block::
+
+            conda create -n bw -c conda-forge brightway2 jupyterlab
+
+        2.  Activate the environment:
+
+        .. code-block::
+            
+            conda activate bw
+
+        .. WARNING::
+
+            You will need to activate this environment every time you start a new terminal or command line shell.
+
+    .. tab:: Windows (x64)
+
+        .. NOTE::
+
+            Brightway runs natively on Windows (x64) systems, including Windows 7-11.
+
+        1. Create a new Conda environment (in this example named :code:`bw`):
+
+        .. code-block::
+
+            conda create -n bw -c conda-forge brightway2 jupyterlab
+
+        2.  Activate the environment:
+
+        .. code-block::
+            
+            conda activate bw
+
+        3. Install :code:`pywin32`:
+
+        .. code-block::
+        
+            conda install pywin32
+
+        .. WARNING::
+
+            You will need to activate this environment every time you start a new terminal or command line shell.
+
+    .. tab:: macOS (M1/ARM)
+
+        .. NOTE::
+
+            Brightway run on the new M1 ARM architecture. However, the super-fast linear algebra software library :code:`pypardiso` is not compatible with the M1 ARM architecture. To avoid critical errors during instruction that would break core functionality, a different version of Brightway (:code:`brightway_nosolver`) must be installed, which includes a different linear algebra software library (:code:`scikit-umfpack`):
+
+        1. Create a new Conda environment (in this example named :code:`bw`):
+
+        .. code-block::
+
+            conda create -n bw -c cmutel -c conda-forge brightway2_nosolver jupyterlab scikit-umfpack
+
+        2.  Activate the environment:
+
+        .. code-block::
+            
+            conda activate bw
+
+        .. WARNING::
+
+            You will need to activate this environment every time you start a new terminal or command line shell.
+
 ```
 
-### Instructions
-
-1. Create a new Conda environment (in this example named `bw`):
-
-``` bash
-conda create -n bw -c conda-forge brightway2 jupyterlab
-```
-
-2.  Activate the environment:
-
-``` bash
-conda activate bw
-```
-
-3. For platforms other than Unix (x64), follow the below platform-specific instructions to complete the setup. This includes _Microsoft Windows_ and _macOS (M1)_.
-
-```{attention}
-You will need to activate this environment every time you start a new
-terminal or command line shell.
-```
-
-## Platforms
-
-### Windows (x64)
-
-1. Install [`pywin32`](https://pypi.org/project/pywin32/):
-
-``` bash
-conda install pywin32
-```
-### macOS (M1/ARM CPU Architecture)
-
-Brightway and the [Activity Browser](https://documentation.brightway.dev/en/latest/source/setup/installation.html#graphical-user-interface-gui) run on the new M1 ARM architecture. However, the super-fast linear algebra software library `pypardiso` is not compatible with the M1 ARM architecture. To avoid critical errors during instruction that would break core functionality, a different version of Brightway (`brightway_nosolver`) must be installed, which includes a different linear algebra software library (`scikit-umfpack`):
-
-1. Create a new Conda environment (in this example named `m1bw`):
-
-``` bash
-conda create -n m1bw -c cmutel -c conda-forge brightway2_nosolver jupyterlab scikit-umfpack
-```
-
-2.  Activate the environment:
-
-``` bash
-conda activate m1bw
-```
 
 # Notebook directory
 
