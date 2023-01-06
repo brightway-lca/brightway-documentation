@@ -1,8 +1,8 @@
+# Upgrading
+
 # Upgrading from Version 1
 
-Upgrading from version 1 requires a full export of your data objects,
-and reimporting them after upgrading the software. Please follow these
-steps:
+Upgrading from version 1 requires a full export of your data objects, and reimporting them after upgrading the software. Please follow these steps:
 
 1.  **Don\'t** upgrade your software yet! Instead, first export your
     databases and methods into Brightway packages:
@@ -42,3 +42,9 @@ for filename in sorted(os.listdir(filepath)):
 ```
 
 You will need to do this for each data directory you want to upgrade.
+
+# Upgrading from Version 2
+
+```{admonition} Add context here...
+
+```

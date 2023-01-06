@@ -1,27 +1,14 @@
 # User Interfaces (UI)
 
-## (I)Python shell
+## (i)Python Shell
 
-Brightway can be used from the interactive Python shell.
-[IPython](http://ipython.org/) is a nicer python shell that adds
-shortcuts, shell commands, and a lot else.
+Brightway can be used from the interactive [iPython shell](http://ipython.org/).
 
 ## Jupyter Notebooks
 
-[Jupyter notebooks](https://jupyter.org/) are the probably the best way
-to interact with Brightway2 (the
-`Brightway2 examples <bw2-notebooks>`{.interpreted-text role="ref"} are
-all Jupyter notebooks). These lab notebooks open incredible
-possibilities for interactive, reproducible, collaborative, and
-understandable science. Read more about the [praise IPython has been
-getting](http://ipython.org/#announcements), and see [some awesome
-demos](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
-A collection of interactive training notebooks is provided at
-training.brightway.dev
+Brightway is intended to be used primarily with [Jupyter Notebooks](https://jupyter.org/). These interactive Python-enabled lab notebooks open incredible possibilities for interactive, reproducible, collaborative, and understandable science.
+## Graphical User Interface (Activity Browser)
 
-## Activity Browser
+Brightway is a command-line tool intended primarily for use with [Jupyter Notebooks and the iPython shell](https://jupyter.org/). It does not provide a native graphical user interface. However, this functionality is provided by the Activity Browser project. To set up Activity Browser for use with Brightway, follow the [official installation instructions](https://github.com/LCA-ActivityBrowser/activity-browser#installation).
 
-The [Activity
-Browser](https://github.com/LCA-ActivityBrowser/activity-browser)\` is a
-native user interface for Brightway. It is a separate open-source
-software project, currently in development.
+![image](images/activity-browser-new.png)
