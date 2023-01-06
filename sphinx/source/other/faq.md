@@ -11,19 +11,22 @@ You can find the current project data directory with the command `projects.dir`.
 
     .. tab:: Linux
 
-        .. code-block::bash
+        .. code-block::
+        :caption: Brightway default data storage location
 
             C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway2
 
     .. tab:: macOS
 
-        .. code-block::bash
+        .. code-block::
+        :caption: Brightway default data storage location
 
             /Users/<User>/Library/Application Support/Brightway2
     
     .. tab:: Windows
 
-        .. code-block::bash
+        .. code-block::
+        :caption: Brightway default data storage location
 
             /home/<User>/.local/share/Brightway2
 ```
