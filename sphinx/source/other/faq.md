@@ -2,6 +2,36 @@
 
 ## Data Management
 
+### Where is my data saved?
+
+You can find the current project data directory with the command `projects.dir`. Everything is stored in this folder or a subdirectory. Similarly, you can find the logs directory with the command `projects.logs_dir`. Brightway uses the `appdirs` library to select an appropriate, platform-specific path, namely:
+
+```{eval-rst}
+.. tabs::
+
+    .. tab:: Linux
+
+        .. code-block::bash
+
+            C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway2
+
+    .. tab:: macOS
+
+        .. code-block::bash
+
+            /Users/<User>/Library/Application Support/Brightway2
+    
+    .. tab:: Windows
+
+        .. code-block::bash
+
+            /home/<User>/.local/share/Brightway2
+```
+
+### How do I backup my data?
+
+Each project is just a subdirectory, and this can be backed up using any normal tools, including cloud backups like Dropbox. You can save a snapshot of entire project directory with `backup_data_directory`, or save a single project with `backup_project_directory`. Both functions return the filepath of the created archive file.
+
 ### Which `Ecoinvent` file should I download?
 
 Ecoinvent makes several versions of each system model available. For instance:
