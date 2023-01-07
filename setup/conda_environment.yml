@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  # core funcitonality
+  # core functionality
   - python=3.11
   # data science
   - ipython

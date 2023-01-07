@@ -3,7 +3,11 @@ Plotting the Technosphere Matrix
 ================================
 """
 
-# sphinx_gallery_thumbnail_path = '../examples/visualizations/graph_technosphere.png'
+# %%
+# .. admonition:: Prerequisites
+#    
+#    1. local download of the correct Ecoinvent 3.9 database
+#    2. working Brightway installation (:code:`bw2io>0.7.8``)
 
 # brightway packages
 import bw2data
@@ -29,9 +33,7 @@ ecoinvent39_importer.statistics()
 bw2data.Database('ei39').graph_technosphere()
 
 # %%
-# .. image:: ../examples/visualizations/graph_technosphere.png
+# .. image:: ./examples/visualizations/graph_technosphere.png
 #    :alt: An example image
 
-# %%
-# .. image:: ./source/_images/graph_technosphere.png
-#    :alt: An example image
+# sphinx_gallery_thumbnail_path = '../examples/visualizations/graph_technosphere.png'
