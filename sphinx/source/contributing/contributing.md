@@ -10,3 +10,28 @@ If you would like to contribute to the development of Brightway, check out the [
 
 If you would like to contribute to the documentation of Brightway, you can:
 
+```{eval-rst}
+.. tabs::
+
+    .. tab:: Simple
+
+        .. admonition:: Prerequisites
+
+            1. basic knowledge of GitHub (issues, discussions, etc.)
+            2. basic `knowledge of Markup <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`_
+
+        Test
+
+    .. tab:: Advanced
+
+        .. admonition:: Prerequisites
+
+            1. knowledge of GitHub (pull-requests, etc.)
+            2. `knowledge of Markup <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`_
+            3. `knowledge of reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+            4. basic `knowledge of Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_
+
+        Test
+
+        
+```

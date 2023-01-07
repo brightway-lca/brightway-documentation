@@ -98,3 +98,14 @@ Brightway is being actively developed, with frequent new releases. To upgrade Br
 conda update conda
 conda update -c conda-forge brightway
 ```
+
+```{toctree}
+---
+hidden:
+maxdepth: 1
+---
+installation
+ui
+cloud
+upgrading
+```

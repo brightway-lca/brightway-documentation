@@ -77,7 +77,7 @@ html_theme = "pydata_sphinx_theme"
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
-    "header_links_before_dropdown": 8,
+    "header_links_before_dropdown": 7,
     "announcement": "<p>⚠️ Work in Progress! If you find errors, open an issue on GitHub. ⚠️</p>",
     "collapse_navigation": True,
     "footer_items": ["copyright"],

@@ -2,12 +2,7 @@
 
 ## Docker
 
-Docker is a program for running containers, and is one of the easiest
-ways to run Brightway2 on server computers. The [Brightway2 Docker
-file](https://hub.docker.com/r/cmutel/brightway2/) is based on the
-[Jupyter
-minimal-notebook](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook)
-Docker file, and let\'s you run a notebook server or ipython shell.
+Docker is one of the easiest ways to run Brightway on a server. The [Brightway2 Dockerfile](https://hub.docker.com/r/cmutel/brightway2/) is based on the [Jupyter minimal-notebook](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook) Docker file, and lets you run a notebook server or iPython shell.
 
 To run the Brightway2 Docker file:
 
@@ -18,77 +13,52 @@ To run the Brightway2 Docker file:
 docker run -d -p 8888:8888 jupyter/minimal-notebook
 ```
 
-This will start a detached container (`-d`) with port `8888` on your
-machine forwarded to port `8888` in the container, where the notebook
-server is listening.
+```{note}
+This will start a detached container (`-d`) with port `8888` on your machine forwarded to port `8888` in the container, where the notebook server is listening.
+```
 
-You can start an ipython shell with:
+3. Start an iPython shell:
 
 ``` bash
 docker run -i -t --entrypoint ipython cmutel/brightway2
 ```
 
-This creates an container with STDIN open (`-i`) and a TTY shell (`-t`).
-Instead of running the `start-notebook.sh` shell, this uses a different
-`entrypoint`. Similarly, you can start a `bash` shell:
+```{note}
+This creates an container with STDIN open (`-i`) and a TTY shell (`-t`). Instead of running the  `start-notebook.sh` shell, this uses a different `entrypoint`.
+```
+
+3. Alternatively, start a Bash shell:
 
 ``` bash
 docker run -i -t --entrypoint bash cmutel/brightway2
 ```
+### Using Data Volumes
 
-### Using data volumes
-
-Brightway2 can\'t do much without data. The default data directory in
-the Docker container is `/home/jovyan/data/`. You can use an existing
-data directory by [mounting a data
-volume](https://docs.docker.com/storage/volumes/), e.g.:
+The default data directory in the Docker container is `/home/jovyan/data/`. You can use an existing data directory by [mounting a data volume](https://docs.docker.com/storage/volumes/), e.g.:
 
 ``` bash
 docker run -i -t -v "/Users/cmutel/Library/Application Support/Brightway3":/home/jovyan/data --entrypoint ipython cmutel/brightway2
 ```
 
+```{warning}
+Compare the [Jupyter minimal-notebook documentation](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook) for information on how to secure your server using https.
+```
+
 You may also want to mount the following:
 
--   `/home/jovyan/notebooks` - The directory the notebook server starts
-    in.
--   `/home/jovyan/output` - The output directory for most Brightway2 IO
-    functions.
+| directory | description | 
+| --------- | ----------- |
+| `/home/jovyan/notebooks` | directory in which the notebook server starts |
+| `/home/jovyan/output` | output directory for most Brightway IO functions |
 
-### Securing the notebook server
+## Amazon AWS Cloud Nine (C9)
 
-See the [jupyter minimal-notebook
-docs](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook)
-for information on notebook commands, including using HTTPS.
-
-## Cloud Nine {#c9}
-
-*Contributed by Manuel Klarmann* - see
-`complete list of authors <authors>`{.interpreted-text role="ref"} and
-`guide to contributing <contributing>`{.interpreted-text role="ref"}.
-
-You can try out Brightway2 without installing anything on your computer
-using the [cloud service cloud 9](https://aws.amazon.com/cloud9/). Sign
-up and verify your account, and then do the following:
-
-1.  Create a new workspace:
-
-![image](images/c9-1.png){.align-center}
-
-2.  Fill out the name and description, and then create your workspace:
-
-![image](images/c9-2.png){.align-center}
-
-3.  In the blue terminal at the bottom of the screen (see screenshot),
-    paste the following command:
+1. Create an [Amazon AWS account] to use the [Cloud 9 service](https://aws.amazon.com/cloud9/?nc1=h_ls).
+2. Create a [new C9 environment](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html).
+3. Download and install Brightway using the C9 terminal:
 
 ``` bash
 wget https://github.com/brightway-lca/brightway2/raw/master/cloud-nine-install.sh && bash cloud-nine-install.sh
 ```
 
-![image](images/c9-3.png){.align-center}
-
-4.  Click on [Preview]{.title-ref} \> [Preview Running
-    Application]{.title-ref} to see the introductory Brightway2
-    notebook. You can also copy/paste the URL into a new tab.
-
-![image](images/c9-4.png){.align-center}
+1.  Click on `Preview > Preview Running Application` to open the introductory Brightway notebook. You can also copy/paste the URL into a new tab.
