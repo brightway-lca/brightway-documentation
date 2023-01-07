@@ -1,6 +1,18 @@
 # Credits & License
 
+![Conda - License](https://img.shields.io/conda/l/conda-forge/brightway2?label=License&logo=Open%20Source%20Initiative&logoColor=white)
+
+
 Brightway was originally developed by [Chris Mutel](https://mutel.org/) during his doctoral research. Brightway would have been possible without the incredibly generous support of [Professor Stefanie Hellweg](http://www.esd.ifu.ethz.ch/the-group/people/person-detail.html?persid=63817) of ETH Zürich. Today, Brightway is a highly active software ecosystem maintained by developers and life-cycle practitioners from academia and industry.
+
+## Citation
+
+[![DOI](https://img.shields.io/badge/JOSS-10.21105%2Fjoss.00236-orange.svg?style=flat&logo=Open%20Access&logoColor=white)](https://doi.org/10.21105/joss.00236)
+
+If you use Brighway in your academic research, please cite the [primary publication in the Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.00236):
+
+> Mutel, C. 2017. Brightway: An open source framework for Life Cycle Assessment. Journal of Open Source Software, 12:2. https://doi.org/10.21105%2Fjoss.00236.
+
 
 ## Contributors
 
@@ -39,7 +51,8 @@ repositories. The most recent general license terms:
     Copyright © 2023, Brightway Developers
     All rights reserved.
 
-    Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    Redistribution and use in source and binary forms, with or without modification,
+    are permitted provided that the following conditions are met:
 
     Redistributions of source code must retain the above copyright notice, this
     list of conditions and the following disclaimer. Redistributions in binary
@@ -47,7 +60,9 @@ repositories. The most recent general license terms:
     following disclaimer in the documentation and/or other materials provided
     with the distribution.
 
-    Neither the name of ETH Zurich or Paul Scherrer Institute nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+    Neither the name of ETH Zurich or Paul Scherrer Institute
+    nor the names of its contributors may be used to endorse or promote products
+    derived from this software without specific prior written permission.
 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
     AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE

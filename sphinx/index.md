@@ -10,13 +10,6 @@ Brightway is designed to make it easy to work with large datasets and perform LC
 
 Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
 
-## License and Citation
-![Conda - License](https://img.shields.io/conda/l/conda-forge/brightway2?label=License&logo=Open%20Source%20Initiative&logoColor=white)
-[![DOI](https://img.shields.io/badge/JOSS-10.21105%2Fjoss.00236-orange.svg?style=flat&logo=Open%20Access&logoColor=white)](https://doi.org/10.21105/joss.00236)
-
-Brightway is free and open-source software, licensed under the [BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause). If you use Brighway in your academic research, please cite the [primary publication in the Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.00236):
-
-> Mutel, C. 2017. Brightway: An open source framework for Life Cycle Assessment. Journal of Open Source Software, 12:2. https://doi.org/10.21105%2Fjoss.00236.
 
 ## Documentation
 

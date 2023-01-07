@@ -90,17 +90,9 @@ Brightway supports Python 2 and 3 (>3.4). However, we recommend you use Python 3
 
 ```
 
-
-# Notebook directory
-
-It is best practice to store your notebooks in separate directories for
-each project you are working on. One reasonable place would be in your
-`Documents` or `Desktop`.
-
-
 # Upgrading Brightway
 
-Brightway is being actively developed, with frequent new releases. To upgrade Brightway, do the following:
+Brightway is being actively developed, with frequent new releases. To upgrade Brightway:
 
 ``` bash
 conda update conda
