@@ -51,6 +51,7 @@ maxdepth: 2
 source/introduction/index
 source/api/index
 source/setup/index
+source/auto_examples/index
 source/lca/index
 source/changelog/index
 source/contributing/index

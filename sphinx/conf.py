@@ -25,7 +25,7 @@ extensions = [
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     'nbsphinx',
-    'sphinx_gallery.load_style',
+    'sphinx_gallery.gen_gallery',
     'myst_parser',
     'autoapi',
     'sphinx_tabs.tabs'
@@ -44,7 +44,7 @@ autoapi_dirs = [
     '../brightway2-regional'
 ]
 
-autoapi_template_dir = '_autoapi_templates'
+autoapi_template_dir = './_autoapi_templates'
 autoapi_root = 'source/api'
 autoapi_keep_files = True
 
@@ -58,6 +58,15 @@ master_doc = 'index'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
+
+# https://sphinx-gallery.github.io/stable/getting_started.html#create-simple-gallery
+sphinx_gallery_conf = {
+    'examples_dirs': '../examples', # path to your example scripts
+    'gallery_dirs': './source/auto_examples', # path to where to save gallery generated output
+    'plot_gallery': False,
+    'remove_config_comments': True,
+    'notebook_images': 'https://documentation.brightway.dev/en/latest/'
+}
 
 # -- Options for HTML output ---------------------------------------------------
 

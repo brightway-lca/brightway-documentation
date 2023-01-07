@@ -112,3 +112,6 @@ sync-docs.sh
 
 # autoapi build files
 /sphinx/source/api/*
+
+# locally built gallery files
+/sphinx/source/auto_examples/*
