@@ -1,20 +1,24 @@
-# General information about the project.
+### path setup ####################################################################################
+
+import os
+import sys
+
+### project information ###########################################################################
+
 project = 'Brightway'
 copyright = 'Brightway Developers'
 
-# The short X.Y version.
-version = '2.0'
-# The full version, including alpha/beta/rc tags.
-release = '2.0'
+version = '2.0' # the short X.Y version.
+release = '2.0' # the full version, including alpha/beta/rc tags.
 
-# -- General configuration -----------------------------------------------------
+### project configuration #########################################################################
 
-# If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '4.5'
+needs_sphinx = '5.3.0'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
+    # native extensions
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
@@ -22,19 +26,35 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
+    # iPython extensions
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
+    # Jupyter Notebook support
     'nbsphinx',
+    # example gallery support
     'sphinx_gallery.gen_gallery',
+    # Markdown support
     'myst_parser',
+    # API documentation support
     'autoapi',
-    'sphinx_tabs.tabs'
+    # responsive web component support
+    'sphinx_design',
 ]
 
 templates_path = ['source/_templates']
 html_static_path = ["source/_static"]
 exclude_patterns = ['_build']
-sphinx_tabs_disable_tab_closing = True # compare https://sphinx-tabs.readthedocs.io/en/latest/
+html_theme = "pydata_sphinx_theme"
+
+# The master toctree document.
+master_doc = 'index'
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+### extension configuration ########################################################################
+
+## autoapi configuration ################################################
 
 autoapi_dirs = [
     '../brightway2-analyzer',
@@ -46,18 +66,18 @@ autoapi_dirs = [
 
 autoapi_template_dir = './_autoapi_templates'
 autoapi_root = 'source/api'
-autoapi_keep_files = True
+autoapi_keep_files = False
 
-# The suffix of source filenames.
+## myst_parser configuration ############################################
+
 source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
 }
-# The master toctree document.
-master_doc = 'index'
 
-# The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+myst_enable_extensions = ["colon_fence"]
+
+## sphinx_gallery configuration ##########################################
 
 # https://sphinx-gallery.github.io/stable/getting_started.html#create-simple-gallery
 sphinx_gallery_conf = {
@@ -69,11 +89,20 @@ sphinx_gallery_conf = {
     'notebook_images': 'https://documentation.brightway.dev/en/latest/'
 }
 
-# -- Options for HTML output ---------------------------------------------------
+## html configuration ###################################################
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-html_theme = "pydata_sphinx_theme"
+html_css_files = ['css/custom.css']
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+html_show_sphinx = False
+
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+html_show_copyright = True
+
+# enable https://fontawesome.com/ icons
+html_css_files = [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+]
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
@@ -127,10 +156,3 @@ html_theme_options = {
    ]
 }
 
-html_css_files = ['css/custom.css']
-
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
-
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = True

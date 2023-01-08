@@ -8,11 +8,11 @@ dependencies:
   # data science
   - ipython
   # sphinx
-  - sphinx=4.5.0 # sphinx-tabs currently requires sphinx[version='>=2,<4|>=2,<5']
+  - sphinx=5.3.0 # sphinx-design currently requires sphinx[version>=2,<5]
   - nbsphinx # Jupyter notebook support
   - pydata-sphinx-theme # website theme
   - sphinx-gallery # example gallery support
   - myst-parser # Markdown support
   - sphinx-autobuild # live-html support
   - sphinx-autoapi # to build docs from source code instead of package import
-  - sphinx-tabs # tab content support
+  - sphinx-design # responsive web component support
