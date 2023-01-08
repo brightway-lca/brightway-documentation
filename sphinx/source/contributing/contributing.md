@@ -4,26 +4,46 @@
 
 ## Contributing to Brightway
 
-If you would like to contribute to the development of Brightway, check out the [relevant Brightway repository on GitHub](https://github.com/brightway-lca) and open a pull request with your changes.
+If you would like to contribute to the development of Brightway, follow the usual GitHub process: Fork the [relevant Brightway repository on GitHub](https://github.com/brightway-lca), make your changes and open a pull request with your changes. The Brightway project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/).
 
 ## Contributing to the Documentation
 
-If you would like to contribute to the documentation of Brightway, you can:
+There are two ways you can contribute to the documentation of Brightway:
+
+### 1. Request new Documentation
+
+[Start a discussion in the `ideas` section of the `brightway-documentation` repository](https://github.com/brightway-lca/brightway-documentation/discussions/categories/ideas), detailing your request and all relevant information.
+
+```{note}
+The processing of these requests are handled on a best-effort basis by the community of Brightway developers.
+```
+
+### 2. Contribute new Documentation
 
 ::::{tab-set}
 
 :::{tab-item} Simple
+
+This is recommended for Brightway users with limited experience in software development and version control tools.
 
 ```{admonition} Prerequisites
 1. basic knowledge of GitHub (issues, discussions, etc.)
 2. basic [knowledge of Markup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ```
 
-Test
+1. Write your contribution using the Markdown (`.md`) syntax and store it in a single file.
+2. [Start a discussion in the `ideas` section of the `brightway-documentation` repository](https://github.com/brightway-lca/brightway-documentation/discussions/categories/ideas) and attach the Markdown file to the discussion. The discussion must include the intended location of your page in the Brightway documentation.
+3.  A member of the Brightway developers community will integrate your contribution into the documentation.
+
+```{note}
+The processing of these requests are handled on a best-effort basis by the community of Brightway developers.
+```
 
 :::
 
 :::{tab-item} Advanced
+
+This is recommended for Brightway users with experience in software development and version control tools.
 
 ```{admonition} Prerequisites
 1. knowledge of GitHub (pull-requests, etc.)
@@ -32,11 +52,20 @@ Test
 4. basic [knowledge of Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
 ```
 
-Test
+1. Fork the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation/) repository.
+2. Add your contributions and build the documentation locally (compare the [repository readme](https://github.com/brightway-lca/brightway-documentation/))
+3. Open a pull request
+3. A member of the Brightway developers community will merge your contribution into the main branch of the documentation repository. Your changes will be published on by the readthedorcs.org service following the successful merge.
 
 :::
 
 ::::
+
+## Contacting the Developers
+
+[![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
+[![Gitter](https://img.shields.io/badge/Community-Chat-ed1965.svg?style=flat&logo=Gitter&logoColor=white)](https://gitter.im/brightway-lca/community)
+[![SO](https://img.shields.io/badge/Community-Questions-f48024.svg?style=flat&logo=Stack%20Overflow&logoColor=white)](https://stackoverflow.com/questions/tagged/brightway)
 
 
 ```{toctree}
