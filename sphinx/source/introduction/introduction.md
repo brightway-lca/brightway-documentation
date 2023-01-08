@@ -1,50 +1,20 @@
 # Introduction
 
-## Python
-
-Brightway2 is written primarily in Python, and some basic knowledge of
-the language is required to use Brightway2. Luckily, Python is a great
-language for beginners. Here are some good resources to get started:
-
--   [How to think like a computer scientist - Think
-    Python](http://www.greenteapress.com/thinkpython/)
--   [Software
-    carpentry](http://swcarpentry.github.io/python-novice-inflammation/)
--   [The official
-    tutorial](https://docs.python.org/3/tutorial/introduction.html)
--   [Python scientific
-    lectures](http://scipy-lectures.github.com/index.html)
--   [Python for you and
-    me](http://pymbook.readthedocs.io/en/latest/index.html)
--   [Google\'s Python class](https://developers.google.com/edu/python/)
-
-Actual books:
-
--   [Automate the Boring Stuff with
-    Python](https://www.nostarch.com/automatestuff)
--   [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
--   [Coding the Matrix: Linear Algebra through Applications to Computer
-    Science (Matrix math using Python)](http://codingthematrix.com/)
-
-::: note
-::: title
-Note
-:::
-
-Brightway2 is compatible with both Python 2.7, 3.4, and 3.5, but is
-primarily written and tested using Python 3.5.
-:::
-
-## Main Brightway2 components
+```{attention}
+📣 HELP WANTED! \
+You can help update and improve the content on this page. \
+Please start by reading the [guide to contributing to the Brightway documentation.](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html)
+```
+## Brightway Components
 
 Brightway2 is split into several main packages:
 
--   [Brightway2]{.title-ref} is the umbrella package, as well as
+-   [Brightway2] is the umbrella package, as well as
     documentation.
--   [Brightway2-data]{.title-ref} handles storing and searching all data
+-   [Brightway2-data] handles storing and searching all data
     sources (databases, LCIA methods, etc.).
--   [Brightway2-calc]{.title-ref} does LCA calculations.
--   [Brightway2-analyzer]{.title-ref} analyzes input data like databases
+-   [Brightway2-calc] does LCA calculations.
+-   [Brightway2-analyzer] analyzes input data like databases
     and methods, as well as the result of LCA calculations.
 
 ## Projects
@@ -55,7 +25,7 @@ LCIA methods, calculations, assumptions, and any other data you need.
 Each project is completely independent of other projects.Projects are
 saved as subdirectories in the file system.
 
-![image](images/org-scheme.png){.align-center}
+![image](../_images/org-scheme.png)
 
 Inside a project we have a number of objects that store data. The most
 common data objects are inventory *databases* and impact assessment
@@ -72,17 +42,14 @@ Projects can be easily created, copied, manipulated, or deleted. See the
 [projects example
 notebook](https://github.com/brightway-lca/brightway2/blob/master/notebooks/Projects.ipynb).
 
-::: warning
-::: title
-Warning
-:::
+```{warning}
 
 Brightway2 uses [atomic file
 writes](https://github.com/abarnert/fatomic) to prevent data corruption,
 but [files are hard](http://danluu.com/file-consistency/); you should
 make regular backups using the `backup-data-directory`{.interpreted-text
 role="ref"} function.
-:::
+```
 
 ## Inventory Databases
 
@@ -263,42 +230,33 @@ be).
 
 Production exchanges have the type `production`.
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 A production exchange is **not** required. A default value of one will
 be applied if no production exchange is defined. This default value is
 usually the most logical amount, so should only be changed in special
 circumstances.
-:::
+```
 
-::: warning
-::: title
-Warning
-:::
+```{warning}
 
 Using a production value other than one can be confusing. See the blog
 post [What happens with a non-unitary production amount in
 LCA?](http://chris.mutel.org/non-unitary.html).
-:::
+```
 
-::: warning
-::: title
-Warning
-:::
+```{warning}
 
 Multioutput processes (i.e. more than one production process) can be
 used in Brightway2, but only under special circumstances. See the blog
 post [Multi-output processes in matrix-based LCA](http://example.com).
-:::
+```
 
 #### Substitution exchanges
 
 A substitution exchange is used in multi-output processes to indicate
 the avoided production of a product by another activity. Substitution
-exchanges have positive values, and the type [substitution]{.title-ref}.
+exchanges have positive values, and the type [substitution].
 
 #### Technosphere exchanges
 
@@ -342,10 +300,10 @@ Brightway2-data defines the following data stores:
 > -   `weighting`{.interpreted-text role="ref"}
 > -   `normalization`{.interpreted-text role="ref"}
 
-::: {#database-documents}
+``` {#database-documents}
 The schema for an `LCI dataset` in
 [voluptuous](https://pypi.python.org/pypi/voluptuous/) is:
-:::
+```
 
 ``` python
 {
@@ -374,26 +332,23 @@ Where an `exchange` is:
 }
 ```
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 Database documents can be validated with
 `bw2data.validate.db_validator(my_data)`, or
 `Database("my database name").validate(my_data)`.
-:::
+```
 
 ### Getting the signs right
 
 Brightway uses the following rules to set values in the technosphere and
 biosphere matrices:
 
--   [biosphere]{.title-ref} exchange values are inserted into the
+-   [biosphere] exchange values are inserted into the
     biosphere matrix without any modification.
--   [production]{.title-ref} and [substitution]{.title-ref} exchanges
+-   [production] and [substitution] exchanges
     are inserted into the technosphere matrix without any modification.
--   [technosphere]{.title-ref} exchanges values are multiplied by
+-   [technosphere] exchanges values are multiplied by
     negative one, and then inserted into the technosphere matrix.
 
 In the technosphere matrix, negative values represent the consumption of
@@ -413,10 +368,10 @@ characterization factors are also negative. The default metadata in
 Brightway follows ecoinvent system assumptions about biosphere flow
 categories:
 
--   Biosphere flows whose categories are [air]{.title-ref},
-    [soil]{.title-ref}, and [water]{.title-ref} are emissions into the
+-   Biosphere flows whose categories are [air],
+    [soil], and [water] are emissions into the
     natural environment.
--   Biosphere flows with the category [natural resource]{.title-ref} are
+-   Biosphere flows with the category [natural resource] are
     consumption of natural resources from the natural environment.
 
 Biosphere exchanges with negative values reverse these assumption; so, a
@@ -488,16 +443,13 @@ Impact assessment method names can have any length and number of
 qualifiers - there is nothing special or sacred about three levels - but
 must always be a list of strings.
 
-::: warning
-::: title
-Warning
-:::
+```{warning}
 
 For technical reasons, impact assessment names must be stored as a
 [tuple](http://docs.python.org/2/tutorial/datastructures.html#tuples-and-sequences),
 not a [list](http://docs.python.org/2/tutorial/introduction.html#lists),
 i.e. they must have `()` at the beginning and end, and not `[]`.
-:::
+```
 
 ### Method metadata
 
@@ -567,15 +519,12 @@ component.
 >     The global location `GLO` is inserted as a default if not location
 >     is specified.
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 LCIA method documents can be validated with
 `bw2data.validate.ia_validator(my_data)`, or
 `Method(("my", "method", "name")).validate(my_data)`.
-:::
+```
 
 ### Default LCIA methods
 
@@ -593,26 +542,12 @@ average_distance\", where both \"fuel_efficiency\" and
 even parameterized themselves. Parsing strings is not trivial, and so
 the machinery to handle such parameterization is a bit complex:
 
-![image](images/parameters.png){.align-center}
+![image](../_images/parameters.png)
 
-::: note
-::: title
-Note
-:::
 
-See also the
-`example parameterized notebooks <parameterized-notebooks>`{.interpreted-text
-role="ref"}.
-:::
-
-::: warning
-::: title
-Warning
-:::
-
-Parameterized inventory datasets only work with databases that use the
-default SQLite backend.
-:::
+```{warning}
+Parameterized inventory datasets only work with databases that use the default SQLite backend.
+```
 
 ### Groups
 
@@ -673,16 +608,16 @@ exchanges.
 The most common way to interact with parameters data is through the
 parameters manager, provided as `parameters`:
 
-::: {.autoclass members="" noindex=""}
+``` {.autoclass members="" noindex=""}
 bw2data.parameters.ParameterManager
-:::
+```
 
 ### Peewee objects
 
 At a finer level of control, the parameterized table objects use [peewee
 objects](http://docs.peewee-orm.com/en/latest/index.html) directly, so
-you will use some different syntax than with [Activity]{.title-ref} and
-[Exchange]{.title-ref} (see the [parameters source
+you will use some different syntax than with [Activity] and
+[Exchange] (see the [parameters source
 code](https://github.com/brightway-lca/brightway2-data/blob/master/bw2data/parameters.py)).
 The long-term goal is to transition all objects to peewee directly,
 instead of using proxies.
@@ -731,16 +666,9 @@ sometimes desirable to do one and not the other.
 `building-matrices`{.interpreted-text role="ref"} describes how
 processed data are turned into matrices for LCA calculations.
 
-::: warning
-::: title
-Warning
-:::
-
-Every time you save a new version of an inventory database or an impact
-assessment method, e.g. with `my_database.write(my_data)`, be sure to
-also call `my_database.process()`, or your changes will not be used in
-LCA calculations.
-:::
+```{warning}
+Every time you save a new version of an inventory database or an impact assessment method, e.g. with `my_database.write(my_data)`, be sure to also call `my_database.process()`, or your changes will not be used in LCA calculations.
+```
 
 ### Processing data
 
@@ -888,16 +816,9 @@ table](https://stats-arrays.readthedocs.io/en/latest/#mapping-parameter-array-co
 The default value for `uncertainty type` is `0`, i.e. unknown
 uncertainty.
 
-::: note
-::: title
-Note
-:::
-
-All distributions (where bounds make sense) can be bounded, i.e. you can
-specify a minimum and maximum value in addition to other parameters.
-This can be helpful in ensuring, for example, that distributions are
-always positive.
-:::
+```{note}
+All distributions (where bounds make sense) can be bounded, i.e. you can specify a minimum and maximum value in addition to other parameters. This can be helpful in ensuring, for example, that distributions are always positive.
+```
 
 In most cases, if you don\'t have uncertain values, or don\'t know
 enough to be able to characterize that uncertainty, you can enter a
@@ -918,41 +839,41 @@ for importing data from other programs is the following:
     ecospold 2, SimaPro CSV) into the same format as the activity and
     exchanges discussed above. Extraction is done using a
     format-specific extractor. Currently, there are extractors for
-    [ecospold1]{.title-ref}, [ecospold1-lcia]{.title-ref},
-    [ecospold2]{.title-ref}, [excel]{.title-ref},
-    [exiobase]{.title-ref}, [simapro CSV]{.title-ref}, and [simapro
-    CSV-lcia]{.title-ref}.
+    [ecospold1], [ecospold1-lcia],
+    [ecospold2], [excel],
+    [exiobase], [simapro CSV], and [simapro
+    CSV-lcia].
 -   Next, each dataset is normalized or transformed to make it better
     conform to what Brightway2 expects. This could mean, for example,
     copying the only production exchange to the list of
-    [products]{.title-ref}, or normalizing the units or biosphere
+    [products], or normalizing the units or biosphere
     category names. This step could also include applying migrations,
     which are additional dataset that can be used to transform data to
     new forms. For example, SimaPro changes ecoinvent activity and
-    product names, and the [simapro-ecoinvent-3]{.title-ref} changes
+    product names, and the [simapro-ecoinvent-3] changes
     these names back to what ecoinvent provided. Migrations are
     explained in more detail below.
 -   The third step is to link exchanges to activities within the
     imported data. Brightway2 has a powerful generic linking function
-    called [link_iterable_by_fields]{.title-ref} that does the heavy
+    called [link_iterable_by_fields] that does the heavy
     lifting. This function will link an exchange if the fields match,
     i.e. it has the same name, location, unit, etc.
-    [link_iterable_by_fields]{.title-ref} can also be told to only link
+    [link_iterable_by_fields] can also be told to only link
     certain types of exchanges, such as biosphere exchanges.
 -   Many imported datasets will link to other databases already
     installed on your computer. You can link these exchanges using the
-    [.match_database()]{.title-ref} function. You can customize this
+    [.match_database()] function. You can customize this
     function by specifying the fields to use, as well as other options.
 -   You should then check on the quality of linking using the
-    [statistics()]{.title-ref} function, which will tell you how many
+    [statistics()] function, which will tell you how many
     exchanges are in the data, and how many unlinked exchanges are
     present, as well as the types of unlinked exchanges.
 -   You are finally ready to choose what to do with the imported data.
     If all exchanges are linked, you can write a new database with
-    [.write_database()]{.title-ref}. You can also save your work with
-    [.write_unlinked(name)]{.title-ref}, which will save a new unlinked
+    [.write_database()]. You can also save your work with
+    [.write_unlinked(name)], which will save a new unlinked
     database for further processing at a later time. You can also write
-    details on linking with [.write_excel()]{.title-ref}, which can
+    details on linking with [.write_excel()], which can
     write the entire data or just the unlinked exchanges. Of course, you
     can always continue with steps 2, 3, and 4, refining your linking
     until you are satisfied.
@@ -996,16 +917,12 @@ implementation has some [known
 issues](http://www.ecoinvent.org/database/ecoinvent-version-3/ecoinvent-v30/known-data-issues/)
 which have to be resolved or ignored by the importer.
 
-::: warning
-::: title
-Warning
-:::
-
+```{warning}
 Brightway2 cannot precisely reproduce the LCI and LCIA results given by
 the ecoinvent centre. The technosphere matrix used by ecoinvent cannot
 be reproduced from the provided unit process datasets. However, the
 differences for most products are quite small.
-:::
+```
 
 We start by removing some exchanges from most datasets. Specifically, we
 remove exchanges with amounts of zero, both coproducts and technosphere
@@ -1039,15 +956,12 @@ activities - but the given activity doesn\'t produce the listed product.
 These exchanges also have to be deleted, using the strategy
 `delete_ghost_exchanges`.
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 Ecoinvent 3.1 includes some dummy biosphere flows (`Fluoranthene_temp`,
 `Chrysene_temp`, etc.). They can be safely deleted using using
 `.drop_unlinked(True)`.
-:::
+```
 
 ### Importing from SimaPro
 
@@ -1059,28 +973,22 @@ ecoinvent data difficult. Fortunately, Pré has been very helpful is
 supplying correspondence files, which we can use to move (to the best of
 our ability) from the \"SimaPro world\" to \"ecoinvent world\".
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 Importing SimaPro XML export files is not recommended, as there are bugs
 with exporting ecoinvent 3 processes.
-:::
+```
 
 ### Importing from the standard Excel template
 
-::: note
-::: title
-Note
-:::
+```{note}
 
 You can see these ideas in practive in [basic
 database](https://github.com/brightway-lca/brightway2-io/blob/master/tests/fixtures/excel/basic_example.xlsx?raw=true)
 and [parameterized
 database](https://github.com/brightway-lca/brightway2-io/blob/master/tests/fixtures/excel/sample_activities_with_variables.xlsx?raw=true)
 Excel templates.
-:::
+```
 
 You can define inventory datasets in many ways in Excel, but there is a
 standard template which is supported by the `ExcelImporter`. The
