@@ -107,7 +107,7 @@ html_css_files = [
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
     "header_links_before_dropdown": 7,
-    "announcement": "<p>⚠️ Work in Progress! If you find errors, open an issue on GitHub. ⚠️</p>",
+    "announcement": "<p>⚠️ This is the draft of the new Brightway documentation. It is work in progress! In the meantime, use the legacy documentation at docs.brightway.dev.</p>",
     "collapse_navigation": True,
     "footer_items": ["copyright"],
     "external_links": [

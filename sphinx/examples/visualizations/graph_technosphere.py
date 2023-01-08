@@ -3,6 +3,7 @@ Plotting the Technosphere Matrix
 ================================
 """
 
+
 # %%
 # .. admonition:: Prerequisites
 #    
@@ -36,4 +37,4 @@ bw2data.Database('ei39').graph_technosphere()
 # .. image:: ./examples/visualizations/graph_technosphere.png
 #    :alt: An example image
 
-# sphinx_gallery_thumbnail_path = '../examples/visualizations/graph_technosphere.png'
+# sphinx_gallery_thumbnail_path = './examples/visualizations/graph_technosphere.png'
