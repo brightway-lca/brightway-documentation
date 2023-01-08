@@ -4,4 +4,4 @@ sphinx-gallery
 pydata-sphinx-theme
 myst-parser
 sphinx-autoapi
-sphinx-tabs
+sphinx-design
