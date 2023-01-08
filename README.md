@@ -71,7 +71,7 @@ sphinx-build sphinx _build/html -b singlehtml -a
 You can now preview the documentation, built as a single html page at:
 
 ```
-_build/html/index.html
+_build/html/homepage.html
 ```
 
 1. You can build the documentation by triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:

@@ -47,7 +47,7 @@ exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
 # The master toctree document.
-master_doc = 'homepage'
+master_doc = 'index'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

@@ -16,7 +16,7 @@ Brightway is an open-source software package for [life cycle assessment](https:/
 Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
 
 ::::{grid} 3
-:gutter: 3
+:gutter: 1
 
 :::{grid-item-card} {fab}`github` Contribute
 :link: contributing
@@ -27,33 +27,25 @@ You can directly contribute to the development of Brightway or the Brightway doc
 Learn more {fas}`arrow-right`
 :::
 
-:::{grid-item-card} {fab}`lightbulb;sd-text-primary` Learn more
-:link: howto/introduction
+:::{grid-item-card} {fab}`github` Contribute
+:link: contributing
 :link-type: doc
 
-The documentation contains information.
+You can directly contribute to the development of Brightway or the Brightway documentation!
 +++
 Learn more {fas}`arrow-right`
 :::
 
-:::{grid-item-card} {fab}`calendar-lines-pen` Join the Conference
-:link: https://2022.brightcon.link/
-:link-type: external
+:::{grid-item-card} {fab}`github` Contribute
+:link: contributing
+:link-type: doc
 
-The annual Brightcon conference brings together life-cycle practitioners from across the globe. 
+You can directly contribute to the development of Brightway or the Brightway documentation!
 +++
 Learn more {fas}`arrow-right`
 :::
-
 
 ::::
-
-## Development
-
-[![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat&logo=GitHub)](https://github.com/brightway-lca/brightway-documentation-readthedocs/discussions)
-![GitHub Repo stars](https://img.shields.io/github/stars/brightway-lca/brightway2?style=social)
-
-Brightway was originally developed by [Chris Mutel](https://mutel.org/) during his doctoral research in the group of [Prof. Stefanie Hellweg](https://esd.ifu.ethz.ch/the-group/people/person-detail.hellweg.html) at ETH Zurich. Today, Brightway is a highly active software ecosystem with contributions by LCA practitioners from academia and industry. [Contributions on GitHub](https://github.com/brightway-lca/) are welcome!
 
 ## Community and News
 
@@ -63,15 +55,11 @@ Brightway was originally developed by [Chris Mutel](https://mutel.org/) during h
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
-Brightway has a mailing list.
-
-Contents
-========
 
 ```{toctree}
 ---
 hidden:
-maxdepth: 1
+maxdepth: 2
 ---
 source/introduction/introduction
 source/setup/setup
