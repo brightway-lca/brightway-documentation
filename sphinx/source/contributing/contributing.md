@@ -43,7 +43,7 @@ The processing of these requests are handled on a best-effort basis by the commu
 
 :::{tab-item} Advanced
 
-This is recommended for Brightway users with experience in software development and version control tools.
+This is recommended for Brightway users with experience in software development and version control tools. The technical infrastructure of the Brightway documentation is [detailed on the Brightway Documentation Technical Infrastructure page.](documentation.md)
 
 ```{admonition} Prerequisites
 1. knowledge of GitHub (pull-requests, etc.)
@@ -55,7 +55,7 @@ This is recommended for Brightway users with experience in software development 
 1. Fork the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation/) repository.
 2. Add your contributions and build the documentation locally (compare the [repository readme](https://github.com/brightway-lca/brightway-documentation/))
 3. Open a pull request
-3. A member of the Brightway developers community will merge your contribution into the main branch of the documentation repository. Your changes will be published on by the readthedorcs.org service following the successful merge.
+4. A member of the Brightway developers community will merge your contribution into the main branch of the documentation repository. Your changes will be published on by the readthedorcs.org service following the successful merge.
 
 :::
 

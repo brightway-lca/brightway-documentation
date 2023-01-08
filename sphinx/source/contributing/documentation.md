@@ -1,26 +1,26 @@
-# Contributing to the Brightway Documentation
+# Brightway Documentation Technical Infrastructure
+
+![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
+
 
 Details on the concept and technical implementation of the new Brightway documentation are detailed in [Brightway Enhancement Proposal (BEP) 003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md).
 
-## Technical Infrastructure
-
-![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
 
 ```{note}
 The Brightway documentation is built with [Sphinx](https://www.sphinx-doc.org/en/master/), the Python documentation generator. The API documentation is compiled from source by [`sphinx-autoapi`](https://sphinx-autoapi.readthedocs.io/en/latest/). It is hosted on [Read the Docs](https://readthedocs.org/). All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
 ```
 
-### Syntax
+## Syntax
 
 The majority of the Brightway documentation is based on Markdown (`.md`) files. The [MyST](https://myst-parser.readthedocs.io/en/latest/index.html) package is used to enable Markdown support across the project. Wherever necessary, reStructuredText (`.rst`) files or directives are used. The [`eval-rst` function](https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-directives-parsing) in MyST allows for use of arbitrary `rst` directives in Markdown files. 
 
-### Structure
+## Structure
 
-#### git submodules
+### git submodules
 
 The core functionality of Brightway is provided by different packages (e.g. `brightway-calc`, `brightway-data`). For strategic reasons, these packages are maintained as separate repositories. The content of these repositories is included in the `brightway-documentation` repository through [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules). This enables `sphinx` to include files from these repositories in the documentation directly (e.g. `README.md`). It further enables `sphinx-autodoc` both locally and in the readthedocs.org service to build the API documentation from source instead of importing all Brightway packages during the build process. 
 
-#### GitHub Actions
+### GitHub Actions
 
 To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used.
 
@@ -110,6 +110,6 @@ To ensure that the `git submodules` are always up-to-date, both locally and in t
                         })
 ```
 
-### Building the Documentation
+## Building the Documentation
 
 The Brightway documentation is built and published automatically by the readthedocs.org service on every push/merge to the `main` branch of the `brightway-documentation` repository. To build the documentation locally, follow the [instructions in the repository readme](https://github.com/brightway-lca/brightway-documentation).
