@@ -1,16 +1,14 @@
----
-title: Brightway2 notebooks
----
+# Learning Brightway
 
-::: note
-::: title
-Note
-:::
+```{attention}
+📣 HELP WANTED! \
+You can help update and improve the content on this page. \
+Please start by reading the [guide to contributing to the Brightway documentation.](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html)
+```
 
-To download backup `html` and `ipynb` files, right-click and choose
-\"Save file as\".
-:::
-
+```{note}
+To download backup `html` and `ipynb` files, right-click and choose `save file as`.
+```
 # Introduction
 
 -   [New Brightway2

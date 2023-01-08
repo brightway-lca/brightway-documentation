@@ -1280,3 +1280,13 @@ You apply strategies using the
 `{ImporterClass}.apply_strategy(name_of_callable)` method. You could
 also append your custom strategy to `{ImporterClass}.strategies`, so it
 is used when you call `{ImporterClass}.apply_strategies`.
+
+
+```{toctree}
+---
+hidden:
+maxdepth: 2
+---
+introduction
+learning
+```

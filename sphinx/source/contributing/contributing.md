@@ -44,5 +44,6 @@ Test
 hidden:
 maxdepth: 1
 ---
+contributing
 documentation
 ```

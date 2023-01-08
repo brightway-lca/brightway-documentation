@@ -1,5 +1,11 @@
 # Installation
 
+```{attention}
+📣 HELP WANTED! \
+You can help update and improve the content on this page. \
+Please start by reading the [guide to contributing to the Brightway documentation.](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html)
+```
+
 Brightway is a Python software package. It can be installed using the [Python package installer `pip`](https://pypi.org/project/pip/) or the [multi-language package management system `conda`](https://docs.conda.io/en/latest/). This guide uses `conda`.
 
 ```{note}
@@ -107,8 +113,9 @@ conda update -c conda-forge brightway
 ```{toctree}
 ---
 hidden:
-maxdepth: 1
+maxdepth: 2
 ---
+setup
 ui
 cloud
 upgrading
