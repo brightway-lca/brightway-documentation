@@ -71,7 +71,7 @@ Contents
 ```{toctree}
 ---
 hidden:
-maxdepth: 2
+maxdepth: 1
 ---
 source/introduction/introduction
 source/setup/setup
@@ -81,5 +81,6 @@ source/lca/lca
 source/contributing/contributing
 source/faq/faq
 source/changelog/index
+source/other/ecosystem
 source/other/credits
 ```
