@@ -424,7 +424,7 @@ There are two more things to keep in mind:
 maxdepth: 2
 hidden:
 ---
-lca
+self
 static_lca
 stochastic_lca
 ```

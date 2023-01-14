@@ -78,6 +78,6 @@ This is recommended for Brightway users with experience in software development 
 hidden:
 maxdepth: 1
 ---
-contributing
+self
 documentation
 ```

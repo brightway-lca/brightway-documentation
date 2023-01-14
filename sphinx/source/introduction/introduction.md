@@ -1294,6 +1294,6 @@ is used when you call `{ImporterClass}.apply_strategies`.
 hidden:
 maxdepth: 2
 ---
-introduction
+self
 learning
 ```

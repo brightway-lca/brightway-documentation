@@ -14,9 +14,9 @@ It is either a rough draft or has been copied over from the legacy documentation
 
 ```{toctree}
 ---
-maxdepth: 2
+maxdepth: 1
 ---
-faq
+self
 brightway
 data
 ecoinvent
