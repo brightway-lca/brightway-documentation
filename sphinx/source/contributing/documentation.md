@@ -32,83 +32,89 @@ To ensure that the `git submodules` are always up-to-date, both locally and in t
 | `brightway2-analyzer` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-analyzer/.github/workflows/github_action_notify_documentation_repo.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 
 
-```{eval-rst}
-.. tabs::
+::::{tab-set}
 
-    .. tab:: :code:`brightway-documentation`
+:::{tab-item} brightway-documentation
 
-        .. NOTE::
-
-            Compare the `documentation on StackOverflow <https://stackoverflow.com/a/67059629/>`_
-
-        .. code-block::
-
-            name: 'Update Submodules'
-
-            on:
-            workflow_dispatch:
-
-            jobs:
-            sync:
-                name: 'Update Submodules'
-                runs-on: ubuntu-latest
-
-                defaults:
-                run:
-                    shell: bash
-
-                steps:
-                - name: Checkout
-                uses: actions/checkout@v2
-                with:
-                    token: ${{ secrets.GITHUB_TOKEN }}
-                    submodules: true
-
-                - name: Update Submodules
-                run: |
-                    git pull --recurse-submodules
-                    git submodule update --remote --recursive
-
-                - name: Commit Update
-                run: |
-                    git config --global user.name 'GitHub Actions Submodule Updater'
-                    git config --global user.email 'bot@noreply.github.com'
-                    git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-                    git commit -am "auto updated submodule" && git push || echo "no changes in submodule to commit"
-
-    .. tab:: e.g. :code:`brightway2-calc`
-
-        .. NOTE::
-
-            Compare the `documentation on GitHub <https://github.blog/changelog/2022-09-08-github-actions-use-github_token-with-workflow_dispatch-and-repository_dispatch/>`_
-
-        .. code-block::
-           :caption: GHA_WORKFLOW_TRIGGER must be set as a org-wide secret
-
-            name: Create Workflow Dispatch
-
-            on:
-            push:
-                branches:
-                - main  
-            workflow_dispatch:
-
-            jobs:
-            build:
-                runs-on: ubuntu-latest
-                steps:
-                - name: Trigger Workflow
-                    uses: actions/github-script@v6
-                    with:
-                    github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
-                    script: |
-                        github.rest.actions.createWorkflowDispatch({
-                            owner: 'brightway-lca',
-                            repo: 'brightway-documentation',
-                            workflow_id: 'github_action_update_submodules.yml',
-                            ref: 'main',
-                        })
+```{note}
+Compare the [documentation on StackOverflow.](https://stackoverflow.com/a/67059629/)
 ```
+
+```
+
+name: 'Update Submodules'
+
+on:
+workflow_dispatch:
+
+jobs:
+sync:
+    name: 'Update Submodules'
+    runs-on: ubuntu-latest
+
+    defaults:
+    run:
+        shell: bash
+
+    steps:
+    - name: Checkout
+    uses: actions/checkout@v2
+    with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        submodules: true
+
+    - name: Update Submodules
+    run: |
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
+
+    - name: Commit Update
+    run: |
+        git config --global user.name 'GitHub Actions Submodule Updater'
+        git config --global user.email 'bot@noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "auto updated submodule" && git push || echo "no changes in submodule to commit"
+```
+:::
+
+:::{tab-item} other repos (eg. brightway2-calc)
+
+```{note}
+Compare the [documentation on GitHub.](https://github.blog/changelog/2022-09-08-github-actions-use-github_token-with-workflow_dispatch-and-repository_dispatch/)
+```
+
+```{warning}
+`GHA_WORKFLOW_TRIGGER` must be set as an org-wide secret
+```
+
+```
+name: Create Workflow Dispatch
+
+on:
+push:
+    branches:
+    - main  
+workflow_dispatch:
+
+jobs:
+build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Workflow
+        uses: actions/github-script@v6
+        with:
+        github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
+        script: |
+            github.rest.actions.createWorkflowDispatch({
+                owner: 'brightway-lca',
+                repo: 'brightway-documentation',
+                workflow_id: 'github_action_update_submodules.yml',
+                ref: 'main',
+            })
+```
+:::
+
+::::
 
 ## Building the Documentation
 

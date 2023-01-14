@@ -58,7 +58,15 @@ pygments_style = 'sphinx'
 
 ## notfound configuration ################################################
 
-notfound_template = "404.html"
+notfound_context = {
+    'title': 'Page Not Found',
+    'body': '''
+<h1>Page Not Found</h1>
+<p>Sorry, we couldn't find that page. Error code 404. </p>
+<p>You can try using the search box above or check our menu on the left hand side of this page.</p>
+<p>If neither of those options work, please create a Github issue ticket <a href="https://github.com/jina-ai/jina/">here</a>, and one of our team will respond.  Please use the tag Documentation. </p>
+''',
+}
 
 ## autoapi configuration ################################################
 

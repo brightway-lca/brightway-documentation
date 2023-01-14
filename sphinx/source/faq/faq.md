@@ -1,9 +1,15 @@
 # FAQ
 
 ```{attention}
-📣 HELP WANTED! \
+__HELP WANTED__ \
 You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html)
+Please start by reading the [guide to contributing to the Brightway documentation.](source/contributing/contributing)
+```
+
+```{warning}
+__NEEDS WORK__ \
+This page is not yet complete. \
+It is either a rough draft or has been copied over from the legacy documentation.
 ```
 
 ```{toctree}
