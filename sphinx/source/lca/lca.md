@@ -422,7 +422,6 @@ There are two more things to keep in mind:
 ```{toctree}
 ---
 maxdepth: 2
-hidden:
 ---
 self
 static_lca
