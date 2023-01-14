@@ -8,8 +8,9 @@ Please start by reading the [guide to contributing to the Brightway documentatio
 
 ```{toctree}
 ---
-maxdepth: 1
+maxdepth: 2
 ---
+faq
 brightway
 data
 ecoinvent

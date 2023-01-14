@@ -1,4 +1,4 @@
-# Running on the cloud
+# Running on the Cloud
 
 ## Docker
 

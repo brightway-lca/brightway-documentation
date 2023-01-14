@@ -8,7 +8,7 @@ You can find the current project data directory with the command `projects.dir`.
 
 ::::{tab-set}
 
-:::{tab-item} Linux
+:::{tab-item} Windows
 
 ```
 C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway2
@@ -23,7 +23,7 @@ C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway
 
 :::
 
-:::{tab-item} Windows
+:::{tab-item} Linux
 
 ```
 /home/<User>/.local/share/Brightway2

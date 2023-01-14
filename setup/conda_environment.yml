@@ -16,3 +16,4 @@ dependencies:
   - sphinx-autobuild # live-html support
   - sphinx-autoapi # to build docs from source code instead of package import
   - sphinx-design # responsive web component support
+  - sphinx-notfound-page # custom 404 page

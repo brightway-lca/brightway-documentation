@@ -5,3 +5,4 @@ pydata-sphinx-theme
 myst-parser
 sphinx-autoapi
 sphinx-design
+sphinx-notfound-page

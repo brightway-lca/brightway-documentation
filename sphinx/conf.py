@@ -39,6 +39,8 @@ extensions = [
     'autoapi',
     # responsive web component support
     'sphinx_design',
+    # custom 404 page
+    'notfound.extension',
 ]
 
 templates_path = ['source/_templates']
@@ -53,6 +55,10 @@ master_doc = 'index'
 pygments_style = 'sphinx'
 
 ### extension configuration ########################################################################
+
+## notfound configuration ################################################
+
+notfound_template = "404.html"
 
 ## autoapi configuration ################################################
 

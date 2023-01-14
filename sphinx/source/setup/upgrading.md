@@ -1,6 +1,6 @@
 # Upgrading
 
-# Upgrading from Version 1
+## Upgrading from Version 1
 
 Upgrading from version 1 requires a full export of your data objects, and reimporting them after upgrading the software. Please follow these steps:
 
@@ -43,7 +43,7 @@ for filename in sorted(os.listdir(filepath)):
 
 You will need to do this for each data directory you want to upgrade.
 
-# Upgrading from Version 2
+## Upgrading from Version 2
 
 ```{admonition} Add context here...
 

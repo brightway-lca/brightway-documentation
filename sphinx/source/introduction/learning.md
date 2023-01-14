@@ -9,7 +9,7 @@ Please start by reading the [guide to contributing to the Brightway documentatio
 ```{note}
 To download backup `html` and `ipynb` files, right-click and choose `save file as`.
 ```
-# Introduction
+## Introduction
 
 -   [New Brightway2
     tutorial](https://github.com/maxkoslowski/Brightway2_Intro/blob/master/BW2_tutorial.ipynb)
@@ -22,13 +22,13 @@ including importing and using the FORWAST database. After you go through
 the introduction notebook, you are ready to start exploring, and the
 manual will try to help you when you get lost.
 
-# Brightway2 seminar
+## Brightway2 seminar
 
 A Brightway2 seminar was held in Zürich in 2017, and the [teaching
 material is
 available](https://github.com/PoutineAndRosti/Brightway-Seminar-2017).
 
-# Example notebooks
+## Example notebooks
 
 In general, this manual tells you *what* to do; the notebooks tell you
 *how* to do it. Here are some example notebooks showing various themes:
@@ -94,7 +94,7 @@ the steps needed to import various databases.
 -   [Importing the Material Footprint LCIA
     method](https://github.com/brightway-lca/brightway2/blob/master/notebooks/Import%20material%20footprint.ipynb).
 
-# Contributed notebooks
+## Contributed notebooks
 
 This section will highlight notebooks from people using or exploring
 Brightway2. Please email Chris Mutel if you have something to add!
