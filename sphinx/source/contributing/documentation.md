@@ -41,7 +41,6 @@ Compare the [documentation on StackOverflow.](https://stackoverflow.com/a/670596
 ```
 
 ```
-
 name: 'Update Submodules'
 
 on:
