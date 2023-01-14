@@ -1,3 +1,15 @@
+```{attention}
+__HELP WANTED__ \
+You can help update and improve the content on this page. \
+Please start by reading the [guide to contributing to the Brightway documentation.](source/contributing/contributing)
+```
+
+```{warning}
+__NEEDS WORK__ \
+This page is not yet complete. \
+It is either a rough draft or has been copied over from the legacy documentation.
+```
+
 # Brightway Life-Cycle Assessment Framework
 
 [![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
@@ -5,12 +17,6 @@
 [![SO](https://img.shields.io/badge/Community-Questions-f48024.svg?style=flat&logo=Stack%20Overflow&logoColor=white)](https://stackoverflow.com/questions/tagged/brightway)
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
-
-```{attention}
-📣 HELP WANTED! \
-You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html)
-```
 
 Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) and [environmental impact assessment](https://en.wikipedia.org/wiki/Environmental_impact_assessment) written in the [Python](https://www.python.org/) programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system. 
 

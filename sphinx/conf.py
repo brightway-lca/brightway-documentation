@@ -59,6 +59,7 @@ pygments_style = 'sphinx'
 ## notfound configuration ################################################
 
 notfound_context = {
+'overflow-x': 'hidden',
 'title': 'Page Not Found',
 'body': '''
 <pre>                                                                                                                                                      
