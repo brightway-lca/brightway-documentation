@@ -12,7 +12,13 @@ The Brightway documentation is built with [Sphinx](https://www.sphinx-doc.org/en
 
 ## Syntax
 
-The majority of the Brightway documentation is based on Markdown (`.md`) files. The [MyST](https://myst-parser.readthedocs.io/en/latest/index.html) package is used to enable Markdown support across the project. Wherever necessary, reStructuredText (`.rst`) files or directives are used. The [`eval-rst` function](https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-directives-parsing) in MyST allows for use of arbitrary `rst` directives in Markdown files. 
+### Markdown
+
+The majority of the Brightway documentation is based on Markdown (`.md`) files. The [MyST](https://myst-parser.readthedocs.io/en/latest/index.html) package is used to enable Markdown support across the project. Wherever necessary, reStructuredText (`.rst`) files or directives are used. The [`eval-rst` function](https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-directives-parsing) in MyST allows for use of arbitrary `rst` directives in Markdown files.
+
+### Jupyter Notebooks
+
+The `myst-nb` package is being used to render Jupyter Notebooks in the documentation. This allows for the use of Jupyter Notebooks as a documentation format. The notebooks are stored in the `notebooks` folder in the `brightway-documentation` repository. Curtrently, the notebooks are not executed during the build process. Any markdown cell in a notebook supports the features of the `myst-parser`, including admonitions, `eval-rst` directives, and `myst` directives.
 
 ## Structure
 
