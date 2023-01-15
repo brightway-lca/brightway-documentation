@@ -20,7 +20,7 @@ It is either a rough draft or has been copied over from the legacy documentation
 
 -- from the [Brightway 2.5 repository readme file](https://github.com/brightway-lca/brightway25)
 
-Brightway 2.5 is the next step on the way a future Brightway version, as detailed in the [Brightway Strategic Development Plan](https://github.com/brightway-lca/enhancement-proposals/blob/main/Brightway%20strategic%20development%20plan.md). In practice, this means that the meta-packages `brightway-lca/brightway2` and `brightway-lca/brightway25` will install different versions of the Brightway packages. For instance:
+Brightway 2.5 is the next step on the way to the next version of Brightway, as detailed in the [Brightway Strategic Development Plan](https://github.com/brightway-lca/enhancement-proposals/blob/main/Brightway%20strategic%20development%20plan.md). In practice, this means that the meta-packages `brightway-lca/brightway2` and `brightway-lca/brightway25` will install different versions of the Brightway packages. For instance:
 
 | package | Brightway 2 version | Brightway 2.5 version |
 | ------- | ------------------- | --------------------- |
