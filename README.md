@@ -67,6 +67,8 @@ sphinx-build sphinx _build/html -b singlehtml -a
 | outdir | `./_build/html` | N/A |
 | -b | `singlehtml` | create only a single html page |
 | -a | N/A | always write all output files |
+| `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
+
 
 You can now preview the documentation, built as a single html page at:
 
