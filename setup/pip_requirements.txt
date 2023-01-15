@@ -1,8 +1,7 @@
 ipython
-nbsphinx
-sphinx-gallery
 pydata-sphinx-theme
 myst-parser
+myst-nb
 sphinx-autoapi
 sphinx-design
 sphinx-notfound-page
