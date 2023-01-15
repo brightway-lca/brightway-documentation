@@ -1,8 +1,31 @@
 # Gallery
 
+## Visualizations
+
+::::{grid} 3
+
+:::{grid-item-card}  [Plotting Technosphere](visualizations/graph_technosphere)
+
+![thumbnail](visualizations/graph_technosphere_thumbnail.png)
+:::
+
+:::{grid-item-card}  Placeholder
+
+Placeholder
+
+:::
+
+:::{grid-item-card}  Placeholder
+
+Placeholder
+:::
+
+::::
+
 ```{toctree}
 ---
-maxdepth: 2
+maxdepth: 1
+hidden:
 ---
-visualizations/graph_technosphere/graph_technosphere
+visualizations/index
 ```
