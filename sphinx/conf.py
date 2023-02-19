@@ -77,11 +77,8 @@ And remember, every little bit counts in the grand scheme of things.
 ## autoapi configuration ################################################
 
 autoapi_dirs = [
-    '../brightway2-analyzer',
     '../brightway2-calc',
-    '../brightway2-data',
     '../brightway2-io',
-    '../brightway2-regional'
 ]
 
 autoapi_template_dir = './_autoapi_templates'
