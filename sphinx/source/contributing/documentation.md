@@ -32,10 +32,10 @@ To ensure that the `git submodules` are always up-to-date, both locally and in t
 
 | package | action |
 | ------- | ------ |
-| `brightway2-calc` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_notify_documentation_repo.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-io` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_notify_documentation_repo.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-data` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_notify_documentation_repo.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-analyzer` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-analyzer/.github/workflows/github_action_notify_documentation_repo.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-calc` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-io` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-data` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-analyzer` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-analyzer/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 
 
 ::::{tab-set}

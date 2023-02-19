@@ -4,7 +4,7 @@ name: Create Workflow Dispatch (Trigger Submodule Pull)
 on:
   push:
     branches:
-      - main  
+      - main
   workflow_dispatch:
 
 jobs:
