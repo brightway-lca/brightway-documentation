@@ -124,3 +124,13 @@ build:
 ## Building the Documentation
 
 The Brightway documentation is built and published automatically by the readthedocs.org service on every push/merge to the `main` branch of the `brightway-documentation` repository. To build the documentation locally, follow the [instructions in the repository readme](https://github.com/brightway-lca/brightway-documentation).
+
+## Community Engagement (Chat, Forum, etc.)
+
+### Gitter/Matrix
+
+Brightway has a number of [Matrix](https://matrix.org/) chat rooms (channels). They are [based on the open-source Matrix secure communications technology](https://matrix.org/docs/guides/introduction). They are hosted on the `matrix.org` server (not on `gitter.io`). They allow both community discussions and read-only channels for announcements only. Read-only/announcement rooms can be created by adapting the room permissions to allow only [users with moderator/admin power level]((https://matrix.org/docs/guides/moderation#power-levels)) to send messages.
+
+| Room | Purpose | Address (matrix.org server) |
+| ---- | ------- | ------- |
+| `announcements` | read-only announcements | #brightway/announcements:matrix.org |
