@@ -150,22 +150,22 @@ html_theme_options = {
         {
             "name": "GitHub",
             "url": "https://github.com/brightway-lca",
-            "icon": "fab fa-github",
+            "icon": "fab fa-brands fa-github",
         },
         {
             "name": "Conda",
             "url": "https://anaconda.org/cmutel/brightway2",
-            "icon": "fab fa-python",
+            "icon": "fab fa-brands fa-python",
         },
         {
             "name": "StackOverflow",
             "url": "https://stackoverflow.com/questions/tagged/brightway",
-            "icon": "fab fa-stack-overflow",
+            "icon": "fab fa-brands fa-stack-overflow",
         },
         {
-            "name": "Gitter",
-            "url": "https://gitter.im/brightway-lca/community",
-            "icon": "fab fa-gitter",
+            "name": "Matrix",
+            "url": "https://app.element.io/#/room/#brightway/community:matrix.org",
+            "icon": "fab fa-regular fa-comments",
         }
     ],
     "logo": {
