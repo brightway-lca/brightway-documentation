@@ -77,12 +77,24 @@ And remember, every little bit counts in the grand scheme of things.
 ## autoapi configuration ################################################
 
 autoapi_dirs = [
-    '../brightway2-io',
+    '../brightway2-io/bw2io',
 ]
 
-autoapi_template_dir = './_autoapi_templates'
+#autoapi_template_dir = '_autoapi_templates'
 autoapi_root = 'source/api'
 autoapi_keep_files = False
+autoapi_ignore = [
+    '*data/*',
+    '*tests/*',
+    '*tests.py',
+    '*validation.py',
+    '*.rst',
+    '*.yml',
+    '*.md',
+    '*.json',
+    '*.data'
+]
+
 
 ## myst_parser configuration ############################################
 

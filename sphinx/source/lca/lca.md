@@ -199,10 +199,6 @@ biosphere exchange.
 
 ## Brightway2 LCA Reports
 
-::: note
-::: title
-Note
-:::
 
 The Brightway2 report data format is evolving, and this section should
 not be understood as definitive.
@@ -281,10 +277,9 @@ most relevant pathways and flows included, in a few seconds.
 
 ### Illustration of graph traversal
 
-It\'s easiest to understand how graph traversal is implemented with a
+It's easiest to understand how graph traversal is implemented with a
 simple example. Take this system:
 
-![image](images/gt-system.png){.align-center}
 
 -   This system has four **nodes**, which are LCI processes, also called
     transforming activities. Each **node** has one reference product,
@@ -386,7 +381,6 @@ automatically sorted list of nodes to examine.
 After this first iteration, we have the following nodes and edges in our
 graph traversal:
 
-![image](images/gt-step-1.png){.align-center}
 
 ``` python
 nodes = {-1: {'amount': 1, 'cum': some number, 'ind': some small number}}
@@ -407,8 +401,6 @@ the heap. Iterate until no new nodes are found.
 Because the heap is automatically sorted, at each iteration we will take
 the node with the highest impact that hasn\'t yet been assessed.
 
-![image](images/gt-step-2.png){.align-center}
-
 There are two more things to keep in mind:
 
 -   We use a cutoff criteria to stop traversing the supply chain - any
@@ -421,6 +413,7 @@ There are two more things to keep in mind:
 
 ```{toctree}
 ---
+hidden:
 maxdepth: 2
 ---
 self

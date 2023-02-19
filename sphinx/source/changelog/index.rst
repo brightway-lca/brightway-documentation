@@ -14,9 +14,4 @@ The files are sourced automatically from their respective GitHub repositories.
    :maxdepth: 2
    :hidden:
 
-   link_to_changelog_calc
-   link_to_changelog_data
    link_to_changelog_io
-   link_to_changelog_analyzer
-   link_to_changelog_regional
-

@@ -613,11 +613,8 @@ exchanges.
 ### Parameters manager
 
 The most common way to interact with parameters data is through the
-parameters manager, provided as `parameters`:
+parameters manager, provided as `parameters`.
 
-``` {.autoclass members="" noindex=""}
-bw2data.parameters.ParameterManager
-```
 
 ### Peewee objects
 
