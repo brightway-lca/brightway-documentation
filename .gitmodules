@@ -2,19 +2,7 @@
 	path = brightway2-io
 	url = https://github.com/brightway-lca/brightway2-io
 	branch = main
-[submodule "brightway2-data"]
-	path = brightway2-data
-	url = https://github.com/brightway-lca/brightway2-data
-	branch = main
 [submodule "brightway2-calc"]
 	path = brightway2-calc
 	url = https://github.com/brightway-lca/brightway2-calc
-	branch = main
-[submodule "brightway2-regional"]
-	path = brightway2-regional
-	url = https://github.com/brightway-lca/brightway2-regional.git
-	branch = main
-[submodule "brightway2-analyzer"]
-	path = brightway2-analyzer
-	url = https://github.com/brightway-lca/brightway2-analyzer.git
 	branch = main
