@@ -77,7 +77,6 @@ And remember, every little bit counts in the grand scheme of things.
 ## autoapi configuration ################################################
 
 autoapi_dirs = [
-    '../brightway2-calc',
     '../brightway2-io',
 ]
 

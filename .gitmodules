@@ -2,7 +2,3 @@
 	path = brightway2-io
 	url = https://github.com/brightway-lca/brightway2-io
 	branch = main
-[submodule "brightway2-calc"]
-	path = brightway2-calc
-	url = https://github.com/brightway-lca/brightway2-calc
-	branch = main
