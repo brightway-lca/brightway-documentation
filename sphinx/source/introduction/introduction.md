@@ -1,7 +1,7 @@
 ```{attention}
 __HELP WANTED__ \
 You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](source/contributing/contributing)
+Please start by reading the [guide to contributing to the Brightway documentation.](../contributing/contributing.md)
 ```
 
 ```{warning}
@@ -300,17 +300,13 @@ Data store objects are instantiated with the object name, e.g.
 
 Brightway2-data defines the following data stores:
 
-> -   `SingleFileDatabase <single-file-database>`{.interpreted-text
->     role="ref"}
-> -   `JSONDatabase <json-database>`{.interpreted-text role="ref"}
-> -   `method`{.interpreted-text role="ref"}
-> -   `weighting`{.interpreted-text role="ref"}
-> -   `normalization`{.interpreted-text role="ref"}
+-   `SingleFileDatabase <single-file-database>`{.interpreted-text role="ref"}
+-   `JSONDatabase <json-database>`{.interpreted-text role="ref"}
+-   `method`{.interpreted-text role="ref"}
+-   `weighting`{.interpreted-text role="ref"}
+-   `normalization`{.interpreted-text role="ref"}
 
-``` {#database-documents}
-The schema for an `LCI dataset` in
-[voluptuous](https://pypi.python.org/pypi/voluptuous/) is:
-```
+The schema for an `LCI dataset` in [voluptuous](https://pypi.python.org/pypi/voluptuous/) is:
 
 ``` python
 {

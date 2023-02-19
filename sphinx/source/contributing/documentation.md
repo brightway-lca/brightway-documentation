@@ -2,7 +2,6 @@
 
 ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
 
-
 Details on the concept and technical implementation of the new Brightway documentation are detailed in [Brightway Enhancement Proposal (BEP) 003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md).
 
 

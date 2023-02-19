@@ -56,6 +56,9 @@ pygments_style = 'sphinx'
 
 ### suppress warnings ##############################################################################
 
+suppress_warnings = [
+    "myst.header" # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
+]
 
 ### extension configuration ########################################################################
 
@@ -80,7 +83,6 @@ autoapi_dirs = [
     '../brightway2-io/bw2io',
 ]
 
-#autoapi_template_dir = '_autoapi_templates'
 autoapi_root = 'source/api'
 autoapi_keep_files = False
 autoapi_ignore = [
@@ -94,7 +96,6 @@ autoapi_ignore = [
     '*.json',
     '*.data'
 ]
-
 
 ## myst_parser configuration ############################################
 
