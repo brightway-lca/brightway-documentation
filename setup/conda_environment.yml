@@ -17,3 +17,4 @@ dependencies:
   - sphinx-autoapi # to build docs from source code instead of package import
   - sphinx-design # responsive web component support
   - sphinx-notfound-page # custom 404 page
+  - graphviz # for plotting dependency diagrams with sphinx-autoapi

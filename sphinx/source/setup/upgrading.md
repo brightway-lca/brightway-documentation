@@ -45,6 +45,6 @@ You will need to do this for each data directory you want to upgrade.
 
 ## Upgrading from Version 2
 
-```{admonition} Add context here...
-
-```
+:::{note}
+Add context here...
+:::

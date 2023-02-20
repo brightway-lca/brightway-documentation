@@ -4,11 +4,12 @@ import sys
 from glob import glob
 import shutil
 import os
+import datetime
 
 ### project information ###########################################################################
 
 project = 'Brightway'
-copyright = 'Brightway Developers'
+copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
 
 version = '2.0' # the short X.Y version.
 release = '2.0' # the full version, including alpha/beta/rc tags.
@@ -28,6 +29,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
+    'sphinx.ext.inheritance_diagram', # for plotting dependency diagrams with sphinx-autoapi
     # iPython extensions
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
@@ -78,6 +80,21 @@ And remember, every little bit counts in the grand scheme of things.
 }
 
 ## autoapi configuration ################################################
+## https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
+
+autoapi_options = [
+    'members',
+    'undoc-members',
+    'private-members',
+    'show-inheritance',
+    'show-module-summary',
+    #'special-members',
+    'imported-members',
+    'show-inheritance-diagram'
+]
+
+autoapi_python_class_content = 'both'
+autoapi_member_order = 'groupwise'
 
 autoapi_dirs = [
     '../brightway2-io/bw2io',
@@ -85,6 +102,7 @@ autoapi_dirs = [
 
 autoapi_root = 'source/api'
 autoapi_keep_files = False
+
 autoapi_ignore = [
     '*data/*',
     '*tests/*',
@@ -99,6 +117,7 @@ autoapi_ignore = [
 ]
 
 ## myst_parser configuration ############################################
+## https://myst-parser.readthedocs.io/en/latest/configuration.html
 
 source_suffix = {
     '.rst': 'restructuredtext',
