@@ -13,7 +13,7 @@ It is either a rough draft or has been copied over from the legacy documentation
 # Brightway Life-Cycle Assessment Framework
 
 [![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
-[![Gitter](https://img.shields.io/badge/Community-Chat-ed1965.svg?style=flat&logo=Gitter&logoColor=white)](https://gitter.im/brightway-lca/community)
+[![Matrix](https://img.shields.io/badge/Community-Chat-ed1965.svg?style=flat&logo=Matrix&logoColor=white)](https://app.element.io/#/room/#brightway/community:matrix.org)
 [![SO](https://img.shields.io/badge/Community-Questions-f48024.svg?style=flat&logo=Stack%20Overflow&logoColor=white)](https://stackoverflow.com/questions/tagged/brightway)
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)

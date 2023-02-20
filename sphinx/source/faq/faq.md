@@ -17,6 +17,7 @@ It is either a rough draft or has been copied over from the legacy documentation
 maxdepth: 1
 ---
 self
+help
 brightway
 data
 ecoinvent
