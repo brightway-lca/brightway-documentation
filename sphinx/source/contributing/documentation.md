@@ -27,7 +27,7 @@ The core functionality of Brightway is provided by different packages (e.g. `bri
 
 ### GitHub Actions
 
-To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used.
+To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used. Whenever changes are made to the `main` branch of a Brightway package (e.g. `brightway-calc`, `brightway-data`), a GitHub action workflow triggers another GitHub actions workflow in the `brightway-documentation` repository. This workflow updates the `git submodules` and commits the changes to the `main` branch of the `brightway-documentation` repository.
 
 | package | action |
 | ------- | ------ |
@@ -129,8 +129,9 @@ The Brightway documentation is built and published automatically by the readthed
 
 ### Gitter/Matrix
 
-Brightway has a number of [Matrix](https://matrix.org/) chat rooms (channels). They are [based on the open-source Matrix secure communications technology](https://matrix.org/docs/guides/introduction). They are hosted on the `matrix.org` server (not on `gitter.io`). They allow both community discussions and read-only channels for announcements only. Read-only/announcement rooms can be created by adapting the room permissions to allow only [users with moderator/admin power level]((https://matrix.org/docs/guides/moderation#power-levels)) to send messages.
+Brightway has a number of [Matrix](https://matrix.org/) chat rooms (channels). They are [based on the open-source Matrix secure communications technology](https://matrix.org/docs/guides/introduction). They are hosted on the `matrix.org` server (not on `gitter.io`). They allow both community discussions and read-only channels for announcements only. Read-only/announcement rooms can be created by adapting the room permissions to allow only [users with moderator/admin power level](https://matrix.org/docs/guides/moderation#power-levels)) to send messages.
 
 | Room | Purpose | Address (matrix.org server) |
 | ---- | ------- | ------- |
 | `announcements` | read-only announcements | #brightway/announcements:matrix.org |
+| `community` | main discussion | #brightway/community:matrix.org |
