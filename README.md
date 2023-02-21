@@ -33,7 +33,7 @@ git clone https://github.com/brightway-lca/brightway-documentation.git
 git submodule update --init --recursive --remote --force
 ```
 
-| positional argument or option| description |
+| option | description |
 | ---------------------------- | ----------- |
 | init | initializes (=downloads) submodules if not currently present |
 | recursive | goes through all submodules specified in the `.gitmodules` file |
