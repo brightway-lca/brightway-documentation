@@ -58,7 +58,7 @@ conda activate sphinx
 
 You are now ready to build the documentation...
 
-### Documentation Build
+### Building the Documentation
 
 1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
@@ -99,11 +99,18 @@ sphinx-autobuild sphinx _build/html -a -j auto --open-browser
 You can now preview the documentation at (the browser window will open automatically ✨):
 http://127.0.0.1:8000/
 
-### Contributing
+### Contributing (General Documentation)
 
-1. Fork this repository, create an aptly named branch and add your contributions.
-2. Open a pull request and tag Brightway contributors.
-3. Your changes will go live at https://documentation.brightway.dev after your branch is merged into main.
+1. add some text here
+
+### Contributing (API Documentation)
+
+TODO: UPDATE THIS SECTION
+
+1. Create a new branch from the `main` branch of the submodule repository (e.g. `brightway2-calc`).
+2. Adapt the branch name in the `.gitmodules` file of the `brightway-documentation` repository.
+3. Use the command `git submodule update --init --recursive --remote --force` to update the submodule to the latest commit on the branch specified in the `.gitmodules` file.
+4. Remember that when switching branches in the submodule repository, you need to update the submodule in the `brightway-documentation` repository as well. This can be done by running the command `git submodule update --init --recursive --remote --force` again.
 
 ## 📚 References
 
