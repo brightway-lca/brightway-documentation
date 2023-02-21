@@ -21,22 +21,30 @@ All content pages of the documentation are Markdown formatted for reasons of sim
 
 ### Setup
 
-1. Clone this repository [recursively, thus populating all submodule directories](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+1. Clone this repository:
 
 ```
-git clone https://github.com/brightway-lca/brightway-documentation.git --recursive
+git clone https://github.com/brightway-lca/brightway-documentation.git
 ```
 
-If you cloned the repository and the submodule directories (`brightway-2-analyzer`, `brightway2-calc`, etc.) are still empty, populate them with:
+and populate the submodules (`brightway-2-analyzer`, `brightway2-calc`, etc.):
 
 ```
-git submodule update --init
+git submodule update --init --recursive --remote
 ```
 
-2. Ensure the submodule directories are up-to-date:
+| positional argument or option| description |
+| ---------------------------- | ----------- |
+| init | initializes (=downloads) submodules if not currently present |
+| recursive | goes through all submodules specified in the `.gitmodules` file |
+| remote | points to the latest commit on the branches specified in the `.gitmodules` file |
+
+Note that if the `--remote` flag is not set, the submodules will point to the latest commit on the default branches (`main`), **not** to the latest commit on the branches specified in the `.gitmodules` file. On the `main` branch of the `brightway-documentation` repo, all submodule branches specified in the `.gitmodules` should be `main`. This is to ensure the documentation is always up-to-date with the latest changes in the submodules.
+
+2. To manually update the submodules, use the same command again:
 
 ```
-git pull --recurse-submodules
+git submodule update --init --recursive --remote
 ```
 
 > They are updated automatically on the remote by [Dependabot](https://github.com/dependabot) + [GitHub Actions](https://github.com/features/actions), so there is no need to push changes to the submodules to the remote.
