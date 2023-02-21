@@ -27,10 +27,10 @@ All content pages of the documentation are Markdown formatted for reasons of sim
 git clone https://github.com/brightway-lca/brightway-documentation.git
 ```
 
-and populate the submodules (`brightway-2-analyzer`, `brightway2-calc`, etc.):
+2. Initialize (=download) the submodules (`brightway-2-analyzer`, `brightway2-calc`, etc.):
 
 ```
-git submodule update --init --recursive --remote
+git submodule update --init --recursive --remote --force
 ```
 
 | positional argument or option| description |
@@ -38,18 +38,13 @@ git submodule update --init --recursive --remote
 | init | initializes (=downloads) submodules if not currently present |
 | recursive | goes through all submodules specified in the `.gitmodules` file |
 | remote | points to the latest commit on the branches specified in the `.gitmodules` file |
+| force | ensures that accidental edits in the submodules are always overwritten |
 
 Note that if the `--remote` flag is not set, the submodules will point to the latest commit on the default branches (`main`), **not** to the latest commit on the branches specified in the `.gitmodules` file. On the `main` branch of the `brightway-documentation` repo, all submodule branches specified in the `.gitmodules` should be `main`. This is to ensure the documentation is always up-to-date with the latest changes in the submodules.
 
-2. To manually update the submodules, use the same command again:
+To manually update the submodules, use the same command again. There is no need to push changes to the submodules to the remote, since [they are updated by GitHub Actions](https://documentation.brightway.dev/en/latest/source/contributing/documentation.html#github-actions).
 
-```
-git submodule update --init --recursive --remote
-```
-
-> They are updated automatically on the remote by [Dependabot](https://github.com/dependabot) + [GitHub Actions](https://github.com/features/actions), so there is no need to push changes to the submodules to the remote.
-
-3. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment by running from the repository root directory:
+3. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``setup/conda_environment.yml``](setup/conda_environment.yml). Install the environment `sphinx` by running from the repository root directory:
 
 ```
 conda env create -f 'setup/conda_environment.yml'
@@ -60,6 +55,8 @@ and activate the environment:
 ```
 conda activate sphinx
 ```
+
+You are now ready to build the documentation...
 
 ### Documentation Build
 
@@ -84,7 +81,7 @@ You can now preview the documentation, built as a single html page at:
 _build/html/homepage.html
 ```
 
-1. You can build the documentation by triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
+2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
 ```
 sphinx-autobuild sphinx _build/html -a -j auto --open-browser
