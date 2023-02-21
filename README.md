@@ -66,7 +66,7 @@ You are now ready to build the documentation...
 sphinx-build sphinx _build/html -b singlehtml -a
 ```
 
-| positional argument or option| value | description |
+| option | value | description |
 | ---------------------------- | ----- | ----------- |
 | sourcedir | `./sphinx` | N/A |
 | outdir | `./_build/html` | N/A |
@@ -81,7 +81,7 @@ You can now preview the documentation, built as a single html page at:
 _build/html/homepage.html
 ```
 
-2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
+1. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
 ```
 sphinx-autobuild sphinx _build/html -a -j auto --open-browser
