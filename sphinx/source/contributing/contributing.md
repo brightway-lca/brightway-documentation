@@ -1,4 +1,4 @@
-# Contributing: Getting Started
+# Contributing
 
 [![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat&logo=GitHub)](https://github.com/brightway-lca/brightway-documentation)
 
@@ -66,12 +66,6 @@ This is recommended for Brightway users with experience in software development 
 
 ::::
 
-## Contacting the Developers
-
-[![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
-[![Gitter](https://img.shields.io/badge/Community-Chat-ed1965.svg?style=flat&logo=Gitter&logoColor=white)](https://gitter.im/brightway-lca/community)
-[![SO](https://img.shields.io/badge/Community-Questions-f48024.svg?style=flat&logo=Stack%20Overflow&logoColor=white)](https://stackoverflow.com/questions/tagged/brightway)
-
 
 ```{toctree}
 ---
@@ -79,6 +73,6 @@ hidden:
 maxdepth: 1
 ---
 self
-documentation
-api_documentation
+contributing_general_documentation
+contributing_api_documentation
 ```

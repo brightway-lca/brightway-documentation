@@ -6,13 +6,14 @@ If you have questions that the documentation cannot answer, you can get in touch
 
 ## Contact the Community
 
-| Contact Channel | Link | Description |
-| --------------- | ---- | ----------- |
-| Mailing List | [`brightway.groups.io`](https://brightway.groups.io/) | The Brightway mailing list is the best place to ask questions about Brightway. |
-| Matrix Chat Rooms | [`#brightway/community:matrix.org`](https://app.element.io/#/room/#brightway/community:matrix.org) | The Brightway Matrix chat rooms are a good place to ask questions about Brightway. |
+[![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
+[![Matrix](https://img.shields.io/badge/Community-Chat-ed1965.svg?style=flat&logo=Matrix&logoColor=white)](https://app.element.io/#/room/#brightway/community:matrix.org)
+[![SO](https://img.shields.io/badge/Community-Questions-f48024.svg?style=flat&logo=Stack%20Overflow&logoColor=white)](https://stackoverflow.com/questions/tagged/brightway)
+[![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
 ## Contact the Developers
 
 | Contact Channel | Link | Description |
 | --------------- | ---- | ----------- |
-| GitHub Discussions/Issues | [`brightway-lca/repositories`](https://github.com/orgs/brightway-lca/repositories) | The discussions/issues in the respective repositories are the best way to get in touch with the developers. |
+| GitHub Discussions | [`brightway-lca/repositories`](https://github.com/orgs/brightway-lca/repositories) | Best for technical suggestions and discussions on specific Brightway functionality. |
+| GitHub Issues | [`brightway-lca/repositories`](https://github.com/orgs/brightway-lca/repositories) | Best for errors reports and improvement suggestions on specific Brightway functionality. |
