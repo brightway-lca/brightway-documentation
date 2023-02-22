@@ -1,4 +1,4 @@
 [submodule "brightway2-io"]
 	path = brightway2-io
 	url = https://github.com/brightway-lca/brightway2-io
-	branch = documentation_improvements
+	branch = main
