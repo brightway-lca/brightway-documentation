@@ -1,4 +1,4 @@
-# Contributing
+# Contributing: Getting Started
 
 [![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat&logo=GitHub)](https://github.com/brightway-lca/brightway-documentation)
 
@@ -80,4 +80,5 @@ maxdepth: 1
 ---
 self
 documentation
+api_documentation
 ```
