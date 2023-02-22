@@ -20,6 +20,7 @@ If you have questions that the documentation cannot answer, you can get in touch
 
 ```{toctree}
 ---
+hidden:
 maxdepth: 1
 ---
 self
