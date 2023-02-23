@@ -47,7 +47,7 @@ The processing of these requests are handled on a best-effort basis by the commu
 
 :::{tab-item} Advanced
 
-This is recommended for Brightway users with experience in software development and version control tools. The technical infrastructure of the Brightway documentation is [detailed on the Brightway Documentation Technical Infrastructure page.](documentation.md)
+This is recommended for Brightway users with experience in software development and version control tools. The technical infrastructure of the Brightway documentation is detailed on the Contributing Guide pages for the [General Documentation](contributing_general_documentation.md) and the [API Documentation.](contributing_api_documentation.md)
 
 ```{admonition} Prerequisites
 1. knowledge of GitHub (pull-requests, etc.)
