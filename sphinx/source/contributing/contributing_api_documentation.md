@@ -58,7 +58,7 @@ git submodule update --init --recursive --remote --force
 2. As soon as the changes to `brightway2-io` have been merged into the `main` branch, the `brightway2-io` submodule in the `brightway-documentation` repo will be updated automatically through [a GitHub Actions workflow](https://github.com/brightway-lca/brightway-documentation/tree/main/.github/workflows).
 3. The Brightway documentation at readthedocs.org will be built automatically. Your changes are now online!
 
-:::
+::::
 
 ## Structure
 
