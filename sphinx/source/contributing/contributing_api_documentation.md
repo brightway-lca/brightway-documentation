@@ -49,7 +49,7 @@ You can now preview your changes:
 
 1. Edit the file `.gitmodules` in the `brightway-documentation` repo to reflect your fork of the `brightway2-io` repo by changing the `<username>` in the `url` field:
 
-```git
+```
 [submodule "brightway2-io"]
 	path = brightway2-io
 	url = https://github.com/<username>/brightway2-io

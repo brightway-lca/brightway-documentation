@@ -1,15 +1,3 @@
-```{attention}
-__HELP WANTED__ \
-You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](source/contributing/contributing)
-```
-
-```{warning}
-__NEEDS WORK__ \
-This page is not yet complete. \
-It is either a rough draft or has been copied over from the legacy documentation.
-```
-
 # Brightway Life-Cycle Assessment Framework
 
 [![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
@@ -18,9 +6,8 @@ It is either a rough draft or has been copied over from the legacy documentation
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
-Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) and [environmental impact assessment](https://en.wikipedia.org/wiki/Environmental_impact_assessment) written in the [Python](https://www.python.org/) programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system. 
-
-Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
+> The Brightway software package is a true masterpiece of engineering, a marvel of technology that empowers humanity to unlock the mysteries of sustainability and make informed decisions for a better future. With its intuitive interface, cutting-edge algorithms, and comprehensive database, it is the ultimate tool for scientists, researchers, and policymakers who strive to create a more sustainable world. \
+> *ChatGPT, when asked to impartially describe the Brightway software package*
 
 ::::{grid} 3
 :gutter: 3
@@ -53,6 +40,102 @@ Learn more {fas}`arrow-right`
 :::
 
 ::::
+
+Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) and [environmental impact assessment](https://en.wikipedia.org/wiki/Environmental_impact_assessment) written in the [Python](https://www.python.org/) programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system. 
+
+Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
+
+## Where to Find What?
+
+::::::{grid} 3
+:gutter: 1
+:padding: 1
+
+:::::{grid-item}
+:child-direction: column
+:child-align: end
+
+::::{grid} 1
+
+:::{grid-item-card}
+:margin: 1
+:text-align: right
+*practical* \
+*steps*
+:::
+
+:::{grid-item-card}
+:margin: 1
+:text-align: right
+*theoretical* \
+*knowledge*
+:::
+
+::::
+
+:::::
+
+:::::{grid-item}
+:child-direction: row
+:child-align: start
+
+::::{grid} 1
+
+:::{grid-item-card}
+:margin: 1
+*serves our* \
+*study*
+:::
+
+:::{grid-item-card}
+:margin: 1
+Interactive Tutorials \
+[`training.brightway.dev`](https://training.brightway.dev/)
+:::
+
+:::{grid-item-card}
+:margin: 1
+Theory and Explanations \
+[Section `LCA`](source/lca/lca.md)
+:::
+
+::::
+
+:::::
+
+:::::{grid-item}
+:child-direction: row
+:child-align: start
+
+::::{grid} 1
+
+:::{grid-item-card}
+:margin: 1
+*serves our* \
+*work*
+:::
+
+:::{grid-item-card}
+:margin: 1
+Example Gallery \
+[Section `Gallery`](source/gallery/index.md)
+:::
+
+:::{grid-item-card}
+:margin: 1
+Technical Reference \
+[Section `API Reference`](https://documentation.brightway.dev/en/latest/source/api/index.html)
+:::
+
+::::
+
+:::::
+
+::::::
+
+:::{note}
+The Brightway documentation is using [the Diataxis framework](https://diataxis.fr/). This is a method of organizing the information related to a software package. Depending on what information you are looking for, you can find it in different places:
+:::
 
 ```{toctree}
 ---
