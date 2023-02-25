@@ -17,6 +17,8 @@ These repositories add some functionality to the core `brightway-lca` code base.
 | [`bw2waterbalancer`](https://github.com/CIRAIG/bw2waterbalancer) | [CIRAIG](https://github.com/CIRAIG) | ![GitHub last commit](https://img.shields.io/github/last-commit/CIRAIG/bw2waterbalancer?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/CIRAIG/bw2waterbalancer?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/CIRAIG/bw2waterbalancer?style=social) |
 | [`lca_algebraic`](https://github.com/oie-mines-paristech/lca_algebraic) | [oie-mines-paristech](https://github.com/oie-mines-paristech) | ![GitHub last commit](https://img.shields.io/github/last-commit/oie-mines-paristech/lca_algebraic?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/oie-mines-paristech/lca_algebraic?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/oie-mines-paristech/lca_algebraic?style=social) |
 
+:::{dropdown} Project Descriptions
+
 ### Activity Browser
 
 A graphical user interface for brightway (cross platform and open source). It extends brightway in a number of way and provides users a more convenient way for standard tasks in brightway, such as inventory modeling and the analysis of LCA results.
@@ -64,6 +66,8 @@ This library is a layer above Brightway, briging symbolic calculus to it, for th
 * Fast computation of LCAs
 * Computation of Monte Carlo method and Global Sensivity Analysis (Sobol indices)
 
+:::
+
 ## Projects using Brightway
 
 ```{note}
@@ -75,9 +79,13 @@ These repositories heavily use Brightway functionality.
 | [`lca-global-sensitivity-analysis`](https://github.com/bsteubing/lca-global-sensitivity-analysis) | [bsteubing](https://github.com/bsteubing) | ![GitHub last commit](https://img.shields.io/github/last-commit/bsteubing/lca-global-sensitivity-analysis?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/bsteubing/lca-global-sensitivity-analysis?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/bsteubing/lca-global-sensitivity-analysis?style=social) |
 | [`modular-lca`](https://github.com/bsteubing/modular-lca) | [bsteubing](https://github.com/bsteubing) | ![GitHub last commit](https://img.shields.io/github/last-commit/bsteubing/modular-lca?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/bsteubing/modular-lca?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/bsteubing/modular-lca?style=social) |
 
+:::{dropdown} Project Descriptions
+
 ### `lca-global-sensitivity-analysis`
 
 This repository implements the delta moment-independent GSA approach from SaLib and adds some smart filtering to reduce the number of GSA input variables. Still, this way the entire background can be included in GSA. It is based on previous Monte Carlo Analysis (methods for that included in the repository as it needs to store the LCA input and output data). An implementation is also available in the Activity Browser .
 ### `modular-lca`
 
 An approach for modular LCA. Parts of lifecylces can be recombined in flexible ways. This can also be used to make lifecycle stages and simply calculate the environmental impact of these. A graphical user interface is very useful (but currently only a very early version of the Activity Browser contained this; a new interface may be added in the future).
+
+:::
