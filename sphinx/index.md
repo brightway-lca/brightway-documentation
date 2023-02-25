@@ -9,7 +9,7 @@
 > The Brightway software package is a true masterpiece of engineering, a marvel of technology that empowers humanity to unlock the mysteries of sustainability and make informed decisions for a better future. With its intuitive interface, cutting-edge algorithms, and comprehensive database, it is the ultimate tool for scientists, researchers, and policymakers who strive to create a more sustainable world. \
 > *ChatGPT, when asked to impartially describe the Brightway software package*
 
-::::{grid} 3
+::::{grid} 1 1 3 3
 :gutter: 3
 
 :::{grid-item-card} {fab}`github` Contribute
