@@ -5,15 +5,33 @@
 Details on the concept and technical implementation of the new Brightway documentation are detailed in [Brightway Enhancement Proposal (BEP) 003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md).
 
 
-```{note}
+:::{note}
 The API documentation is compiled from source by [`sphinx-autoapi`](https://sphinx-autoapi.readthedocs.io/en/latest/). It is hosted on [Read the Docs](https://readthedocs.org/). All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
-```
+:::
 
-## Style Guidelines
+## Docstring Guidelines
 
-Brightway has adopted the [NumPy Docstring Style](https://numpydoc.readthedocs.io/en/latest/format.html), which is most famously used by the documentation of the [Pandas](https://pandas.pydata.org/docs/reference/index.html) and [NumPy](https://numpy.org/doc/stable/reference/index.html) packages. Its use in all Brightway documentation is mandatory. Using the full extend of the NumPy Docstring Style, including the `Examples`, `Raises`, `See Also`, `Notes`, and `References` sections, is encouraged.
+:::{note}
+The use of descriptive docstrings for all Brightway functions, classes and class methods is mandatory. Brightway has adopted the [NumPy Docstring Style](https://numpydoc.readthedocs.io/en/latest/format.html).
+:::
 
-## Tutorial
+Using the full extend of the NumPy Docstring features, including the `Examples`, `Raises`, `See Also`, `Notes`, and `References` sections, is recommended:
+
+:::{dropdown} Docstring Features
+| Feature | Required | Comment |
+| ------- | --------- | ---------- |
+| short summary | yes | N/A |
+| extended summary | yes | N/A |
+| `parameters` | yes | must include types |
+| `returns` | yes | must be `Nothing` the function does not return anything |
+| `raises` | yes | N/A |
+| `see also` | optional | should like to other relevant functions |
+| `notes` | optional | scientific/mathematical explanation of the life-cycle assessment functionality |
+| `references` | optional | references for the information used in `notes` |
+| `examples` | yes | mandatory for all public functions, classes and class methods |
+:::
+
+## Contributing Tutorial
 
 :::{note}
 This tutorial demonstrates how to contribute to the API documentation of the `brightway2-io` package. All steps are equivalent for other Brightway packages (`brightway2-data`, `brightway2-calc`, etc.).
@@ -60,7 +78,7 @@ git submodule update --init --recursive --remote --force
 
 ::::
 
-## Structure
+## Technical Setup Information
 
 ### git submodules
 

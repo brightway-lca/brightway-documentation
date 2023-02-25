@@ -9,7 +9,7 @@ Details on the concept and technical implementation of the new Brightway documen
 The Brightway documentation is built with [Sphinx](https://www.sphinx-doc.org/en/master/), the Python documentation generator. It is hosted on [Read the Docs](https://readthedocs.org/). All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
 ```
 
-## Syntax
+## Document Syntax
 
 ### Markdown (and reStructuredText)
 
@@ -22,3 +22,24 @@ The `myst-nb` package is being used to render Jupyter Notebooks in the documenta
 ## Building the Documentation
 
 The Brightway documentation is built and published automatically by the readthedocs.org service on every push/merge to the `main` branch of the `brightway-documentation` repository. To preview your changes, build the documentation locally by following the [instructions in the repository readme](https://github.com/brightway-lca/brightway-documentation).
+
+## Technical Setup Information
+
+The content of the Brightway documentation is stored in the `sphinx/source` folder of the `brightway-documentation` repository. The homepage is located in `sphinx/source/index.md`. The `sphinx/source/conf.py` file contains the configuration for the documentation build.
+
+```
+.
+├── setup/
+│   └── conda_environment.yml
+├── sphinx/
+│   └── source/
+│       ├── conf.py
+│       ├── index.md
+│       ├── setup/
+│       ├── introduction/
+│       └── (...other documentation sections)
+├── README.md
+├── brightway2-io/
+├── brightway2-data/
+└── (...other brightway2 modules)
+```
