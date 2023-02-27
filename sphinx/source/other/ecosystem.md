@@ -16,6 +16,7 @@ These repositories add some functionality to the core `brightway-lca` code base.
 | [`bw2landbalancer`](https://github.com/CIRAIG/bw2landbalancer) | [CIRAIG](https://github.com/CIRAIG) | ![GitHub last commit](https://img.shields.io/github/last-commit/CIRAIG/bw2landbalancer?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/CIRAIG/bw2landbalancer?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/CIRAIG/bw2landbalancer?style=social) | 
 | [`bw2waterbalancer`](https://github.com/CIRAIG/bw2waterbalancer) | [CIRAIG](https://github.com/CIRAIG) | ![GitHub last commit](https://img.shields.io/github/last-commit/CIRAIG/bw2waterbalancer?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/CIRAIG/bw2waterbalancer?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/CIRAIG/bw2waterbalancer?style=social) |
 | [`lca_algebraic`](https://github.com/oie-mines-paristech/lca_algebraic) | [oie-mines-paristech](https://github.com/oie-mines-paristech) | ![GitHub last commit](https://img.shields.io/github/last-commit/oie-mines-paristech/lca_algebraic?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/oie-mines-paristech/lca_algebraic?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/oie-mines-paristech/lca_algebraic?style=social) |
+| [`premise`](https://github.com/polca/premise) | [Romain Sacchi](https://github.com/romainsacchi) | ![GitHub last commit](https://img.shields.io/github/last-commit/polca/premise?logo=GitHub) | ![GitHub contributors](https://img.shields.io/github/contributors/polca/premise?logo=GitHub) | ![GitHub Repo stars](https://img.shields.io/github/stars/polca/premise?style=social) |
 
 :::{dropdown} Project Descriptions
 
@@ -65,6 +66,10 @@ This library is a layer above Brightway, briging symbolic calculus to it, for th
 * Definition of parameters
 * Fast computation of LCAs
 * Computation of Monte Carlo method and Global Sensivity Analysis (Sobol indices)
+
+### `premise`
+
+`premise` allows to align the life cycle inventories contained in the Ecoinvent 3 cutoff database with the output results of Integrated Assessment Models (IAM), such as REMIND or IMAGE, in order to produce life cycle inventory databases under future policy scenarios for any year between 2005 and 2100.
 
 :::
 
