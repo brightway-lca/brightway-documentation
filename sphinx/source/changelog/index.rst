@@ -15,3 +15,6 @@ The files are sourced automatically from their respective GitHub repositories.
    :hidden:
 
    link_to_changelog_io
+   link_to_changelog_data 
+   link_to_changelog_calc
+   link_to_changelog_analyzer
