@@ -12,5 +12,5 @@
 	branch = main
 [submodule "brightway2-analyzer"]
 	path = brightway2-analyzer
-	url = https://github.com/brightway-lca/brightway2-analyzer.git
+	url = https://github.com/brightway-lca/brightway2-analyzer
 	branch = main
