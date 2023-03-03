@@ -1,5 +1,5 @@
 ipython
-pydata-sphinx-theme
+pydata-sphinx-theme==0.13.0
 myst-parser
 myst-nb
 sphinx-autoapi

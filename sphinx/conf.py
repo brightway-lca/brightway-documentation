@@ -46,7 +46,6 @@ extensions = [
 ]
 
 templates_path = ['source/_templates']
-html_static_path = ["source/_static"]
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
@@ -191,19 +190,19 @@ html_theme_options = {
         }
     ],
     "logo": {
-      "image_light": "logo/BW_all_black_transparent_landscape.svg",
-      "image_dark": "logo/BW_all_white_transparent_landscape.svg"
+      "image_light": "source/_static/logo/BW_all_black_transparent_landscape.svg",
+      "image_dark": "source/_static/logo/BW_all_white_transparent_landscape.svg"
     },
     "favicons": [
       {
          "rel": "icon",
          "sizes": "100x100",
-         "href": "logo/BW_favicon_100x100.png",
+         "href": "source/_static/logo/BW_favicon_100x100.png",
       },
       {
          "rel": "apple-touch-icon",
          "sizes": "500x500",
-         "href": "logo/BW_favicon_500x500.png"
+         "href": "source/_static/logo/BW_favicon_500x500.png"
       },
    ]
 }

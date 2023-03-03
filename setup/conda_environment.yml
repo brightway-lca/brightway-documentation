@@ -10,7 +10,7 @@ dependencies:
   # sphinx
   - sphinx=5.3.0 # sphinx-design currently requires sphinx[version>=2,<5]
   - nbsphinx # Jupyter notebook support
-  - pydata-sphinx-theme # website theme
+  - pydata-sphinx-theme=0.13.0 # website theme
   - myst-parser # Markdown support
   - myst-nb # Jupyter notebook support
   - sphinx-autobuild # live-html support
