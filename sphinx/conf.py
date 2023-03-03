@@ -98,13 +98,16 @@ autoapi_member_order = 'groupwise'
 
 autoapi_dirs = [
     '../brightway2-io/bw2io',
+    '../brightway2-data/bw2data',
+    '../brightway2-calc/bw2calc',
+    '../brightway2-analyzer/bw2analyzer',
 ]
 
 autoapi_root = 'source/api'
 autoapi_keep_files = False
 
 autoapi_ignore = [
-    '*data/*',
+    '*/data/*',
     '*tests/*',
     '*tests.py',
     '*validation.py',
