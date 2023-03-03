@@ -197,12 +197,12 @@ html_theme_options = {
       {
          "rel": "icon",
          "sizes": "100x100",
-         "href": "source/_static/logo/BW_favicon_100x100.png",
+         "href": "logo/BW_favicon_100x100.png",
       },
       {
          "rel": "apple-touch-icon",
          "sizes": "500x500",
-         "href": "source/_static/logo/BW_favicon_500x500.png"
+         "href": "logo/BW_favicon_500x500.png"
       },
    ]
 }
