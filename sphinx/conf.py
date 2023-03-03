@@ -191,8 +191,8 @@ html_theme_options = {
         }
     ],
     "logo": {
-      "image_light": "_static/logo/BW_all_black_transparent_landscape.svg",
-      "image_dark": "_static/logo/BW_all_white_transparent_landscape.svg"
+      "image_light": "logo/BW_all_black_transparent_landscape.svg",
+      "image_dark": "logo/BW_all_white_transparent_landscape.svg"
     },
     "favicons": [
       {
