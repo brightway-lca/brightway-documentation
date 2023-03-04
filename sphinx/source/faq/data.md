@@ -23,14 +23,14 @@ You can find the current project data directory with the command `projects.dir`.
 :::{tab-item} Windows
 
 ```
-C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway2
+C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway3
 ```
 :::
 
 :::{tab-item} macOS
 
 ```
-/Users/<User>/Library/Application Support/Brightway2
+/Users/<User>/Library/Application Support/Brightway3
 ```
 
 :::
@@ -38,7 +38,7 @@ C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway
 :::{tab-item} Linux
 
 ```
-/home/<User>/.local/share/Brightway2
+/home/<User>/.local/share/Brightway3
 ```
 
 :::
