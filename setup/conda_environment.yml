@@ -18,3 +18,4 @@ dependencies:
   - sphinx-design # responsive web component support
   - sphinx-notfound-page # custom 404 page
   - graphviz # for plotting dependency diagrams with sphinx-autoapi
+  - gitpython # for reading the current branch name for version-switcher functionality
