@@ -140,7 +140,7 @@ nb_execution_mode = 'off'
 
 ## version-switcher configuration #######################################
 
-version: str = 'main'
+version: str = 'latest'
 
 ## html configuration ###################################################
 
