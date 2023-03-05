@@ -162,7 +162,7 @@ html_css_files = [
 html_theme_options = {
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
-        "json_url": "https://documentation.brightway.dev/en/latest/_static/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/sphinx/source/_static/switcher.json",
         "version_match": version
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
