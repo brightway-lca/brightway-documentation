@@ -140,7 +140,7 @@ nb_execution_mode = 'off'
 
 ## version-switcher configuration #######################################
 
-version: str = Repo().head.ref.name
+version: str = Repo(search_parent_directories=True).head.ref.name
 
 ## html configuration ###################################################
 
@@ -168,7 +168,7 @@ html_theme_options = {
     "header_links_before_dropdown": 7,
     "announcement": "<p>⚠️ This is the draft of the new Brightway documentation. It is work in progress! In the meantime, use the legacy documentation at docs.brightway.dev.</p>",
     "collapse_navigation": True,
-    "footer_items": ["copyright"],
+    "footer_start": ["copyright"],
     "external_links": [
         {
             "url": "https://training.brightway.dev/",
