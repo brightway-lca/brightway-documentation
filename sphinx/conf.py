@@ -140,7 +140,7 @@ nb_execution_mode = 'off'
 
 ## version-switcher configuration #######################################
 
-version: str = Repo(search_parent_directories=True).head.ref.name
+version: str = 'legacy'
 
 ## html configuration ###################################################
 
