@@ -43,7 +43,7 @@ extensions = [
     'notfound.extension',
 ]
 
-staic_path = ['source/_static']
+html_static_path = ['source/_static']
 templates_path = ['source/_templates']
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
