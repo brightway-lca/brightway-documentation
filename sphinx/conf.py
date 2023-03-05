@@ -163,7 +163,7 @@ html_theme_options = {
     "switcher": {
         "version_match": version,
         "json_url": "https://documentation.brightway.dev/en/latest/source/_static/switcher.json",
-    }
+    },
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
     "announcement": "<p>⚠️ This is the draft of the new Brightway documentation. It is work in progress! In the meantime, use the legacy documentation at docs.brightway.dev.</p>",
