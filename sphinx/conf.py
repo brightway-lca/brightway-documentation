@@ -43,6 +43,7 @@ extensions = [
     'notfound.extension',
 ]
 
+staic_path = ['source/_static']
 templates_path = ['source/_templates']
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
@@ -162,7 +163,7 @@ html_theme_options = {
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "version_match": version,
-        "json_url": "https://documentation.brightway.dev/en/latest/source/_static/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/sphinx/source/_static/switcher.json",
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
