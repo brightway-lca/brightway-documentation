@@ -167,7 +167,7 @@ html_theme_options = {
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
-    "announcement": "<p>This is the documentation for the legacy version of Brightway (=Brightway2). This version is compatible with the ActivityBroser user interface.</p>",
+    "announcement": "<p>This is the documentation for Brightway2, the legacy version compatible with the ActivityBroser user interface.</p>",
     "collapse_navigation": True,
     "footer_start": ["copyright"],
     "external_links": [
