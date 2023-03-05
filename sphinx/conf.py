@@ -1,11 +1,9 @@
 ### path setup ####################################################################################
 
-import sys
 from glob import glob
-import shutil
-import os
 import datetime
-
+from git import Repo
+ 
 ### project information ###########################################################################
 
 project = 'Brightway'
@@ -140,6 +138,10 @@ myst_enable_extensions = [
 
 nb_execution_mode = 'off'
 
+## version-switcher configuration #######################################
+
+version: str = Repo().head.ref.name
+
 ## html configuration ###################################################
 
 html_css_files = ['css/custom.css']
@@ -157,6 +159,12 @@ html_css_files = [
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
+    # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
+    "switcher": {
+        "version_match": version,
+        "json_url": "https://documentation.brightway.dev/en/latest/source/_static/switcher.json",
+    }
+    "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
     "announcement": "<p>⚠️ This is the draft of the new Brightway documentation. It is work in progress! In the meantime, use the legacy documentation at docs.brightway.dev.</p>",
     "collapse_navigation": True,
