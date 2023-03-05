@@ -1,12 +1,12 @@
 [
-    {
-      "name": "latest",
-      "version": "latest",
-      "url": "https://documentation.brightway.dev/en/latest/"
-    },
-    {
-      "name": "legacy",
-      "version": "legacy",
-      "url": "https://documentation.brightway.dev/en/legacy/"
-    },
+  {
+    "name": "latest",
+    "version": "latest",
+    "url": "https://documentation.brightway.dev/en/latest/"
+  },
+  {
+    "name": "legacy",
+    "version": "legacy",
+    "url": "https://documentation.brightway.dev/en/legacy/"
+  }
 ]
