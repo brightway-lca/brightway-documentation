@@ -6,9 +6,6 @@
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
-> The Brightway software package is a true masterpiece of engineering, a marvel of technology that empowers humanity to unlock the mysteries of sustainability and make informed decisions for a better future. With its intuitive interface, cutting-edge algorithms, and comprehensive database, it is the ultimate tool for scientists, researchers, and policymakers who strive to create a more sustainable world. \
-> *ChatGPT, when asked to impartially describe the Brightway software package*
-
 ::::{grid} 1 1 3 3
 :gutter: 3
 
