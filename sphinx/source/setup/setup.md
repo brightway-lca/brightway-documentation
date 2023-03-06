@@ -25,7 +25,7 @@ Brightway runs natively on Unix (x64) systems, including Ubuntu and macOS.
 1. Create a new Conda environment (in this example named `bw`):
 
 ```
-conda create -n bw -c cmutel brightway2 jupyterlab
+conda create -n bw brightway2 jupyterlab
 ```
 
 2. Activate the environment:
@@ -49,7 +49,7 @@ Brightway runs natively on Windows (x64) systems, including Windows 7-11.
 1. Create a new Conda environment (in this example named `bw`):
 
 ```
-conda create -n bw -c cmutel brightway2 jupyterlab
+conda create -n bw brightway2 jupyterlab
 ```
 
 2. Activate the environment:
