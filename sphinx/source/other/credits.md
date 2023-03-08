@@ -30,7 +30,7 @@ If you use Brighway in your academic research, please cite the [primary publicat
 | [Bernhard Steubing](https://www.researchgate.net/profile/Maghimai_Marcus2) | to be added |
 | [Pascal Lesage](http://www.polymtl.ca/recherche/rc/en/professeurs/details.php?NoProf=551) | to be added |
 | [Manuel Klarmann](https://twitter.com/mklarmann) | to be added |
-| [Tomas Navarrete](https://www.linkedin.com/in/tom4m3) | to be added |
+| [Tomás Navarrete Gutiérrez](https://www.linkedin.com/in/tom4m3) | contributor |
 | Guillaume Audard | to be added |
 | [Benjamin Portner](https://www.researchgate.net/profile/Benjamin_Portner) | to be added |
 | Jan Machacek | to be added |
