@@ -6,6 +6,12 @@
 [![SO](https://img.shields.io/badge/Community-Meetups-green.svg?style=flat&logo=Google%20Maps&logoColor=white)](https://2022.brightcon.link/)
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
+```{button-ref} source/faq/brightway.md
+:color: primary
+:expand:
+This is the documentation for Brightway2, the legacy version compatible with the ActivityBroser user interface.
+```
+
 ::::{grid} 1 1 3 3
 :gutter: 3
 
