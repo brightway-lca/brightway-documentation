@@ -1,9 +1,0 @@
-ipython
-pydata-sphinx-theme==0.13.0
-myst-parser
-myst-nb
-sphinx-autoapi
-sphinx-design
-sphinx-notfound-page
-graphviz==2.50.0
-gitpython

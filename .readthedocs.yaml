@@ -18,11 +18,9 @@ sphinx:
 # If using Sphinx, optionally build your docs in additional formats such as PDF
 # formats:
 #    - pdf
-
-# Optionally declare the Python requirements required to build your docs
-python:
-   install:
-   - requirements: setup/pip_requirements.txt
   
+conda:
+  environment: setup/conda_environment.yml
+
 submodules:
   include: all 
