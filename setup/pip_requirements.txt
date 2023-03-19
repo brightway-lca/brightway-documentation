@@ -5,5 +5,5 @@ myst-nb
 sphinx-autoapi
 sphinx-design
 sphinx-notfound-page
-graphviz
+graphviz==2.50.0
 gitpython
