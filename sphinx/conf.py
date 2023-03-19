@@ -167,7 +167,7 @@ html_theme_options = {
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
-    "announcement": "<p>Register Now: <a href='http://example.com'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
+    "announcement": "<p>Register Now: <a href='https://www.d-d-s.ch/school.html'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
     "collapse_navigation": True,
     "footer_start": ["copyright"],
     "external_links": [
