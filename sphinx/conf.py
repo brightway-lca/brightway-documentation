@@ -160,7 +160,7 @@ html_css_files = [
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
-    "announcement": "<p>Register Now: <a href='http://example.com'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
+    "announcement": "<p>Register Now: <a href='https://www.d-d-s.ch/school.html'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/sphinx/source/_static/switcher.json",
