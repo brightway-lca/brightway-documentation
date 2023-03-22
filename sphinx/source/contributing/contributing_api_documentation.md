@@ -22,6 +22,7 @@ Using the full extend of the NumPy Docstring features, including the `Examples`,
 | ------- | --------- | ---------- |
 | short summary | yes | N/A |
 | extended summary | yes | N/A |
+| `attributes` | yes | N/A |
 | `parameters` | yes | must include types |
 | `returns` | yes | must be `Nothing` the function does not return anything |
 | `raises` | yes | N/A |
@@ -29,6 +30,8 @@ Using the full extend of the NumPy Docstring features, including the `Examples`,
 | `notes` | optional | scientific/mathematical explanation of the life-cycle assessment functionality |
 | `references` | optional | references for the information used in `notes` |
 | `examples` | yes | mandatory for all public functions, classes and class methods |
+
+The `__init__` method should be documented as a docstring on the __init__ method itself. This means that The `attributes` and `parameters` sections [will be split between the class docstring the the `__init__` docstring.](https://github.com/sphinx-contrib/napoleon/blob/dce30797b7a229ccebda4030f65482d501427794/docs/source/example_numpy.py#L226)
 :::
 
 ## Contributing Tutorial

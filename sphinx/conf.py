@@ -87,12 +87,14 @@ autoapi_options = [
     'show-inheritance',
     'show-module-summary',
     #'special-members',
-    'imported-members',
+    #'imported-members',
     'show-inheritance-diagram'
 ]
 
 autoapi_python_class_content = 'both'
 autoapi_member_order = 'groupwise'
+autoapi_root = 'source/api'
+autoapi_keep_files = False
 
 autoapi_dirs = [
     '../brightway2-io/bw2io',
@@ -100,9 +102,6 @@ autoapi_dirs = [
     '../brightway2-calc/bw2calc',
     '../brightway2-analyzer/bw2analyzer'
 ]
-
-autoapi_root = 'source/api'
-autoapi_keep_files = False
 
 autoapi_ignore = [
     '*/data/*',
