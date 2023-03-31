@@ -4,16 +4,15 @@
 
 Details on the concept and technical implementation of the new Brightway documentation are detailed in [Brightway Enhancement Proposal (BEP) 003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md).
 
-
-:::{note}
+```{note}
 The API documentation is compiled from source by [`sphinx-autoapi`](https://sphinx-autoapi.readthedocs.io/en/latest/). It is hosted on [Read the Docs](https://readthedocs.org/). All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
-:::
+```
 
 ## Docstring Guidelines
 
-:::{note}
+```{note}
 The use of descriptive docstrings for all Brightway functions, classes and class methods is mandatory. Brightway has adopted the [NumPy Docstring Style](https://numpydoc.readthedocs.io/en/latest/format.html).
-:::
+```
 
 Using the full extend of the NumPy Docstring features, including the `Examples`, `Raises`, `See Also`, `Notes`, and `References` sections, is recommended:
 
@@ -36,21 +35,21 @@ The `__init__` method should be documented as a docstring on the __init__ method
 
 ## Contributing Tutorial
 
-:::{note}
+```{note}
 This tutorial demonstrates how to contribute to the API documentation of the `brightway2-io` package. All steps are equivalent for other Brightway packages (`brightway2-data`, `brightway2-calc`, etc.).
-:::
+```
 
 ::::{tab-set}
 
 :::{tab-item} Make and Preview your Changes
 
 1. Clone the `brightway-documentation` repo.
-2. Fork the `brightway2-io` repo and create a new branch `documentation_improvements`.
-3. Make the desired changes to the docstrings on the branch `documentation_improvements` in your fork of the `brightway2-io` repo.
+2. Fork the `brightway2-io` repo and create a new branch (e.g. `documentation_improvements`).
+3. Make the desired changes to the docstrings on your branch (e.g. `documentation_improvements`) in your fork of the `brightway2-io` repo.
 
 You can now preview your changes:
 
-1. Edit the file `.gitmodules` in the `brightway-documentation` repo to reflect your fork of the `brightway2-io` repo by changing the `<username>` in the `url` field:
+4. Edit the file `.gitmodules` in the `brightway-documentation` repo to reflect your fork of the `brightway2-io` repo by changing the `<username>` in the `url` field:
 
 ```
 [submodule "brightway2-io"]
@@ -59,13 +58,13 @@ You can now preview your changes:
 	branch = documentation_improvements
 ```
 
-1. Point the `brightway2-io` submodule to your fork of the `brightway2-io` repo. Repeat whenever you have made changes to the docstrings in your fork of the `brightway2-io` repo:
+5. Point the `brightway2-io` submodule to your fork of the `brightway2-io` repo. Repeat whenever you have made changes to the docstrings in your fork of the `brightway2-io` repo:
 
 ```bash
 git submodule update --init --recursive --remote --force
 ```
 
-3.  Follow [the instructions in the readme](https://github.com/brightway-lca/brightway-documentation) to build the documentation locally. You can now preview your changes.
+6.  Follow [the instructions in the readme](https://github.com/brightway-lca/brightway-documentation) to build the documentation locally. You can now preview your changes.
 
 ```{note}
 [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) offer a convenient way to include the documentation of other Brightway packages in the Brightway documentation. However, they are not updated automatically. You need to manually update the submodule directories whenever you have made changes to the docstrings in your fork of the `brightway2-io` repo.
@@ -76,8 +75,17 @@ git submodule update --init --recursive --remote --force
 :::{tab-item} Publish your Changes
 
 1. Open a pull request with your edits against the main `brightway2-io` repo.
+   
+```{note}
+One pull request per file (e.g. `bw2io/chemidplus.py`) is recommended. Please follow the naming convention:
+```bash
+Update docstrings to NumPy standards (`bw2io/chemidplus` etc.)
+```
+
 2. As soon as the changes to `brightway2-io` have been merged into the `main` branch, the `brightway2-io` submodule in the `brightway-documentation` repo will be updated automatically through [a GitHub Actions workflow](https://github.com/brightway-lca/brightway-documentation/tree/main/.github/workflows).
 3. The Brightway documentation at readthedocs.org will be built automatically. Your changes are now online!
+
+:::
 
 ::::
 
