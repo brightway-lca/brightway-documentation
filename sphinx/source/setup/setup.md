@@ -16,10 +16,10 @@ Brightway supports Python 2 and 3 (>3.4). However, we recommend you use Python 3
 
 ::::{tab-set}
 
-:::{tab-item} Unix (x64)
+:::{tab-item} Linux or macOS (x64)
 
 ```{note}
-Brightway runs natively on Unix (x64) systems, including Ubuntu and macOS.
+Brightway runs natively on Unix (x64) systems, including Linux distributions and macOS.
 ```
 
 1. Create a new Conda environment (in this example named `bw`):
@@ -70,10 +70,10 @@ You will need to activate this environment every time you start a new terminal o
 
 :::
 
-:::{tab-item} macOS (M1/ARM)
+:::{tab-item} macOS (Apple Silicon/ARM)
 
 ```{note}
-Brightway run on the new M1 ARM architecture. However, the super-fast linear algebra software library `pypardiso` is not compatible with the M1 ARM architecture. To avoid critical errors during instruction that would break core functionality, a different version of Brightway (`brightway_nosolver`) must be installed, which includes a different linear algebra software library (`scikit-umfpack`).
+Brightway rusn on the new Apple Silicon ARM architecture. However, the super-fast linear algebra software library `pypardiso` is not compatible with the ARM processor architecture. To avoid critical errors during instruction that would break core functionality, a different version of Brightway (`brightway_nosolver`) must be installed, which includes a different linear algebra software library (`scikit-umfpack`).
 ```
 
 1. Create a new Conda environment (in this example named `bw`):
