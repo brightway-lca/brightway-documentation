@@ -98,18 +98,9 @@ sphinx-autobuild sphinx _build/html -a -j auto --open-browser
 You can now preview the documentation at (the browser window will open automatically ✨):
 http://127.0.0.1:8000/
 
-### Contributing (General Documentation)
+### Contributing
 
-1. add some text here
-
-### Contributing (API Documentation)
-
-TODO: UPDATE THIS SECTION
-
-1. Create a new branch from the `main` branch of the submodule repository (e.g. `brightway2-calc`).
-2. Adapt the branch name in the `.gitmodules` file of the `brightway-documentation` repository.
-3. Use the command `git submodule update --init --recursive --remote --force` to update the submodule to the latest commit on the branch specified in the `.gitmodules` file.
-4. Remember that when switching branches in the submodule repository, you need to update the submodule in the `brightway-documentation` repository as well. This can be done by running the command `git submodule update --init --recursive --remote --force` again.
+Please follow the extensive guide we have provided [on the documentation website](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html).
 
 ## 📚 References
 

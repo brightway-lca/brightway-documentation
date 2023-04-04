@@ -1,4 +1,4 @@
-# Contribution Guide: API Documentation
+# API Documentation
 
 ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
 
