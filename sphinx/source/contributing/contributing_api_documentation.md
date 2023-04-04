@@ -1,4 +1,4 @@
-# API Documentation
+# Instructions: API Documentation
 
 ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
 
@@ -39,32 +39,46 @@ The `__init__` method should be documented as a docstring on the __init__ method
 This tutorial demonstrates how to contribute to the API documentation of the `brightway2-io` package. All steps are equivalent for other Brightway packages (`brightway2-data`, `brightway2-calc`, etc.).
 ```
 
-::::{tab-set}
-
-:::{tab-item} Make and Preview your Changes
-
 1. Clone the `brightway-documentation` repo.
 2. Fork the `brightway2-io` repo and create a new branch (e.g. `documentation_improvements`).
-3. Make the desired changes to the docstrings on your branch (e.g. `documentation_improvements`) in your fork of the `brightway2-io` repo.
+3. Make the desired changes to the docstrings on your branch. \
+   Now test and preview your changes locally. Thereafter publish your changes.
 
-You can now preview your changes:
+::::{tab-set}
 
-4. Edit the file `.gitmodules` in the `brightway-documentation` repo to reflect your fork of the `brightway2-io` repo by changing the `<username>` in the `url` field:
+:::{tab-item} Preview your Changes
+
+1. Update the `.gitmodules` file in the `brightway-documentation` repo to point to your fork of the `brightway2-io` repo by changing the `url` and `branch` variables:
+
+```{note}
+`<username>` is your GitHub username. \
+`<branchname>` is the name of the branch you are working on. 
+```
 
 ```
 [submodule "brightway2-io"]
 	path = brightway2-io
 	url = https://github.com/<username>/brightway2-io
-	branch = documentation_improvements
+	branch = <branchname>
 ```
 
-5. Point the `brightway2-io` submodule to your fork of the `brightway2-io` repo. Repeat whenever you have made changes to the docstrings in your fork of the `brightway2-io` repo:
+2. Synchronize the `brightway2-io` submodule to the `.gitmodules` file. Repeat whenever you have made additional changes to the docstrings in your fork of the `brightway2-io` repo.
 
 ```bash
-git submodule update --init --recursive --remote --force
+git submodule sync && git submodule update --init --remote --force
 ```
 
-6.  Follow [the instructions in the readme](https://github.com/brightway-lca/brightway-documentation) to build the documentation locally. You can now preview your changes.
+| option | description |
+| ---- | ----------- |
+| [`sync`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-sync) | synchronize the submodule configuration with the `.gitmodules` file |
+| [`init`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-init) | ensure submodules are initialized if run for the first time |
+| [`remote`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt---remote) | point to the latest commit on the branch specified in the `.gitmodules` file |
+| [`force`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt---force) | force update |
+
+
+3. Follow [the instructions in the readme](https://github.com/brightway-lca/brightway-documentation) to build the documentation locally. You can now preview your changes.
+4. Once you are happy with your changes, revert your edits to the `.gitmodules` file in the `brightway-documentation` repo and synchronize the `brightway2-io` submodule to the `.gitmodules` file (see step 2.)
+
 
 ```{note}
 [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) offer a convenient way to include the documentation of other Brightway packages in the Brightway documentation. However, they are not updated automatically. You need to manually update the submodule directories whenever you have made changes to the docstrings in your fork of the `brightway2-io` repo.
@@ -141,7 +155,7 @@ sync:
     - name: Update Submodules
     run: |
         git pull --recurse-submodules
-        git submodule update --remote --recursive
+        git submodule update --remote
 
     - name: Commit Update
     run: |
