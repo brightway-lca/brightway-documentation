@@ -2,7 +2,6 @@
 
 from glob import glob
 import datetime
-from git import Repo
  
 ### project information ###########################################################################
 
@@ -167,15 +166,9 @@ html_theme_options = {
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
-    "announcement": "<p>Register Now: <a href='https://www.d-d-s.ch/school.html'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
+    "announcement": "<p>This is the documentation for Brightway2, the legacy version compatible with the ActivityBrowser user interface.</p>",
     "collapse_navigation": True,
     "footer_start": ["copyright"],
-    "external_links": [
-        {
-            "url": "https://training.brightway.dev/",
-            "name": "Interactive Training",
-        },
-    ],
     "icon_links": [
         {
             "name": "GitHub",
