@@ -5,17 +5,14 @@ channels:
 dependencies:
   # core functionality
   - python=3.11
-  # data science
   - ipython
   # sphinx
   - sphinx=5.3.0 # sphinx-design currently requires sphinx[version>=2,<5]
-  - nbsphinx # Jupyter notebook support
-  - pydata-sphinx-theme=0.13.0 # website theme
-  - myst-parser # Markdown support
-  - myst-nb # Jupyter notebook support
-  - sphinx-autobuild # live-html support
-  - sphinx-autoapi # to build docs from source code instead of package import
-  - sphinx-design # responsive web component support
-  - sphinx-notfound-page # custom 404 page
-  - graphviz # for plotting dependency diagrams with sphinx-autoapi
-  - gitpython # for reading the current branch name for version-switcher functionality
+  - pydata-sphinx-theme=0.13.3 # website theme
+  - myst-parser=0.18.1 # Markdown support
+  - myst-nb=0.17.1 # Jupyter notebook support
+  - sphinx-autobuild=2021.3.14 # live-html support
+  - sphinx-autoapi=2.1.0 # to build docs from source code instead of package import
+  - sphinx-design=0.3.0 # responsive web component support
+  - sphinx-notfound-page=0.8.3 # custom 404 page
+  - graphviz=7.1.0 # for plotting dependency diagrams with sphinx-autoapi

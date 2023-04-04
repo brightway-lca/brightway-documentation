@@ -2,7 +2,6 @@
 
 from glob import glob
 import datetime
-from git import Repo
  
 ### project information ###########################################################################
 

@@ -6,7 +6,6 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&logo=GitHub)](https://github.com/brightway-lca/brightway-documentation-readthedocs/discussions)
 ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?logo=Read%20the%20Docs)
 
-
 The primary documentation for the Brightway life-cycle assessment software package. Sphinx and readthedocs.org are used to build/host the documentation.
 
 ## Repository Structure
