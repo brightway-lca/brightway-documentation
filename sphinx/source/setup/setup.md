@@ -26,7 +26,7 @@ Brightway runs natively on Unix (x64) systems, including Linux distributions and
 1. Create a new Conda environment (in this example named `bw`):
 
 ```
-conda create -n bw -c cmutel brightway2 jupyterlab
+conda create -n bw -c cmutel brightway25 jupyterlab
 ```
 
 2. Activate the environment:
@@ -50,7 +50,7 @@ Brightway runs natively on Windows (x64) systems, including Windows 7-11.
 1. Create a new Conda environment (in this example named `bw`):
 
 ```
-conda create -n bw -c cmutel brightway2 jupyterlab
+conda create -n bw -c cmutel brightway25 jupyterlab
 ```
 
 2. Activate the environment:
@@ -80,7 +80,7 @@ Brightway runs on the new Apple Silicon ARM architecture. However, the super-fas
 1. Create a new Conda environment (in this example named `bw`):
 
 ```
-conda create -n bw -c cmutel -c conda-forge brightway2_nosolver jupyterlab scikit-umfpack
+conda create -n bw -c cmutel -c conda-forge brightway25_nosolver jupyterlab scikit-umfpack
 ```
 
 2. Activate the environment:
