@@ -167,13 +167,7 @@ html_theme_options = {
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
     "collapse_navigation": True,
-    "footer_start": ["copyright"],
-    "external_links": [
-        {
-            "url": "https://training.brightway.dev/",
-            "name": "Interactive Training",
-        },
-    ],
+    "footer_start": ["copyright", "./_templates/footer.html"],
     "icon_links": [
         {
             "name": "GitHub",
@@ -182,7 +176,7 @@ html_theme_options = {
         },
         {
             "name": "Conda",
-            "url": "https://anaconda.org/cmutel/brightway2",
+            "url": "https://anaconda.org/cmutel/brightway25",
             "icon": "fab fa-brands fa-python",
         },
         {
