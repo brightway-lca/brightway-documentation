@@ -167,7 +167,9 @@ html_theme_options = {
     "navbar_start": ["navbar-logo", "version-switcher"],
     "header_links_before_dropdown": 7,
     "collapse_navigation": True,
-    "footer_start": ["copyright", "./_templates/footer.html"],
+    "footer_start": ["copyright"],
+    "footer_end": ["footer"],
+    "show_prev_next": False,
     "icon_links": [
         {
             "name": "GitHub",
