@@ -177,7 +177,7 @@ html_theme_options = {
         },
         {
             "name": "Conda",
-            "url": "https://anaconda.org/cmutel/brightway2",
+            "url": "https://anaconda.org/conda-forge/brightway2",
             "icon": "fab fa-brands fa-python",
         },
         {
