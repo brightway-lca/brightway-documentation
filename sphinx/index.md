@@ -28,7 +28,7 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 🌐 BrightCon
-:link: https://2022.brightcon.link/
+:link: https://2023.brightcon.link/
 :link-type: url
 
 Our annual conference brings together developers and practitioners from across the globe!
