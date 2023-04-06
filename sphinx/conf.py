@@ -40,6 +40,8 @@ extensions = [
     'sphinx_design',
     # custom 404 page
     'notfound.extension',
+    # custom favicons
+    'sphinx_favicon',
 ]
 
 html_static_path = ['source/_static']
@@ -137,6 +139,21 @@ myst_enable_extensions = [
 
 nb_execution_mode = 'off'
 
+## sphinx-favicon configuration #########################################
+
+favicons = [
+    {
+        "rel": "icon",
+        "sizes": "100x100",
+        "href": "logo/BW_favicon_100x100.png",
+    },
+    {
+        "rel": "apple-touch-icon",
+        "sizes": "500x500",
+        "href": "logo/BW_favicon_500x500.png"
+    },
+]
+
 ## version-switcher configuration #######################################
 
 version: str = 'latest'
@@ -196,17 +213,5 @@ html_theme_options = {
       "image_light": "source/_static/logo/BW_all_black_transparent_landscape.svg",
       "image_dark": "source/_static/logo/BW_all_white_transparent_landscape.svg"
     },
-    "favicons": [
-      {
-         "rel": "icon",
-         "sizes": "100x100",
-         "href": "logo/BW_favicon_100x100.png",
-      },
-      {
-         "rel": "apple-touch-icon",
-         "sizes": "500x500",
-         "href": "logo/BW_favicon_500x500.png"
-      },
-   ]
 }
 
