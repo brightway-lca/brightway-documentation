@@ -46,7 +46,7 @@ C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway
 ::::
 
 
-## How do I change the location of my data directory?
+## How do I change my data directory?
 
 You can specify a custom data directory path by setting the environment variable `BRIGHTWAY2_DIR`. Brightway will raise an `OSError` if this is not a writable directory.
 

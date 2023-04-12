@@ -11,7 +11,7 @@ Brightway supports Python 2 and 3 (>3.4). However, we recommend you use Python 3
 ```{admonition} Prerequisites
 1. A working installation of [Conda](https://docs.conda.io/en/latest/)
 2. Basic knowledge of [Conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
-3. Basic knowledge of [the difference between `brightway 2` and `brightway 2.5`](../faq/brightway.md)
+3. Basic knowledge of [the difference between `brightway2` and `brightway 25`](../faq/brightway.md)
 ```
 
 
