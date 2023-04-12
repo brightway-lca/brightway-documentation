@@ -30,7 +30,7 @@ The content of the Brightway documentation is stored in the `sphinx/source` fold
 ```
 .
 ├── setup/
-│   └── conda_environment.yml
+│   └── environment.yml
 ├── sphinx/
 │   └── source/
 │       ├── conf.py

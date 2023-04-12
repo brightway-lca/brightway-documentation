@@ -43,7 +43,7 @@ Note that if the `--remote` flag is not set, the submodules will point to the la
 
 To manually update the submodules, use the same command again. There is no need to push changes to the submodules to the remote, since [they are updated by GitHub Actions](https://documentation.brightway.dev/en/latest/source/contributing/documentation.html#github-actions).
 
-1. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``conda_environment.yml``](conda_environment.yml). Install the environment `sphinx` by running from the repository root directory:
+1. Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda `yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) at [``environment.yml``](environment.yml). Install the environment `sphinx` by running from the repository root directory:
 
 ```
 conda env create -f 'conda_environment.yml'
