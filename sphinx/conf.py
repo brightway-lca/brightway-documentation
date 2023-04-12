@@ -8,8 +8,7 @@ import datetime
 project = 'Brightway'
 copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
 
-version = '2.0' # the short X.Y version.
-release = '2.0' # the full version, including alpha/beta/rc tags.
+version = '2' # the short X.Y version.
 
 ### project configuration #########################################################################
 
