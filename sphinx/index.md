@@ -1,3 +1,6 @@
+---
+html_theme.sidebar_secondary.remove: true
+---
 # Brightway Life-Cycle Assessment Framework
 
 [![Mailing List](https://img.shields.io/badge/Community-Mailing%20List-blue.svg?style=flat&logo=Minutemailer&logoColor=white)](https://brightway.groups.io/)
