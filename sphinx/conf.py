@@ -186,6 +186,8 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "show_prev_next": False,
+    "use_edit_page_button": True,
+    "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
     "icon_links": [
         {
             "name": "GitHub",
@@ -212,5 +214,14 @@ html_theme_options = {
       "image_light": "source/_static/logo/BW_all_black_transparent_landscape.svg",
       "image_dark": "source/_static/logo/BW_all_white_transparent_landscape.svg"
     },
+}
+
+# required by html_theme_options: "use_edit_page_button"
+html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
+    "github_user": "brightway-lca",
+    "github_repo": "brightway-documentation",
+    "github_version": "main",
+    "doc_path": "sphinx",
 }
 
