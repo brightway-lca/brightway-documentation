@@ -41,6 +41,8 @@ extensions = [
     'notfound.extension',
     # custom favicons
     'sphinx_favicon',
+    # copy button on code blocks
+    "sphinx_copybutton",
 ]
 
 html_static_path = ['source/_static']

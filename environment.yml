@@ -17,3 +17,4 @@ dependencies:
   - sphinx-notfound-page=0.8.3 # custom 404 page
   - graphviz=7.1.0 # for plotting dependency diagrams with sphinx-autoapi
   - sphinx-favicon=1.0.1 # for custom favicons
+  - sphinx-copybutton=0.5.2 # for copy button on code blocks
