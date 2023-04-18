@@ -1,8 +1,5 @@
 # Instructions: API Documentation
 
-![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white)
-
-Details on the concept and technical implementation of the new Brightway documentation are detailed in [Brightway Enhancement Proposal (BEP) 003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md).
 
 ```{note}
 The API documentation is compiled from source by [`sphinx-autoapi`](https://sphinx-autoapi.readthedocs.io/en/latest/). It is hosted on [Read the Docs](https://readthedocs.org/). All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
@@ -105,6 +102,14 @@ Update docstrings to NumPy standards (`bw2io/chemidplus` etc.)
 
 ## Technical Setup Information
 
+### Sphinx
+
+The Brightway documentation is built with [Sphinx](https://www.sphinx-doc.org/en/master/), the Python documentation generator. All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
+
+### readthedocs.org
+
+The documentation sites are hosted on [readthedocs.org](https://readthedocs.org/). Three users are currently assigned as administrators: [`@cmutel`](https://github.com/cmutel), [`@michaelweinold`](https://github.com/michaelweinold) and [`@tngTUDOR`](https://github.com/tngTUDOR). The build process is currently ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white).
+
 ### git submodules
 
 The core functionality of Brightway is provided by different packages (e.g. `brightway-calc`, `brightway-data`). For strategic reasons, these packages are maintained as separate repositories. The content of these repositories is included in the `brightway-documentation` repository through [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules). This enables `sphinx` to include files from these repositories in the documentation directly (e.g. `README.md`). It further enables `sphinx-autodoc` both locally and in the readthedocs.org service to build the API documentation from source instead of importing all Brightway packages during the build process. 
@@ -113,9 +118,20 @@ The core functionality of Brightway is provided by different packages (e.g. `bri
 
 To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used. Whenever changes are made to the `main` branch of a Brightway package (e.g. `brightway-calc`, `brightway-data`), a GitHub action workflow triggers another GitHub actions workflow in the `brightway-documentation` repository. This workflow updates the `git submodules` and commits the changes to the `main` branch of the `brightway-documentation` repository.
 
+```{note}
+Updates the Brightway submodules.
+```
+
 | package | action |
 | ------- | ------ |
 | `brightway-documentation` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway-documentation/.github/workflows/github_action_update_submodules.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+
+```{note}
+Triggers the submodule update workflow in the `brightway-documentation` repository.
+```
+
+| package | action |
+| ------- | ------ |
 | `brightway2-calc` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 | `brightway2-io` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 | `brightway2-data` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |

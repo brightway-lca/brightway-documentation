@@ -6,9 +6,6 @@ If you would like to contribute to the development of Brightway, follow the usua
 
 ## Contributing to the Brightway Documentation
 
-```{note}
-The general outline of the site (sitemap/table of contents) [is documented here](https://github.com/brightway-lca/brightway-documentation/discussions/41).
-```
 ```{warning}
 The processing of all requests is handled on a best-effort basis by the community of Brightway developers.
 ```
