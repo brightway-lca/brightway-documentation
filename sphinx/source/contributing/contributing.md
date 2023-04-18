@@ -9,10 +9,9 @@ If you would like to contribute to the development of Brightway, follow the usua
 ```{warning}
 The processing of all requests is handled on a best-effort basis by the community of Brightway developers.
 ```
-### Option 1: Request Changes
+### Option 1: Request Changes or Report Errors
 
 [Create a new discussion in the `ideas` section of the `brightway-documentation` repository](https://github.com/brightway-lca/brightway-documentation/discussions/categories/ideas), detailing your request and all relevant information.
-
 
 ### Option 2: Contribute Changes
 
@@ -51,7 +50,7 @@ This is recommended for Brightway users with experience in software development 
 1. Fork the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation/) repository.
 2. Add your contributions and build the documentation locally (compare the [repository readme](https://github.com/brightway-lca/brightway-documentation/))
 3. Open a pull request
-4. A member of the Brightway developers community will merge your contribution into the main branch of the documentation repository. Your changes will be published on by the readthedorcs.org service following the successful merge.
+4. A member of the Brightway developers community will merge your contribution into the main branch of the documentation repository. Your changes will be published to the documentation website automatically following the successful merge.
 
 :::
 

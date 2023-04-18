@@ -118,20 +118,9 @@ The core functionality of Brightway is provided by different packages (e.g. `bri
 
 To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used. Whenever changes are made to the `main` branch of a Brightway package (e.g. `brightway-calc`, `brightway-data`), a GitHub action workflow triggers another GitHub actions workflow in the `brightway-documentation` repository. This workflow updates the `git submodules` and commits the changes to the `main` branch of the `brightway-documentation` repository.
 
-```{note}
-Updates the Brightway submodules.
-```
-
 | package | action |
 | ------- | ------ |
 | `brightway-documentation` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway-documentation/.github/workflows/github_action_update_submodules.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-
-```{note}
-Triggers the submodule update workflow in the `brightway-documentation` repository.
-```
-
-| package | action |
-| ------- | ------ |
 | `brightway2-calc` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 | `brightway2-io` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 | `brightway2-data` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
