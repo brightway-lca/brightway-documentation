@@ -174,6 +174,12 @@ html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
 
+html_sidebars = {
+    "**": [
+        "sidebar-nav-bs.html",
+    ],
+}
+
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
     "announcement": "<p>Register Now: <a href='https://www.d-d-s.ch/school.html'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
