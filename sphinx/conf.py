@@ -176,6 +176,7 @@ html_css_files = [
 
 html_sidebars = {
     "**": [
+        "sidebar_grid_diataxis.html",
         "sidebar-nav-bs.html",
     ],
 }
