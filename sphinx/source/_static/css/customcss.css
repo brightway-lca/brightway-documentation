@@ -55,7 +55,7 @@
     font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
     text-rendering: geometricprecision;
     text-align: center;
-    height: 25px;
+    height: 22px;
     text-decoration: none;
 
 }
@@ -66,14 +66,14 @@
 .custom-shield:active {
     text-decoration: none;
     color: white;
-    ;
+
 }
 
 
 
 .shield-icon {
     padding-left: 5px;
-    padding-top: 1px;
+
 }
 
 
