@@ -56,7 +56,7 @@
     text-rendering: geometricprecision;
     height: 22px;
     text-decoration: none;
-
+    font-size: 14px;
 }
 
 .custom-shield:link,
