@@ -161,7 +161,7 @@ version: str = 'latest'
 
 ## html configuration ###################################################
 
-html_css_files = ['css/custom.css']
+html_css_files = ['css/custom.css','css/customcss.css']
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
@@ -171,7 +171,7 @@ html_show_copyright = True
 
 # enable https://fontawesome.com/ icons
 html_css_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css","css/customcss.css"
 ]
 
 html_sidebars = {

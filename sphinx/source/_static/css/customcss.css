@@ -1,0 +1,29 @@
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 100%;
+
+}
+
+.custom-box {
+    background-color: #f8f9fa;
+    color: #212529;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+
+}
+
+.custom-header {
+    background-color: #f0f1f2;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    padding: 3px;
+    padding-left: 5px;
+
+}
+
+.text-container {
+    padding: 5px;
+    word-break: break-all
+}
