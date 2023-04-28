@@ -38,10 +38,77 @@
     word-break: break-all
 }
 
-.custom-shields {}
 
-.custom-shields>img {
-    width: 100%;
-    height: 22px;
 
+
+
+
+.custom-shield {
+    display: flex;
+    justify-content: space-between;
+    background-color: #505050;
+    border-radius: 3px;
+    grid-column: span 2;
+    color: white;
+    fill: rgb(255, 255, 255);
+    text-anchor: middle;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    text-rendering: geometricprecision;
+    text-align: center;
+    height: 25px;
+    text-decoration: none;
+
+}
+
+.custom-shield:link,
+.custom-shield:visited,
+.custom-shield:hover,
+.custom-shield:active {
+    text-decoration: none;
+    color: white;
+    ;
+}
+
+
+
+.shield-icon {
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+
+
+
+
+.second-part {
+
+
+
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 110px;
+}
+
+.mailingBckG {
+    background-color: #0e7fc0;
+}
+
+.chatBckG {
+    background-color: #d6185c;
+}
+
+.questionsBckG {
+    background-color: #de7623;
+}
+
+.meetupsBckG {
+    background-color: #8ab803;
+}
+
+.meetupsBckG {
+    background-color: #8ab803;
+}
+
+.blogBckG {
+    background-color: #929292;
 }
