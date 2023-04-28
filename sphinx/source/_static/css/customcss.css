@@ -54,7 +54,6 @@
     text-anchor: middle;
     font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
     text-rendering: geometricprecision;
-    text-align: center;
     height: 22px;
     text-decoration: none;
 
@@ -80,13 +79,17 @@
 
 
 
+.first-part {
+    width: 40%;
+}
+
 .second-part {
 
 
-
+    padding-left: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    width: 110px;
+    width: 50%;
 }
 
 .mailingBckG {
