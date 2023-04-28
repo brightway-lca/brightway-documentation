@@ -161,17 +161,15 @@ version: str = 'latest'
 
 ## html configuration ###################################################
 
-html_css_files = ['css/custom.css']
-
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-# enable https://fontawesome.com/ icons
 html_css_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    "css/custom.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" # for https://fontawesome.com/ icons
 ]
 
 html_sidebars = {
@@ -182,7 +180,7 @@ html_sidebars = {
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
-    "announcement": "<p>Register Now: <a href='https://www.d-d-s.ch/school.html'>Autumn School 2023: Open Approaches to Time in LCA</a> 📍 Switzerland 🗓️ 9-13.October</p>",
+    "announcement": "<p>Register Now: <a href='https://2023.brightcon.link/'>Brightcon 2023 Community Conference & Hackathon</a> 📍 Luxembourg 🗓️ 16.-20.September</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/sphinx/source/_static/switcher.json",
