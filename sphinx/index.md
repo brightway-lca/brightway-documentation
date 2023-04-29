@@ -54,7 +54,7 @@ source/introduction/introduction
 source/setup/setup
 source/api/index
 source/gallery/index
-source/lca/lca
+source/lca/index
 source/contributing/contributing
 source/faq/faq
 source/changelog/index
