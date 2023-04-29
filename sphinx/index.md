@@ -27,7 +27,7 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 📜 Open Source
-:link: source/other/license
+:link: source/other/credits
 :link-type: url
 
 Brightway is free and open source - and it will stay that way!
@@ -59,5 +59,6 @@ source/contributing/contributing
 source/faq/faq
 source/changelog/index
 source/other/ecosystem
+source/other/support
 source/other/credits
 ```
