@@ -8,6 +8,10 @@
 
 The primary documentation for the Brightway life-cycle assessment software package. Sphinx and readthedocs.org are used to build/host the documentation.
 
+| static documentation | interactive documentation | development playground |
+| ---- | ------------- | ------------- |
+| [docs.brightway.dev](https://github.com/brightway-lca/brightway-documentation) | [learn.brightway.dev](https://github.com/brightway-lca/brightway-learn) | [hub.brightway.dev](https://github.com/brightway-lca/brightway-hub) | 
+
 ## Repository Structure
 
 Brightway modules are split up into different repositories (`brightway-2-analyzer`, `brightway2-calc`, etc.). These repositories are included as [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in this repository in order to e.g. enable Sphinx to build a combined changelog page.
@@ -45,7 +49,7 @@ To manually update the submodules, use the same command again. There is no need 
 
 ### Setup Python Environment
 
-A [Conda environment file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). The file is located at [``./environment.yml``](environment.yml). Set up a Python virtual environment that includes all packages required to build the documentation. Install the environment `sphinx` by running from the repository root directory:
+Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda environment file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). The file is located at [``./environment.yml``](environment.yml). Install the environment `sphinx` by running from the repository root directory:
 
 ```bash
 conda env create -f 'environment.yml'
@@ -63,7 +67,7 @@ You are now ready to build the documentation...
 
 1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
-```bash
+```
 sphinx-build sphinx _build/html -b singlehtml -a
 ```
 
@@ -84,7 +88,7 @@ _build/html/homepage.html
 
 2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
-```bash
+```
 sphinx-autobuild sphinx _build/html -a -j auto --open-browser
 ```
 
