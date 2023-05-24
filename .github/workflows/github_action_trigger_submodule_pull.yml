@@ -12,13 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Workflow
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: 'brightway-lca',
-              repo: 'brightway-documentation',
-              workflow_id: 'github_action_update_submodules.yml',
-              ref: 'main',
-            })
+      - run: | # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+          gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
+    env:
+      GH_TOKEN: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
