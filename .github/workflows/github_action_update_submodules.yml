@@ -1,8 +1,7 @@
 # compare: https://stackoverflow.com/a/67059629/
+name: Update Submodules
 
-name: 'Update Submodules'
-
-on:
+on: # this workflow is triggered by the 'trigger_submodule' workflow in other repositories
   workflow_dispatch:
 
 jobs:
@@ -16,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3 # https://github.com/actions/checkout/releases
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         submodules: true
