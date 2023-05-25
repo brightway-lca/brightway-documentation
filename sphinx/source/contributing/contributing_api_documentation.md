@@ -116,15 +116,18 @@ The core functionality of Brightway is provided by different packages (e.g. `bri
 
 ### GitHub Actions
 
-To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used. Whenever changes are made to the `main` branch of a Brightway package (e.g. `brightway-calc`, `brightway-data`), a GitHub action workflow triggers another GitHub actions workflow in the `brightway-documentation` repository. This workflow updates the `git submodules` and commits the changes to the `main` branch of the `brightway-documentation` repository.
+To ensure that the `git submodules` are always up-to-date, both locally and in the readthedocs.org service, [GitHub Actions](https://github.com/features/actions) are used. They are collected in `.github/workflows/`.
 
-| package | action |
-| ------- | ------ |
-| `brightway-documentation` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway-documentation/.github/workflows/github_action_update_submodules.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-calc` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-io` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-data` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
-| `brightway2-analyzer` | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-analyzer/.github/workflows/github_action_trigger_submodule_pull.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+Whenever changes are made to the `main` branch of a Brightway package (e.g. `brightway-calc`, `brightway-data`), the GitHub action workflow `github_action_trigger_submodule_pull_reusable.yml` in that repository runs the GitHub actions workflow `github_action_trigger_submodule_pull_main.yml` in the `brightway-documentation` repository. This workflow triggers the GitHub action workflow `github_action_update_submodules.yml` in the `brightway-documentation` repository, which updates the `git submodules` and commits the changes to the `main` branch of the `brightway-documentation` repository. This also triggers the readthedocs.org build process.
+
+| package | description | action |
+| ------- | ----------- | ------ |
+| `brightway-documentation` | trigger submodule pull | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway-documentation/.github/workflows/github_action_trigger_submodule_pull_main.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway-documentation` | pull submodules | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway-documentation/.github/workflows/github_action_update_submodules.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-calc` | re-use trigger submodule pull | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-calc/.github/workflows/github_action_trigger_submodule_pull_reusable.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-io` | re-use trigger submodule pull | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-io/.github/workflows/github_action_trigger_submodule_pull_reusable.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-data` | re-use trigger submodule pull | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-data/.github/workflows/github_action_trigger_submodule_pull_reusable.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
+| `brightway2-analyzer` | re-use trigger submodule pull | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/brightway-lca/brightway2-analyzer/.github/workflows/github_action_trigger_submodule_pull_reusable.yml?label=action&logo=GitHub%20Actions&logoColor=white) |
 
 
 ::::{tab-set}
