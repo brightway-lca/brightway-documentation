@@ -1,0 +1,17 @@
+# this workflow triggers the workflow 'github_action_update_submodules.yml' in the brightway-documentation repository
+# this workflow is re-used by the 'github_action_trigger_submodule_pull_reusable.yml' workflow in 'brightway2-calc', 'brightway2-data', 'brightway2-io', etc.
+name: Create Workflow Dispatch (Trigger Submodule Pull)
+
+on:
+  workflow_call: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_call
+  workflow_dispatch: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Workflow
+        run: | # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+          gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
+        env:
+          GH_TOKEN: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
