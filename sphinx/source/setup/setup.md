@@ -55,7 +55,7 @@ Brightway runs natively on the new Apple Silicon ARM architecture.
 
 ::::
 
-# Upgrading Brightway
+## Upgrading Brightway
 
 Brightway is being actively developed, with frequent new releases. To upgrade Brightway:
 
