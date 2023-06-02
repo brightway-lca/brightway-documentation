@@ -6,7 +6,7 @@ Brightway is a Python software package. It can be installed using the [Python pa
 Brightway supports Python 2 and 3 (>3.4). However, we recommend you use Python 3. 
 ```
 
-## Quickstart
+## Installing Brightway
 
 ```{admonition} Prerequisites
 1. A working installation of [Conda](https://docs.conda.io/en/latest/)
