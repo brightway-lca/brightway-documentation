@@ -30,9 +30,9 @@ extensions = [
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     # Markdown support
-    'myst_parser', # do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
+    # 'myst_parser', do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
     # Jupyter Notebook support
-    'nbsphinx',
+    'myst_nb',
     # API documentation support
     'autoapi',
     # responsive web component support
@@ -136,11 +136,9 @@ myst_enable_extensions = [
     "html_image",
 ]
 
-## nbsphinx configuration ################################################
+## myst_nb configuration ################################################
 
-nbsphinx_allow_errors = True
-nbsphinx_execute = 'never'
-
+nb_execution_mode = 'off'
 
 ## sphinx-favicon configuration #########################################
 
