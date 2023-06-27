@@ -14,8 +14,6 @@ version = '2' # the short X.Y version.
 
 needs_sphinx = '5.3.0'
 
-# Add any Sphinx extension module names here, as strings. They can be extensions
-# coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     # native extensions
     'sphinx.ext.autodoc',
@@ -25,14 +23,14 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
-    'sphinx.ext.inheritance_diagram', # for plotting dependency diagrams with sphinx-autoapi
+    'sphinx.ext.inheritance_diagram',
     # iPython extensions
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     # Markdown support
-    # 'myst_parser', do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
+    'myst_parser', # do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
     # Jupyter Notebook support
-    'myst_nb',
+    'nbsphinx',
     # API documentation support
     'autoapi',
     # responsive web component support
@@ -123,9 +121,7 @@ autoapi_ignore = [
 
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.md': 'myst-nb',
-    '.ipynb': 'myst-nb',
-    '.myst': 'myst-nb',
+    '.md': 'markdown'
 }
 
 myst_enable_extensions = [
@@ -136,9 +132,10 @@ myst_enable_extensions = [
     "html_image",
 ]
 
-## myst_nb configuration ################################################
+## nbsphinx configuration ################################################
 
-nb_execution_mode = 'off'
+nbsphinx_execute = 'never'
+nbsphinx_allow_errors = True
 
 ## sphinx-favicon configuration #########################################
 
