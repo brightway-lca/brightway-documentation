@@ -43,13 +43,13 @@ extensions = [
     "sphinx_copybutton",
 ]
 
-html_static_path = ['source/_static']
-templates_path = ['source/_templates']
+html_static_path = ['_static']
+templates_path = ['_templates']
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'content/index'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -181,7 +181,7 @@ html_theme_options = {
     "announcement": "<p>Register Now: <a href='https://2023.brightcon.link/'>Brightcon 2023 Community Conference & Hackathon</a> 📍 Luxembourg 🗓️ 16.-20.September</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
-        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/sphinx/source/_static/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
         "version_match": version
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
@@ -215,8 +215,8 @@ html_theme_options = {
         }
     ],
     "logo": {
-      "image_light": "source/_static/logo/BW_all_black_transparent_landscape.svg",
-      "image_dark": "source/_static/logo/BW_all_white_transparent_landscape.svg"
+      "image_light": "BW_all_black_transparent_landscape.svg",
+      "image_dark": "BW_all_white_transparent_landscape.svg"
     },
 }
 
@@ -226,5 +226,5 @@ html_context = {
     "github_user": "brightway-lca",
     "github_repo": "brightway-documentation",
     "github_version": "main",
-    "doc_path": "sphinx",
+    "doc_path": "source",
 }

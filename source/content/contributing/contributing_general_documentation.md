@@ -10,15 +10,15 @@ To preview your changes, build the documentation locally by following the [instr
 
 ### Repository Structure
 
-The content of the Brightway documentation is stored in the `sphinx/source` folder of the `brightway-documentation` repository. The homepage is located in `sphinx/source/index.md`. The `sphinx/source/conf.py` file contains the configuration for the documentation build.
+The content of the Brightway documentation is stored in the `source/content` folder of the `brightway-documentation` repository. The homepage is located in `source/content/index.md`. The `source/conf.py` file contains the configuration for the documentation build.
 
 ```
 .
 ├── setup/
 │   └── environment.yml
-├── sphinx/
-│   └── source/
-│       ├── conf.py
+├── source/
+│   ├── conf.py
+│   └── content/
 │       ├── index.md
 │       ├── setup/
 │       ├── introduction/
@@ -26,7 +26,7 @@ The content of the Brightway documentation is stored in the `sphinx/source` fold
 ├── README.md
 ├── brightway2-io/
 ├── brightway2-data/
-└── (...other brightway2 modules)
+└── (...other Brightway modules)
 ```
 ### Document Syntax
 
