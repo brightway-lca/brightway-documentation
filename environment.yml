@@ -12,7 +12,7 @@ dependencies:
   - pydata-sphinx-theme=0.13.3 # website theme # https://github.com/pydata/pydata-sphinx-theme/releases
   - myst-parser=2.0.0 # Markdown support # https://github.com/executablebooks/MyST-Parser/releases
   - nbsphinx=0.9.2 # Jupyter notebook support # https://github.com/spatialaudio/nbsphinx/releases
-  - sphinx-autoapi=2.1.1 # to build docs from source code instead of package import # https://github.com/readthedocs/sphinx-autoapi/tags
+  - sphinx-autoapi=2.1.0 # to build docs from source code instead of package import # https://github.com/readthedocs/sphinx-autoapi/tags
   - sphinx-design=0.4.1 # responsive web component support # https://github.com/executablebooks/sphinx-design/releases
   - sphinx-notfound-page=0.8.3 # custom 404 page # https://github.com/readthedocs/sphinx-notfound-page/tags
   - graphviz=8.1.0 # for plotting dependency diagrams with sphinx-autoapi # https://anaconda.org/conda-forge/graphviz/files
