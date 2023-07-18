@@ -68,12 +68,12 @@ You are now ready to build the documentation...
 1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
 ```
-sphinx-build sphinx _build/html -b singlehtml -a
+sphinx-build source _build/html -b singlehtml -a
 ```
 
 | option | value | description |
 | ---------------------------- | ----- | ----------- |
-| sourcedir | `./sphinx` | N/A |
+| sourcedir | `./source` | N/A |
 | outdir | `./_build/html` | N/A |
 | -b | `singlehtml` | create only a single html page |
 | -a | N/A | always write all output files |
@@ -89,12 +89,12 @@ _build/html/homepage.html
 2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
 ```
-sphinx-autobuild sphinx _build/html -a -j auto --open-browser
+sphinx-autobuild source _build/html -a -j auto --open-browser
 ```
 
 | positional argument or option| value | description |
 | ---------------------------- | ----- | ----------- |
-| sourcedir | `./sphinx` | N/A |
+| sourcedir | `./source` | N/A |
 | outdir | `./_build/html` | N/A |
 | `-a` | N/A | always write all output files |
 | `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
