@@ -70,8 +70,8 @@ hidden:
 maxdepth: 2
 ---
 self
+upgrading
 ui
 cloud
 docker
-upgrading
 ```

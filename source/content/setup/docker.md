@@ -1,10 +1,14 @@
-# Using docker images to run brightway
+# Docker Setup
 
-brightway publishes the following official docker images, one per current brightway versions (2 and 2.5):
+Brightway publishes two official docker images.
+
+```{admonition} Prerequisites
+1. Basic knowledge of [Docker](https://www.docker.com).
+2. Basic knowledge of [the difference between `brightway2` and `brightway 25`](../faq/brightway.md)
+```
 
 + [brightway/bw2](https://hub.docker.com/r/brightway/bw2), for brightway 2
 + [brightway/bw25](https://hub.docker.com/r/brightway/bw25), for brightway 2.5
-
 
 Based on the [Jupyter minimal notebook](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook).
 
@@ -46,7 +50,5 @@ The following images are built:
 | brightway/bw2:latest | brightway 2.4.3, py310, miniconda3, compatible with ecoinvent 3.9 |
 | brightway/bw2:2.4.3-py310-miniconda3-ecoinvent-3.9 |
 | brightway/bw2:2.4.3-py310-miniconda3-ecoinvent-3.8 |
-
-
 
 [^1]: Until a release of [bw2io](https://github.com/brightway-lca/brightway2-io) that is compatible with any ecoinvent version and all bw2x.

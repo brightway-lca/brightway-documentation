@@ -1,4 +1,4 @@
-# User Interfaces (UI)
+# User Interface (UI)
 
 ## (i)Python Shell
 
