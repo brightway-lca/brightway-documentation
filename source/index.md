@@ -9,7 +9,7 @@
 :gutter: 3
 
 :::{grid-item-card} 🌿 Projects
-:link: source/other/ecosystem
+:link: source/content/other/ecosystem
 :link-type: doc
 
 Contributors have built amazing projects based on Brightway!
@@ -18,7 +18,7 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 👩‍💻 Contribute
-:link: source/contributing/contributing
+:link: source/content/contributing/contributing
 :link-type: doc
 
 Brightway is developed by a community of volunteers. Join us!
@@ -27,7 +27,7 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 📜 Open Source
-:link: source/other/credits
+:link: source/content/other/credits
 :link-type: url
 
 Brightway is free and open source - and it will stay that way!
@@ -50,15 +50,15 @@ Brightway is designed to make it easy to work with large datasets and perform LC
 hidden:
 maxdepth: 1
 ---
-introduction/introduction
-setup/setup
-api/index
-gallery/index
-lca/index
-contributing/contributing
-faq/faq
-changelog/index
-other/ecosystem
-other/support
-other/credits
+content/introduction/introduction
+content/setup/setup
+content/api/index
+content/gallery/index
+content/lca/index
+content/contributing/contributing
+content/faq/faq
+content/changelog/index
+content/other/ecosystem
+content/other/support
+content/other/credits
 ```
