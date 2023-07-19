@@ -12,7 +12,7 @@ version = '2' # the short X.Y version.
 
 ### project configuration #########################################################################
 
-needs_sphinx = '5.3.0'
+needs_sphinx = '6.2.1'
 
 extensions = [
     # native extensions
@@ -48,8 +48,8 @@ templates_path = ['_templates']
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
-# The master toctree document.
-master_doc = 'content/index'
+# The root toctree document.
+root_doc = 'index'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
