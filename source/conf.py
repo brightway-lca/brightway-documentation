@@ -12,7 +12,7 @@ version = '2' # the short X.Y version.
 
 ### project configuration #########################################################################
 
-needs_sphinx = '5.3.0'
+needs_sphinx = '6.2.1'
 
 extensions = [
     # native extensions
