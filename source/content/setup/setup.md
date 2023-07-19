@@ -72,5 +72,6 @@ maxdepth: 2
 self
 ui
 cloud
+docker
 upgrading
 ```
