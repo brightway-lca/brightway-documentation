@@ -9,7 +9,7 @@
 :gutter: 3
 
 :::{grid-item-card} 🌿 Projects
-:link: source/content/other/ecosystem
+:link: /content/other/ecosystem
 :link-type: doc
 
 Contributors have built amazing projects based on Brightway!
@@ -18,7 +18,7 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 👩‍💻 Contribute
-:link: source/content/contributing/contributing
+:link: /content/contributing/contributing
 :link-type: doc
 
 Brightway is developed by a community of volunteers. Join us!
@@ -27,8 +27,8 @@ Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} 📜 Open Source
-:link: source/content/other/credits
-:link-type: url
+:link: /content/other/credits
+:link-type: doc
 
 Brightway is free and open source - and it will stay that way!
 +++
