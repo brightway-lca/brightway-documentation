@@ -2,6 +2,7 @@
 
 from glob import glob
 import datetime
+import os
  
 ### project information ###########################################################################
 
@@ -221,10 +222,14 @@ html_theme_options = {
 }
 
 # required by html_theme_options: "use_edit_page_button"
+# and
+# To build urls withoug hard-coding them
 html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "brightway-lca",
     "github_repo": "brightway-documentation",
     "github_version": "main",
     "doc_path": "source",
+    "read_the_docs_build": os.getenv('READTHEDOCS', False),
+    "read_the_docs_version": os.getenv('READTHEDOCS_VERSION', None),
 }
