@@ -225,6 +225,7 @@ html_theme_options = {
 # and
 # To build urls withoug hard-coding them
 html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "brightway-lca",
     "github_repo": "brightway-documentation",
     "github_version": "main",
