@@ -14,8 +14,7 @@ The content of the Brightway documentation is stored in the `source/content` fol
 
 ```
 .
-├── setup/
-│   └── environment.yml
+├── environment.yml
 ├── source/
 │   ├── conf.py
 |   ├── index.md
