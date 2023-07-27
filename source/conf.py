@@ -231,4 +231,5 @@ html_context = {
     "github_version": "main",
     "doc_path": "source",
     "read_the_docs_build": os.getenv('READTHEDOCS', False),
+    "read_the_docs_version": os.getenv('READTHEDOCS_VERSION', None),
 }
