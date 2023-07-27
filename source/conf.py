@@ -230,5 +230,5 @@ html_context = {
     "github_repo": "brightway-documentation",
     "github_version": "main",
     "doc_path": "source",
-    "read_the_docs_build": os.getenv('READTHEDOCS', True),
+    "read_the_docs_build": os.getenv('READTHEDOCS', False),
 }

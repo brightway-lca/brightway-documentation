@@ -1,1 +1,5 @@
-<p>🌿🐛 Found a bug? Something not working? Frustrated? <a href='../content/contributing/contributing.html'>Please report it!</a></p>
+{% if read_the_docs_build %}
+<p>🌿🐛 Found a bug? Something not working? Frustrated? <a href=/{{language}}/{{version}}/content/contributing/contributing.html'>Please report it!</a></p>
+{% else %}
+<p>🌿🐛 Found a bug? Something not working? Frustrated? <a href='/content/contributing/contributing.html'>Please report it!</a></p>
+{% endif %}
