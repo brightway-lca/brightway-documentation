@@ -10,19 +10,31 @@
     <div class="custom-box">
       <div class="custom-box-header"><b>How-To</b></div>
       <div class="text-container">
-        <a href='/content/gallery/'>Section: Gallery</a>
+	      {% if read_the_docs_build %}
+	      <a href=/{{language}}/{{version}}/content/gallery/ >Section: Gallery</a>
+	      {% else %}
+	      <a href="/content/gallery/" >Section: Gallery</a>
+	      {% endif %}
       </div>
     </div>
     <div class="custom-box">
       <div class="custom-box-header"><b>Explanation</b></div>
       <div class="text-container">
-        <a href='/content/lca/'>Section: LCA</a>
+	      {% if read_the_docs_build %}
+	      <a href=/{{language}}/{{version}}/content/lca/ >Section: LCA</a>
+	      {% else %}
+	      <a href="/content/lca/" >Section: LCA</a>
+	      {% endif %}
       </div>
     </div>
     <div class="custom-box">
       <div class="custom-box-header"><b>Reference</b></div>
       <div class="text-container">
-        <a href='/source/api/'>Section: API</a>
+	      {% if read_the_docs_build %}
+	      <a href=/{{language}}/{{version}}/source/api/ >Section: API</a>
+	      {% else %}
+	      <a href="/source/api/" >Section: API</a>
+	      {% endif %}
       </div>
     </div>
   </div>
