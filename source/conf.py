@@ -104,6 +104,9 @@ autoapi_dirs = [
     '../brightway2-analyzer/bw2analyzer'
 ]
 
+autoapi_root = 'source/api'
+autoapi_keep_files = False
+
 autoapi_ignore = [
     '*/data/*',
     '*tests/*',
@@ -172,7 +175,7 @@ html_css_files = [
 
 html_sidebars = {
     "**": [
-        "sidebar_grid_diataxis.html",
+        "search-field.html",
         "sidebar-nav-bs.html",
     ],
 }
@@ -185,14 +188,15 @@ html_theme_options = {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
         "version_match": version
     },
+    # page elements
     "navbar_start": ["navbar-logo", "version-switcher"],
-    "header_links_before_dropdown": 7,
-    "collapse_navigation": True,
+    "navbar_end": ["navbar-icon-links.html"],
+    "navbar_persistent": ["theme-switcher"], # this is where the search button is usually placed
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
-    "show_prev_next": False,
-    "use_edit_page_button": True,
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
+    "header_links_before_dropdown": 7,
+    # page elements content
     "icon_links": [
         {
             "name": "GitHub",
@@ -215,6 +219,11 @@ html_theme_options = {
             "icon": "fab fa-regular fa-comments",
         }
     ],
+    # various settings
+    "collapse_navigation": True,
+    "show_prev_next": False,
+    "use_edit_page_button": True,
+    "navigation_with_keys": True,
     "logo": {
       "image_light": "BW_all_black_transparent_landscape.svg",
       "image_dark": "BW_all_white_transparent_landscape.svg"
