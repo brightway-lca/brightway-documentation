@@ -2,11 +2,11 @@
   {
     "name": "latest (bw25)",
     "version": "latest",
-    "url": "https://documentation.brightway.dev/en/latest/"
+    "url": "https://docs.brightway.dev/en/latest/"
   },
   {
     "name": "legacy (bw2)",
     "version": "legacy",
-    "url": "https://documentation.brightway.dev/en/legacy/"
+    "url": "https://docs.brightway.dev/en/legacy/"
   }
 ]
