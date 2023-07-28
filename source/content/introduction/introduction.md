@@ -32,7 +32,7 @@ LCIA methods, calculations, assumptions, and any other data you need.
 Each project is completely independent of other projects.Projects are
 saved as subdirectories in the file system.
 
-![image](../_images/org-scheme.png)
+![image](../../_images/org-scheme.png)
 
 Inside a project we have a number of objects that store data. The most
 common data objects are inventory *databases* and impact assessment
