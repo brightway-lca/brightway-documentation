@@ -186,7 +186,7 @@ html_theme_options = {
     "announcement": "<p>This is the documentation for older versions of Brightway (legacy).</p>",
     # version switcher
     "switcher": {
-        "json_url": "https://github.com/brightway-lca/brightway-documentation/blob/main/source/_static/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
         "version_match": version
     },
     # page elements
