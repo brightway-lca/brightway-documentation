@@ -99,8 +99,8 @@ We notice several things:
 ### Input and Output
 
 The `input` and `output` columns gives values for biosphere flows or
-transforming activity data sets. The `mapping`{.interpreted-text
-role="ref"} is used to translate keys like `("Douglas Adams", 42)` into
+transforming activity data sets. The `mapping`
+is used to translate keys like `("Douglas Adams", 42)` into
 integer values. So, each mapping number uniquely identifies an activity
 dataset.
 

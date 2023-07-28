@@ -14,8 +14,7 @@ It is either a rough draft or has been copied over from the legacy documentation
 
 The actual LCA class (`bw2calc.LCA`) is more of a coordinator then an
 accountant, as the matrix builder is doing much of the data
-manipulation. The `lca`{.interpreted-text role="ref"} class only has to
-do the following:
+manipulation. The `lca` class only has to do the following:
 
 -   Translate the functional unit into a demand array
 -   Find the right parameter arrays, and ask matrix builder for matrices

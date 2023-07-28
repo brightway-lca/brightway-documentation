@@ -54,8 +54,7 @@ notebook](https://github.com/brightway-lca/brightway2/blob/master/notebooks/Proj
 Brightway2 uses [atomic file
 writes](https://github.com/abarnert/fatomic) to prevent data corruption,
 but [files are hard](http://danluu.com/file-consistency/); you should
-make regular backups using the `backup-data-directory`{.interpreted-text
-role="ref"} function.
+make regular backups using the `backup-data-directory` function.
 ```
 
 ## Inventory Databases
@@ -142,7 +141,7 @@ The document structure is:
 
 -   *location* (string, optional): A location identifier. Default is
     *GLO*, but this can be changed in the
-    `user-preferences`{.interpreted-text role="ref"}.
+    `user-preferences`.
 
 -   *unit* (string): Unit of this activity. [Units are
     normalized](https://github.com/brightway-lca/brightway2-io/blob/master/bw2io/units.py)
@@ -156,13 +155,13 @@ The document structure is:
             activity that is linked to, e.g.
             `("my new database", "production of ice cream")` or
             `('biosphere', '51447e58e03a40a2bbd9abf45214b7d3')`. See
-            also `dataset-codes`{.interpreted-text role="ref"}.
+            also `dataset-codes`.
         -   *type* (string): One of `production`, `technosphere`, and
-            `biosphere`. See `exchanges`{.interpreted-text role="ref"}.
+            `biosphere`. See `exchanges`.
         -   *amount* (float): Amount of this exchange.
         -   *uncertainty type* (integer): Integer code for uncertainty
             distribution of this exchange, see
-            `uncertainty-type`{.interpreted-text role="ref"} for more
+            `uncertainty-type` for more
             information. There can be other uncertainty fields as well.
         -   *comment* (string, optional): A comment on this exchange.
             Used to store pedigree matrix data in ecoinvent v2.
@@ -284,7 +283,7 @@ Biosphere exchanges have the type `biosphere`.
 ### Database is a subclass of DataStore
 
 Much of the functionality of Database objects is provided by its parent
-class, `datastore`{.interpreted-text role="ref"}. The normal methods
+class, `datastore`. The normal methods
 provided by a data store are:
 
 > -   **write(data)**: Write data to disk
@@ -300,11 +299,11 @@ Data store objects are instantiated with the object name, e.g.
 
 Brightway2-data defines the following data stores:
 
--   `SingleFileDatabase <single-file-database>`{.interpreted-text role="ref"}
--   `JSONDatabase <json-database>`{.interpreted-text role="ref"}
--   `method`{.interpreted-text role="ref"}
--   `weighting`{.interpreted-text role="ref"}
--   `normalization`{.interpreted-text role="ref"}
+-   `SingleFileDatabase <single-file-database>`
+-   `JSONDatabase <json-database>`
+-   `method`
+-   `weighting`
+-   `normalization`
 
 The schema for an `LCI dataset` in [voluptuous](https://pypi.python.org/pypi/voluptuous/) is:
 
@@ -400,12 +399,12 @@ individually. Use of `JSONDatabase` is shown in a simple [ipython
 notebook](https://github.com/brightway-lca/brightway2/blob/master/notebooks/JSON%20database.ipynb).
 
 Before using `JSONDatabase`, please read its technical documentation
-carefully: `json-database`{.interpreted-text role="ref"}. To create a
+carefully: `json-database`. To create a
 `JSONDatabase`, use `Database("my db name", backend="json")`. To switch
 backends for a database, use
-`convert_backend <switching-backends>`{.interpreted-text role="ref"}.
+`convert_backend <switching-backends>`.
 
-`custom-backends`{.interpreted-text role="ref"}, such as using an actual
+`custom-backends`, such as using an actual
 relational database, can also be defined.
 
 ### Biosphere database
@@ -420,7 +419,7 @@ in the `biosphere` database whenever you can. If you need to add some
 custom flows, feel free to create a separate database.
 
 You can also change the name for the default biosphere database in the
-`user preferences <user-preferences>`{.interpreted-text role="ref"}.
+`user preferences <user-preferences>`.
 
 ## Impact Assessment
 
@@ -517,7 +516,7 @@ component.
 >     `(u'biosphere', u'21c70338ff2e1cdc8e468f4c90f113a1')`.
 > 2.  The numeric characterization factor. This can either be a number,
 >     or a uncertainty dictionary (see
->     `uncertainty-type`{.interpreted-text role="ref"}).
+>     `uncertainty-type`).
 > 3.  An *optional* location, used for regionalized impact assessment.
 >     The global location `GLO` is inserted as a default if not location
 >     is specified.
@@ -623,8 +622,7 @@ The long-term goal is to transition all objects to peewee directly,
 instead of using proxies.
 
 The parameters framework is centered around the
-`Group, ProjectParameter, DatabaseParameter, and ActivityParameter classes <parameters>`{.interpreted-text
-role="ref"}.
+`Group, ProjectParameter, DatabaseParameter, and ActivityParameter classes <parameters>`.
 
 Here are some examples of peewee-style queries:
 
@@ -663,7 +661,7 @@ unstructured data documents to a highly-structured binary form for
 calculations. `write` and `process` are intentionally separate, as it is
 sometimes desirable to do one and not the other.
 
-`building-matrices`{.interpreted-text role="ref"} describes how
+`building-matrices` describes how
 processed data are turned into matrices for LCA calculations.
 
 ```{warning}
@@ -683,10 +681,10 @@ processed data arrays, however. In this case, we create a special
 dictionary that maps each unique data value to an integer index.
 Brightway2 uses two such mappings:
 
-> -   `mapping <mapping>`{.interpreted-text role="ref"}: Maps inventory
+> -   `mapping <mapping>`: Maps inventory
 >     objects (activities, biosphere flows, and anything else that would
 >     appear in a supply chain graph) to indices.
-> -   `geomapping`{.interpreted-text role="ref"}: Map locations (both
+> -   `geomapping`: Map locations (both
 >     inventory and regionalized impact assessment) to indices.
 
 Items are added to mappings using `.add(keys)`, and removed using
@@ -702,20 +700,19 @@ example, LCIA methods have units, and databases can have version
 numbers. A *metadata store* stores information about data objects like
 databases and methods.
 
-The base class for metadata is `serialized-dict`{.interpreted-text
-role="ref"}, which is basically a normal Python dictionary that can be
+The base class for metadata is `serialized-dict`, which is basically a normal Python dictionary that can be
 easily saved or loaded (i.e. serialized) to or from a
 [JSON](http://en.wikipedia.org/wiki/JSON) file. These files can be
 easily edited in a normal text editor.
 
 Brightway2 defines the following metadata stores:
 
--   `databases`{.interpreted-text role="ref"}: LCI databases
--   `methods`{.interpreted-text role="ref"}: LCIA methods
+-   `databases`: LCI databases
+-   `methods`: LCIA methods
     (characterization factors)
--   `normalizations`{.interpreted-text role="ref"}: LCIA normalization
+-   `normalizations`: LCIA normalization
     factors
--   `weightings`{.interpreted-text role="ref"}: LCIA weighting factors
+-   `weightings`: LCIA weighting factors
 
 ### Metadata should be singletons
 
@@ -882,8 +879,7 @@ If this seems a bit overwhelming, that\'s because it is - and a huge
 pain. The current data formats and lack of well-defined strategies for
 interchange between databases and even updating databases makes life
 much more difficult than it should be. There are concrete examples of
-importing databases in `example-io-notebooks`{.interpreted-text
-role="ref"}.
+importing databases in `example-io-notebooks`.
 
 ### Importing from ecospold 1
 
