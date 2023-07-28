@@ -544,7 +544,7 @@ average_distance\", where both \"fuel_efficiency\" and
 even parameterized themselves. Parsing strings is not trivial, and so
 the machinery to handle such parameterization is a bit complex:
 
-![image](../_images/parameters.png)
+![image](../../_images/parameters.png)
 
 
 ```{warning}
