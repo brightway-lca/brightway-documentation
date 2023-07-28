@@ -1,0 +1,111 @@
+/* https://pydata-sphinx-theme.readthedocs.io/en/v0.8.1/user_guide/customizing.html */
+
+html[data-theme="light"] {
+    --pst-color-primary: #000000;
+
+    --pst-color-success: #28a745;
+    --pst-color-info: #007bff;
+    --pst-color-warning: #ffc107;
+    --pst-color-danger: #dc3546;
+  
+    --pst-color-link: #006996;
+    --pst-color-link-hover: #00701c;
+}
+
+/* for custom sidebar grid */
+/* https://github.com/brightway-lca/brightway-documentation/issues/81 */
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+.custom-box {
+    background-color: #f8f9fa;
+    color: #212529;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+
+.custom-box-header {
+    background-color: #f0f1f2;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    padding: 3px;
+    padding-left: 5px;
+}
+
+.custom-header {
+    padding-left: 5px;
+    font-weight: var(--pst-sidebar-header-font-weight);
+    font-size: var(--pst-sidebar-header-font-size);
+}
+
+.text-container {
+    padding: 5px;
+    word-break: break-all
+}
+
+.custom-shield {
+    display: flex;
+    justify-content: space-between;
+    background-color: #505050;
+    border-radius: 3px;
+    grid-column: span 2;
+    color: white;
+    fill: rgb(255, 255, 255);
+    text-anchor: middle;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    text-rendering: geometricprecision;
+    height: 22px;
+    text-decoration: none;
+}
+
+.custom-shield:link,
+.custom-shield:visited,
+.custom-shield:hover,
+.custom-shield:active {
+    text-decoration: none;
+    color: white;
+}
+
+.shield-icon {
+    padding-left: 5px;
+}
+
+.first-part {
+    width: 40%;
+}
+
+.second-part {
+    padding-left: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 50%;
+}
+
+.mailingBckG {
+    background-color: #0e7fc0;
+}
+
+.chatBckG {
+    background-color: #d6185c;
+}
+
+.questionsBckG {
+    background-color: #de7623;
+}
+
+.meetupsBckG {
+    background-color: #8ab803;
+}
+
+.meetupsBckG {
+    background-color: #8ab803;
+}
+
+.blogBckG {
+    background-color: #929292;
+}

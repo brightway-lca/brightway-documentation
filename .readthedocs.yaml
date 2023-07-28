@@ -6,10 +6,10 @@
 version: 2
 
 conda:
-   environment: conda_environment.yml
+   environment: environment.yml
 
 sphinx:
-   configuration: sphinx/conf.py
+   configuration: source/conf.py
 
 submodules:
    include: all 

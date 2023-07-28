@@ -1,0 +1,12 @@
+[
+  {
+    "name": "latest (bw25)",
+    "version": "latest",
+    "url": "https://docs.brightway.dev/en/latest/"
+  },
+  {
+    "name": "legacy (bw2)",
+    "version": "legacy",
+    "url": "https://docs.brightway.dev/en/legacy/"
+  }
+]
