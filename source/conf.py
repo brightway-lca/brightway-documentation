@@ -8,8 +8,7 @@ import os
 
 project = 'Brightway'
 copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
-
-version = '2' # the short X.Y version.
+version: str = 'latest' # required by the version switcher
 
 ### project configuration #########################################################################
 
@@ -94,7 +93,7 @@ autoapi_options = [
 
 autoapi_python_class_content = 'both'
 autoapi_member_order = 'groupwise'
-autoapi_root = 'source/api'
+autoapi_root = 'api'
 autoapi_keep_files = False
 
 autoapi_dirs = [
@@ -103,9 +102,6 @@ autoapi_dirs = [
     '../brightway2-calc/bw2calc',
     '../brightway2-analyzer/bw2analyzer'
 ]
-
-autoapi_root = 'source/api'
-autoapi_keep_files = False
 
 autoapi_ignore = [
     '*/data/*',
@@ -155,10 +151,6 @@ favicons = [
         "href": "logo/BW_favicon_500x500.png"
     },
 ]
-
-## version-switcher configuration #######################################
-
-version: str = 'latest'
 
 ## html configuration ###################################################
 
