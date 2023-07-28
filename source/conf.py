@@ -182,7 +182,7 @@ html_theme_options = {
     "announcement": "<p>Register Now: <a href='https://2023.brightcon.link/'>Brightcon 2023 Community Conference & Hackathon</a> 📍 Luxembourg 🗓️ 16.-20.September</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
-        "json_url": "https://github.com/brightway-lca/brightway-documentation/blob/main/source/_static/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
         "version_match": version
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
