@@ -16,13 +16,23 @@ It is either a rough draft or has been copied over from the legacy documentation
 
 Brightway2 is split into several main packages:
 
--   [Brightway2] is the umbrella package, as well as
-    documentation.
--   [Brightway2-data] handles storing and searching all data
-    sources (databases, LCIA methods, etc.).
--   [Brightway2-calc] does LCA calculations.
--   [Brightway2-analyzer] analyzes input data like databases
-    and methods, as well as the result of LCA calculations.
+-   [Brightway25](https://github.com/brightway-lca/brightway25) is the 
+    umbrella package, as well as documentation. When installing this
+    package, it will pull as dependencies the following packages:
+
+    -   [Brightway2-data](https://github.com/brightway-lca/brightway2-data)
+        handles storing and searching all data sources (databases, LCIA methods,
+        etc.).
+    -   [Brightway2-calc](https://github.com/brightway-lca/brightway2-calc) does
+        LCA calculations.
+    -   [Brightway2-io](https://github.com/brightway-lca/brightway2-io) tools
+        for the import, export, and management of inventory databases and impact
+        assessment methods. LCA calculations.
+    -   [Brightway2-analyzer](https://github.com/brightway-lca/brightway2-analyzer)
+        analyzes input data like databases and methods, as well as the result of
+        LCA calculations.
+    -   [Brightway2-parameters](https://github.com/brightway-lca/brightway2-parameters)
+        Library for storing, validating, and calculating with parameters.
 
 ## Projects
 
