@@ -45,6 +45,10 @@ Brightway is an open-source software package for [life cycle assessment](https:/
 
 Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
 
+# Testing Dead Links
+
+[This link works just fine.](https://www.srf.ch/news/schweiz/diebstaehle-in-zuerich-kriminelle-haben-es-auf-sonnenkollektoren-abgesehen) [But this link is broken!](https://www.srf.ch/news/schweiz/diebstaehle-in-zuerich--haben-es-auf-sonnenkollektoren-abgesehen)
+
 ```{toctree}
 ---
 hidden:
