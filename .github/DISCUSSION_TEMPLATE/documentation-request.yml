@@ -1,56 +1,39 @@
-title: "[General] "
-labels: ["General Introduction"]
+title: "[Documentation Request]"
+labels: ["documentation"]
 body:
   - type: markdown
     attributes:
       value: |
-        This is text that will show up in the template!
-  - type: textarea
-    id: improvements
+        ### Request Information
+  - type: markdown
     attributes:
-      label: Top 3 improvements
-      description: "What are the top 3 improvements we could make to this project?"
       value: |
-        1.
-        2.
-        3.
-        ...
+        Thank you for taking the time to request documentation for this project!
+        Please fill out the below information:
+  - type: dropdown
+    id: dropdown_1
+    attributes:
+      label: Request Category
+      options:
+        - Changes to existing page
+        - Creation of new page
+  - type: input
+    id: input_1
+    attributes:
+      label: Page Title
+      description: Name or location of requested page
+    validations:
+      required: true
+  - type: textarea
+    id: textarea_1
+    attributes:
+      label: Description
+      description: "What are the top 3 improvements we could make to this project?"
+      value:
       render: bash
     validations:
       required: true
   - type: markdown
     attributes:
       value: |
-        ## Markdown header
-        And some more markdown
-  - type: input
-    id: has-id
-    attributes:
-      label: Suggestions
-      description: A description about suggestions to help you
-    validations:
-      required: true
-  - type: dropdown
-    id: download
-    attributes:
-      label: Which area of this project could be most improved?
-      options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
-    validations:
-      required: true
-  - type: checkboxes
-    attributes:
-      label: Check that box!
-      options:
-        - label: This one!
-          required: true
-        - label: I won't stop you if you check this one, too
-  - type: markdown
-    attributes:
-      value: |
-        ### The thrilling conclusion
-        _to our template_
-
+        Compare also [the Contributing Guidelines](https://docs.brightway.dev/en/latest/content/contributing/contributing.html) for this project.
