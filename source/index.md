@@ -52,7 +52,7 @@ maxdepth: 1
 ---
 content/introduction/introduction
 content/setup/setup
-content/api/index
+api/index
 content/gallery/index
 content/lca/index
 content/contributing/contributing

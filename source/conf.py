@@ -15,14 +15,11 @@ version: str = 'latest' # required by the version switcher
 needs_sphinx = '7.0.1'
 
 extensions = [
-    # native extensions
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
+    # core extensions
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
-    'sphinx.ext.napoleon',
     'sphinx.ext.inheritance_diagram',
     # iPython extensions
     'IPython.sphinxext.ipython_directive',
@@ -67,7 +64,7 @@ suppress_warnings = [
 notfound_context = {
 'title': 'Page Not Found',
 'body': '''                                                                                                                                           
-<h1>Page Not Found (404)</h1>
+<h1>🍂 Page Not Found (404)</h1>
 <p>
 Oops! It looks like you've stumbled upon a page that's been recycled into the digital abyss.
 But don't worry, we're all about sustainability here.
@@ -223,14 +220,10 @@ html_theme_options = {
 }
 
 # required by html_theme_options: "use_edit_page_button"
-# and
-# To build urls withoug hard-coding them
 html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "brightway-lca",
     "github_repo": "brightway-documentation",
     "github_version": "main",
     "doc_path": "source",
-    "read_the_docs_build": os.getenv('READTHEDOCS', False),
-    "read_the_docs_version": os.getenv('READTHEDOCS_VERSION', None),
 }
