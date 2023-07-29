@@ -1,4 +1,4 @@
-title: "[Documentation Request]"
+title: ""
 labels: ["documentation"]
 body:
   - type: markdown
@@ -14,6 +14,7 @@ body:
     id: dropdown_1
     attributes:
       label: Request Category
+      required: true
       options:
         - Changes to existing page
         - Creation of new page
@@ -33,6 +34,14 @@ body:
       render: bash
     validations:
       required: true
+  - type: checkboxes
+    attributes:
+      label: Check that box!
+      options:
+        - label: I could help with the content of this documentation request.
+          required: false
+        - label: I could help with the technical implementation of this documentation request.
+          required: false
   - type: markdown
     attributes:
       value: |
