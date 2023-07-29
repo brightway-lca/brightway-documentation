@@ -17,6 +17,8 @@ body:
       options:
         - Changes to existing page
         - Creation of new page
+      validations:
+        required: true
   - type: input
     id: input_1
     attributes:
