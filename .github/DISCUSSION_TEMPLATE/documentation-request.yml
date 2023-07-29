@@ -1,44 +1,37 @@
-title: "Title"
+title: ""
 labels: ["documentation"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Request Information
-  - type: markdown
-    attributes:
-      value: |
+        ### Request Form
         Thank you for taking the time to request documentation for this project!
         Please fill out the below information:
   - type: dropdown
-    id: dropdown_1
     attributes:
       label: Request Category
       options:
         - Changes to existing page
         - Creation of new page
+      multiple: false
       validations:
         required: true
   - type: input
-    id: input_1
     attributes:
       label: Page Title
       description: Name or location of requested page
     validations:
       required: true
   - type: textarea
-    id: textarea_1
     attributes:
       label: Description
-      description: "What are the top 3 improvements we could make to this project?"
-      value: |
-        Add your description here.
-      render: bash
+      description: Describe what should change or what information should be added.
+      value: Add your description here.
     validations:
       required: true
   - type: checkboxes
     attributes:
-      label: Check that box!
+      label: Can you help?
       options:
         - label: I could help with the content of this documentation request.
           required: false
