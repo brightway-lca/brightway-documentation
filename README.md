@@ -67,14 +67,14 @@ You are now ready to build the documentation...
 
 1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
-```
+```bash
 sphinx-build source _build/html -b singlehtml -a
 ```
 
 | option | value | description |
 | ---------------------------- | ----- | ----------- |
-| sourcedir | `./source` | N/A |
-| outdir | `./_build/html` | N/A |
+| sourcedir | `source` | N/A |
+| outdir | `_build/html` | N/A |
 | -b | `singlehtml` | create only a single html page |
 | -a | N/A | always write all output files |
 | `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
@@ -88,14 +88,14 @@ _build/html/homepage.html
 
 2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
-```
+```bash
 sphinx-autobuild source _build/html -a -j auto --open-browser
 ```
 
 | positional argument or option| value | description |
 | ---------------------------- | ----- | ----------- |
-| sourcedir | `./source` | N/A |
-| outdir | `./_build/html` | N/A |
+| sourcedir | `source` | N/A |
+| outdir | `_build/html` | N/A |
 | `-a` | N/A | always write all output files |
 | `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
 | `--open-browser` | N/A | automatically open browser |
@@ -103,6 +103,23 @@ sphinx-autobuild source _build/html -a -j auto --open-browser
 
 You can now preview the documentation at (the browser window will open automatically ✨):
 http://127.0.0.1:8000/
+
+### Checking for Dead External Links
+
+The documentation contains links to external websites. To check if these links are still valid, run the following command from the repository root directory:
+
+```bash
+sphinx-build -b linkcheck -D linkcheck_workers=20 source _build/linkcheck
+```
+
+| positional argument or option| value | description |
+| ---------------------------- | ----- | ----------- |
+| `-b` | `linkcheck` | [`linkcheck` builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder) |
+| `-D` | `linkcheck_workers=20`` | [number of links to check in paralell](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-linkcheck_workers) |
+| sourcedir | `source` | N/A |
+| outdir | `_build/linkcheck` | `_build/linkcheck/output.txt` contains a list of all broken or redirected links |
+
+Internal links, if formatted according to [the `myst-parser` cross-referencing specifications](https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#cross-references), are checked automatically during the regular build process.
 
 ### Contributing
 
