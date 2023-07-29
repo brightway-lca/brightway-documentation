@@ -14,7 +14,6 @@ body:
     id: dropdown_1
     attributes:
       label: Request Category
-      required: true
       options:
         - Changes to existing page
         - Creation of new page
