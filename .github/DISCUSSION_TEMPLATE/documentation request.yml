@@ -1,5 +1,5 @@
-title: "[Documentation Requests]"
-labels: ["some text here"]
+title: "[General] "
+labels: ["General Introduction"]
 body:
   - type: markdown
     attributes:
@@ -53,3 +53,4 @@ body:
       value: |
         ### The thrilling conclusion
         _to our template_
+
