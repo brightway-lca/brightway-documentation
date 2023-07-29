@@ -1,4 +1,4 @@
-title: ""
+title: "[Documentation Request] "
 labels: ["documentation"]
 body:
   - type: markdown
@@ -14,8 +14,8 @@ body:
         - Changes to existing page
         - Creation of new page
       multiple: false
-      validations:
-        required: true
+    validations:
+      required: true
   - type: input
     attributes:
       label: Page Title
