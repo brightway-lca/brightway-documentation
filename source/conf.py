@@ -4,13 +4,17 @@ from glob import glob
 import datetime
 import os
  
-### project information ###########################################################################
+###################################################################################################
+### Project Information ###########################################################################
+###################################################################################################
 
 project = 'Brightway'
 copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
 version: str = 'latest' # required by the version switcher
 
-### project configuration #########################################################################
+###################################################################################################
+### Project Configuration #########################################################################
+###################################################################################################
 
 needs_sphinx = '7.0.1'
 
@@ -40,121 +44,21 @@ extensions = [
     "sphinx_copybutton",
 ]
 
+root_doc = 'index'
 html_static_path = ['_static']
 templates_path = ['_templates']
 exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
-# The root toctree document.
-root_doc = 'index'
-
-# The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
-
-### suppress warnings ##############################################################################
-
 suppress_warnings = [
     "myst.header" # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
 ]
 
-### extension configuration ########################################################################
+####################################################################################################
+### Theme html Configuration #######################################################################
+####################################################################################################
 
-## notfound configuration ################################################
-
-notfound_context = {
-'title': 'Page Not Found',
-'body': '''                                                                                                                                           
-<h1>🍂 Page Not Found (404)</h1>
-<p>
-Oops! It looks like you've stumbled upon a page that's been recycled into the digital abyss.
-But don't worry, we're all about sustainability here.
-Why not take a moment to reduce, reuse, and recycle your clicks by heading back to the main page?
-And remember, every little bit counts in the grand scheme of things.
-</p>
-''',
-}
-
-## autoapi configuration ################################################
-## https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
-
-autoapi_options = [
-    'members',
-    'undoc-members',
-    'private-members',
-    'show-inheritance',
-    'show-module-summary',
-    #'special-members',
-    #'imported-members',
-    'show-inheritance-diagram'
-]
-
-autoapi_python_class_content = 'both'
-autoapi_member_order = 'groupwise'
-autoapi_root = 'api'
-autoapi_keep_files = False
-
-autoapi_dirs = [
-    '../brightway2-io/bw2io',
-    '../brightway2-data/bw2data',
-    '../brightway2-calc/bw2calc',
-    '../brightway2-analyzer/bw2analyzer'
-]
-
-autoapi_ignore = [
-    '*/data/*',
-    '*tests/*',
-    '*tests.py',
-    '*validation.py',
-    '*version.py',
-    '*.rst',
-    '*.yml',
-    '*.md',
-    '*.json',
-    '*.data'
-]
-
-## myst_parser configuration ############################################
-## https://myst-parser.readthedocs.io/en/latest/configuration.html
-
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown'
-}
-
-myst_enable_extensions = [
-    "amsmath",
-    "colon_fence",
-    "deflist",
-    "dollarmath",
-    "html_image",
-]
-
-## nbsphinx configuration ################################################
-
-nbsphinx_execute = 'never'
-nbsphinx_allow_errors = True
-
-## sphinx-favicon configuration #########################################
-
-favicons = [
-    {
-        "rel": "icon",
-        "sizes": "100x100",
-        "href": "logo/BW_favicon_100x100.png",
-    },
-    {
-        "rel": "apple-touch-icon",
-        "sizes": "500x500",
-        "href": "logo/BW_favicon_500x500.png"
-    },
-]
-
-## html configuration ###################################################
-
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
-
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
 html_css_files = [
@@ -169,7 +73,6 @@ html_sidebars = {
     ],
 }
 
-# https://pydata-sphinx-theme.readthedocs.io/en/stable/
 html_theme_options = {
     "announcement": "<p>Register Now: <a href='https://2023.brightcon.link/'>Brightcon 2023 Community Conference & Hackathon</a> 📍 Luxembourg 🗓️ 16.-20.September</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
@@ -221,9 +124,112 @@ html_theme_options = {
 
 # required by html_theme_options: "use_edit_page_button"
 html_context = {
-    # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "brightway-lca",
     "github_repo": "brightway-documentation",
     "github_version": "main",
     "doc_path": "source",
 }
+
+####################################################################################################
+### Extension Configuration ########################################################################
+####################################################################################################
+
+# linkcheck Configuration ###############################################
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
+
+linkcheck_retries = 1
+linkcheck_workers = 20
+linkcheck_exclude_documents = []
+
+# notfound Configuration ################################################
+# https://sphinx-notfound-page.readthedocs.io
+
+notfound_context = {
+    'title': 'Page Not Found',
+    'body': '''                                                                                                                                           
+        <h1>🍂 Page Not Found (404)</h1>
+        <p>
+        Oops! It looks like you've stumbled upon a page that's been recycled into the digital abyss.
+        But don't worry, we're all about sustainability here.
+        Why not take a moment to reduce, reuse, and recycle your clicks by heading back to the main page?
+        And remember, every little bit counts in the grand scheme of things.
+        </p>
+    ''',
+}
+
+# autoapi Configuration ################################################
+# https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
+
+autoapi_dirs = [
+    '../brightway2-io/bw2io',
+    '../brightway2-data/bw2data',
+    '../brightway2-calc/bw2calc',
+    '../brightway2-analyzer/bw2analyzer'
+]
+
+autoapi_ignore = [
+    '*/data/*',
+    '*tests/*',
+    '*tests.py',
+    '*validation.py',
+    '*version.py',
+    '*.rst',
+    '*.yml',
+    '*.md',
+    '*.json',
+    '*.data'
+]
+
+autoapi_options = [
+    'members',
+    'undoc-members',
+    'private-members',
+    'show-inheritance',
+    'show-module-summary',
+    #'special-members',
+    #'imported-members',
+    'show-inheritance-diagram'
+]
+
+autoapi_python_class_content = 'both'
+autoapi_member_order = 'groupwise'
+autoapi_root = 'api'
+autoapi_keep_files = False
+
+# myst_parser Configuration ############################################
+# https://myst-parser.readthedocs.io/en/latest/configuration.html
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown'
+}
+
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "html_image",
+]
+
+# nbsphinx configuration ################################################
+# https://nbsphinx.readthedocs.io/en/0.9.2/
+
+nbsphinx_execute = 'never'
+nbsphinx_allow_errors = True
+
+# sphinx-favicon configuration #########################################
+# https://github.com/tcmetzger/sphinx-favicon
+
+favicons = [
+    {
+        "rel": "icon",
+        "sizes": "100x100",
+        "href": "logo/BW_favicon_100x100.png",
+    },
+    {
+        "rel": "apple-touch-icon",
+        "sizes": "500x500",
+        "href": "logo/BW_favicon_500x500.png"
+    },
+]
