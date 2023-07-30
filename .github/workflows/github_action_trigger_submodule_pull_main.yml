@@ -10,8 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Workflow
-        run: | # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+      - name: Generate Token from GitHub App # https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow#authenticating-with-a-github-app
+        id: generate_token
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # https://github.com/tibdex/github-app-token
+        with:
+          app_id: ${{ secrets.DOCUMENTATION_WORKFLOW_APP_ID }}
+          private_key: ${{ secrets.DOCUMENTATION_WORKFLOW_PRIVATE_KEY }}
+      - name: Trigger Workflow # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+        id: trigger_workflow
+        run: |
           gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
         env:
-          GH_TOKEN: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
