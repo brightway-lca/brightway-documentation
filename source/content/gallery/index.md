@@ -12,27 +12,45 @@ It is either a rough draft or has been copied over from the legacy documentation
 
 # Gallery
 
-## Visualizations
+## Input of Files
 
 ::::{grid} 3
 
 :::{grid-item-card}  [Plotting Technosphere](visualizations/graph_technosphere)
-
-![thumbnail](visualizations/graph_technosphere_thumbnail.png)
+<img src="visualizations/graph_technosphere_thumbnail.png" class="sd-pt-5 sd-pb-5">
 :::
 
 :::{grid-item-card}  Placeholder
-
 Placeholder
 
 :::
 
 :::{grid-item-card}  Placeholder
-
 Placeholder
 :::
 
 ::::
+
+## Visualizations
+
+::::{grid} 3
+
+:::{grid-item-card} [Logo](visualizations/graph_technosphere)
+Banana
+:::
+
+:::{grid-item-card} Placeholder
+<div style="padding-top: 50px">
+  <img src="logo.png">
+</div>
+:::
+
+:::{grid-item-card} Placeholder
+<img src="logo.png" class="sd-pt-5 sd-pb-5">
+:::
+
+::::
+
 
 ```{toctree}
 ---
