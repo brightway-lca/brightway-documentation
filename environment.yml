@@ -7,7 +7,7 @@ dependencies:
   - python=3.11
   - ipython
   # sphinx
-  - sphinx=7.0.1 # core builder # https://anaconda.org/conda-forge/sphinx/files
+  - sphinx=7.2.5 # core builder # https://anaconda.org/conda-forge/sphinx/files
   # theme and extensions
   - pydata-sphinx-theme=0.13.3 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
   - myst-parser=2.0.0 # Markdown support # https://anaconda.org/conda-forge/myst-parser/files

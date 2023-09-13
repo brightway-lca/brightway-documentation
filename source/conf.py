@@ -74,7 +74,7 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    "announcement": "<p>Register Now: <a href='https://2023.brightcon.link/'>Brightcon 2023 Community Conference & Hackathon</a> 📍 Luxembourg 🗓️ 16.-20.September</p>",
+    "announcement": "<p>Join the Discussion: 💬 <a href='https://matrix.to/#/#brightway:matrix.org'>Brightway Community Chat Rooms on Matrix</a></p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",

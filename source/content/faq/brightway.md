@@ -1,8 +1,8 @@
 # Brightway (Versions, Compatibility, etc.)
 
-## Brightway Versions and Compatibility
+## Versions and Compatibility
 
-### Brightway Versions
+### Versions
 
 #### Brightway 1
 
