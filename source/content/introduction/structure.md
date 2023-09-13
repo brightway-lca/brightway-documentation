@@ -157,24 +157,22 @@ The document structure is:
     normalized](https://github.com/brightway-lca/brightway2-io/blob/master/bw2io/units.py)
     when written to disk.
 
--   
+-   *exchanges* (list): A list of activity inputs and outputs, with its own schema.
 
-    *exchanges* (list): A list of activity inputs and outputs, with its own schema.
-
-    :   -   *input* (database name, database code): The technological
-            activity that is linked to, e.g.
-            `("my new database", "production of ice cream")` or
-            `('biosphere', '51447e58e03a40a2bbd9abf45214b7d3')`. See
-            also `dataset-codes`.
-        -   *type* (string): One of `production`, `technosphere`, and
-            `biosphere`. See `exchanges`.
-        -   *amount* (float): Amount of this exchange.
-        -   *uncertainty type* (integer): Integer code for uncertainty
-            distribution of this exchange, see
-            `uncertainty-type` for more
-            information. There can be other uncertainty fields as well.
-        -   *comment* (string, optional): A comment on this exchange.
-            Used to store pedigree matrix data in ecoinvent v2.
+    -   *input* (database name, database code): The technological
+        activity that is linked to, e.g.
+        `("my new database", "production of ice cream")` or
+        `('biosphere', '51447e58e03a40a2bbd9abf45214b7d3')`. See
+        also `dataset-codes`.
+    -   *type* (string): One of `production`, `technosphere`, and
+        `biosphere`. See `exchanges`.
+    -   *amount* (float): Amount of this exchange.
+    -   *uncertainty type* (integer): Integer code for uncertainty
+        distribution of this exchange, see
+        `uncertainty-type` for more
+        information. There can be other uncertainty fields as well.
+    -   *comment* (string, optional): A comment on this exchange.
+        Used to store pedigree matrix data in ecoinvent v2.
 
 ---
 
