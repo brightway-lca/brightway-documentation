@@ -10,7 +10,7 @@ This page is not yet complete. \
 It is either a rough draft or has been copied over from the legacy documentation.
 ```
 
-# Introduction
+# Theory
 
 ## Brightway Components
 
@@ -42,7 +42,7 @@ LCIA methods, calculations, assumptions, and any other data you need.
 Each project is completely independent of other projects.Projects are
 saved as subdirectories in the file system.
 
-![image](../../_images/org-scheme.png)
+![image](_images/org-scheme.png)
 
 Inside a project we have a number of objects that store data. The most
 common data objects are inventory *databases* and impact assessment
@@ -157,24 +157,21 @@ The document structure is:
     normalized](https://github.com/brightway-lca/brightway2-io/blob/master/bw2io/units.py)
     when written to disk.
 
--   
-
-    *exchanges* (list): A list of activity inputs and outputs, with its own schema.
-
-    :   -   *input* (database name, database code): The technological
-            activity that is linked to, e.g.
-            `("my new database", "production of ice cream")` or
-            `('biosphere', '51447e58e03a40a2bbd9abf45214b7d3')`. See
-            also `dataset-codes`.
-        -   *type* (string): One of `production`, `technosphere`, and
-            `biosphere`. See `exchanges`.
-        -   *amount* (float): Amount of this exchange.
-        -   *uncertainty type* (integer): Integer code for uncertainty
-            distribution of this exchange, see
-            `uncertainty-type` for more
-            information. There can be other uncertainty fields as well.
-        -   *comment* (string, optional): A comment on this exchange.
-            Used to store pedigree matrix data in ecoinvent v2.
+-   *exchanges* (list): A list of activity inputs and outputs, with its own schema.
+    -   *input* (database name, database code): The technological
+        activity that is linked to, e.g.
+        `("my new database", "production of ice cream")` or
+        `('biosphere', '51447e58e03a40a2bbd9abf45214b7d3')`. See
+        also `dataset-codes`.
+    -   *type* (string): One of `production`, `technosphere`, and
+        `biosphere`. See `exchanges`.
+    -   *amount* (float): Amount of this exchange.
+    -   *uncertainty type* (integer): Integer code for uncertainty
+        distribution of this exchange, see
+        `uncertainty-type` for more
+        information. There can be other uncertainty fields as well.
+    -   *comment* (string, optional): A comment on this exchange.
+        Used to store pedigree matrix data in ecoinvent v2.
 
 ## Uniquely identifying activities {#dataset-codes}
 
@@ -296,13 +293,13 @@ Much of the functionality of Database objects is provided by its parent
 class, `datastore`. The normal methods
 provided by a data store are:
 
-> -   **write(data)**: Write data to disk
-> -   **load**: Load data from disk
-> -   **register**: Register object with metadata store
-> -   **deregister**: Remove object from metadata store
-> -   **copy(name)**: Create a new object with name `name`
-> -   **backup**: Write backup of data
-> -   **validate(data)**: Validate data using this object\'s validator
+-   **write(data)**: Write data to disk
+-   **load**: Load data from disk
+-   **register**: Register object with metadata store
+-   **deregister**: Remove object from metadata store
+-   **copy(name)**: Create a new object with name `name`
+-   **backup**: Write backup of data
+-   **validate(data)**: Validate data using this object\'s validator
 
 Data store objects are instantiated with the object name, e.g.
 `DataStore("name goes here")`.
@@ -490,8 +487,8 @@ methods.flush()
 
 Methods should have the following metadata:
 
-> -   *description*: A description of this method or submethod.
-> -   *unit*: The unit of this method or submethod.
+-   *description*: A description of this method or submethod.
+-   *unit*: The unit of this method or submethod.
 
 In addition, the metadata `abbreviation` is generated automatically.
 
@@ -522,14 +519,14 @@ This returns the following:
 Each list elements has two required components and a third optional
 component.
 
-> 1.  A reference to a biosphere flow, e.g.
->     `(u'biosphere', u'21c70338ff2e1cdc8e468f4c90f113a1')`.
-> 2.  The numeric characterization factor. This can either be a number,
->     or a uncertainty dictionary (see
->     `uncertainty-type`).
-> 3.  An *optional* location, used for regionalized impact assessment.
->     The global location `GLO` is inserted as a default if not location
->     is specified.
+1.  A reference to a biosphere flow, e.g.
+    `(u'biosphere', u'21c70338ff2e1cdc8e468f4c90f113a1')`.
+2.  The numeric characterization factor. This can either be a number,
+    or a uncertainty dictionary (see
+    `uncertainty-type`).
+3.  An *optional* location, used for regionalized impact assessment.
+    The global location `GLO` is inserted as a default if not location
+    is specified.
 
 ```{note}
 
@@ -554,7 +551,7 @@ average_distance\", where both \"fuel_efficiency\" and
 even parameterized themselves. Parsing strings is not trivial, and so
 the machinery to handle such parameterization is a bit complex:
 
-![image](../../_images/parameters.png)
+![image](_images/parameters.png)
 
 
 ```{warning}
@@ -691,11 +688,11 @@ processed data arrays, however. In this case, we create a special
 dictionary that maps each unique data value to an integer index.
 Brightway2 uses two such mappings:
 
-> -   `mapping <mapping>`: Maps inventory
->     objects (activities, biosphere flows, and anything else that would
->     appear in a supply chain graph) to indices.
-> -   `geomapping`: Map locations (both
->     inventory and regionalized impact assessment) to indices.
+-   `mapping <mapping>`: Maps inventory
+    objects (activities, biosphere flows, and anything else that would
+    appear in a supply chain graph) to indices.
+-   `geomapping`: Map locations (both
+    inventory and regionalized impact assessment) to indices.
 
 Items are added to mappings using `.add(keys)`, and removed using
 `.delete(keys)`. However, managing the different mappings is done for
@@ -761,7 +758,7 @@ get the actual data object metadata:
 
 ``` python
 methods[methods.random()]
->> {u'abbreviation': u'recipe-endpoint-ha-wo-lthc.0ba25d5fd76e35b3125224ce78d37151',
+>{u'abbreviation': u'recipe-endpoint-ha-wo-lthc.0ba25d5fd76e35b3125224ce78d37151',
     u'unit': u'points'}
 ```
 
@@ -801,24 +798,24 @@ uncertainty types are given below, and their parameters are explained in
 detail in the [stats_arrays
 table](https://stats-arrays.readthedocs.io/en/latest/#mapping-parameter-array-columns-to-uncertainty-distributions):
 
-> -   `0`: Undefined or unknown uncertainty.
-> -   `1`: No uncertainty.
-> -   `2`: Lognormal distribution. This is a tricky distribution to work
->     with, but is [very popular in
->     LCA](http://chris.mutel.org/ecoinvent-lognormal.html). The
->     `amount` field is the median of the data, and the `sigma` field is
->     the standard deviation of the data **when it is log-transformed**,
->     i.e. the σ from the formula for the log-normal PDF.
-> -   `3`: Normal distribution.
-> -   `4`: Uniform distribution.
-> -   `5`: Triangular distribution.
-> -   `6`: Bernoulli distribution.
-> -   `7`: Discrete uniform.
-> -   `8`: Weibull.
-> -   `9`: Gamma.
-> -   `10`: Beta distribution.
-> -   `11`: Generalized Extreme Value.
-> -   `12`: Student\'s T.
+-   `0`: Undefined or unknown uncertainty.
+-   `1`: No uncertainty.
+-   `2`: Lognormal distribution. This is a tricky distribution to work
+    with, but is [very popular in
+    LCA](http://chris.mutel.org/ecoinvent-lognormal.html). The
+    `amount` field is the median of the data, and the `sigma` field is
+    the standard deviation of the data **when it is log-transformed**,
+    i.e. the σ from the formula for the log-normal PDF.
+-   `3`: Normal distribution.
+-   `4`: Uniform distribution.
+-   `5`: Triangular distribution.
+-   `6`: Bernoulli distribution.
+-   `7`: Discrete uniform.
+-   `8`: Weibull.
+-   `9`: Gamma.
+-   `10`: Beta distribution.
+-   `11`: Generalized Extreme Value.
+-   `12`: Student\'s T.
 
 The default value for `uncertainty type` is `0`, i.e. unknown
 uncertainty.
@@ -1041,52 +1038,52 @@ be included, and the rest ignored.
 
 Keep in mind the following general restrictions and notes:
 
-> -   Provide useful codes! There is no reason to use e.g. UUIDs, unless
->     you are feeling masochistic. You can also skip providing codes at
->     all, they will be autogenerated.
-> -   As in the activity data format, there are no required fields, and
->     you can also insert your own.
-> -   Each workbook can only describe data for one `Database`. Multiple
->     `Database` sections will raise an error!
-> -   Input exchanges must be linked using the data provided in the
->     spreadsheet. That means that you may need to provide an activity
->     name and a reference product when trying to link against
->     ecoinvent.
-> -   Linking is done using the column headings exactly as provided. You
->     should check to make sure the capitalization, spelling, and
->     spacing are consistent with the attributes in the background
->     databases you want to link against.
-> -   Worksheet names don\'t have any special meaning to the importer,
->     and are only used to indicate where errors occurred.
+-   Provide useful codes! There is no reason to use e.g. UUIDs, unless
+    you are feeling masochistic. You can also skip providing codes at
+    all, they will be autogenerated.
+-   As in the activity data format, there are no required fields, and
+    you can also insert your own.
+-   Each workbook can only describe data for one `Database`. Multiple
+    `Database` sections will raise an error!
+-   Input exchanges must be linked using the data provided in the
+    spreadsheet. That means that you may need to provide an activity
+    name and a reference product when trying to link against
+    ecoinvent.
+-   Linking is done using the column headings exactly as provided. You
+    should check to make sure the capitalization, spelling, and
+    spacing are consistent with the attributes in the background
+    databases you want to link against.
+-   Worksheet names don\'t have any special meaning to the importer,
+    and are only used to indicate where errors occurred.
 
 Parameters are a bit different - as they are trickier to handle, their
 sections are stricter:
 
-> -   All parameter sections must have the column \"name\". Names should
->     be unique within a parameter section.
-> -   Stochastic variables should have the usual uncertainty columns,
->     e.g. uncertainty type, loc, scale, minimum, maximum.
-> -   Variables which are defined by formulas should have the column
-> -   Parameters can have an \"amount\" column, but if there is also a
->     \"formula\" column, the amount will be overwritten on import as
->     the formula is evaluated.
-> -   Formulas should be for consumption by Python, not Excel; they will
->     be interpreted by [asteval](https://newville.github.io/asteval/).
-> -   The `Database`, `Project parameters`, and `Database parameters`
->     don\'t have to be in any order or in any particular worksheet.
->     There can be multiple `Project parameters` and
->     `Database parameters` sections, they will be concatenated.
+-   All parameter sections must have the column \"name\". Names should
+    be unique within a parameter section.
+-   Stochastic variables should have the usual uncertainty columns,
+    e.g. uncertainty type, loc, scale, minimum, maximum.
+-   Variables which are defined by formulas should have the column
+-   Parameters can have an \"amount\" column, but if there is also a
+    \"formula\" column, the amount will be overwritten on import as
+    the formula is evaluated.
+-   Formulas should be for consumption by Python, not Excel; they will
+    be interpreted by [asteval](https://newville.github.io/asteval/).
+-   The `Database`, `Project parameters`, and `Database parameters`
+    don\'t have to be in any order or in any particular worksheet.
+    There can be multiple `Project parameters` and
+    `Database parameters` sections, they will be concatenated.
 
 The following data transformations are applied by the `ExcelImporter`:
 
-> -   Numbers are translated from text into actual numbers.
-> -   Tuples, separated in the cell by the `::` string, are
->     reconstructed, i.e. \"this::example\" would become
->     `("this", "example")`.
-> -   The strings \"True\" and \"False\" (by themselves, not as part of
->     a larger string) are transformed to their respective boolean
->     values.
-> -   Fields with the value `(Unknown)` are omitted on a per-row basis.
+-   Numbers are translated from text into actual numbers.
+-   Tuples, separated in the cell by the `::` string, are
+    reconstructed, i.e. \"this::example\" would become
+    `("this", "example")`.
+-   The strings \"True\" and \"False\" (by themselves, not as part of
+    a larger string) are transformed to their respective boolean
+    values.
+-   Fields with the value `(Unknown)` are omitted on a per-row basis.
 
 ### Importing LCIA methods from the standard Excel template
 
@@ -1168,10 +1165,10 @@ database is used.
 Both importers will attempt to normalize biosphere flow names and
 categories to the ecospold2 standard, using the strategies:
 
-> -   `normalize_simapro_lcia_biosphere_categories`
-> -   `normalize_simapro_biosphere_names`
-> -   `normalize_biosphere_names`
-> -   `normalize_biosphere_categories`
+-   `normalize_simapro_lcia_biosphere_categories`
+-   `normalize_simapro_biosphere_names`
+-   `normalize_biosphere_names`
+-   `normalize_biosphere_categories`
 
 Next, the characterization factors are examined to see if they are only
 given for root categories, e.g. `('air',)` and not
@@ -1196,18 +1193,18 @@ copy (that can be loaded later) using `.write_unlinked("some name")`.
 The options to examine or resolve the unlinked characterization factors
 are:
 
-> -   You can write a spreadsheet of the characterization factors,
->     including their linking status, with `.write_excel("some name")`.
-> -   You can apply new linking strategies with
->     `.apply_strategies([some_new_strategy])`. Note that this method
->     requires a *list* of strategies.
-> -   TODO: You can write all biosphere flows to a new biosphere
->     database with `.create_new_biosphere("some name")`.
-> -   If you are satisfied that you don\'t care about the unlinked
->     characterization factors, you can drop them with
->     `.drop_unlinked()`.
-> -   Alternatively, you can add the missing biosphere flows to the
->     biosphere database using `.add_missing_cfs()`.
+-   You can write a spreadsheet of the characterization factors,
+    including their linking status, with `.write_excel("some name")`.
+-   You can apply new linking strategies with
+    `.apply_strategies([some_new_strategy])`. Note that this method
+    requires a *list* of strategies.
+-   TODO: You can write all biosphere flows to a new biosphere
+    database with `.create_new_biosphere("some name")`.
+-   If you are satisfied that you don\'t care about the unlinked
+    characterization factors, you can drop them with
+    `.drop_unlinked()`.
+-   Alternatively, you can add the missing biosphere flows to the
+    biosphere database using `.add_missing_cfs()`.
 
 ### Custom strategies
 
@@ -1294,7 +1291,10 @@ hidden:
 maxdepth: 2
 ---
 self
+lca
 structure
 io
 uncertainty
+graph_traversal
+static_and_stochastic_lca
 ```

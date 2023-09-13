@@ -50,13 +50,13 @@ Brightway is designed to make it easy to work with large datasets and perform LC
 hidden:
 maxdepth: 1
 ---
-content/introduction/introduction
 content/setup/setup
-api/index
+content/theory/theory
 content/gallery/index
-content/lca/index
-content/contributing/contributing
+api/index
 content/faq/faq
+content/contributing/contributing
+
 content/changelog/index
 content/other/ecosystem
 content/other/support

@@ -16,7 +16,7 @@ version: str = 'latest' # required by the version switcher
 ### Project Configuration #########################################################################
 ###################################################################################################
 
-needs_sphinx = '7.0.1'
+needs_sphinx = '7.2.5'
 
 extensions = [
     # core extensions
@@ -87,7 +87,7 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
-    "header_links_before_dropdown": 7,
+    "header_links_before_dropdown": 6,
     # page elements content
     "icon_links": [
         {
