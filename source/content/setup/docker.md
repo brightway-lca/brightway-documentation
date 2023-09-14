@@ -1,14 +1,14 @@
 # Docker Setup
 
-Brightway publishes two official docker images.
-
 ```{admonition} Prerequisites
+:class: important
 1. Basic knowledge of [Docker](https://www.docker.com).
 2. Basic knowledge of [the difference between `brightway2` and `brightway 25`](../faq/brightway.md)
 ```
+Brightway publishes two official docker images:
 
-+ [brightway/bw2](https://hub.docker.com/r/brightway/bw2), for brightway 2
-+ [brightway/bw25](https://hub.docker.com/r/brightway/bw25), for brightway 2.5
+- [brightway/bw2](https://hub.docker.com/r/brightway/bw2), for brightway 2
+- [brightway/bw25](https://hub.docker.com/r/brightway/bw25), for brightway 2.5
 
 Based on the [Jupyter minimal notebook](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook).
 
