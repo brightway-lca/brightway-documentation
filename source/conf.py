@@ -87,7 +87,7 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
-    "header_links_before_dropdown": 6,
+    "header_links_before_dropdown": 7,
     # page elements content
     "icon_links": [
         {

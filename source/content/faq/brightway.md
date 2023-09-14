@@ -37,4 +37,16 @@ Brightway 2.5 is the next step on the way to the next version of Brightway, as d
 
 This is specified in the respective `setup.py` files: [Brightway25 packages](https://github.com/brightway-lca/brightway25/blob/main/setup.py) and [Brightway2 packages](https://github.com/brightway-lca/brightway2/blob/master/setup.py).
 
+## Technical Stack
+
+### Storing Python objects in a SQLite3 database is silly! Why not use *X* document database?
+
+Where *X* is one of [MongoDB](https://www.mongodb.com), [CouchDB](http://couchdb.apache.org/), [UnQLite](https://unqlite-python.readthedocs.io/en/latest/), [Vedis](https://vedis-python.readthedocs.io/en/latest/), [CDB](https://cr.yp.to/cdb.html), [TinyDB](http://tinydb.readthedocs.io/en/latest/intro.html), etc.
+
+This approach may seem strange at first, but is the result of coding, evaluating, and ultimately rejecting several alternatives. Most document databases can't store all Python objects directly, because they use JSON or some other serialization. We have actually built and tested database backends built on pickle files, JSON files, MongoDB CodernityDB and BlitzDB. SQLite3 also has several real advantages:
+
+* Most importantly, it is included with Python, no new dependencies or installation steps are required.
+* It is famous for being well tested, and is completely cross-platform.
+* It is also more than fast enough. For example, loading every activity from ecoinvent 3+ takes only a few seconds.
+
 [^1]: The German surname _Hellweg_ translates to _Brightway_ in English 🤯

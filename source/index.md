@@ -56,6 +56,7 @@ content/gallery/index
 api/index
 content/faq/faq
 content/contributing/contributing
+content/contact/contact
 
 content/changelog/index
 content/other/ecosystem
