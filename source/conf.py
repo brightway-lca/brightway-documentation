@@ -208,7 +208,7 @@ html_theme_options = {
         },
         {
             "name": "Matrix",
-            "url": "https://app.element.io/#/room/#brightway/community:matrix.org",
+            "url": "https://matrix.to/#/#brightway:matrix.org",
             "icon": "fab fa-regular fa-comments",
         }
     ],
