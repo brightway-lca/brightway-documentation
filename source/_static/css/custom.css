@@ -6,7 +6,6 @@ html[data-theme="light"] {
     /* https://github.com/pydata/pydata-sphinx-theme/blob/bd67c18a1904b0301de0fb285792b87672e403ce/src/pydata_sphinx_theme/assets/styles/sections/_announcement.scss#L45C39-L45C51 */
     /* announcement banner background color */
     --pst-color-secondary-bg: #83d299;
-    --pst-color-accent: #ff0000;
     /* https://github.com/pydata/pydata-sphinx-theme/blob/main/src/pydata_sphinx_theme/assets/styles/content/_admonitions.scss */
     /* default admonition colors */
     --pst-color-info-bg: #83d299;
@@ -17,6 +16,6 @@ html[data-theme="light"] {
     --pst-color-warning: #006f27;
     /* https://github.com/pydata/pydata-sphinx-theme/blob/main/src/pydata_sphinx_theme/assets/styles/content/_admonitions.scss */
     /* attention admonition colors */
-    --pst-color-attention-bg: #c5ffb1;
+    --pst-color-attention-bg: #83d299;
     --pst-color-attention: #006f27;
 }
