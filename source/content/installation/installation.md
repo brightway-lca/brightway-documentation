@@ -1,4 +1,4 @@
-# Setup
+# Installation
 
 Brightway is a Python software package. A user interface [is available](./ui.md), but not necessary for use. Brightway can be installed using the [Python package installer `pip`](https://pypi.org/project/pip/) or the [multi-language package management system `conda`](https://docs.conda.io/en/latest/). This guide uses `conda`.
 
