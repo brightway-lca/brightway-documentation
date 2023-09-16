@@ -47,7 +47,7 @@ Learn more {fas}`arrow-right`
 hidden:
 maxdepth: 1
 ---
-content/setup/setup
+content/installation/installation
 content/theory/theory
 content/gallery/index
 api/index

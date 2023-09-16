@@ -28,7 +28,7 @@ for index, name in enumerate(methods):
 print("Your exported objects are here:", config.request_dir("upgrade"))
 ```
 
-2.  Upgrade your software following the [setup guide](./setup.md).
+2.  Upgrade your software following the [installation guide](./installation.md).
 3.  Each data directory would now be a new project. You can import the objects you exported earlier like this:
 
 ``` python
