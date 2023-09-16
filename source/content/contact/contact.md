@@ -16,3 +16,5 @@ The Brightway community is active and growing. There are many ways to get in tou
 | Event | Location | Description |
 | ----- | -------- | ----------- | 
 | [Brightcon Conference](http://brightcon.link) | Luxembourg (2023) | Annual user and developer conference with hackathon and workshops |
+
+![image](_images/brightcon_banner.jpg)
