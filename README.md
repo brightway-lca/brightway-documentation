@@ -8,7 +8,7 @@ The primary documentation for the Brightway life-cycle assessment software packa
 
 | static documentation | interactive documentation | development playground  |
 | ---- | ------------- | ------------- |
-| [docs.brightway.dev](https://github.com/brightway-lca/brightway-documentation) | (coming soon!) | (coming soon!) | 
+| [docs.brightway.dev](https://github.com/brightway-lca/brightway-documentation) | [learn.brightway.dev](https://github.com/brightway-lca/brightway-learn) | [live.brightway.dev](https://github.com/brightway-lca/brightway-live) | 
 
 ## Repository Structure
 
