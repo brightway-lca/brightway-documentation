@@ -95,14 +95,13 @@ You will need to activate this environment every time you start a new terminal o
 
 ::::
 
-
-## Upgrading Brightway
+## Updating Brightway
 
 Brightway is being actively developed, with frequent new releases. To upgrade Brightway:
 
 ``` bash
 conda update conda
-conda update -c conda-forge brightway
+conda update -c cmutel brightway25
 ```
 
 ```{toctree}
