@@ -15,6 +15,6 @@
 	url = https://github.com/brightway-lca/brightway2-analyzer
 	branch = main
 [submodule "brightway-examples"]
-	path = source/content/gallery/brightway-examples
+	path = source/content/examples/brightway-examples
 	url = https://github.com/brightway-lca/brightway-examples
 	branch = main
