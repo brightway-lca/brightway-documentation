@@ -16,7 +16,7 @@ version: str = 'latest' # required by the version switcher
 ### Project Configuration #########################################################################
 ###################################################################################################
 
-needs_sphinx = '7.2.5'
+needs_sphinx = '5.3.0'
 
 extensions = [
     # core extensions
@@ -29,9 +29,9 @@ extensions = [
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     # Markdown support
-    'myst_parser', # do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
+    # 'myst_parser', # do not enable separately if using myst_nb, compare: https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
     # Jupyter Notebook support
-    'nbsphinx',
+    'myst_nb',
     # API documentation support
     'autoapi',
     # responsive web component support
@@ -53,6 +53,14 @@ html_theme = "pydata_sphinx_theme"
 suppress_warnings = [
     "myst.header" # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
 ]
+
+# https://myst-nb.readthedocs.io/en/v0.8.4/use/myst.html#parse-extensions-other-than-md-and-ipynb
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'myst-nb',
+    '.ipynb': 'myst-nb',
+    '.myst': 'myst-nb',
+}
 
 ####################################################################################################
 ### Theme html Configuration #######################################################################
@@ -195,11 +203,6 @@ autoapi_keep_files = False
 # myst_parser Configuration ############################################
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
 
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown'
-}
-
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
@@ -208,11 +211,11 @@ myst_enable_extensions = [
     "html_image",
 ]
 
-# nbsphinx configuration ################################################
-# https://nbsphinx.readthedocs.io/en/0.9.2/
+# myst-nb configuration ################################################
+# https://myst-nb.readthedocs.io/en/latest/configuration.html
 
-nbsphinx_execute = 'never'
-nbsphinx_allow_errors = True
+nb_execution_mode = 'off'
+
 
 # sphinx-favicon configuration #########################################
 # https://github.com/tcmetzger/sphinx-favicon

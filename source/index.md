@@ -49,7 +49,7 @@ maxdepth: 1
 ---
 content/installation/installation
 content/theory/theory
-content/gallery/index
+content/examples/index
 api/index
 content/faq/faq
 content/contributing/contributing
