@@ -7,13 +7,11 @@ If you have questions that the documentation cannot answer, you can [get in touc
 :::
 
 
-
 ```{toctree}
 ---
 hidden:
 maxdepth: 1
 ---
-self
 error_messages
 brightway
 data_management
