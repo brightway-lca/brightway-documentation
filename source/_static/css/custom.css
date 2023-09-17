@@ -19,3 +19,7 @@ html[data-theme="light"] {
     --pst-color-attention-bg: #83d299;
     --pst-color-attention: #006f27;
 }
+
+.sphinx-design-class-body-examples {
+    height: 200px;
+}

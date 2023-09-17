@@ -35,10 +35,6 @@ conda create -n bw -c cmutel brightway25 jupyterlab
 conda activate bw
 ```
 
-```{warning}
-You will need to activate this environment every time you start a new terminal or command line shell.
-```
-
 :::
 
 :::{tab-item} Windows (x64)
@@ -65,10 +61,6 @@ conda activate bw
 conda install pywin32
 ```
 
-```{warning}
-You will need to activate this environment every time you start a new terminal or command line shell.
-```
-
 :::
 
 :::{tab-item} macOS (Apple Silicon/ARM)
@@ -89,19 +81,19 @@ conda create -n bw -c cmutel -c conda-forge brightway25_nosolver jupyterlab scik
 conda activate bw
 ```
 
-```{warning}
-You will need to activate this environment every time you start a new terminal or command line shell.
-```
-
 ::::
 
 ## Updating Brightway
 
-Brightway is being actively developed, with frequent new releases. To upgrade Brightway:
+Brightway is being actively developed, with frequent new releases. To update Brightway:
 
 ``` bash
 conda update conda
 conda update -c cmutel brightway25
+```
+
+```{warning}
+Newer versions of Brightway can introduce breaking changes. We recommend you create a new Conda environment for each project, and only update Brightway when you are ready to update your project.
 ```
 
 ```{toctree}
