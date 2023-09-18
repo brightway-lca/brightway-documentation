@@ -1,4 +1,3 @@
-title: "[Documentation Request] "
 labels: ["documentation"]
 body:
   - type: markdown
@@ -26,7 +25,7 @@ body:
     attributes:
       label: Description
       description: Describe what should change or what information should be added.
-      value: Add your description here.
+      placeholder: Add your description here.
     validations:
       required: true
   - type: checkboxes
