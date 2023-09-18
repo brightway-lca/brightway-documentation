@@ -7,8 +7,7 @@ More examples will be added over time...
 
 ```{toctree}
 ---
-hidden:
-maxdepth: 1
+maxdepth: 3
 ---
 data
 visualization
