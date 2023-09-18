@@ -9,8 +9,7 @@ If you have questions that the documentation cannot answer, you can [get in touc
 
 ```{toctree}
 ---
-hidden:
-maxdepth: 1
+maxdepth: 3
 ---
 error_messages
 brightway

@@ -1,45 +1,40 @@
 # Brightway LCA Software Framework
 
-## What is Brightway?
+## What is Brightway
 
-Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) and [environmental impact assessment](https://en.wikipedia.org/wiki/Environmental_impact_assessment) written in the [Python](https://www.python.org/) programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system. 
-
-## What can Brightway do?
+Brightway is an open-source software package for life cycle assessment (LCA) and environmental impact assessment written in the Python programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system.
 
 Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
+
+## How can I learn Brightway?
 
 ::::{grid} 1 1 3 3
 :gutter: 3
 
-:::{grid-item-card} 🌿 Projects
-:link: /content/other/ecosystem
-:link-type: doc
+:::{grid-item-card} 📚 Read the Docs!
 
-Contributors have built amazing projects based on Brightway!
+Brightway has extensive documentation. This includes the theory of life-cycle assessment the the Brightway software framework.
++++
+You are here!
+:::
+
+:::{grid-item-card} 👨‍🏫 Learn it!
+:link: https://learn.brightway.dev/
+:link-type: url
+
+Brightway has step-by-step tutorials for beginners and experts alike. Learn how to use Brightway to do life-cycle assessment.
 +++
 Learn more {fas}`arrow-right`
 :::
 
-:::{grid-item-card} 👩‍💻 Contribute
-:link: /content/contributing/contributing
-:link-type: doc
+:::{grid-item-card} 💻 Try it!
+:link: https://docs.brightway.dev/projects/live
+:link-type: url
 
-Brightway is developed by a community of volunteers. Join us!
+Brightway has a live demo in a JupyterLite development environment where you can try out Brightway without installing anything.
 +++
 Learn more {fas}`arrow-right`
 :::
-
-:::{grid-item-card} 📜 Open Source
-:link: /content/other/credits
-:link-type: doc
-
-Brightway is free and open source - and it will stay that way!
-+++
-Learn more {fas}`arrow-right`
-:::
-
-::::
-
 
 
 ```{toctree}
