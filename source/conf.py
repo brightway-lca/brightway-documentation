@@ -29,8 +29,6 @@ extensions = [
     'IPython.sphinxext.ipython_console_highlighting',
     # Markdown support
     'myst_parser', # do not enable separately if using myst_nb, compare https://github.com/executablebooks/MyST-NB/issues/421#issuecomment-1164427544
-    # Jupyter Notebook support
-    'nbsphinx',
     # API documentation support
     'autoapi',
     # responsive web component support
@@ -131,11 +129,6 @@ myst_enable_extensions = [
     "dollarmath",
     "html_image",
 ]
-
-## nbsphinx configuration ################################################
-
-nbsphinx_execute = 'never'
-nbsphinx_allow_errors = True
 
 ## sphinx-favicon configuration #########################################
 
