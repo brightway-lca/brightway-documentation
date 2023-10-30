@@ -1,4 +1,4 @@
-# Setup
+# Installation
 
 ```{warning}
 This version of the documentation is for older releases of Brightway (`legacy` or `brightway2`). It includes only those pages which are relevant to the legacy releases. To access the complete documentation, please switch the the [latest version](https://docs.brightway.dev/en/latest/). The legacy releases [supports the popular Activity Browser user interface](../setup/ui.md), but do not have the latest features of Brightway. You can learn more about [the different versions of Brightway here](../faq/brightway.md).
