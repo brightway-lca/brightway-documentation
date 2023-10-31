@@ -14,6 +14,7 @@ maxdepth: 3
 error_messages
 brightway
 data_management
+environment_management
 confusing_results
 ecoinvent
 simapro
