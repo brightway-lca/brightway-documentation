@@ -9,6 +9,7 @@ More examples will be added over time...
 ---
 maxdepth: 3
 ---
+guide
 data
 visualization
 ```
