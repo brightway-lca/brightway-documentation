@@ -211,8 +211,9 @@ html_theme_options = {
     "use_edit_page_button": True,
     "navigation_with_keys": True,
     "logo": {
-      "image_light": "BW_all_black_transparent_landscape.svg",
-      "image_dark": "BW_all_white_transparent_landscape.svg"
+        "text": "Brightway",
+        "image_light": "BW_all_black_transparent_landscape.svg",
+        "image_dark": "BW_all_white_transparent_landscape.svg"
     },
 }
 
