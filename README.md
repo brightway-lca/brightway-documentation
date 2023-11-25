@@ -131,10 +131,10 @@ Please follow the extensive guide we have provided [on the documentation website
 
 What if you want to update the [docstrings](https://en.wikipedia.org/wiki/Docstring) of a Brightway package (eg. `bw2data`) and check if they render correctly in the documentation? You can do this by updating the submodule `brightway2-data`.
 
-1. Use the `git submodule set-url` command to update the URL of the submodule:
+1. Use the [`git submodule set-url`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-set-url--ltpathgtltnewurlgt) command to update the URL of the submodule:
 
 > [!NOTE]
-> Replace `brightway2-data` with the name of the submodule you want to update.
+> Replace `brightway2-data` with the name of the submodule you want to update. \
 > Replace `https://github.com/michaelweinold/brightway2-data` with the URL of the submodule you want to update.
 
 ```bash
@@ -150,7 +150,7 @@ This will update the URL in the `.gitmodules` file and in the `.git/config` file
 	branch = main
 ```
 
-2. Use the `git submodule update` command to update the submodule:
+2. Use the [`git submodule update`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-update--init--remote-N--no-fetch--no-recommend-shallow-f--force--checkout--rebase--merge--referenceltrepositorygt--depthltdepthgt--recursive--jobsltngt--no-single-branch--filterltfilterspecgt--ltpathgt82308203) command to update the submodule:
 
 ```bash
 git submodule update --init --recursive --remote 
