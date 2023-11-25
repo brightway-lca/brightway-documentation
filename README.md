@@ -123,6 +123,41 @@ Internal links, if formatted according to [the `myst-parser` cross-referencing s
 
 Please follow the extensive guide we have provided [on the documentation website](https://documentation.brightway.dev/en/latest/source/contributing/contributing.html).
 
+## Manual
+
+### Working with Git Submodules
+
+#### Updating your Submodules
+
+What if you want to update the [docstrings](https://en.wikipedia.org/wiki/Docstring) of a Brightway package (eg. `bw2data`) and check if they render correctly in the documentation? You can do this by updating the submodule `brightway2-data`.
+
+1. Use the `git submodule set-url` command to update the URL of the submodule:
+
+> [!NOTE]
+> Replace `brightway2-data` with the name of the submodule you want to update.
+> Replace `https://github.com/michaelweinold/brightway2-data` with the URL of the submodule you want to update.
+
+```bash
+git submodule set-url brightway2-data https://github.com/michaelweinold/brightway2-data
+```
+
+This will update the URL in the `.gitmodules` file and in the `.git/config` file:
+
+```
+[submodule "brightway2-data"]
+	path = brightway2-data
+	url = https://github.com/michaelweinold/brightway2-data
+	branch = main
+```
+
+2. Use the `git submodule update` command to update the submodule:
+
+```bash
+git submodule update --init --recursive --remote 
+```
+
+3. To change the URL of the submodule back to the original URL, repeat step 1. with the original URL.
+
 ## 📚 References
 
 Compare the `sphinx`:
