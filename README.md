@@ -102,22 +102,6 @@ sphinx-autobuild source _build/html -a -j auto --open-browser
 You can now preview the documentation at (the browser window will open automatically ✨):
 http://127.0.0.1:8000/
 
-### Checking for Dead External Links
-
-The documentation contains links to external websites. To check if these links are still valid, run the following command from the repository root directory:
-
-```bash
-sphinx-build -b linkcheck -D linkcheck_workers=20 source _build/linkcheck
-```
-
-| positional argument or option| value | description |
-| ---------------------------- | ----- | ----------- |
-| `-b` | `linkcheck` | [`linkcheck` builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder) |
-| `-D` | `linkcheck_workers=20`` | [number of links to check in paralell](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-linkcheck_workers) |
-| sourcedir | `source` | N/A |
-| outdir | `_build/linkcheck` | `_build/linkcheck/output.txt` contains a list of all broken or redirected links |
-
-Internal links, if formatted according to [the `myst-parser` cross-referencing specifications](https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#cross-references), are checked automatically during the regular build process.
 
 ### Contributing
 
@@ -125,17 +109,29 @@ Please follow the extensive guide we have provided [on the documentation website
 
 ## Manual
 
-### Working with Git Submodules
+### Updating the Build Environment
 
-#### Updating your Submodules
+The build environment (packages and versions used by Sphinx to build the documentation) is defined in the [Conda environment file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment) [`./environment.yml`](environment.yml). 
 
-What if you want to update the [docstrings](https://en.wikipedia.org/wiki/Docstring) of a Brightway package (eg. `bw2data`) and check if they render correctly in the documentation? You can do this by updating the submodule `brightway2-data`.
+Package versions are "pinned" to ensure that the documentation is always built with the same versions. Otherwise, chagnes in one of the packages might break the build. Package versions are _not_ updated automatiaclly. In doing so, we are following [the recommendation by the community](https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/index.html#user-guide):
+
+> \[The pydata-sphinx-theme\] is still under active development, and we make no promises about the stability of any specific HTML structure, CSS variables, etc. Make these customizations at your own risk, and pin versions if you’re worried about breaking changes!
+
+ To update the package versions, edit the file and test the build locally, before pushing the changes to the remote.
+
+### Updating the Example Gallery
+
+
+
+### Updating Git Submodules
+
+What if you want to update the [docstrings](https://en.wikipedia.org/wiki/Docstring) of a Brightway package (eg. `bw2data`) and check if they render correctly in the documentation? You can do this by updating the submodule `brightway2-data` and building the documentation:
 
 1. Use the [`git submodule set-url`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-set-url--ltpathgtltnewurlgt) command to update the URL of the submodule:
 
 > [!NOTE]
 > Replace `brightway2-data` with the name of the submodule you want to update. \
-> Replace `https://github.com/michaelweinold/brightway2-data` with the URL of the submodule you want to update.
+> Replace `https://github.com/(...))` with the URL of the submodule you want to update.
 
 ```bash
 git submodule set-url brightway2-data https://github.com/michaelweinold/brightway2-data
@@ -156,7 +152,25 @@ This will update the URL in the `.gitmodules` file and in the `.git/config` file
 git submodule update --init --recursive --remote 
 ```
 
-3. To change the URL of the submodule back to the original URL, repeat step 1. with the original URL.
+3. Now build the documentation as described above.
+4. To change the URL of the submodule back to the original URL, repeat step 1. with the original URL.
+
+### Checking for Dead External Links
+
+The documentation contains links to external websites. To check if these links are still valid, run the following command from the repository root directory:
+
+```bash
+sphinx-build -b linkcheck -D linkcheck_workers=20 source _build/linkcheck
+```
+
+| positional argument or option| value | description |
+| ---------------------------- | ----- | ----------- |
+| `-b` | `linkcheck` | [`linkcheck` builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder) |
+| `-D` | `linkcheck_workers=20`` | [number of links to check in paralell](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-linkcheck_workers) |
+| sourcedir | `source` | N/A |
+| outdir | `_build/linkcheck` | `_build/linkcheck/output.txt` contains a list of all broken or redirected links |
+
+Internal links, if formatted according to [the `myst-parser` cross-referencing specifications](https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#cross-references), are checked automatically during the regular build process.
 
 ## 📚 References
 
