@@ -180,9 +180,9 @@ Internal links, if formatted according to [the `myst-parser` cross-referencing s
 
 The [`git submodules`](./.gitmodules) in the `brightway-documentation` repo are automatically updated every time the source repositories (eg. `brightway2-data`) are updated. Since the readthedocs.org build is then triggered, the API documentation is automatically updated every time that new code is added to a Brightway library. This is accomplished by three [GitHub Action workflows](https://github.com/features/actions):
 
-[![Update Submodules](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_update_submodules.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_update_submodules.yml) \
-[![Create Workflow Dispatch (Trigger Submodule Pull), Re-Use Workflow](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_reusable.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_reusable.yml) \
-[![Create Workflow Dispatch (Trigger Submodule Pull)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_main.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_main.yml)
+[![Update Submodules](https://github.com/brightway-lca/brightway-documentation/actions/workflows/update_submodules.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/update_submodules.yml) \
+[![Create Workflow Dispatch (Trigger Submodule Update)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/trigger_submodule_update_main.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/trigger_submodule_update_main.yml) \
+[![Re-Use Workflow - Create Workflow Dispatch (Trigger Submodule Update)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/trigger_submodule_update_reuse.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/trigger_submodule_update_reuse.yml)
 
 and a [GitHub App](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps) to ensure the workflows have the necessary permissions to update the submodules. The actions are connected as follows:
 
@@ -190,7 +190,7 @@ and a [GitHub App](https://docs.github.com/en/apps/creating-github-apps/about-cr
   flowchart TD;
     id1([<tt>bw2data</tt> updated])
 	--> 
-	id2(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Re-Use Workflow¹</a>)
+	id2(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Re-Use Workflow</a>)
 	-->
 	id3(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Trigger 'Update Submodules'</a>) 
 	--> 
