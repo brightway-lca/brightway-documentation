@@ -1,16 +1,4 @@
-```{attention}
-__HELP WANTED__ \
-You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](../contributing/contributing.md)
-```
-
-```{warning}
-__NEEDS WORK__ \
-This page is not yet complete. \
-It is either a rough draft or has been copied over from the legacy documentation.
-```
-
-# Theory
+# Brightway
 
 ## Brightway Components
 
@@ -1283,18 +1271,3 @@ You apply strategies using the
 `{ImporterClass}.apply_strategy(name_of_callable)` method. You could
 also append your custom strategy to `{ImporterClass}.strategies`, so it
 is used when you call `{ImporterClass}.apply_strategies`.
-
-
-```{toctree}
----
-hidden:
-maxdepth: 2
----
-self
-lca
-structure
-io
-uncertainty
-graph_traversal
-static_and_stochastic_lca
-```

@@ -42,12 +42,12 @@ Learn more {fas}`arrow-right`
 hidden:
 maxdepth: 1
 ---
-content/installation/installation
-content/theory/theory
+content/installation/index
+content/theory/index
 content/examples/index
+content/faq/index
 api/index
-content/faq/faq
-content/contributing/contributing
+content/contributing/index
 content/contact/contact
 
 content/changelog/index
