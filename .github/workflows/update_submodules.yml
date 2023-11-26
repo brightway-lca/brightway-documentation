@@ -1,7 +1,8 @@
-# compare: https://stackoverflow.com/a/67059629/
+# This workflow updated the submodules in the brightway2-data repository.
+# it has been adapted from https://stackoverflow.com/a/67059629/
 name: Update Submodules
 
-on: # this workflow is triggered by the 'trigger_submodule' workflow in other repositories
+on: # this workflow is triggered by the 'trigger_submodule_update_main' workflow in eg. brightway2-data.
   workflow_dispatch:
 
 jobs:
@@ -15,7 +16,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3 # https://github.com/actions/checkout/releases
+      uses: actions/checkout@v4 # https://github.com/actions/checkout/releases
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         submodules: true

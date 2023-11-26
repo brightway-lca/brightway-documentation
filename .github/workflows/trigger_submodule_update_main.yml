@@ -1,6 +1,8 @@
-# this workflow triggers the workflow 'github_action_update_submodules.yml' in the brightway-documentation repository
-# this workflow is re-used by the 'github_action_trigger_submodule_pull_reusable.yml' workflow in 'brightway2-calc', 'brightway2-data', 'brightway2-io', etc.
-name: Create Workflow Dispatch (Trigger Submodule Pull)
+# This workflow is re-used by the 'trigger_submodule_update_reuse.yml' workflow
+# in eg. 'brightway2-data'.
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+# This workflow triggers the workflow 'update_submodules.yml' in the 'brightway-documentation' repository.
+name: Create Workflow Dispatch (Trigger Submodule Update)
 
 on:
   workflow_call: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_call
@@ -12,13 +14,13 @@ jobs:
     steps:
       - name: Generate Token from GitHub App # https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow#authenticating-with-a-github-app
         id: generate_token
-        uses: tibdex/github-app-token@v1.7.0 # https://github.com/tibdex/github-app-token
+        uses: tibdex/github-app-token@v2.1.0 # https://github.com/tibdex/github-app-token
         with:
           app_id: ${{ secrets.DOCUMENTATION_WORKFLOW_APP_ID }}
           private_key: ${{ secrets.DOCUMENTATION_WORKFLOW_PRIVATE_KEY }}
       - name: Trigger Workflow # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
         id: trigger_workflow
         run: |
-          gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
+          gh workflow run update_submodules.yml -R brightway-lca/brightway-documentation
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}

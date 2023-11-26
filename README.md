@@ -113,15 +113,11 @@ Please follow the extensive guide we have provided [on the documentation website
 
 The build environment (packages and versions used by Sphinx to build the documentation) is defined in the [Conda environment file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment) [`./environment.yml`](environment.yml). 
 
-Package versions are "pinned" to ensure that the documentation is always built with the same versions. Otherwise, chagnes in one of the packages might break the build. Package versions are _not_ updated automatiaclly. In doing so, we are following [the recommendation by the community](https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/index.html#user-guide):
+Package versions are "pinned" to ensure that the documentation is always built with the same versions. Otherwise, changes in one of the packages might break the build. Package versions are _not_ updated automatiaclly. In doing so, we are following [the recommendation by the community](https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/index.html#user-guide):
 
 > \[The pydata-sphinx-theme\] is still under active development, and we make no promises about the stability of any specific HTML structure, CSS variables, etc. Make these customizations at your own risk, and pin versions if you’re worried about breaking changes!
 
  To update the package versions, edit the file and test the build locally, before pushing the changes to the remote.
-
-### Updating the Example Gallery
-
-
 
 ### Updating Git Submodules
 
@@ -155,6 +151,14 @@ git submodule update --init --recursive --remote
 3. Now build the documentation as described above.
 4. To change the URL of the submodule back to the original URL, repeat step 1. with the original URL.
 
+### Updating the Example Gallery
+
+Examples are collected in the form of Jupyter Notebooks in the [`brightway-examples`](https://github.com/brightway-lca/brightway-examples) repository. This repository is included as a submodule in this repository at [`.source/content/examples/brightway-examples`](.source/content/examples/brightway-examples).
+
+When new examples are added to the 
+
+To update the submodule, follow the steps described in [Updating Git Submodules](#updating-git-submodules).
+
 ### Checking for Dead External Links
 
 The documentation contains links to external websites. To check if these links are still valid, run the following command from the repository root directory:
@@ -171,6 +175,39 @@ sphinx-build -b linkcheck -D linkcheck_workers=20 source _build/linkcheck
 | outdir | `_build/linkcheck` | `_build/linkcheck/output.txt` contains a list of all broken or redirected links |
 
 Internal links, if formatted according to [the `myst-parser` cross-referencing specifications](https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#cross-references), are checked automatically during the regular build process.
+
+## GitHub Actions
+
+The [`git submodules`](./.gitmodules) in the `brightway-documentation` repo are automatically updated every time the source repositories (eg. `brightway2-data`) are updated. Since the readthedocs.org build is then triggered, the API documentation is automatically updated every time that new code is added to a Brightway library. This is accomplished by three [GitHub Action workflows](https://github.com/features/actions):
+
+[![Update Submodules](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_update_submodules.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_update_submodules.yml) \
+[![Create Workflow Dispatch (Trigger Submodule Pull), Re-Use Workflow](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_reusable.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_reusable.yml) \
+[![Create Workflow Dispatch (Trigger Submodule Pull)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_main.yml/badge.svg)](https://github.com/brightway-lca/brightway-documentation/actions/workflows/github_action_trigger_submodule_pull_main.yml)
+
+and a [GitHub App](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps) to ensure the workflows have the necessary permissions to update the submodules. The actions are connected as follows:
+
+```mermaid
+  flowchart TD;
+    id1([<tt>bw2data</tt> updated])
+	--> 
+	id2(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Re-Use Workflow¹</a>)
+	-->
+	id3(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Trigger 'Update Submodules'</a>) 
+	--> 
+	id4(<tt>brightway-documentation</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Update Submodules</a>)
+	--> 
+	id5([<tt>bw2data</tt> submodule in <tt>brightway-documentation</tt> updated])
+	id7(<a href='https://github.com/organizations/brightway-lca/settings/installations/40187447'><tt>Documentation Workflow App</tt></a>)-- permissions to trigger run -->id3
+```
+
+¹ The [Re-Use Workflow]() is used in order to....
+
+## readthedocs.org
+
+The documentation is hosted on [readthedocs.org](https://readthedocs.org/). The build is triggered automatically every time the `main` branch of the `brightway-documentation` repository is updated.
+
+The following GitHub users are currently maintainers of the readthedocs.org project: \
+[@michaelweinold](https://github.com/michaelweinold), [@cmutel](https://github.com/cmutel), [@tngTUDOR](https://github.com/tngTUDOR)
 
 ## 📚 References
 
