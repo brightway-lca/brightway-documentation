@@ -1,4 +1,4 @@
-# Examples Contributing Guide
+# Contributing Guide
 
 You can contribute examples to the Brightway Documentation webpage by following these steps:
 
