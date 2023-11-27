@@ -1,15 +1,10 @@
 # Credits & License
 
-![Conda - License](https://img.shields.io/conda/l/conda-forge/brightway2?label=License&logo=Open%20Source%20Initiative&logoColor=white)
-
-
-Brightway was originally developed by [Chris Mutel](https://mutel.org/) during his doctoral research. Brightway would have been possible without the incredibly generous support of [Professor Stefanie Hellweg](http://www.esd.ifu.ethz.ch/the-group/people/person-detail.html?persid=63817) of ETH Zürich. Today, Brightway is a highly active software ecosystem maintained by developers and life-cycle practitioners from academia and industry.
+Brightway was originally developed by [Chris Mutel](https://mutel.org/) during his doctoral research project. Brightway would have been possible without the incredibly generous support of [Professor Stefanie Hellweg](http://www.esd.ifu.ethz.ch/the-group/people/person-detail.html?persid=63817) of ETH Zürich. Today, Brightway is a highly active software ecosystem maintained by developers and life-cycle practitioners from academia and industry.
 
 ## Citation
 
-[![DOI](https://img.shields.io/badge/JOSS-10.21105%2Fjoss.00236-orange.svg?style=flat&logo=Open%20Access&logoColor=white)](https://doi.org/10.21105/joss.00236)
-
-If you use Brighway in your academic research, please cite the [primary publication in the Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.00236):
+If you use Brighway in your academic research, please cite the [primary publication in the Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.00236): [![DOI](https://img.shields.io/badge/JOSS-10.21105%2Fjoss.00236-orange.svg?style=flat&logo=Open%20Access&logoColor=white)](https://doi.org/10.21105/joss.00236)
 
 > Mutel, C. 2017. Brightway: An open source framework for Life Cycle Assessment. Journal of Open Source Software, 12:2. https://doi.org/10.21105%2Fjoss.00236.
 
@@ -19,24 +14,24 @@ If you use Brighway in your academic research, please cite the [primary publicat
 | Name | Contributions |
 |------|--|
 | [Chris Mutel](http://chris.mutel.org/) | [creator](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) [of `brightway-lca`](https://github.com/brightway-lca) |
-| [Adrian Haas](https://www.ethz.ch/content/specialinterest/baug/institute-ifu/institute-ifu/en/das-institut/personen/personen-detail.html?persid=171851) | to be added |
-| [Giuseppe Cardellini](http://www.kuleuven.be/wieiswie/en/person/90387) | to be added |
-| Andreas Froemelt | to be added |
-| [Niko Heeren](https://environment.yale.edu/profile/niko-heeren/) | to be added |
-| Aurelian Jaggi | to be added |
-| Maghimai Marcus | to be added |
-| [Marie de Saxcé](http://lca-net.com/about/who-we-are/) | to be added |
-| [Low Kian Seong](https://bitbucket.org/lowks) | to be added |
-| [Bernhard Steubing](https://www.researchgate.net/profile/Maghimai_Marcus2) | to be added |
-| [Pascal Lesage](http://www.polymtl.ca/recherche/rc/en/professeurs/details.php?NoProf=551) | to be added |
-| [Manuel Klarmann](https://twitter.com/mklarmann) | to be added |
-| [Tomás Navarrete Gutiérrez](https://www.linkedin.com/in/tom4m3) | contributor |
-| Guillaume Audard | to be added |
-| [Benjamin Portner](https://www.researchgate.net/profile/Benjamin_Portner) | to be added |
-| Jan Machacek | to be added |
-| Paul Baustert | to be added |
-| Aleksandra Kim | to be added |
-| [Michael Weinold](https://michael.weinold.ch) | [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) <br> `brightway-hybrid` |
+| [Adrian Haas](https://www.ethz.ch/content/specialinterest/baug/institute-ifu/institute-ifu/en/das-institut/personen/personen-detail.html?persid=171851) |  |
+| [Giuseppe Cardellini](http://www.kuleuven.be/wieiswie/en/person/90387) |  |
+| Andreas Froemelt |  |
+| [Niko Heeren](https://environment.yale.edu/profile/niko-heeren/) |  |
+| Aurelian Jaggi |  |
+| Maghimai Marcus |  |
+| [Marie de Saxcé](http://lca-net.com/about/who-we-are/) |  |
+| [Low Kian Seong](https://bitbucket.org/lowks) |  |
+| [Bernhard Steubing](https://www.researchgate.net/profile/Maghimai_Marcus2) |  |
+| [Pascal Lesage](http://www.polymtl.ca/recherche/rc/en/professeurs/details.php?NoProf=551) |  |
+| [Manuel Klarmann](https://twitter.com/mklarmann) |  |
+| [Tomás Navarrete Gutiérrez](https://www.linkedin.com/in/tom4m3) |  |
+| Guillaume Audard |  |
+| [Benjamin Portner](https://www.researchgate.net/profile/Benjamin_Portner) |  |
+| Jan Machacek |  |
+| Paul Baustert |  |
+| Aleksandra Kim |  |
+| [Michael Weinold](https://michael.weinold.ch) | [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) <br> [`brightway-live`](https://github.com/brightway-lca/brightway-live) <br> [`brightway-book`](https://github.com/brightway-lca/brightway-book) |
 
 
 ## License

@@ -1,4 +1,7 @@
-# Instructions: API Documentation
+# Contributing to the Code
+
+
+If you would like to contribute to the development of Brightway, follow the usual GitHub process: Fork the [relevant Brightway repository on GitHub](https://github.com/brightway-lca), make your changes and open a pull request with your changes. The Brightway project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/).
 
 
 ```{note}

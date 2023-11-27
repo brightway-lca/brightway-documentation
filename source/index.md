@@ -46,9 +46,9 @@ content/installation/index
 content/theory/index
 content/examples/index
 content/faq/index
-api/index
 content/contributing/index
 content/contact/contact
+api/index
 
 content/changelog/index
 content/other/ecosystem
