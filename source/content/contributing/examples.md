@@ -1,4 +1,4 @@
-# Contributing Guide
+# Contributing to the Examples
 
 You can contribute examples to the Brightway Documentation webpage by following these steps:
 
@@ -26,21 +26,7 @@ Make sure to include [a Conda environment file in YAML format](https://conda.io/
 1. Basic knowledge of the [MyST Markdown syntax](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
 ```
 
-You can use additional formatting in your example notebook to make it more readable.
-
-The Brightway Documentation webpage uses the [MyST markdown format](https://myst-parser.readthedocs.io/en/latest/index.html). _Markdown_ is a is a lightweight markup language (=text-encoding system) for creating formatted text using a plain-text editor. MyST is a dialect of Markdown that supports many visual elements useful in scientific publishing. 
-
-For instance, you can use plain text:
-
-```markdown
-$y = mx^2 + b$
-```
-
-to include a LaTeX equation in your text:
-
-$y = mx^2 + b$
-
-Other functions include [cross-references, footnotes, embedded images, tables, colored information boxes and more](https://myst-parser.readthedocs.io/en/latest/index.html). To provide this functionality in Jupyter Notebooks, the Brightway Documentation webpage uses the [MyST-NB](https://myst-nb.readthedocs.io/en/latest/index.html) extension.
+Please follow the formatting instructions from the [Formatting Guide](./formatting.md).
 
 ## Add your Notebook
 

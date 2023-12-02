@@ -18,6 +18,8 @@ maxdepth: 1
 ---
 self
 bugs
+formatting
 code
+examples
 docs
 ```

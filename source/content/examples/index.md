@@ -9,7 +9,7 @@ This section contains a collection of examples that demonstrate how to use Brigh
 
 ```{note}
 Would you like to contribute by adding your own examples (based on your Jupyter Notebooks)?
-Please follow the [Examples Contribution Guide](./guide.md).
+Please follow the [Examples Contribution Guide](../contributing/examples.md).
 ```
 
 ```{toctree}

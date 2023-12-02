@@ -10,13 +10,44 @@ The primary documentation for the Brightway life-cycle assessment software packa
 | ---- | ------------- | ------------- |
 | [docs.brightway.dev](https://github.com/brightway-lca/brightway-documentation) | [learn.brightway.dev](https://github.com/brightway-lca/brightway-learn) | [live.brightway.dev](https://github.com/brightway-lca/brightway-live) | 
 
-## Repository Structure
+## Overview
 
-Brightway modules are split up into different repositories (`brightway-2-analyzer`, `brightway2-calc`, etc.). These repositories are included as [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in this repository in order to e.g. enable Sphinx to build a combined changelog page.
+### Repository Structure
 
-## Sphinx/readthedocs.org Structure
+The content of the Brightway documentation is stored in the `source/content` folder of the `brightway-documentation` repository. The homepage is located in `source/content/index.md`. The `source/conf.py` file contains the configuration for the documentation build.
 
-All content pages of the documentation are Markdown formatted for reasons of simplicity. The API documentation is build from source automatically by the readthedocs.org Sphinx extension [`AutoAPI`](https://sphinx-autoapi.readthedocs.io/en/latest/).
+Brightway modules are split up into different repositories for strategic reasons (`brightway-2-analyzer`, `brightway2-calc`, etc.). These repositories are included as [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in this repository. This allows the Sphinx documentation generator to easily to build a combined changelog page or generate an API documentation from Brightway source code.
+
+```
+.
+├── environment.yml
+├── source/
+│   ├── conf.py
+|   ├── index.md
+│   └── content/
+│       ├── setup/
+│       ├── introduction/
+│       └── (...other documentation sections)
+├── README.md
+├── brightway2-io/ (git submodule)
+├── brightway2-data/ (git submodule)
+└── (...other Brightway modules as git submodules)
+```
+
+### Sphinx
+
+The Brightway documentation is built with [Sphinx](https://www.sphinx-doc.org/en/master/), the Python documentation generator. All relevant code resides in the [`brightway-documentation`](https://github.com/brightway-lca/brightway-documentation) repository.
+
+### readthedocs.org
+
+The documentation is hosted on [readthedocs.org](https://readthedocs.org/). The build is triggered automatically every time the `main` branch of the `brightway-documentation` repository is updated. The build process is currently ![Read the Docs](https://img.shields.io/readthedocs/brightway-documentation?label=readthedocs.org&logo=Read%20the%20Docs&logoColor=white).
+
+
+Three users are currently assigned as administrators: [`@cmutel`](https://github.com/cmutel), [`@michaelweinold`](https://github.com/michaelweinold) and [`@tngTUDOR`](https://github.com/tngTUDOR).
+
+### git submodules
+
+The core functionality of Brightway is provided by different packages (e.g. `brightway-calc`, `brightway-data`). For strategic reasons, these packages are maintained as separate repositories. The content of these repositories is included in the `brightway-documentation` repository through [`git submodules`](https://git-scm.com/book/en/v2/Git-Tools-Submodules). This enables `sphinx` to include files from these repositories in the documentation directly (e.g. `README.md`). It further enables `sphinx-autodoc` both locally and in the readthedocs.org service to build the API documentation from source instead of importing all Brightway packages during the build process. 
 
 ## Quickstart
 
@@ -190,24 +221,15 @@ and a [GitHub App](https://docs.github.com/en/apps/creating-github-apps/about-cr
   flowchart TD;
     id1([<tt>bw2data</tt> updated])
 	--> 
-	id2(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Re-Use Workflow</a>)
+	id2(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/trigger_submodule_update_reuse.yml'>Re-Use Workflow</a>)
 	-->
-	id3(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Trigger 'Update Submodules'</a>) 
+	id3(<tt>bw2data</tt> Action: <a href='https://github.com/brightway-lca/brightway-documentation/blob/main/.github/workflows/trigger_submodule_update_main.yml'>Trigger 'Update Submodules'</a>) 
 	--> 
-	id4(<tt>brightway-documentation</tt> Action: <a href='https://github.com/brightway-lca/brightway2-data/blob/main/.github/workflows/github_action_trigger_submodule_pull_reusable.yml'>Update Submodules</a>)
+	id4(<tt>brightway-documentation</tt> Action: <a href='https://github.com/brightway-lca/brightway-documentation/blob/main/.github/workflows/update_submodules.yml'>Update Submodules</a>)
 	--> 
 	id5([<tt>bw2data</tt> submodule in <tt>brightway-documentation</tt> updated])
 	id7(<a href='https://github.com/organizations/brightway-lca/settings/installations/40187447'><tt>Documentation Workflow App</tt></a>)-- permissions to trigger run -->id3
 ```
-
-¹ The [Re-Use Workflow]() is used in order to....
-
-## readthedocs.org
-
-The documentation is hosted on [readthedocs.org](https://readthedocs.org/). The build is triggered automatically every time the `main` branch of the `brightway-documentation` repository is updated.
-
-The following GitHub users are currently maintainers of the readthedocs.org project: \
-[@michaelweinold](https://github.com/michaelweinold), [@cmutel](https://github.com/cmutel), [@tngTUDOR](https://github.com/tngTUDOR)
 
 ## 📚 References
 
