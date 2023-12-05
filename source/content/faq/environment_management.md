@@ -17,33 +17,12 @@ Replace `<FILE_NAME>` with the name you want to give the file. \
 Replace `<PATH_TO_FILE>` with the path to the file you want to save the environment to.
 ```
 
-::::{tab-set}
-
-:::{tab-item} Linux or macOS
-
-```{note}
-Brightway runs natively on Unix (x64) systems, including Linux distributions and macOS.
-```
-
-```bash
-conda activate <ENVIRONMENT_NAME>
-conda env export --from-history > <PATH_TO_FILE>/<FILE_NAME>.yml
-```
-
-:::
-
-:::{tab-item} Windows (x64)
-
 ```bash
 conda activate <ENVIRONMENT_NAME>
 conda env export --from-history > "<PATH_TO_FILE>/<FILE_NAME>.yml"
 ```
 
-:::
-
-::::
-
-This will create a file called `<FILE_NAME>.yml` at the location you specified. The `--from-history` flag ensures that only those packages are included that you installed into the environment (and not all their dependencies). You can then use this file to recreate the environment at a later point using the following command:
+This will create a file called `<FILE_NAME>.yml` at the location you specified. The `--from-history` flag ensures that only those packages are included that you installed into the environment (and not all their dependencies). You can then use this file to recreate the environment at a later point using the following shell command:
 
 ```{note}
 Replace `<ENVIRONMENT_NAME>` with the name of the environment you want to restore.
