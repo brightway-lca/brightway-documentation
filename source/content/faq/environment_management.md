@@ -29,5 +29,5 @@ Replace `<ENVIRONMENT_NAME>` with the name of the environment you want to restor
 ```
 
 ```bash
-conda env create -f <PATH_TO_FILE>/environment.yml
+conda env create -f "<PATH_TO_FILE>/environment.yml"
 ```
