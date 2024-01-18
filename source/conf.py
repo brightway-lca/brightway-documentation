@@ -82,7 +82,7 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    "announcement": "<p>Join the Discussion: 💬 <a href='https://matrix.to/#/#brightway:matrix.org'>Brightway Community Chat Rooms on Matrix</a></p>",
+    "announcement": "<p><a href='https://www.d-d-s.ch/schools/may-24/index.html'>REGISTER NOW</a>: Brightway Spring School! 🇨🇦 Québec City (Canada) 🗓️ 20.-24. May 2024</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
