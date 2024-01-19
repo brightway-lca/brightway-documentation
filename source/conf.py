@@ -101,17 +101,20 @@ html_theme_options = {
         {
             "name": "GitHub",
             "url": "https://github.com/brightway-lca",
-            "icon": "fab fa-brands fa-github",
+            "icon": "fa-brands fa-github",
+            "type": "fontawesome",
         },
         {
             "name": "Conda",
             "url": "https://anaconda.org/cmutel/brightway25",
-            "icon": "fab fa-brands fa-python",
+            "icon": "fa-brands fa-python",
+            "type": "fontawesome",
         },
         {
-            "name": "Matrix",
+            "name": "Matrix Group Chat",
             "url": "https://app.element.io/#/room/#brightway/community:matrix.org",
-            "icon": "fab fa-regular fa-comments",
+            "icon": "fa-regular fa-comments",
+            "type": "fontawesome",
         }
     ],
     # various settings
