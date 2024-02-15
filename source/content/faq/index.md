@@ -24,6 +24,7 @@ hidden: true
 self
 error_messages
 brightway
+compatibility
 data_management
 environment_management
 confusing_results
