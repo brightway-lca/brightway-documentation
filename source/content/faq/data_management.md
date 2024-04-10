@@ -74,7 +74,7 @@ Replace `<PATH>` with your desired absolute directory path and restart the shell
 
 ## How do I change my data directory in a conda environment?
 
-When you create a [conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#managing-environments), it lives in a folder similar to `<YOUR_ANACONDA_INSTALL_DIR>/envs/<YOUR_ENV_NAME>`. When conda activates or deactivates an environment, it looks for additional scripts in the two subfolders `activate.d` and `deactivate.d` within this folder. To set persistent environment variables [(like `BRIGHTWAY2_DIR`)](BRIGHTWAY2_DIR) in the virtual environment:
+When you create a [conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#managing-environments), it lives in a folder similar to `<YOUR_ANACONDA_INSTALL_DIR>/envs/<YOUR_ENV_NAME>`. When conda activates or deactivates an environment, it looks for additional scripts in the two subfolders `etc/conda/activate.d` and `etc/conda/deactivate.d` within this folder. To set persistent environment variables [(like `BRIGHTWAY2_DIR`)](BRIGHTWAY2_DIR) in the virtual environment:
 
 ::::{tab-set}
 
@@ -87,9 +87,36 @@ When you create a [conda environment](https://conda.io/projects/conda/en/latest/
 cd <YOUR_ANACONDA_INSTALL_DIR>/envs/<YOUR_ENV_NAME>
 ```
 
-2. Create the two folders `activate.d` and `deactivate.d`
+2. Create the two folders `etc/conda/activate.d` and `etc/conda/deactivate.d`
 
-3. Create scripts in the folders that set and unset the environment variables (in this case `BRIGHTWAY2_DIR`). The names of the files don't matter, but the file extensions do. Inside the folder `activate.d` create the file `<WHATEVER_NAME_YOU_LIKE.sh` and inside it write `export BRIGHTWAY2_DIR=<YOUR_NEW_DIR_PATH>`. Inside the folder `deactivate.d` create the file `<WHATEVER_NAME_YOU_LIKE.sh` and inside it write `BRIGHTWAY2_DIR=`.
+```bash
+mkdir -p etc/conda/activate.d
+mkdir -p etc/conda/deactivate.d
+```
+
+4. Create scripts in the folders that set and unset the environment variables (in this case `BRIGHTWAY2_DIR`). The names of the files don't matter, but the file extensions do. Inside the folder `activate.d` create the file `<WHATEVER_NAME_YOU_LIKE.sh` and inside it write `export BRIGHTWAY2_DIR=<YOUR_NEW_DIR_PATH>`. Inside the folder `deactivate.d` create the file `<WHATEVER_NAME_YOU_LIKE.sh` and inside it write `unset BRIGHTWAY2_DIR`.
+
+The scripts should look like this:
+In the `activate.d`:
+
+```bash
+#!/bin/sh
+export BRIGHTWAY2_DIR="<YOUR_NEW_DIR_PATH>"
+```
+
+In the `deactivate.d`:
+
+```bash
+#!/bin/sh
+unset BRIGHTWAY2_DIR
+```
+
+5. Ensure Script Permissions: Make sure both scripts are executable by running:
+
+```bash
+chmod +x etc/conda/activate.d/<WHATEVER_NAME_YOU_LIKE>.sh
+chmod +x etc/conda/deactivate.d/<WHATEVER_NAME_YOU_LIKE>.sh
+```
 
 :::
 
