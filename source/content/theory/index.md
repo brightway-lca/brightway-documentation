@@ -19,6 +19,7 @@ hidden: true
 maxdepth: 2
 ---
 self
+terminology
 lca
 structure
 io
