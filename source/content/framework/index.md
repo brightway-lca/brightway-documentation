@@ -10,7 +10,7 @@ Projects that extend the ![Brightway](https://img.shields.io/static/v1?label=Bri
 | [`bw_graph_tools`](https://docs.brightway.dev/projects/graphtools/) | [Path traversal](https://en.wikipedia.org/wiki/Graph_traversal) and graph manipulation in Brightway |
 | [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/) | Importing [SimaPro](http://simapro.com) CSV files into Brightway |
 | [`bw_processing`](https://docs.brightway.dev/projects/bw-processing/) | Creation of structured arrays in a common format |
-| [`bw_temporalis`](https://docs.brightway.dev/projects/temporalis/) | Dynamic LCA, considering time in both inventory and impact assessment |
+| [`bw_temporalis`](https://docs.brightway.dev/projects/temporalis/) | [Dynamic LCA](https://doi.org/10.1021/es9030003), considering time in both inventory and impact assessment |
 
 
 ## Other Projects _extending_ Brightway
