@@ -8,7 +8,7 @@ Projects that extend the ![Brightway](https://img.shields.io/static/v1?label=Bri
 | ------- | ----------- |
 | [`bw_hestia_bridge`](https://docs.brightway.dev/projects/hestiabridge/) | Enables importing of [Hestia](https://www.hestia.earth) data into Brightway |
 | [`bw_graph_tools`](https://docs.brightway.dev/projects/graphtools/) | Enables [path traversal](https://en.wikipedia.org/wiki/Graph_traversal) and graph manipulation in Brightway |
-| [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/en/latest/) | Import SimaPro CSV files into Brightway |
+| [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/en/latest/) | Import [SimaPro](http://simapro.com) CSV files into Brightway |
 
 ## Other Projects _extending_ Brightway
 
