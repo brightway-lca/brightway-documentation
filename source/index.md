@@ -52,12 +52,12 @@ content/installation/index
 content/theory/index
 content/examples/index
 content/faq/index
+content/framework/index
 content/contributing/index
 content/contact/contact
 api/index
 
 content/changelog/index
-content/other/ecosystem
 content/other/support
 content/other/credits
 ```

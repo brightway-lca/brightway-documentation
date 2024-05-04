@@ -1,8 +1,6 @@
 ### path setup ####################################################################################
 
-from glob import glob
 import datetime
-import os
  
 ###################################################################################################
 ### Project Information ###########################################################################
@@ -16,7 +14,7 @@ version: str = 'latest' # required by the version switcher
 ### Project Configuration #########################################################################
 ###################################################################################################
 
-needs_sphinx = '5.3.0'
+needs_sphinx = '7.0.0'
 
 extensions = [
     # core extensions
@@ -95,7 +93,7 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
-    "header_links_before_dropdown": 7,
+    "header_links_before_dropdown": 8,
     # page elements content
     "icon_links": [
         {
@@ -218,7 +216,6 @@ myst_enable_extensions = [
 # https://myst-nb.readthedocs.io/en/latest/configuration.html
 
 nb_execution_mode = 'off'
-
 
 # sphinx-favicon configuration #########################################
 # https://github.com/tcmetzger/sphinx-favicon
