@@ -16,7 +16,7 @@ Please follow the [Examples Contribution Guide](../contributing/examples.md).
 
 In addition to the examples, we have collected materials that were compiled to teach Brightway. This includes materials used in Brightway Spring/Autumn Schools, Brightway Classes, and Brightcon Conferences.
 
-### Brighcon Conferences
+### Brightcon Conferences
 
 | Year | Location | Website | Materials |
 |------|----------|---------|-----------|
