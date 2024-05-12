@@ -133,7 +133,7 @@ conda install -c conda-forge jupyterlab
 :::{tab-item} macOS (Apple Silicon/ARM)
 
 ```{note}
-Brightway runs on the new Apple Silicon ARM architecture. However, the super-fast linear algebra software library `pypardiso` is not compatible with the ARM processor architecture. To avoid critical errors during instruction that would break core functionality, a different version of Brightway (`brightway_nosolver`) and a a different linear algebra software library (`scikit-umfpack`) must be installed.
+Due to [an upstream bug](https://github.com/scikit-umfpack/scikit-umfpack/issues/98), there is currently no reliable way to install the fast sparse library `umfpack` on Apple Silicon. Please install Brightway using `conda` or `mamba` for now.
 ```
 
 1. Create a new Conda environment (in this example named `brightway`):
