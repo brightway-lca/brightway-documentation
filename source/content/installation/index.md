@@ -78,18 +78,20 @@ umfpack-libdir = '/opt/homebrew/Cellar/suite-sparse/7.6.0/lib/'
 umfpack-includedir = '/opt/homebrew/Cellar/suite-sparse/7.6.0/include/suitesparse/'
 ```
 
+This assumes you installed version `7.6.0`, you may need to adjust the version number. You should be able to run `ls /opt/homebrew/Cellar/suite-sparse/` to see what was installed.
+
 7. Install `scikit-umfpack`:
 
 ```console
 pip install scikit-umfpack -Csetup-args=--native-file=$PWD/custom-config.ini
 ```
 
-This assumes that the `custom-config.ini` file is in your current working directory.
+This assumes that the `custom-config.ini` file is in your current working directory (`PWD` means print working directory).
 
 8. Install Brightway:
 
 ```console
-pip install brightway25 pypardiso
+pip install brightway25 scikit-umfpack
 ```
 
 9. (Optional) You can also use pip to install useful libraries like `jupyterlab`.
