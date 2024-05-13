@@ -17,4 +17,5 @@ self
 setup
 projects
 databases
+lcia
 ```

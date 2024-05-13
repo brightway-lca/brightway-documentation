@@ -51,8 +51,8 @@ hidden:
 maxdepth: 1
 ---
 content/installation/index
-content/theory/index
 content/gettingstarted/index
+content/theory/index
 content/examples/index
 content/faq/index
 content/contributing/index
