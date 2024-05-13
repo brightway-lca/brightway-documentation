@@ -39,6 +39,8 @@ Learn more {fas}`arrow-right`
 
 ## What's New?
 
+__May 2024__: New section [Getting Started](./content/gettingstarted/index.md) added to the documentation. This section will help you kickstart your first Brightway project. Thank you, @[KatrinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold) \
+
 __April 2024__: New section [Terminology](./content/theory/terminology.md) added to the documentation. This section explains the most important terms used in the Brightway documentation. Thank you, @[marc-vdm](https://github.com/marc-vdm)! \
 __April 2024__: New sub-section [Teaching Materials](./content/examples/index.md) added to the documentation. This section collects materials used to teach Brightway. Thank you, @[KatrinTreyer](https://github.com/KarinTreyer)!
 

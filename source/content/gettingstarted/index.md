@@ -36,13 +36,15 @@ How do I manage my projects?
 bd.project.ProjectManager()
 ```
 
-```{note}
+````{note}
 For your convenience, Brightway also provides a shorthand way of calling the project manager:
-```
 
 ```python
 bp.projects
 ```
+
+````
+
 
 ```{admonition} API Documentation
 :class: note

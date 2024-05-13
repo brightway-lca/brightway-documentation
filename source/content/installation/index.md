@@ -41,7 +41,7 @@ pip install brightway25 pypardiso
 :::{tab-item} MacOS (Apple Silicon/ARM)
 
 ```{note}
-Due to [an upstream bug](https://github.com/scikit-umfpack/scikit-umfpack/issues/98), there is currently no reliable way to install the fast sparse library `umfpack` on Apple Silicon. Please install Brightway using `conda` or `mamba` for now.
+Due to [an upstream bug](https://github.com/scikit-umfpack/scikit-umfpack/issues/98), there is currently no reliable way to install the fast sparse library `umfpack` on Apple Silicon using `pip`. Please install Brightway using `conda` or `mamba` for now.
 ```
 
 1. Install [Homebrew](https://docs.brew.sh/Installation).
