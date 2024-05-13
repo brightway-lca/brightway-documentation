@@ -50,14 +50,15 @@ maxdepth: 1
 ---
 content/installation/index
 content/theory/index
+content/gettingstarted/index
 content/examples/index
 content/faq/index
-content/framework/index
 content/contributing/index
 content/contact/contact
 api/index
 
-content/changelog/index
+content/other/framework
 content/other/support
 content/other/credits
+content/changelog/index
 ```
