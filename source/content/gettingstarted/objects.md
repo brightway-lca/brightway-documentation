@@ -19,10 +19,11 @@ my_biosphere = bd.Database('biosphere3')
 {py:obj}`bw2data.backends.base.SQLiteBackend`, the data type for these storage objects
 ```
 
-### Basic Searches
+(object-selection)=
+### Object Selection
 
-How do I select an activity from the technosphere database? \
-How do I select a biosphere flow from the biosphere database? 
+How do I select (=search for) an activity from the technosphere database? \
+How do I select (=search for) a biosphere flow from the biosphere database? 
 
 You can use the `search` function to find and return a list of objects that match your search term:
 
@@ -64,7 +65,7 @@ random_biosphere_flow = my_biosphere.random()
 ```
 ````
 
-### Objects Properties
+### Object Properties
 
 How do I list the properties of an activity? \
 How do I list the properties of a biosphere flow?
@@ -91,7 +92,7 @@ obj.as_dict()
 How can I list the different (searchable) metadata fields of an activity? \
 How can I list the different (searchable) metadata fields of a biosphere flow?
 
-[As we have seen above](#objects-properties), activities and biosphere flows are similar to Python dictionaries. We can therefore quickly check which metadata fields are available for search:
+[As we have seen above](#object-properties), activities and biosphere flows are similar to Python dictionaries. We can therefore quickly check which metadata fields are available for search:
 
 ```python
 list(my_database.random().as_dict().keys())
@@ -122,15 +123,23 @@ list(my_activity.production())
 In order to interact with _impact assessment methods_ we must first load the appropriate storage object:
 
 ```python
-my_methods = bd.methods
+bw2data.meta.Methods()
 ```
+
+````{note}
+For your convenience, Brightway also provides a shorthand way of calling the dictionary of methods metadata:
+
+```python
+bp.methods
+```
+````
 
 ```{admonition} API Documentation
 :class: seealso
 {py:obj}`bw2data.meta.Methods` ([`dict`](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [`tuple`s](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)), the data type for this storage object
 ```
 
-### Basic Searches
+### Object Selection
 
 ```{warning}
 [Unlike the technosphere and biosphere databases](#object-properties), the impact assessment methods are stored as a Python [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). This means, that no `search` function is available. Instead, a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) with the [Python membership operator `in`](https://docs.python.org/3/reference/expressions.html#membership-test-operations) can be used to search.
@@ -143,3 +152,16 @@ method_search_results = [
     if 'ILCD 2.0' in str(method) and 'LT' not in str(method)
 ]
 ```
+
+````{note}
+🎲 You can also _randomly_ select a method:
+
+```python
+random_method = bw.methods.random()
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2data.serialization.SerializedDict.random`
+```
+````

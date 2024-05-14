@@ -1,32 +1,44 @@
 # Impact Assessment
 
-## Impact Assessment Methods
+In order to conduct a life-cycle impact assessment we must first load the appropriate storage objects:
 
 ```python
-bw2data.meta.Methods()
+my_database = bd.Database('<database_name>')
+my_biosphere = bd.Database('biosphere3')
+my_methods = bd.methods
 ```
 
-````{note}
-For your convenience, Brightway also provides a shorthand way of calling the dictionary of methods metadata:
+## Calculate LCA Results
 
-```python
-bp.methods
-```
-````
-
-
-## Interacting with the Database
-
-## Calculate _one_ LCIA Result
+### Calculate _one_ LCIA Result
 
 How can I calculate the life-cycle impact assessment (LCIA) results for a given activity?
 
-Define the functional unit and the impact assessment method:
+We must define the functional unit and the impact assessment method.
+
+First, we must create a variable that contains the activity we want to assess. The activity must be of type {py:obj}`bw2data.backends.proxies.Activity`.
+
+```{admonition} Getting Started
+:class: seealso
+[](#object-selection)
+```
 
 ```python
-lca = bw2calc.LCA(
-    demand={my_activity: 1}, # the functional unit
-    method=('IPCC 2013', 'climate change', 'GWP 100a')
+functional_unit_activity = my_database.random()
+```
+
+Next, we must create a variable that contains the impact assessment method we want to use. The method must be of type `tuple`.
+
+```python
+impact_assessment_method = bd.methods.random()
+```
+
+Now, we can create an instance of the {py:obj}`bw2calc.lca.LCA` class.
+
+```python
+lca = bc.LCA(
+    demand=functional_unit_activity,
+    method=impact_assessment_method
 )
 ```
 
@@ -35,33 +47,48 @@ lca = bw2calc.LCA(
 {py:obj}`bw2calc.lca.LCA`
 ```
 
+This has only prepared the LCA calculation. Now, we must perform it:
+
 ```python
 lca.lci() # builds matrices, solves the inventory problem, generates an LCI matrix
 lca.lcia() # solves the impact assessment problem, generates an LCIA matrix
-lca.score() # returns the LCIA results
 ```
 
-```{admonition} API Documentation
+Now, the system has been solved. You can simply access the results:
+
+```python
+lca.score # returns the LCIA results
 ```
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2calc.lca.LCA`
+{py:obj}`bw2calc.lca_base.LCABase.lci` \
+{py:obj}`bw2calc.lca_base.LCABase.lcia` \
+{py:obj}`bw2calc.lca.LCA.score`
 ```
 
-## Calculate _multiple_ LCIA Results
+✨ Congratulations, you have conducted your first life-cycle impact assessment in Brightway!
+
+### Calculate _multiple_ LCIA Results
 
 How can I calculate the life-cycle impact assessment (LCIA) results for multiple activities?
 
-Define the functional units and the impact assessment methods:
+First, we must define a list of functional units and a list of the impact assessment methods:
 
 ```python
 functional_units = [
-    {my_activity_1: 1},
-    {my_activity_2: 1},
-    {my_activity_3: 1},
+    {bd.my_database.random(): 1},
+    {bd.my_database.random(): 1},
+    {bd.my_database.random(): 1},
+]
+methods = [
+    bd.methods.random(),
+    bd.methods.random(),
+    bd.methods.random(),
 ]
 ```
+
+Next, we must set up the calculation:
 
 ```python
 bd.meta.CalculationSetups['<setup_name>'] = (
@@ -75,12 +102,19 @@ bd.meta.CalculationSetups['<setup_name>'] = (
 {py:obj}`bw2data.meta.CalculationSetups`
 ```
 
+Now, we can perform the calculation:
+
 ```python
 mlca = bc.multi_lca.MultiLCA('<setup_name>')
-mlca.results
 ```
 
 ```{admonition} API Documentation
 :class: seealso
 {py:obj}`bw2calc.multi_lca.MultiLCA`
+```
+
+Now, the system has been solved. You can simply access the results:
+
+```python
+mlca.results
 ```
