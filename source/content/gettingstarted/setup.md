@@ -26,3 +26,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+
+## Saving Python Packages
+
+How do I save my Python environment so that I can use it later? \
+How can I make sure that my code works on another computer?
+
+```python
+conda activate <ENVIRONMENT_NAME>
+conda env export --from-history > "<PATH_TO_FILE>/<FILE_NAME>.yml"
+```
+
+```{admonition} FAQ Pages
+:class: seealso
+[Environment Management](../faq/environment_management.md)
+```

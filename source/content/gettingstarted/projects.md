@@ -12,7 +12,7 @@ bd.project.ProjectManager()
 For your convenience, Brightway also provides a shorthand way of calling the project manager:
 
 ```python
-bp.projects
+bd.projects
 ```
 ````
 
@@ -26,7 +26,7 @@ bp.projects
 How do I list all projects?
 
 ```python
-list(bp.projects)
+list(bd.projects)
 ```
 
 ```{admonition} API Documentation
@@ -34,14 +34,27 @@ list(bp.projects)
 {py:obj}`bw2data.project.ProjectManager`
 ```
 
+## Select Project
+
+How do I select a project?
+
+```python
+bd.set_current(name='<project_name>')
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2data.project.ProjectManager.set_current`
+```
+
 ## Project Locations
 
 How do I find where my projects are stored on disk?
 
 ```python
-bp.projects.dir
-bp.projects.logs_dir
-bp.projects.output_dir
+bd.projects.dir
+bd.projects.logs_dir
+bd.projects.output_dir
 ```
 
 ```{admonition} API Documentation
