@@ -19,7 +19,7 @@ my_biosphere = bd.Database('biosphere3')
 {py:obj}`bw2data.backends.base.SQLiteBackend`, the data type for these storage objects
 ```
 
-### Selecting Objects
+### Basic Searches
 
 How do I select an activity from the technosphere database? \
 How do I select a biosphere flow from the biosphere database? 
@@ -33,19 +33,21 @@ my_biosphere.search('<search_term>')
 
 This will return a list of objects that match your search term.
 
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2data.backends.base.SQLiteBackend.search` \
+{py:obj}`bw2data.backends.proxies.Activity`, the data type of an activity/flow object
+```
+
 You can also use a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) to iterate over the objects in the database. This can be used to build lists of activities from complex search parameters. For example:
 
 ```python
-german_coal_activities = [activity for activity in my_database
+german_coal_activities = [
+    activity for activity in my_database
     if 'electricity production' in activity['name']    
     and 'coal' in aactivity['name']   
     and activity['location'] == 'DE'
 ]
-```
-
-```{admonition} API Documentation
-:class: seealso
-{py:obj}`bw2data.backends.proxies.Activity`, the data type of an activities/flows
 ```
 
 ````{note}
@@ -102,10 +104,10 @@ set(list(activity.as_dict()['categories'] for activity in my_database))
 ```
 
 ```note
-The {py:obj}`w2data.backends.base.SQLiteBackend.search` function allows for more specific search queries through its keyword arguments. These include `limit`, `filter`, mask`, etc.
+The {py:obj}`bw2data.backends.base.SQLiteBackend.search` function allows for more specific search queries through its keyword arguments. These include `limit`, `filter`, mask`, etc.
 ```
 
-### Inspecting Object Exchanges
+### Inspecting Exchanges
 
 How do I list the technosphere exchanges and biosphere exchanges of an activity?
 
@@ -128,6 +130,16 @@ my_methods = bd.methods
 {py:obj}`bw2data.meta.Methods` ([`dict`](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [`tuple`s](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)), the data type for this storage object
 ```
 
+### Basic Searches
+
+```{warning}
+[Unlike the technosphere and biosphere databases](#object-properties), the impact assessment methods are stored as a Python [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). This means, that no `search` function is available. Instead, a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) with the [Python membership operator `in`](https://docs.python.org/3/reference/expressions.html#membership-test-operations) can be used to search.
+
+```
+
 ```python
-bio.search('carbon dioxide', filter = {'categories': 'urban', 'name': 'fossil'})
+method_search_results = [
+    method for method in bw.methods
+    if 'ILCD 2.0' in str(method) and 'LT' not in str(method)
+]
 ```
