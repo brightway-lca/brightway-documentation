@@ -33,8 +33,15 @@ my_biosphere.search('<search_term>')
 
 This will return a list of objects that match your search term.
 
-You can also use a list comprehension to iterate over the objects in the database:
+You can also use a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) to iterate over the objects in the database. This can be used to build lists of activities from complex search parameters. For example:
 
+```python
+german_coal_activities = [activity for activity in my_database
+    if 'electricity production' in activity['name']    
+    and 'coal' in aactivity['name']   
+    and activity['location'] == 'DE'
+]
+```
 
 ```{admonition} API Documentation
 :class: seealso
@@ -94,8 +101,9 @@ We can also quickly list all unique values for a given metadata field, for examp
 set(list(activity.as_dict()['categories'] for activity in my_database))
 ```
 
-
-
+```note
+The {py:obj}`w2data.backends.base.SQLiteBackend.search` function allows for more specific search queries through its keyword arguments. These include `limit`, `filter`, mask`, etc.
+```
 
 ### Inspecting Object Exchanges
 
@@ -105,19 +113,6 @@ How do I list the technosphere exchanges and biosphere exchanges of an activity?
 list(my_activity.technosphere())
 list(my_activity.biosphere())
 list(my_activity.production())
-```
-
-### Search Basics
-
-How do I search all possible metadata fields of a database?
-
-```python
-my_database.search('<search_term>')
-```
-
-```{admonition} API Documentation
-:class: seealso
-{py:obj}`bw2data.backends.base.SQLiteBackend.search`
 ```
 
 ## Impact Assessment Methods
@@ -135,11 +130,4 @@ my_methods = bd.methods
 
 ```python
 bio.search('carbon dioxide', filter = {'categories': 'urban', 'name': 'fossil'})
-```
-
-How do I find out which fields I can search for?
-
-```{admonition} Python Documentation
-:class: seealso
-[List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
 ```
