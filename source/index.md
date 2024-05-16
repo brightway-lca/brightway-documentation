@@ -6,7 +6,7 @@
 [![Blog](https://img.shields.io/badge/Development-Blog-lightgrey.svg?style=flat&logo=Blogger&logoColor=white)](https://chris.mutel.org/)
 
 ```{warning}
-This version of the documentation is for older releases of Brightway (`legacy` or `brightway2`). It includes only those pages which are relevant to the legacy releases. To access the complete documentation, please switch the the [latest version](https://docs.brightway.dev/en/latest/). The legacy releases [supports the popular Activity Browser user interface](content/setup/ui.md), but do not have the latest features of Brightway. You can learn more about [the different versions of Brightway here](content/faq/brightway.md).
+This version of the documentation is for older releases of Brightway (`legacy` or `brightway2`). It includes only those pages which are relevant to the legacy releases. To access the complete documentation, please switch to the [latest version](https://docs.brightway.dev/en/latest/). The legacy releases [supports the popular Activity Browser user interface](content/setup/ui.md), but do not have the latest features of Brightway. You can learn more about [the different versions of Brightway here](content/faq/brightway.md).
 ```
 
 ## What is Brightway?
@@ -23,6 +23,7 @@ hidden:
 maxdepth: 1
 ---
 content/installation/installation
+content/gettingstarted/index
 content/api/index
 content/faq/faq
 content/changelog/index
