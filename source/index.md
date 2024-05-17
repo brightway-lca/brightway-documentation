@@ -56,8 +56,9 @@ content/examples/index
 content/faq/index
 content/contributing/index
 content/contact/contact
-api/index
+content/api/index
 
+content/other/material
 content/other/framework
 content/other/support
 content/other/credits
