@@ -4,7 +4,7 @@ Brightway is a Python software package. You can use Brightway in a Python script
 
 ## Import Python Packages
 
-Which Python packages do I have to import?
+> Which Python packages do I have to import?
 
 ```{note}
 `brightway2` is a metapackage. It just loads other Brightway packages like `bw2data`, `bw2calc`, `bw2io`, etc.
@@ -29,8 +29,8 @@ import seaborn as sns
 
 ## Saving Python Packages
 
-How do I save my Python environment so that I can use it later? \
-How can I make sure that my code works on another computer?
+> How do I save my Python environment so that I can use it later? \
+> How can I make sure that my code works on another computer?
 
 ```python
 conda activate <ENVIRONMENT_NAME>
