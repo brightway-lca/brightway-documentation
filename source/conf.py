@@ -40,6 +40,8 @@ extensions = [
     'sphinx_favicon',
     # copy button on code blocks
     "sphinx_copybutton",
+    # hover-over tooltips for cross-references
+    'hoverxref.extension',
 ]
 
 root_doc = 'index'
@@ -169,11 +171,11 @@ autoapi_dirs = [
     '../brightway2-io/bw2io',
     '../brightway2-data/bw2data',
     '../brightway2-calc/bw2calc',
-    '../brightway2-analyzer/bw2analyzer'
+    '../brightway2-analyzer/bw2analyzer',
+    '../brightway2-parameters/bw2parameters',
 ]
 
 autoapi_ignore = [
-    '*/data/*',
     '*tests/*',
     '*tests.py',
     '*validation.py',
@@ -182,7 +184,6 @@ autoapi_ignore = [
     '*.yml',
     '*.md',
     '*.json',
-    '*.data'
 ]
 
 autoapi_options = [
@@ -232,3 +233,13 @@ favicons = [
         "href": "logo/BW_favicon_500x500.png"
     },
 ]
+
+# hoverxref configuration ###############################################
+# https://github.com/readthedocs/sphinx-hoverxref
+
+hoverxref_domains = ["py"]
+hoverxref_role_types = dict.fromkeys(
+    ["ref", "class", "func", "meth", "attr", "exc", "data"],
+    "tooltip",
+)
+hoverxref_tooltip_lazy = True

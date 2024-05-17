@@ -1,16 +1,4 @@
-```{attention}
-__HELP WANTED__ \
-You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](../contributing/contributing.md)
-```
-
-```{warning}
-__NEEDS WORK__ \
-This page is not yet complete. \
-It has been transfered over from the legacy documentation.
-```
-
-# Structure
+# Brightway Structure
 
 (brightway_components)=
 ## Brightway Components
@@ -35,7 +23,7 @@ Brightway is split into several main packages:
     -   [Brightway2-parameters](https://github.com/brightway-lca/brightway2-parameters)
         Library for storing, validating, and calculating with parameters.
 
-## Projects
+## Brightway Objects
 
 Data in Brightway2 is structured in a hierarchy. At the top level, we
 have projects. A project is self-contained, with its own copy of data,

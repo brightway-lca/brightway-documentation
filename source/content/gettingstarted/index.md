@@ -18,5 +18,8 @@ setup
 projects
 databases
 objects
+exchanges
+datapackages
 lcia
+stochastic
 ```

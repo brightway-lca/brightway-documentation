@@ -12,7 +12,7 @@ my_methods = bd.methods
 
 ### Calculate _one_ LCIA Result
 
-How can I calculate the life-cycle impact assessment (LCIA) results for a given activity?
+> How can I calculate the life-cycle impact assessment (LCIA) results for a given activity?
 
 We must define the functional unit and the impact assessment method.
 
@@ -71,7 +71,7 @@ lca.score # returns the LCIA results
 
 ### Calculate _multiple_ LCIA Results
 
-How can I calculate the life-cycle impact assessment (LCIA) results for multiple activities?
+> How can I calculate the life-cycle impact assessment (LCIA) results for multiple activities?
 
 First, we must define a list of functional units and a list of the impact assessment methods:
 

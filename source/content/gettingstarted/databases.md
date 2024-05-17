@@ -1,8 +1,18 @@
 # Databases
 
+````{admonition} Prerequisites
+:class: important
+```python
+import bw2analyzer as ba
+import bw2calc as bc
+import bw2data as bd
+import bw2io as bi
+```
+````
+
 ## Manage Databases
 
-How do I manage my databases?
+> How do I manage my databases?
 
 ```python
 bd.meta.Databases()
@@ -38,7 +48,7 @@ list(bp.databases)
 
 ## Delete Database
 
-How do I delete a database?
+> How do I delete a database?
 
 The {py:obj}`bw2data.meta.Databases` object is a kind of [Python dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries). You can therefore delete a database by using the `del` keyword:
 
@@ -48,7 +58,7 @@ del bw.databases['<database_name>']
 
 ## Rename Database
 
-How do I rename an existing database?
+> How do I rename an existing database?
 
 The {py:obj}`bw2data.meta.Databases` object is a kind of [Python dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries). You can therefore rename a database (the `key` of the dictionary) by:
 
@@ -56,9 +66,27 @@ The {py:obj}`bw2data.meta.Databases` object is a kind of [Python dictionary](htt
 bd.databases['<new_database_name>'] = bd.databases.pop('<old_database_name>')
 ```
 
+## Import Example Data
+
+> How can I import some example data?
+
+A small example database is shipped with `bw2io`. It is located at: \
+[`bw2io/data/examples/sample_parameterized_database.xlsx`](https://github.com/brightway-lca/brightway2-io/blob/main/bw2io/data/examples/sample_parameterized_database.xlsx). \
+You can import it quickly with:
+
+```python
+bi.add_example_database(searchable=True)
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2io.data.add_example_database`
+```
+
+
 ## Import Your Own Data
 
-How can I import my own data (from an Excel sheet)?
+> How can I import my own data (from an Excel sheet)?
 
 ```python
 importer = bi.ExcelImporter(filepath='<file_path>')
@@ -104,7 +132,7 @@ importer.write_database()
 
 ### Ecoinvent Import (Automatic)
 
-How do I import the [Ecoinvent](https://ecoinvent.org) database?
+> How do I import the [Ecoinvent](https://ecoinvent.org) database?
 
 You can use the ✨new✨ automatic import function to download and import the latest version of the Ecoinvent database.
 
@@ -129,7 +157,7 @@ bi.import_ecoinvent_release(
 
 ### Ecoinvent Import (Manual)
 
-How do I import the [Ecoinvent](https://ecoinvent.org) database?
+> How do I import the [Ecoinvent](https://ecoinvent.org) database?
 
 You can also download and import the database manually. First, you must create the biosphere 
 

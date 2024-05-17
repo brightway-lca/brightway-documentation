@@ -1,8 +1,18 @@
 # Projects
 
+````{admonition} Prerequisites
+:class: important
+```python
+import bw2analyzer as ba
+import bw2calc as bc
+import bw2data as bd
+import bw2io as bi
+```
+````
+
 ## Manage Projects
 
-How do I manage my projects?
+> How do I manage my projects?
 
 ```python
 bd.project.ProjectManager()
@@ -36,7 +46,7 @@ list(bd.projects)
 
 ## Select Project
 
-How do I select a project?
+> How do I select a project?
 
 ```python
 bd.set_current(name='<project_name>')
@@ -49,7 +59,7 @@ bd.set_current(name='<project_name>')
 
 ## Project Locations
 
-How do I find where my projects are stored on disk?
+> How do I find where my projects are stored on disk?
 
 ```python
 bd.projects.dir
@@ -64,7 +74,7 @@ bd.projects.output_dir
 
 ## Rename Project
 
-How do I rename an existing project?
+> How do I rename an existing project?
 
 ```{note}
 You can not _just_ rename an existing project. You must copy the project to a new name and then switch to the new project.
@@ -84,7 +94,7 @@ bd.projects.delete_project(name=<old_project_name>, delete_dir=True)
 
 ## Delete Project
 
-How do I delete an existing project?
+> How do I delete an existing project?
 
 ```python
 bd.projects.delete_project(<project_name>, delete_dir=True)
