@@ -58,7 +58,7 @@ content/contributing/index
 content/contact/contact
 content/api/index
 
-content/other/material
+content/other/materials
 content/other/framework
 content/other/support
 content/other/credits
