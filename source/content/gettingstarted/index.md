@@ -18,5 +18,7 @@ setup
 projects
 databases
 objects
+datapackages
 lcia
+uncertainty
 ```
