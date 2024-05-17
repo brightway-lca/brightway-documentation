@@ -18,3 +18,6 @@
 	path = source/content/examples/brightway-examples
 	url = https://github.com/brightway-lca/brightway-examples
 	branch = main
+[submodule "brightway2-parameters"]
+	path = brightway2-parameters
+	url = https://github.com/brightway-lca/brightway2-parameters
