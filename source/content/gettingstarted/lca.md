@@ -1,12 +1,26 @@
-# Impact Assessment
+# Static LCA
 
-In order to conduct a life-cycle impact assessment we must first load the appropriate storage objects:
+````{admonition} Prerequisites
+:class: important
+
+```{admonition} Brightway Documentation
+:class: seealso
+[Brightway Structure Page](../theory/structure.md) \
+[Glossary/Terminology Page](../theory/terminology.md)
 
 ```python
-my_database = bd.Database('<database_name>')
+import bw2analyzer as ba
+import bw2calc as bc
+import bw2data as bd
+import bw2io as bi
+
+bi.add_example_database() # loads 'Mobility example' database and 'biosphere3' database
+
+my_database = bd.Database('Mobility example')
 my_biosphere = bd.Database('biosphere3')
 my_methods = bd.methods
 ```
+````
 
 ## Calculate LCA Results
 

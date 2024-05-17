@@ -57,7 +57,7 @@ These are based on Python [`mappings`](https://docs.python.org/3/glossary.html#t
 In order to list the properties of an activity or biosphere flow, you can use the `as_dict` method, which turns the object into a real Python dictionary:
 
 ```python
-next(iter(my_database.random().exchanges())).as_dict() 
+[exc for exc in eidb.random().exchanges()][0].as_dict()
 ```
 
 ```{admonition} API Documentation

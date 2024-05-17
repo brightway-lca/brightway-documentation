@@ -20,6 +20,6 @@ databases
 objects
 exchanges
 datapackages
-lcia
+lca
 stochastic
 ```
