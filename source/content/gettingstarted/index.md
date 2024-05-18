@@ -22,4 +22,5 @@ exchanges
 datapackages
 lca
 stochastic
+regionalization
 ```
