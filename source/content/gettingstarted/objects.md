@@ -16,6 +16,14 @@ import bw2data as bd
 import bw2io as bi
 ```
 
+You can also [load an example database](./databases.md) to get started:
+
+```python
+bi.add_example_database()
+my_database = bd.Database('Mobility example')
+my_biosphere = bd.Database('biosphere3')
+my_methods = bd.methods
+```
 ````
 
 ## Technosphere and Biosphere
