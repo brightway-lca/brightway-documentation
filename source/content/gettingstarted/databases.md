@@ -83,7 +83,7 @@ bi.add_example_database(searchable=True)
 {py:obj}`bw2io.data.add_example_database`
 ```
 
-More databases are provided by the `files.brightway.dev` fileserver. They canbe downloaded using `bw2io`. You can list the available databases with:
+More databases are provided by the `files.brightway.dev` fileserver. They can be downloaded using `bw2io`. You can list the available databases with:
 
 ```python
 bi.remote.PROJECTS_BW25

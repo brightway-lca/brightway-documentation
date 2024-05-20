@@ -99,19 +99,19 @@ You are now ready to build the documentation...
 1. You can build the documentation by __triggering every build manually__: To trigger the build, run [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) from the repository root directory:
 
 ```bash
-sphinx-build source _build/html -b singlehtml -a
+sphinx-build source _build/html --builder=singlehtml --jobs=auto --write-all; open _build/html/index.html
 ```
 
 | option | value | description |
 | ---------------------------- | ----- | ----------- |
 | sourcedir | `source` | N/A |
 | outdir | `_build/html` | N/A |
-| -b | `singlehtml` | create only a single html page |
-| -a | N/A | always write all output files |
-| `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
+| `--builder` | `singlehtml` | create only a single html page |
+| `--write-all` | N/A | always write all output files |
+| `--jobs` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
 
 
-You can now preview the documentation, built as a single html page at:
+Your browser should automatically open. You can also open the build manually, stored as a single html page at:
 
 ```
 _build/html/homepage.html
