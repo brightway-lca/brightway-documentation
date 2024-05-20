@@ -92,6 +92,39 @@ bd.projects.delete_project(name=<old_project_name>, delete_dir=True)
 {py:obj}`bw2data.project.ProjectManager.delete_project`
 ```
 
+## Backup Project
+
+> How do I backup an existing project? \
+> How do I save a project to disk?
+
+```python
+bd.backup.backup_project_directory(
+    project='<project_name>',
+    dir_backup='<target_location_for_backup>'
+)
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2io.backup.backup_project_directory`
+```
+
+## Restore Project
+
+> How do I restore a project from a backup?
+
+```python
+bi.backup.restore_project_directory(
+    fp='<path_to_backup>',
+    project_name='<project_name>'
+)
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2io.backup.restore_project_directory`
+```
+
 ## Delete Project
 
 > How do I delete an existing project?
