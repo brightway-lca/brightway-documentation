@@ -70,9 +70,9 @@ bd.databases['<new_database_name>'] = bd.databases.pop('<old_database_name>')
 
 > How can I import some example data?
 
-A small example database is shipped with `bw2io`. It is located at: \
+A small example database is shipped directly with `bw2io`. It is located at: \
 [`bw2io/data/examples/sample_parameterized_database.xlsx`](https://github.com/brightway-lca/brightway2-io/blob/main/bw2io/data/examples/sample_parameterized_database.xlsx). \
-You can import it quickly with:
+You can import it with:
 
 ```python
 bi.add_example_database(searchable=True)
@@ -83,6 +83,33 @@ bi.add_example_database(searchable=True)
 {py:obj}`bw2io.data.add_example_database`
 ```
 
+More databases are provided by the `files.brightway.dev` fileserver. They canbe downloaded using `bw2io`. You can list the available databases with:
+
+```python
+bi.remote.PROJECTS_BW25
+```
+
+Currently, the Ecoinvent biosphere database and the USEEIO database are available for download:
+
+```
+{
+    'ecoinvent-3.8-biosphere': 'ecoinvent-3.8-biosphere.tar.gz',
+    'ecoinvent-3.9.1-biosphere': 'ecoinvent-3.9.1-biosphere.tar.gz',
+    'USEEIO-1.1': 'USEEIO-1.1.tar.gz'
+}
+```
+
+For instance, you can now load the USEEIO database with `bw2io`:
+
+
+```python
+bw2io.install_project(project_key="USEEIO-1.1”)
+```
+
+```{admonition} API Documentation
+:class: seealso
+{py:obj}`bw2io.remote.install_project`
+```
 
 ## Import Your Own Data
 
