@@ -103,7 +103,7 @@ For instance, you can now load the USEEIO database with `bw2io`:
 
 
 ```python
-bw2io.install_project(project_key="USEEIO-1.1”)
+bi.install_project(project_key="USEEIO-1.1")
 ```
 
 ```{admonition} API Documentation
