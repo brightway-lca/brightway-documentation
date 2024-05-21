@@ -106,7 +106,7 @@ sphinx-build source _build/html --builder=singlehtml --jobs=auto --write-all; op
 | ---------------------------- | ----- | ----------- |
 | sourcedir | `source` | N/A |
 | outdir | `_build/html` | N/A |
-| `--builder` | `singlehtml` | create only a single html page |
+| `--builder` | `html` | [default builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html) |
 | `--write-all` | N/A | always write all output files |
 | `--jobs` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
 
