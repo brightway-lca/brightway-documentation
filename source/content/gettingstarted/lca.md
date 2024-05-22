@@ -55,7 +55,7 @@ Now, we can create an instance of the {py:obj}`bw2calc.lca.LCA` class.
 
 ```python
 lca = bc.LCA(
-    demand=functional_unit_activity,
+    demand={functional_unit_activity:1},
     method=impact_assessment_method
 )
 ```
