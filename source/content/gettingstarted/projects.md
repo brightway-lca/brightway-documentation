@@ -49,7 +49,7 @@ list(bd.projects)
 > How do I select a project?
 
 ```python
-bd.set_current(name='<project_name>')
+bd.projects.set_current(name='<project_name>')
 ```
 
 ```{admonition} API Documentation
