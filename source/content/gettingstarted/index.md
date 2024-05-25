@@ -17,10 +17,11 @@ self
 setup
 projects
 databases
-objects
-exchanges
-datapackages
+nodes
+edges
+methods
 lca
 stochastic
+datapackages
 regionalization
 ```

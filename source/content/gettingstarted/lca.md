@@ -38,7 +38,7 @@ First, we must create a variable that contains the activity we want to assess. T
 
 ```{admonition} Getting Started
 :class: seealso
-[](#object-selection)
+[](#node-selection)
 ```
 
 ```python

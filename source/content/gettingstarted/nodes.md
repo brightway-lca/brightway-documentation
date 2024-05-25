@@ -1,4 +1,4 @@
-# Objects (Nodes)
+# Nodes (Activities and Flows)
 
 ````{admonition} Prerequisites
 :class: important
@@ -26,9 +26,9 @@ my_methods = bd.methods
 ```
 ````
 
-## Technosphere and Biosphere
+## Node Management
 
-In order to interact with _technosphere activities_ and _biosphere flows_, we must first load the appropriate storage objects:
+In Brightway, _technosphere activities_ and _biosphere flows_ are organized by the `Database` function.
 
 ```python
 my_database = bd.Database('<database_name>')
@@ -37,11 +37,12 @@ my_biosphere = bd.Database('biosphere3')
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2data.backends.base.SQLiteBackend`, the data type for the technosphere/biosphere databases
+{py:obj}`bw2data.database.DatabaseChooser`, alias for the `Database` function \
+{py:obj}`bw2data.backends.base.SQLiteBackend`, the data type of the databases
 ```
 
-(object-selection)=
-### Object Selection
+(node-selection)=
+## Node Selection
 
 > How do I select (=search for) an activity from the technosphere database? \
 > How do I select (=search for) a biosphere flow from the biosphere database? 
@@ -101,7 +102,7 @@ random_biosphere_flow = my_biosphere.random()
 ```
 ````
 
-### Object Properties
+## Node Properties
 
 > How do I list the properties of an activity? \
 > How do I list the properties of a biosphere flow?
@@ -123,7 +124,7 @@ my_database.random().as_dict()
 {py:obj}`bw2data.proxies.ProxyBase.as_dict`
 ```
 
-### Specific Searches
+## Specific Searches
 
 > How can I list the different (searchable) metadata fields of an activity? \
 > How can I list the different (searchable) metadata fields of a biosphere flow?
@@ -144,7 +145,7 @@ set(list(activity.as_dict()['categories'] for activity in my_database))
 The {py:obj}`bw2data.backends.base.SQLiteBackend.search` function allows for more specific search queries through its keyword arguments. These include `limit`, `filter`, mask`, etc.
 ```
 
-### Inspecting Exchanges
+## Inspecting Exchanges
 
 > How do I list the technosphere exchanges and biosphere exchanges of an activity?
 
@@ -152,57 +153,4 @@ The {py:obj}`bw2data.backends.base.SQLiteBackend.search` function allows for mor
 list(my_activity.technosphere())
 list(my_activity.biosphere())
 list(my_activity.production())
-```
-
-## Impact Assessment Methods
-
-In order to interact with _impact assessment methods_ we must first load the appropriate storage object:
-
-```python
-bw2data.meta.Methods()
-```
-
-````{note}
-For your convenience, Brightway also provides a shorthand way of calling the dictionary of methods metadata:
-
-```python
-bp.methods
-```
-````
-
-```{admonition} API Documentation
-:class: seealso
-{py:obj}`bw2data.meta.Methods` ([`dict`](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [`tuple`s](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)), the data type for this storage object
-```
-
-### Object Selection
-
-```{warning}
-[Unlike the technosphere and biosphere databases](#object-properties), the impact assessment methods are usually stored as a Python [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) of [tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). This means, that no `search` function is available. Instead, a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) with the [Python membership operator `in`](https://docs.python.org/3/reference/expressions.html#membership-test-operations) can be used to search.
-```
-
-```python
-method_search_results = [
-    method for method in bw.methods
-    if 'ILCD 2.0' in str(method) and 'LT' not in str(method)
-]
-```
-
-````{note}
-🎲 You can also _randomly_ select a method:
-
-```python
-random_method = bw.methods.random()
-```
-
-```{admonition} API Documentation
-:class: seealso
-{py:obj}`bw2data.serialization.SerializedDict.random`
-```
-````
-
-```{admonition} API Documentation
-:class: seealso
-{py:obj}`bw2data.methods.Method` \
-{py:obj}`bw2data.methods.Method`, the data type of a method object
 ```
