@@ -1,7 +1,7 @@
 ```{attention}
 __HELP WANTED__ \
 You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](../contributing/contributing.md)
+Please start by reading the [guide to contributing to the Brightway documentation.](contributing)
 ```
 
 ```{warning}

@@ -8,7 +8,7 @@ If you have questions that the documentation cannot answer, you can [get in touc
 
 ```{note}
 Would you like to contribute by adding your questions (and answers)?
-Please follow the [Brightway Documentation Contribution Guide](../contributing/contributing.md).
+Please follow the [Brightway Documentation Contribution Guide](contributing).
 ```
 
 ```{toctree}

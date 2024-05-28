@@ -4,7 +4,7 @@ If you would like to support the Brightway project, there are several ways to do
 
 ## Contribute to the Project
 
-Brightway is a community project, and we welcome contributions of all kinds. See the [contributing guide](../contributing/contributing.md) for more information.
+Brightway is a community project, and we welcome contributions of all kinds. See the [contributing guide](contributing) for more information.
 
 ## Départ de Sentier Membership
 

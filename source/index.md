@@ -58,6 +58,7 @@ content/contributing/index
 content/contact/contact
 content/api/index
 
+content/other/glossary
 content/other/materials
 content/other/framework
 content/other/support

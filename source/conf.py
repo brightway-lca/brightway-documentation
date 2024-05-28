@@ -14,7 +14,7 @@ version: str = 'latest' # required by the version switcher
 ### Project Configuration #########################################################################
 ###################################################################################################
 
-needs_sphinx = '7.0.0'
+needs_sphinx = '7.3.0'
 
 extensions = [
     # core extensions
@@ -51,7 +51,7 @@ exclude_patterns = ['_build']
 html_theme = "pydata_sphinx_theme"
 
 suppress_warnings = [
-    "myst.header" # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
+    "myst.header", # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
 ]
 
 # https://myst-nb.readthedocs.io/en/v0.8.4/use/myst.html#parse-extensions-other-than-md-and-ipynb
@@ -237,9 +237,11 @@ favicons = [
 # hoverxref configuration ###############################################
 # https://github.com/readthedocs/sphinx-hoverxref
 
+hoverxref_auto_ref = True
 hoverxref_domains = ["py"]
 hoverxref_role_types = dict.fromkeys(
-    ["ref", "class", "func", "meth", "attr", "exc", "data"],
+    ["obj", "mod", "ref", "class", "func", "meth", "attr", "exc", "data"],
     "tooltip",
 )
-hoverxref_tooltip_lazy = True
+hoverxref_default_type = 'tooltip'
+hoverxref_tooltip_lazy = False
