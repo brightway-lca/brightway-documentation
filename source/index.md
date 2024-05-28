@@ -54,12 +54,12 @@ content/gettingstarted/index
 content/theory/index
 content/examples/index
 content/faq/index
-content/contributing/index
-content/contact/contact
-content/api/index
-
 content/other/glossary
-content/other/materials
+content/api/index
+content/contact/contact
+
+content/contributing/index
+content/other/framework
 content/other/support
 content/other/credits
 content/changelog/index
