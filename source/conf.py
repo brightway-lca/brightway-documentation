@@ -41,7 +41,7 @@ extensions = [
     # copy button on code blocks
     "sphinx_copybutton",
     # hover-over tooltips for cross-references
-    'hoverxref.extension',
+    # 'hoverxref.extension', # currently no support for markdown as per https://github.com/readthedocs/sphinx-hoverxref/issues/250
 ]
 
 root_doc = 'index'
@@ -237,6 +237,8 @@ favicons = [
 # hoverxref configuration ###############################################
 # https://github.com/readthedocs/sphinx-hoverxref
 
+"""
+
 hoverxref_auto_ref = True
 hoverxref_domains = ["py"]
 hoverxref_role_types = dict.fromkeys(
@@ -245,3 +247,4 @@ hoverxref_role_types = dict.fromkeys(
 )
 hoverxref_default_type = 'tooltip'
 hoverxref_tooltip_lazy = False
+"""

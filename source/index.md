@@ -60,7 +60,6 @@ content/api/index
 
 content/other/glossary
 content/other/materials
-content/other/framework
 content/other/support
 content/other/credits
 content/changelog/index

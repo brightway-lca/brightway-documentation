@@ -6,7 +6,7 @@
 ```{admonition} Brightway Documentation
 :class: seealso
 [Brightway Structure Page](../theory/structure.md) \
-[Glossary/Terminology Page](../theory/terminology.md)
+[Glossary](glossary)
 ```
 
 ```python
