@@ -8,8 +8,6 @@ This section contains contains a collection of the most useful Brightway command
 2. Basic knowledge of [Python data types](https://docs.python.org/3/library/datatypes.html).
 ```
 
-:hoverxref:`show a floating window <hoverxref:hoverxref>`
-
 ```{toctree}
 ---
 maxdepth: 3

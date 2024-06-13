@@ -78,7 +78,6 @@ random_method: tuple = bw.methods.random()
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2data.method.Method` \
 {py:obj}`bw2data.method.Method`, the data type of a method object
 ```
 
@@ -91,14 +90,19 @@ random_method: tuple = bw.methods.random()
 bd.Method(bd.methods.random()).load()
 ```
 
-```{note}
-This will also tell you the format in which you must provide data if you want to write a new method. This process is described below.
+This will return a list of tuples of the form `(id,cf)`, where `id` is the biosphere flow ID and `cf` is the characterization factor. To get the `name` and `code` of the biosphere flow, you can use the `get` method of the `ActivityDataset` object:
+
+```python
+import pandas as pd
+df_gwp_method_flows = pd.DataFrame(gwp_method_flow_tuples, columns=['id', 'cf'])
+df_gwp_method_flows['name'] = df_gwp_method_flows['id'].apply(lambda x: bd.get_node(id=x)['name'])
+df_gwp_method_flows['code'] = df_gwp_method_flows['id'].apply(lambda x: bd.get_node(id=x)['code'])
 ```
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2data.method.Method`, the data type of a method object \
 {py:obj}`bw2data.data_store.DataStore.load`
+{py:obj}`bw2data.backends.schema.ActivityDataset`, list of node properties (including `code` and `name`)
 ```
 
 ## Method Creation
@@ -117,13 +121,9 @@ You can now prepare your methods data. Data must be in this format:
 ```
 list(
     list(
-        tuple(biosphere database name, biosphere flow code), characterization factor
-    )
+        tuple(<biosphere_database_name>, <biosphere_flow_code>), <characterization_factor>
+    ),
 )
-```
-
-```{warning}
-This format is slightly different from the one returned by the bd.Method().load() function!
 ```
 
 For instance:
@@ -151,4 +151,5 @@ bd.Method(new_method_name).write(new_method_data)
 ```{admonition} API Documentation
 :class: seealso
 {py:obj}`bw2data.method.Method`
+{py:obj}`bw2data.backends.schema.ActivityDataset`, list of node properties (including `code` and `name`)
 ```
