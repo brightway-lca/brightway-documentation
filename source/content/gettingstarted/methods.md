@@ -101,7 +101,7 @@ df_gwp_method_flows['code'] = df_gwp_method_flows['id'].apply(lambda x: bd.get_n
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2data.data_store.DataStore.load`
+{py:obj}`bw2data.data_store.DataStore.load` \
 {py:obj}`bw2data.backends.schema.ActivityDataset`, list of node properties (including `code` and `name`)
 ```
 
@@ -150,6 +150,6 @@ bd.Method(new_method_name).write(new_method_data)
 
 ```{admonition} API Documentation
 :class: seealso
-{py:obj}`bw2data.method.Method`
+{py:obj}`bw2data.method.Method` \
 {py:obj}`bw2data.backends.schema.ActivityDataset`, list of node properties (including `code` and `name`)
 ```
