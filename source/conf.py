@@ -1,6 +1,5 @@
 ### path setup ####################################################################################
 
-from glob import glob
 import datetime
 import os
  
@@ -12,7 +11,7 @@ version: str = 'legacy' # required by version switcher
 
 ### project configuration #########################################################################
 
-needs_sphinx = '7.0.1'
+needs_sphinx = '7.3.7'
 
 extensions = [
     # native extensions
@@ -210,16 +209,17 @@ html_theme_options = {
     "show_prev_next": False,
     "use_edit_page_button": True,
     "navigation_with_keys": True,
+    # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/branding.html#different-logos-for-light-and-dark-mode
     "logo": {
         "text": "Brightway",
-        "image_light": "BW_all_black_transparent_landscape.svg",
-        "image_dark": "BW_all_white_transparent_landscape.svg"
+        "image_light": "_static/logo/BW_all_black_transparent_landscape.svg",
+        "image_dark": "_static/logo/BW_all_white_transparent_landscape.svg"
     },
 }
 
 # required by html_theme_options: "use_edit_page_button"
 # and
-# To build urls withoug hard-coding them
+# To build urls without hard-coding them
 html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "brightway-lca",
