@@ -17,6 +17,7 @@ self
 lca
 structure
 io
+parameters
 uncertainty
 graph_traversal
 static_and_stochastic_lca

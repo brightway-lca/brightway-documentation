@@ -124,8 +124,8 @@ html_theme_options = {
     "navigation_with_keys": True,
     "logo": {
         "text": "Brightway",
-        "image_light": "BW_all_black_transparent_landscape.svg",
-        "image_dark": "BW_all_white_transparent_landscape.svg"
+        "image_light": "logo/BW_all_black_transparent_landscape.svg",
+        "image_dark": "logo/BW_all_white_transparent_landscape.svg"
     },
 }
 
