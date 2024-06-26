@@ -11,6 +11,7 @@ Projects that extend the ![Brightway](https://img.shields.io/static/v1?label=Bri
 | [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/) | Importing [SimaPro](http://simapro.com) CSV files into Brightway |
 | [`bw_processing`](https://docs.brightway.dev/projects/bw-processing/) | Creation of structured arrays in a common format |
 | [`bw_temporalis`](https://docs.brightway.dev/projects/bw-temporalis/) | [Dynamic LCA](https://doi.org/10.1021/es9030003), considering time in both inventory and impact assessment |
+| [`bw_timex`](https://docs.brightway.dev/projects/bw-timex/) | [Temporal LCA](https://doi.org/10.1021/es9030003), considering time in both inventory and impact assessment |
 | [`bw_aggregation`](https://docs.brightway.dev/projects/bw_aggregation) | Flexibly use aggregated unit processes for faster calculations |
 | [`bw_regional`](https://docs.brightway.dev/projects/bw-regional/) | Regionalized LCA calculations |
 
