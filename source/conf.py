@@ -198,6 +198,8 @@ autoapi_options = [
     'show-inheritance-diagram'
 ]
 
+graphviz_output_format = 'svg' # https://pydata-sphinx-theme.readthedocs.io/en/stable/examples/graphviz.html#inheritance-diagram
+
 autoapi_python_class_content = 'both'
 autoapi_member_order = 'groupwise'
 autoapi_root = 'content/api'
