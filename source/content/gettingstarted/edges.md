@@ -31,7 +31,7 @@ my_methods = bd.methods
 > How do I list the technosphere exchanges and biosphere exchanges of an activity?
 
 ```python
-my_database.random().exchanges()
+[exchange for exchange in my_database.random().exchanges()]
 ```
 
 ```{admonition} API Documentation
