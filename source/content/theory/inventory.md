@@ -29,7 +29,7 @@ Either approach works with biosphere flows - the can be linked to both separate 
 
 ## Technosphere edges: positive and negative values
 
-You may have seen the following matrix equation for IO or LCA: $h = \[I - A\]^{-1}f$. Brightway does **not use this equation** - instead, we use the following: $h = A^{-1}f$. In other words, we do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production. This is an arbitrary restriction, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. The sign convention here is simple:
+You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway does **not use this equation** - instead, we use the following: $h = A^{-1}f$. In other words, we do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production. This is an arbitrary restriction, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. The sign convention here is simple:
 
 * Positive numbers in the technosphere are products (goods and services) being *produced* by a process. This can include waste.
 * Negative numbers in the technosphere are products (goods and services) being *consumed* by a process. This can include waste.
@@ -54,7 +54,10 @@ That was a mouthful! Let's break it down:
 * Why did I just say "without modification" instead of with a positive value? Because maybe you chose to put in a negative amount in your production edge. Brightway won't judge, it just does what you tell it to. In general, this isn't the greatest idea (why model it as a negative production instead of a consumption edge?), but it will work.
 * We have an exchange data model for inputs and outputs which **doesn't make sense**, because it needs to labels the products being produced by the process as an *input* to that process, even though it is definitely an *output* of the physical process. Sorry about that, we will fix this, but for now follow this rule:
 
-.. warning:: Products always need to be edge *inputs* in the Brightway, even if they are *outputs* in the real world. Similarly, edge *outputs* should always be processes.
+
+```{warning}
+Products always need to be edge *inputs* in the Brightway, even if they are *outputs* in the real world. Similarly, edge *outputs* should always be processes.
+```
 
 When using chimaera process+product nodes there is no distinction between a process and a product, and so you don't need to think about any of this, and that's how this weird design choice came into Brightway in the first place.
 
