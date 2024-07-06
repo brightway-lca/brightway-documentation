@@ -14,6 +14,7 @@ hidden: true
 maxdepth: 2
 ---
 self
+inventory
 lca
 structure
 io
