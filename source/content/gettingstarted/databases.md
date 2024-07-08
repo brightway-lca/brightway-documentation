@@ -147,9 +147,9 @@ importer.statistics()
 ```
 
 Using the fields `('name', 'reference product', 'unit', 'location')` is a good combination
-of fields to ensure that the matching is done correctly. \
+of fields to ensure that the matching is done correctly.
 
-`importer.statistics()` will give you a summary of the matching process. \
+`importer.statistics()` will give you a summary of the matching process.
 
 You must now determine all unlinked flows.
 
@@ -158,7 +158,7 @@ list(importer.unlinked)
 ```
 
 If the number of unlinked flows isn't zero, some exchanges are either 
-linking ot other databases (e.g., the biosphere database, ecoinvent) 
+linking to other databases (e.g., the biosphere database, ecoinvent) 
 or are ill-defined.
 
 Let's try to see if we can link up the unlinked flows to the ecoinvent database:
@@ -181,12 +181,12 @@ importer.match_database(
 importer.statistics()
 ```
 
-Note that this time, we change the fields we want a match on to `('name', 'categories', 'unit',)`. \
+Note that this time, we change the fields we want a match on to `('name', 'categories', 'unit',)`.
 
 
 ````{note}
 Normally, you __must__ find the errors causing unliked flows. \
-Usually those are typos, wrong geographies/databases etc. \
+Usually those are typos, wrong geographies/databases etc.
 ````
 
 If you __are sure__ that you do not need unlinked flows, you can drop them:
