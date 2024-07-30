@@ -98,7 +98,7 @@ bd.projects.delete_project(name=<old_project_name>, delete_dir=True)
 > How do I save a project to disk?
 
 ```python
-bd.backup.backup_project_directory(
+bi.backup.backup_project_directory(
     project='<project_name>',
     dir_backup='<target_location_for_backup>'
 )
