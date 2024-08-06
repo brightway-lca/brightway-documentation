@@ -101,7 +101,7 @@ This will return a list of tuples of the form `(id,cf)`, where `id` is the biosp
 
 ```python
 import pandas as pd
-df_gwp_method_flows = pd.DataFrame(gwp_method_flow_tuples, columns=['id', 'cf'])
+df_gwp_method_flows = pd.DataFrame(bd.Method(bd.methods.random()).load(), columns=['id', 'cf'])
 df_gwp_method_flows['name'] = df_gwp_method_flows['id'].apply(lambda x: bd.get_node(id=x)['name'])
 df_gwp_method_flows['code'] = df_gwp_method_flows['id'].apply(lambda x: bd.get_node(id=x)['code'])
 ```
