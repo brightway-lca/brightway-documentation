@@ -63,6 +63,13 @@ method_search_results = [
 ]
 ```
 
+If you already know the exact name of the method, query the method from the tuple:
+
+```python
+method_tuple = ('IPCC 2021', 'climate change', 'global warming potential (GWP100)')
+method = bd.Method(method_tuple)
+```
+
 ````{note}
 🎲 You can also _randomly_ select a method:
 
