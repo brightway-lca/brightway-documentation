@@ -195,7 +195,7 @@ autoapi_options = [
     'show-module-summary',
     #'special-members',
     #'imported-members',
-    'show-inheritance-diagram'
+    #'show-inheritance-diagram' # disabled due to https://github.com/brightway-lca/brightway-documentation/issues/162
 ]
 
 graphviz_output_format = 'svg' # https://pydata-sphinx-theme.readthedocs.io/en/stable/examples/graphviz.html#inheritance-diagram
