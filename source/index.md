@@ -50,8 +50,8 @@ hidden:
 maxdepth: 1
 ---
 content/installation/index
-content/gettingstarted/index
-content/theory/index
+content/overview/index
+content/cheatsheet/index
 content/examples/index
 content/faq/index
 content/other/glossary

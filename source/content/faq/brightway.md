@@ -53,4 +53,4 @@ This approach may seem strange at first, but is the result of coding, evaluating
 * It is famous for being well tested, and is completely cross-platform.
 * It is also more than fast enough. For example, loading every activity from ecoinvent 3+ takes only a few seconds.
 
-[^1]: The German surname _Hellweg_ translates to _Brightway_ in English 🤯
+[^1]: The name "Brightway" comes from two ideas. In German, the pilgrimage paths around Europe are called "Weg", e.g. [Jakobsweg](https://en.wikipedia.org/wiki/Camino_de_Santiago), and there was a (minor) path called the "Bright way" (Hellweg in German 🤯). The idea of a path towards salvation fits open source sustainability assessment software. Brightway was also tremendously supported by Professor Hellweg during its initial development.

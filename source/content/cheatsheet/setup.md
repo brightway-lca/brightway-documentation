@@ -4,12 +4,7 @@ Brightway is a Python software package. You can use Brightway in a Python script
 
 ## Import Python Packages
 
-> Which Python packages do I have to import?
-
-```{note}
-`brightway2` is a metapackage. It just loads other Brightway packages like `bw2data`, `bw2calc`, `bw2io`, etc.
-It is recommended to import the individual packages directly. That way, you can see where each function comes from.
-```
+> Which Python packages should I import?
 
 ```python
 import bw2analyzer as ba
@@ -27,15 +22,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-## Saving Python Packages
+We will follow these import conventions throughout the documentation.
+
+## Saving Python environments
 
 > How do I save my Python environment so that I can use it later? \
 > How can I make sure that my code works on another computer?
-
-```python
-conda activate <ENVIRONMENT_NAME>
-conda env export --from-history > "<PATH_TO_FILE>/<FILE_NAME>.yml"
-```
 
 ```{admonition} FAQ Pages
 :class: seealso

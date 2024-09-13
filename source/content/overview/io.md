@@ -1,31 +1,161 @@
-```{attention}
-__HELP WANTED__ \
-You can help update and improve the content on this page. \
-Please start by reading the [guide to contributing to the Brightway documentation.](contributing)
+# Importing data
+
+```{admonition} Leaning from examples
+:class: seealso
+Importing data is the worst part of the LCA world, and it is easy to get overwhelmed. This document discusses basic concepts, but also includes a set of examples that show the concepts in practice.
 ```
 
-```{warning}
-__NEEDS WORK__ \
-This page is not yet complete. \
-It has been transfered over from the legacy documentation.
+```{admonition} Prepared projects
+:class: seealso
+Some data has already been prepared for Brightway, so you can skip doing the import yourself. Look at the [initial project data](../cheatsheet/index.md#creating-initial-project-data) and at {py:obj}`bw2io.ecoinvent.import_ecoinvent_release`.
 ```
-
-# Import and Export
 
 ## Introduction
 
-There are some standards for life cycle inventory data, but the sad
-truth is that there are no really good standards, and each
-implementation of the standards has its own quirks. The basic strategy
-for importing data from other programs is the following:
+There are some standards for life cycle inventory data, but the sad truth is that there are no really good standards, and each implementation of the standards by different software providers has its own quirks.
 
--   First, data is extracted from the export format (ecospold 1,
-    ecospold 2, SimaPro CSV) into the same format as the activity and
-    exchanges discussed above. Extraction is done using a
-    format-specific extractor. Currently, there are extractors for
-    `ecospold1`, `ecospold1-lcia`,
-    `ecospold2`, `excel`,
-    `exiobase`, `simapro CSV`, and `simapro CSV-lcia`.
+The biggest difficulty we face is in constructing the supply chain graph from its serialization in the given data format. In the most basic case, a graph can be written:
+
+```python
+nodes = ['A', 'B']
+edges = [{'from': 'A', 'to': 'B', 'amount': 42}]
+```
+
+In this case, there is a a single unambiguous identifier for each node, and everything is easy. In the real world, edges are normally defined by the *attributes* of the referenced nodes, like this:
+
+```python
+nodes = [{
+    'id': 1,
+    'name': 'foo'
+}, {
+    'id': 2,
+    'name': 'bar'
+}]
+edges = [{'from': 'foo', 'to': 'bar', 'amount': 42}]
+```
+
+This type of data exchange format is convenient for data creators, as some formats simply lack a single unambiguous identifier, and in others this identifier is generated at run-time. **However**, to use this data we now need to figure out that the node with name "foo" is the one with "id" `1` - and real world matching is more complex than this simple example, and needs to be done hundreds or thousands of times. In general, we need to write our import logic assuming that we will have to do attribute matching.
+
+| Format | Gotchas |
+| --- | --- |
+| ecospold 1 | Unique identifier is `number`, but some software doesn't use this correctly, so it can't be counted on |
+| ecospold 2 | Separate UUIDs for activity and product, but they aren't easy to find, and you need to combine them to get a single identifier for a process with a reference process located in time and space |
+| SimaPro CSV | No guarantee of any attribute uniqueness, exports don't always include internal ids, attributes changed from original data for common background databases, exported data can include errors[^1] |
+| Excel | Potential whitespace errors, no support for anything but primitive data types, custom templates require custom code |
+| OLCA JSON-LD | Format can change in incompatible ways, lots of NIH |
+| ILCD | Everything we love about XML, better for individual datasets than complete databases, in practice requires using EU elementary flow list and UUID mapping |
+| Exiobase | Not a single format, elementary flow list changes over time |
+
+The basic strategy for importing data is the following:
+
+First, data is extracted from the given format. Extraction is done using a format-specific extractor. Currently, there are extractors for `ecospold1`, `ecospold2`, `simapro CSV`, `exiobase`, and the standard Brightway `excel` template.
+
+Next, we have to choose where and how to transform the data, either for direct import or for linking to other databases already present. Harmonization could mean transforming the data to fit a certain taxonomy, to fit a certain data model, or to meet other data modelling assumptions. There is a lot of variety in LCA data formats, and the most popular software allows for a lot of flexibility, so there are no general rules.
+
+We then need to create concrete links in each edge - i.e. to turn `'from': 'foo'` to `'from': 1`. To do this, we define the fields we want to link with, and use the built-in `Brightway` linking functionality. This is normally an iterative process, trying different linking approaches combined with harmonization and examining the linking status until the imported data is completely linked.
+
+Finally, we can load the data into our relational data store, and use it in models or calculations.
+
+## Transforming nodes or edges
+
+In general, we want to avoid transformations, as it is cleaner and less future work to use the original data as it was provided. Transformations are a necessary evil to allow for linking, and especially for linking across databases. So most of the time we only apply transformations to edges, not to nodes, as we assume that imported data is internally consistent.
+
+Transforming nodes can be done, though; here are some common scenarios:
+
+* You want all data to be harmonized to a certain taxonomy. Brightway prefers that units be written in full, for example, so you could normalize all unit strings to "kilogram", etc.
+* You want to reverse changes made by a data provider. For example, some databases are built on top of other databases, and if we have those other databases already imported, we would like to remove the existing link and re-link to our versions of the background data. This normally means removing the copied nodes in the imported data.
+* You need to adapt the provided data to better fit LCA assumptions or data schemas.
+
+## Static transformations
+
+Static transformations are pre-computed, and come prepared in a fixed format. `Brightway` has a number of static transformations available in the [randonneur_data](https://github.com/brightway-lca/randonneur_data) library.
+
+Static transformations are great when they work. Please be careful to read their descriptions, match versions precisely, and check to make sure they are doing what you expect! Static transformations will also not perform linking - they will prepare the data to be compatible so that it can be linked afterwards.
+
+The most common static transformations in normal practice are updating references from one background database version to a newer version before linking, and undoing modifications to allow for linking against original data. Here is an example of updating references:
+
+```python
+import randonneur_data as rd
+registry = rd.Registry()
+registry.sample('ecoinvent-3.9.1-biosphere-ecoinvent-3.10-biosphere')
+{
+    'replace': [{
+        'source': {
+            'name': 'Xylene',
+            'uuid': '0e6cf9f9-44ff-4395-ad3b-36109a32e6eb'
+        },
+        'target': {
+            'name': 'Xylenes, unspecified',
+            'formula': 'C8H10',
+            'uuid': '0e6cf9f9-44ff-4395-ad3b-36109a32e6eb'
+        },
+        'comment': 'Flow attribute change not listed in change report'
+    },
+    {
+        'source': {
+            'uuid': 'ce11d77b-c85a-4f03-816e-714dcda260ea',
+            'name': 'Americium-241'
+        },
+        'target': {
+            'uuid': 'a0e98cdc-79cd-4073-9713-c1a48238883a',
+            'name': 'Americium-241'
+        }
+    }]
+}
+```
+
+Similarly, here is a transformation from one nomenclature system to another for the same data:
+
+```python
+import randonneur_data as rd
+registry = rd.Registry()
+registry.sample('simapro-ecoinvent-3.9.1-cutoff', 1)
+{
+    'replace': [{
+        'source': {
+            'identifier': 'EI3ARUNI000011519609842',
+            'name': 'Ventilation of dwellings, decentralized, 6 x 120 m3/h {CH}| ventilation of dwellings, decentralized, 6 x 120 m3/h, polyethylene ducts, with earth tube heat exchanger | Cut-off, U',
+            'platform_id': '35E3AE4E-798C-40F1-A9A2-626BE36D8367'
+        },
+        'target': {
+            'filename': '2578e5c8-8fdd-5a68-bb93-525f992fafd8_60c21de1-a8e8-4f50-8949-78759bf96c62.spold',
+            'name': 'ventilation of dwellings, decentralized, 6 x 120 m3/h, polyethylene ducts, with earth tube heat exchanger',
+            'location': 'CH',
+            'reference product': 'ventilation of dwellings, decentralized, 6 x 120 m3/h',
+            'unit': 'm2*year'
+        }
+    }
+]}
+```
+
+The complete transformation data format includes [useful metadata](https://github.com/brightway-lca/randonneur?tab=readme-ov-file#data-format) in addition to the raw changes.
+
+In order to use these transformations, we need to think about and specify the following:
+
+* Do I want to do destructive changes (delete and create), or just modifications (replace, update, and disaggregate)?
+* Are the labels used in the transformation data correct for my data schema?
+* What fields do we want to use for matching to determine if the transformation should be applied?
+
+Static transformations should be added to a `randonneur_data` regis
+
+See {py:obj}`bw2io.importers.base_lci.LCIImporter.randonneur` on how to customize these choices.
+
+Prepared static transformations can be generated in two ways - programmatically, or manually. Programmatic generation is always preferred, as it should be tested, is reproducible, and can be adapted for new contexts or input lists. However, manual matching is sometimes necessary. Manual matches should be noted clearly in the transformation file comment.
+
+The [flowmapper](https://github.com/cmutel/flowmapper/) tool allows for automatic matching of elementary flow lists. Technosphere flow matching is usually custom developed, as there are few generic patterns to follow. The [ecoinvent_migrate](https://github.com/brightway-lca/ecoinvent_migrate) library is an exception, and generates prepared static transformations for ecoinvent technosphere and biosphere upgrades.
+
+## Dynamic transformations
+
+Dynamic transformations are done programmatically - i.e. a function takes in a dataset, does some changes, and returns the altered dataset. There are many such functions already available in the Brightway framework. Here are a few:
+
+*
+
+In general, even if you are just writing a quick script for a one-off import, it's best practice to write transformation functions which have documentation and some simple unit tests. This development work forces you to think about what you are trying to accomplish, and what could go wrong.
+
+
+
+Here are some examples of typical harmonization steps:
+
 -   Next, each dataset is normalized or transformed to make it better
     conform to what Brightway2 expects. This could mean, for example,
     copying the only production exchange to the list of
@@ -475,3 +605,4 @@ is used when you call `{ImporterClass}.apply_strategies`.
 
 ## Export
 
+[^1]: The usual text errors, such as bytes outside the defined character page, and the creative, like dates in amount fields, formulas which evaluate to `1 / 0`, and defining the same unit multiple times in different ways.
