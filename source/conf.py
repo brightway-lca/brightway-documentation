@@ -82,7 +82,7 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    "announcement": "<p><a href='https://www.d-d-s.ch/schools/oct-24/index.html'>REGISTER NOW</a>: DdS Autumn School! 🇨🇭 Grosshöchstetten (Switzerland) 🗓️ 6.-11. October 2024</p>",
+    "announcement": "<p><a href='https://2024.brightcon.link/'>REGISTER NOW</a>: Brightcon 2024 Hybrid Conference and Hackathon 🇩🇪 September 23 - 27 in Hamburg</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
