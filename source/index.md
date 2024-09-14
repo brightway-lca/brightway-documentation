@@ -1,9 +1,9 @@
 # Brightway LCA Software Framework
 
 ## What is Brightway?
-Brightway is an open-source software package for life cycle assessment (LCA) and environmental impact assessment written in the Python programming language. LCA is a method for evaluating the environmental impacts of a product, process, or service. It involves analyzing all of the inputs and outputs of a system, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over the entire lifecycle of the system.
+Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) written in Python. LCA is a method for evaluating the environmental impacts of a good or service. It involves analyzing all of the inputs and outputs of a the product's supply chain, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over its life cycle.
 
-Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It thus provides a powerful tool for anyone interested in performing LCA or evaluating the environmental impacts of products and processes. Brightway is not intended to replace software like _SimaPro_ or _OpenLCA_, but instead offers possibilities to break the limits of conventional LCA. Brightway is especially attractive for researchers, especially when used with [Jupyter notebooks](https://jupyter.org/).
+Brightway is designed to make it easy to work with large datasets and perform LCA calculations quickly and accurately. It focuses on flexibility and performance, and offers many possibilities to break the limits of conventional LCA. Brightway has a strong user community in academia, and is increasingly gaining power users from industry and consulting.
 
 ## How can I learn Brightway?
 
