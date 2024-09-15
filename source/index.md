@@ -39,7 +39,8 @@ Learn more {fas}`arrow-right`
 
 ## What's New?
 
-__May 2024__: New section [Getting Started](./content/gettingstarted/index.md) added to the documentation. This section will help you kickstart your first Brightway project. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
+__September 2024__: New [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands
+__May 2024__: New section `Getting Started` added to the documentation (since replaced by the `Cheat Sheet`). This section will help you kickstart your first Brightway project. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
 __April 2024__: New section [Terminology](./content/theory/terminology.md) added to the documentation. This section explains the most important terms used in the Brightway documentation. Thank you, @[marc-vdm](https://github.com/marc-vdm)! \
 __April 2024__: New sub-section [Teaching Materials](./content/examples/index.md) added to the documentation. This section collects materials used to teach Brightway. Thank you, @[KarinTreyer](https://github.com/KarinTreyer)!
 
@@ -50,7 +51,7 @@ hidden:
 maxdepth: 1
 ---
 content/installation/index
-content/gettingstarted/index
+content/cheatsheet/index
 content/theory/index
 content/examples/index
 content/faq/index
