@@ -120,7 +120,7 @@ _build/html/homepage.html
 2. You can also build the documentation by automatically triggering a build after every change to the source files, providing a "live" preview of changes. To trigger the automated builds, run [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild) from the repository root directory:
 
 ```bash
-sphinx-autobuild source _build/html -a -j auto --open-browser
+sphinx-autobuild source _build/html -a -j auto --ignore source/content/api* --open-browser
 ```
 
 | positional argument or option| value | description |
@@ -129,6 +129,7 @@ sphinx-autobuild source _build/html -a -j auto --open-browser
 | outdir | `_build/html` | N/A |
 | `-a` | N/A | always write all output files |
 | `-j` | `auto` | [speed up build by using multiple processes](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j) |
+| `--ignore` | `source/content/api*` | ignores API documentation generated with sphinx-autoapi to avoid infinite build loops |
 | `--open-browser` | N/A | automatically open browser |
 
 
