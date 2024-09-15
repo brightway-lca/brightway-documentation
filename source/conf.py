@@ -49,7 +49,10 @@ extensions = [
 root_doc = 'index'
 html_static_path = ['_static']
 templates_path = ['_templates']
-exclude_patterns = ['_build']
+exclude_patterns = [
+    '_build',
+    'source/content/api/*'
+]
 html_theme = "pydata_sphinx_theme"
 
 suppress_warnings = [
@@ -205,7 +208,7 @@ graphviz_output_format = 'svg' # https://pydata-sphinx-theme.readthedocs.io/en/s
 autoapi_python_class_content = 'both'
 autoapi_member_order = 'groupwise'
 autoapi_root = 'content/api'
-autoapi_keep_files = False
+autoapi_keep_files = True
 
 # myst_parser Configuration ############################################
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
