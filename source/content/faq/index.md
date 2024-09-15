@@ -22,7 +22,7 @@ brightway
 compatibility
 data_management
 environment_management
-confusing_results
+negative_results
 ecoinvent
 simapro
 python
