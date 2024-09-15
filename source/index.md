@@ -55,7 +55,6 @@ content/cheatsheet/index
 content/overview/index
 content/examples/index
 content/faq/index
-content/other/glossary
 content/api/index
 content/contact/contact
 
