@@ -1,6 +1,6 @@
 # Inventory data
 
-## Processes, products, and something in between
+## Processes, Products, and Something in Between
 
 At its heart, Brightway uses a graph data schema with nodes and edges. We are eventually moving towards storing everything in the graph, including databases and LCIA data, but for now our graph just has inventory data.
 
@@ -31,7 +31,7 @@ The first approach is preferred in theory, and is what we encourage, but the sec
 
 Either approach works with biosphere flow edges - they can be linked to both processes and and chimaera process+product nodes. However, biosphere flows *should not* be linked to separate products, as this makes no sense, and this information will be ignored in matrix construction.
 
-## Data schema
+## Data Schema
 
 ### Processes
 
@@ -62,7 +62,7 @@ These attributes are not exclusive - you can add any additional attributes you w
 Tags are used for discrete choices, usually from a pre-defined list of options. This can be used, for example, for classification systems. Properties are always numeric.
 
 (identifying-nodes)=
-### Uniquely identifying nodes
+### Uniquely Identifying Nodes
 
 Linking nodes within and between databases requires a way to uniquely identify each node object. Brightway won't stop you from creating two nodes with the same attributes, so we can't count on any field or combination of fields to be unique. The field we use which is guaranteed to be unique is the database primary key integer `id`.
 
@@ -97,7 +97,7 @@ You should not define edges on product nodes. Edges, both input and output, shou
 
 Tags and properties work the same way as they do for processes.
 
-### Chimaera processes with reference products
+### Chimaera Processes with Single Reference Products
 
 [Chimaera processes](chimaera) act as both a process and a product at the same time.
 

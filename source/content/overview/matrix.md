@@ -1,4 +1,4 @@
-# Matrix construction
+# Matrix Construction
 
 We normally use Brightway to do life cycle assessment calculations using matrices. This section describes how matrices are constructed. In a standard calculation, we would have three matrices:
 
@@ -6,11 +6,11 @@ We normally use Brightway to do life cycle assessment calculations using matrice
 * `biosphere` matrix: The interactions our processes have with the natural environment - either consumption of resources, or emissions to the natural environment. It has columns of processes (in the same order and dimension as the `technosphere` matrix), and rows of biosphere flows.
 * `characterization` matrix: The unit conversion from physical amounts of biosphere flows to the unit of damage. It has columns and rows of biosphere flows (same order and dimension as the `biosphere` matrix), and only has values along the diagonal.
 
-## Processed datapackages
+## Processed Datapackages
 
 To speed up calculations, Brightway maintains a separate cache of the numerical data. When a change is made to a `Database`, it is marked as `dirty` in its metadata. When a calculation is initiated, the cache of all dirty databases is refreshed from the relational data store.
 
-## Positive and negative values in the `technosphere`
+## Positive and Negative Values in the `technosphere`
 
 You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway **does not** use this equation - instead, we use the following: $h = A^{-1}f$. In other words, we do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production, nor do we assume that rows are in the same order as columns. These are arbitrary restrictions, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. The sign convention is:
 
@@ -23,7 +23,7 @@ The *sign* of an edge numeric value is not related to whether or not that edge i
 
 Brightway will automatically insert the correct numerical sign based on the `Node` and `Edge` types you provide.
 
-## What data enters the matrices?
+## What Data Enters the Matrices?
 
 Brightway uses a combination of the node and edge *types* to determine where to put edge data in the technosphere and biosphere matrices. These type filter values are configurable, and can be customized if needed.
 

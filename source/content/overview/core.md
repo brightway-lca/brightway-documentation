@@ -1,4 +1,4 @@
-# Brightway core libraries
+# Brightway Software Ecosystem
 
 The four core libraries in Brightway are:
 

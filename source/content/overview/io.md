@@ -1,4 +1,4 @@
-# Importing data
+# Importing Data
 
 ```{admonition} Leaning from examples
 :class: seealso
@@ -58,7 +58,7 @@ We then need to create concrete links in each edge - i.e. to turn `'from': 'foo'
 
 Finally, we can load the data into our relational data store, and use it in models or calculations.
 
-## Transforming nodes or edges
+## Transforming Nodes or Edges
 
 In general, we want to avoid transformations, as it is cleaner and less future work to use the original data as it was provided. Transformations are a necessary evil used for two main purposes:
 
@@ -71,7 +71,7 @@ Linking is always finding a suitable edge candidate, so transformations for link
 * You want to reverse changes made by a data provider. For example, some databases are built on top of other databases, and if we have those other databases already imported, we would like to remove the existing link and re-link to our versions of the background data. This normally means removing the copied nodes in the imported data.
 * You need to adapt the provided data to better fit a specific set of assumptions, a data quality standard, or a data schemas.
 
-## Static transformations
+## Static Transformations
 
 Static transformations are pre-computed, and come prepared in a fixed format. `Brightway` has a number of static transformations available in the [randonneur_data](https://github.com/brightway-lca/randonneur_data) library.
 
@@ -135,7 +135,7 @@ registry.sample('simapro-ecoinvent-3.9.1-cutoff', 1)
 
 The complete transformation data format includes [useful metadata](https://github.com/brightway-lca/randonneur?tab=readme-ov-file#data-format) in addition to the raw changes.
 
-### Applying static transformations
+### Applying Static Transformations
 
 TBD
 
@@ -145,7 +145,7 @@ In order to use these transformations, we need to think about and specify the fo
 * Are the labels used in the transformation data correct for my data schema?
 * What fields do we want to use for matching to determine if the transformation should be applied?
 
-### Creating new static transformations
+### Creating New Static Transformations
 
 TBD
 
@@ -157,7 +157,7 @@ Prepared static transformations can be generated in two ways - programmatically,
 
 The [flowmapper](https://github.com/cmutel/flowmapper/) tool allows for automatic matching of elementary flow lists. Technosphere flow matching is usually custom developed, as there are few generic patterns to follow. The [ecoinvent_migrate](https://github.com/brightway-lca/ecoinvent_migrate) library is an exception, and generates prepared static transformations for ecoinvent technosphere and biosphere upgrades.
 
-## Dynamic transformations
+## Dynamic Transformations
 
 Dynamic transformations are done programmatically - i.e. a function takes in a dataset, does some changes, and returns the altered dataset. There are many such functions already available in the Brightway framework. Here are a few:
 
@@ -305,7 +305,7 @@ our ability) from the \"SimaPro world\" to \"ecoinvent world\".
 Importing SimaPro XML export files is not recommended, as there are bugs with exporting ecoinvent 3 processes.
 ```
 
-### Importing from the standard Excel template
+### Importing from the Standard Excel Template
 
 ```{note}
 You can see these ideas in practive in `basic
@@ -409,7 +409,7 @@ The following data transformations are applied by the `ExcelImporter`:
      values.
  -   Fields with the value `(Unknown)` are omitted on a per-row basis.
 
-### Importing LCIA methods from the standard Excel template
+### Importing LCIA Methods from the Standard Excel Template
 
 Proper implementation of life cycle impact assessment methods requires a complete set of metadata. However, for simple LCIA methods, Brightway
 has a simplified importer for Excel and CSV files: `bw2io.ExcelLCIAImporter` and `bw2io.CSVLCIAImporter`. These function the same as other importer (i.e. you extract data, apply strategies until you are satisfied with the matching, and write the modified data). There are example [Excel workbooks](https://github.com/brightway-lca/brightway2-io/raw/legacy/tests/fixtures/excel/lcia.xlsx) and [CSV files](https://github.com/brightway-lca/brightway2-io/raw/legacy/tests/fixtures/csv/lcia.csv).
@@ -486,7 +486,7 @@ A few additional notes:
     the migrations file would be needed for e.g.
     `water (air, non-urban air or from high stacks)`.
 
-### Importing an LCIA method
+### Importing an LCIA Method
 
 LCIA methods can be imported from ecospold 1 XML files
 (`EcoinventLCIAImporter`) and SimaPro CSV files
@@ -579,7 +579,7 @@ def csv_add_missing_exchanges_section(data):
 This is short function, and is not complicated - most strategies will do
 more.
 
-#### Data format for LCIA methods
+#### Data Format for LCIA Methods
 
 In order to allow for the re-use of strategies, the data format for LCIA
 methods is the same as for inventory databases. `name` is the name (as a
@@ -587,7 +587,7 @@ tuple) of the impact category, and `exchanges` is the list of
 characterization factors. It is a bit awkward, but makes other things
 easier.
 
-#### Adding other inputs to a strategy
+#### Adding Other Inputs to a Strategy
 
 Strategy functions should only take one input, but sometimes you want to
 add other input arguments. For example, imagine the following silly
@@ -613,7 +613,7 @@ add_silly_string_fixed = partial(add_silly_string, string="something silly")
 
 You would then apply the strategy `add_silly_string_fixed`.
 
-#### Applying custom strategies
+#### Applying Custom Strategies
 
 You apply strategies using the
 `{ImporterClass}.apply_strategy(name_of_callable)` method. You could
