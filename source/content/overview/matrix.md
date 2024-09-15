@@ -12,7 +12,7 @@ To speed up calculations, Brightway maintains a separate cache of the numerical 
 
 ## Positive and Negative Values in the `technosphere`
 
-You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway **does not** use this equation - instead, we use the following: $h = A^{-1}f$. In other words, we do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production, nor do we assume that rows are in the same order as columns. These are arbitrary restrictions, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. The sign convention is:
+You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway **does not** use this equation - instead, we use the following: $h = A^{-1}f$. We do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production, nor do we assume that rows are in the same order as columns. These are arbitrary restrictions, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. [Here](https://doi.org/10.1111/jiec.13323) is a good overview of this difference and its history. The sign convention in Brightway is:
 
 * Positive numbers in the technosphere are products (goods and services) being *produced* by a process. This can include waste.
 * Negative numbers in the technosphere are products (goods and services) being *consumed* by a process. This can include waste.
