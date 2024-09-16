@@ -222,9 +222,9 @@ As these dictionaries have multiple matrices at each calculation step, the `Mult
 * `weighted_inventory` ➟ `weighted_inventories`
 * `score`  ➟ `scores`
 
-### Stochastic LCA Calculations
+### Stochastic LCA Calculations (Monte Carlo)
 
-Both `LCA` and `MultiLCA` classes support stochastic calculations. New values for all matrices can be generated from probability distribution functions, or from pre-calculated arrays of sample or population values.
+Both `LCA` and `MultiLCA` classes support stochastic calculations using Monte Carlo. New values for all matrices can be generated from probability distribution functions, or from pre-calculated arrays of sample or population values.
 
 **Q:** How do I use probability distribution functions in stochastic LCA?
 
@@ -242,10 +242,24 @@ bc.MultiLCA(..., use_arrays=True)
 
 You can use both `use_distributions` *and* `use_arrays` in a calculation.
 
-**Q:** How do I generate a new set of results iteration when doing stochastic LCA?
+**Q:** How do I generate a new set of results when doing stochastic LCA?
 
 ```python
 next(lca_object)
 ```
 
 This will draw new data samples and generate new versions of all matrices defined, including characterization, normalization, and weighting, solve the linear system, and generate all result matrices.
+
+You can also use this in anything that needs the [iterator protocol](https://wiki.python.org/moin/Iterator), like list comprehensions:
+
+```python
+results = [lca.score for _ in zip(lca, range(10))]
+```
+
+But you can also advance the `lca` object manually:
+
+```python
+for _ in range(10):
+    next(lca)
+    do_something_with_lca_result_matrices(lca)
+```
