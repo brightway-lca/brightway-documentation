@@ -17,7 +17,8 @@ glossary
 core
 inventory
 matrix
-io
+importing
+exporting
 ```
 
 ```{note}

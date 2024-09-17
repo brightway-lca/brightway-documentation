@@ -12,7 +12,12 @@ To speed up calculations, Brightway maintains a separate cache of the numerical 
 
 ## Positive and Negative Values in the `technosphere`
 
-You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway **does not** use this equation - instead, we use the following: $h = A^{-1}f$. We do not assume that each column in our technosphere matrix (**A**) is normalized to one unit of production, nor do we assume that rows are in the same order as columns. These are arbitrary restrictions, and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative. [Here](https://doi.org/10.1111/jiec.13323) is a good overview of this difference and its history. The sign convention in Brightway is:
+````{admonition} Technosphere Matrix Normalization
+:class: important
+You may have seen the following matrix equation for IO or LCA: $h = (I - A)^{-1}f$. Brightway **does not** use this equation - instead, we use the following: $h = A^{-1}f$. We do not assume that each column in our technosphere matrix (**A**) is [normalized to one unit of production](production-normalization), nor do we assume that rows are in the same order as columns. These are [unnecessary and arbitrary restrictions](https://doi.org/10.1111/jiec.13323), and Brightway does not like arbitrary restrictions. So we choose to manually construct the technosphere matrix, and choose which numbers are positive and which are negative.```
+````
+
+The sign convention in Brightway is:
 
 * Positive numbers in the technosphere are products (goods and services) being *produced* by a process. This can include waste.
 * Negative numbers in the technosphere are products (goods and services) being *consumed* by a process. This can include waste.
@@ -23,7 +28,17 @@ The *sign* of an edge numeric value is not related to whether or not that edge i
 
 Brightway will automatically insert the correct numerical sign based on the `Node` and `Edge` types you provide.
 
-## What Data Enters the Matrices?
+## Positive and Negative Values in the `biosphere` and LCIA Matrices
+
+The convention in almost all parts of the LCA community is for characterization factors to be positive numbers, representing the *production* of environmental damage. This is true even if the characterization factors are for resource consumption, which is the net removal of a resource from its reserve.
+
+Similarly, every database that we are aware of gives positive values in the biosphere matrx, even if the biosphere flow is the consumption of natural resources.
+
+A more logical sign convention would be consistency with the technosphere, where consumption is negative and production is positive.
+
+Brightway does not take a position on this debate - the signs of values in biosphere and characterization (and normalization and weighting) edges are entered into those matrices without change. Brightway does allow you to follow this more logical sign convention, but does not implement it when importing common databases and LCIA methods, as we prefer to not modify imported data (at least most of the time 😉), and because trying to fix things could easily lead to mistakes. Whatever sign convention you do follow, make sure that both the biosphere edges and any LCIA data you use are consistent with each other.
+
+## What Data Enters the `technosphere` Matrix?
 
 Brightway uses a combination of the node and edge *types* to determine where to put edge data in the technosphere and biosphere matrices. These type filter values are configurable, and can be customized if needed.
 
@@ -51,6 +66,18 @@ Very similiar to the first rule, but with different edge types - `bw2data.labels
 
 3. If an edge (exchange on a `Node` instance) has a type in `bw2data.labels.biosphere_edge_types`, and the edge *output* `Node` has a type in `bw2data.labels.process_node_types`, then the numeric amount of the edge will be added to the *biosphere* matrix without modification, with a row index derived from the edge *input* and a column index derived from the edge *output*.
 
-We now shift to the biosphere matrix, and use another edge type, `bw2data.labels.biosphere_edge_types`, which defaults to "biosphere". We still limit the processes to `bw2data.labels.process_node_types`, but note that **we don't place any limits** on biosphere flow types. This means that the biosphere node `type` is not used when building matrices - the only way we determine what biosphere flows we have in our matrix are whether they are refenced by an edge with a biosphere edge type.
+## What Data Enters the `biosphere` Matrix?
+
+When building the `biosphere` matrix, Brightway iterates over all process nodes present in the `technosphere`; for each edge attached to one of those process nodes, we check:
+
+1. The edge `type`; it must be in `bw2data.labels.biosphere_edge_types`, which has a default of `["biosphere"]`.
+
+That's it! This single rule means that we **don't check the biosphere node `type`** - the only way we determine what biosphere flows we have in our matrix are whether they are refenced by an edge with a biosphere edge type.
 
 We can therefore do a better job reflecting the real world, where the distinction between products in the technosphere and biosphere flows breaks down upon examination. Think of pesticides or other agricultural chemicals, which are both produced but then applied and have environmental effects, or industrial gases including $CO_{2}$ which are used in the technosphere but also released and cause impacts. In Brightway, you could use the same `Node` as a product in the technosphere matrix *and* as a biosphere flow in the biosphere matrix.
+
+## What Data Enters the `characterization`, `normalization`, and `weighting` Matrices?
+
+Any biosphere flows returned [when iterating over LCIA objects](iterate-lcia-method) which **are also in the biosphere matrix** are used to construct these LCIA matrices.
+
+In non-regionalized LCIA, we also remove region-specific characterization factors. The characterization factor [data schema](lcia-tuple-structure) allows for an optional "location" third element. In non-regionalized LCIA, we only use characterization factors who don't have a "location" element, or whose "location" element is equal to `bw2data.config.global_location`.

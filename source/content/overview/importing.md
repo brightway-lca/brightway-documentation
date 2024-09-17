@@ -1,4 +1,4 @@
-# Importing Data
+# Importing
 
 ```{admonition} Leaning from examples
 :class: seealso

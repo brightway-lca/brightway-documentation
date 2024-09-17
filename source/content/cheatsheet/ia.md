@@ -30,6 +30,7 @@ bd.methods.random()
 ]
 ```
 
+(iterate-lcia-method)=
 **Q:** How do I see the data in a given impact category?
 
 ```python
@@ -37,6 +38,7 @@ my_method_object = bd.Method(('<impact>', '<category>'))
 list(my_method_object)
 ```
 
+(lcia-tuple-structure)=
 **Q:** How is the data in impact categories structured?
 
 Iterating over a `Method` object yields tuples.
