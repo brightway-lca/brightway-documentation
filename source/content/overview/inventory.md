@@ -31,6 +31,7 @@ The first approach is preferred in theory, and is what we encourage, but the sec
 
 Either approach works with biosphere flow edges - they can be linked to both processes and and chimaera process+product nodes. However, biosphere flows *should not* be linked to separate products, as this makes no sense, and this information will be ignored in matrix construction.
 
+(data-schema)=
 ## Data Schema
 
 ### Processes

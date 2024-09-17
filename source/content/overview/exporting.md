@@ -2,7 +2,7 @@
 
 ## Exporting to `ecospold` 1
 
-Brightway can export inventory datasets conforming to the latest version of the ecospold version 1 [schema documentation](https://github.com/brightway-lca/pyecospold/tree/main/pyecospold/schemas/v1).
+Brightway can export inventory datasets conforming to the latest version of the ecospold version 1 [schema documentation](https://github.com/brightway-lca/pyecospold/tree/main/pyecospold/schemas/v1). which follow the [Brightway data schema](data-schema).
 
 `ecospold` 1 documents describe processes who produce and consume products. The {py:obj}`bw2io.export.ecospold1.Ecospold1Exporter` operates on individual nodes, and it is up to you to pass nodes of the correct type to the exporter.
 
