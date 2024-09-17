@@ -135,7 +135,7 @@ The following edge attributes are *required* for each `exchange` element in `eco
 The edge "type" will set the `ecospold` 1 `inputGroup` or `outputGroup` value using the following mapping:
 
 | Brightway edge type | `ecospold` 1 `inputGroup` | `ecospold` 1 `outputGroup` |
-| --- | --- |
+| --- | --- | --- |
 | technosphere | "5" | |
 | production | | "0" |
 | substitution | | "1" |
