@@ -130,8 +130,8 @@ For the `MultiLCA` class, we need to *label* each functional unit:
 
 ```python
 functional_units = {
-    "γ": {node_1.id: 1},
-    "ε": {node_2.id: 2},
+    "γ": {node_1.id: 3.9},
+    "ε": {node_2.id: 6.2},
 }
 data_objs = bd.get_multilca_data_objs(functional_units, {})
 lca = bc.MultiLCA(
@@ -145,6 +145,15 @@ lca.lci()
 ```{admonition} Functional unit data types
 :class: important
 In `MultiLCA` functional units, the keys must be integer ids, not `Node` instances
+```
+
+If your functional units will only have a single product node, you can use the `Node` object itself as the dictionary key:
+
+```python
+functional_units = {
+    node_1: {node_1.id: 4.88},
+    node_2: {node_2.id: 11},
+}
 ```
 
 This will create `lca.inventories`, a dictionary which gives inventory matrices for each combination of functional unit label and impact category.
@@ -161,7 +170,7 @@ This will create `lca.inventories`, a dictionary which gives inventory matrices 
 We start by describing how the impact categories, normalization, and weightings are related. The safest way to do this is by creating an instance of `bw2calc.MethodConfig`; the {py:obj}`bw2calc.method_config.MethodConfig` documentation describes how to provide this data.
 
 ```python
-method_config = bd.MethodConfig(<some_data>)
+method_config = bc.MethodConfig(<some_data>)
 ```
 
 For the `MultiLCA` class, we need to *label* each functional unit in a dictionary:
