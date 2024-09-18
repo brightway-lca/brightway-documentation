@@ -40,8 +40,6 @@ extensions = [
     'sphinx_favicon',
     # copy button on code blocks
     "sphinx_copybutton",
-    # non-copyable '>' in code blocks
-    "sphinx-prompt",
     # hover-over tooltips for cross-references
     # 'hoverxref.extension', # currently no support for markdown as per https://github.com/readthedocs/sphinx-hoverxref/issues/250
 ]
