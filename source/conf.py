@@ -147,6 +147,10 @@ html_context = {
 ### Extension Configuration ########################################################################
 ####################################################################################################
 
+# copybutton Configuration ###############################################
+
+copybutton_prompt_text = ">>>"
+
 # linkcheck Configuration ###############################################
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
 
