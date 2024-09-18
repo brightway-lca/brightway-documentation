@@ -20,4 +20,4 @@ dependencies:
   - sphinx-favicon=1.0.1 # for custom favicons # https://anaconda.org/conda-forge/sphinx-favicon/files
   - sphinx-copybutton=0.5.2 # for copy button in code blocks # https://anaconda.org/conda-forge/sphinx-copybutton/files
   # build process
-  - sphinx-autobuild=2024.9.3 # live-html support # https://anaconda.org/conda-forge/sphinx-autobuild/files
+  - sphinx-autobuild=2024.9.17 # live-html support # https://anaconda.org/conda-forge/sphinx-autobuild/files
