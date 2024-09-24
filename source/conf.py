@@ -223,6 +223,7 @@ myst_enable_extensions = [
     "deflist",
     "dollarmath",
     "html_image",
+    "attrs_block",
 ]
 
 # myst-nb configuration ################################################

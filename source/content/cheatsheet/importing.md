@@ -1,4 +1,4 @@
-## Importing data
+## Importing Data
 
 The philosophy and workflow for importing data is explained in the "Overview".
 
