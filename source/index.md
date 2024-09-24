@@ -52,10 +52,9 @@ maxdepth: 1
 ---
 content/installation/index
 content/cheatsheet/index
-content/theory/index
+content/overview/index
 content/examples/index
 content/faq/index
-content/other/glossary
 content/api/index
 content/contact/contact
 
