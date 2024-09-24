@@ -1,5 +1,7 @@
 # Brightway LCA Software Framework
 
+Test: Can we go to the Glossary from here? {term}`Project` and {term}`Functional unit`...
+
 ## What is Brightway?
 Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) written in Python. LCA is a method for evaluating the environmental impacts of a good or service. It involves analyzing all of the inputs and outputs of a the product's supply chain, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over its life cycle.
 

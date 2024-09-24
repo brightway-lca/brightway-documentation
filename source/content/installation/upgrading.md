@@ -1,6 +1,6 @@
-# Updating and upgrading
+# Updating and Upgrading
 
-## Updating Brightway libraries
+## Updating Brightway Libraries
 
 Brightway is being actively developed, with frequent new releases. The update procedure varies slightly depending on whether you have installed Brightway using `pip`, `conda`, or `mamba`. In a terminal or command line shell *with your Brightway environment activated*, run one of the following:
 
@@ -20,7 +20,7 @@ You can use the same syntax to update individual packages:
 pip install -U <my_cool_package>
 ```
 
-## Upgrading from Brightway version 2
+## Upgrading from Brightway Version 2
 
 Individual projects can be migrate to Brightway version 2.5
 
