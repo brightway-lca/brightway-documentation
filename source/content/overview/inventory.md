@@ -1,4 +1,4 @@
-# Inventory data
+# Inventory Data
 
 ## Processes, Products, and Something in Between
 

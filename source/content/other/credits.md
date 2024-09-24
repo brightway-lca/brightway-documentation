@@ -41,7 +41,7 @@ of the the [BSD license](http://opensource.org/licenses/BSD-3-Clause).
 For more information, compare the license files in the respective
 repositories. The most recent general license terms:
 
-    Copyright © 2023, Brightway Developers
+    Copyright © 2024, Brightway Developers
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without modification,
