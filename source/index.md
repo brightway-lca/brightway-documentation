@@ -1,7 +1,5 @@
 # Brightway LCA Software Framework
 
-Test: Can we go to the Glossary from here? {term}`Project` and {term}`Functional unit`...
-
 ## What is Brightway?
 Brightway is an open-source software package for [life cycle assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment) (LCA) written in Python. LCA is a method for evaluating the environmental impacts of a good or service. It involves analyzing all of the inputs and outputs of a the product's supply chain, including raw materials, energy use, and waste products, and quantifying the environmental impacts of these inputs and outputs over its life cycle.
 
@@ -41,7 +39,7 @@ Learn more {fas}`arrow-right`
 
 ## What's New?
 
-__September 2024__: New [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands
+__September 2024__: New [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands. Thank you, @[Chris Mutel](https://github.com/cmutel) \
 __May 2024__: New section `Getting Started` added to the documentation (since replaced by the `Cheat Sheet`). This section will help you kickstart your first Brightway project. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
 __April 2024__: New section [Terminology](./content/theory/terminology.md) added to the documentation. This section explains the most important terms used in the Brightway documentation. Thank you, @[marc-vdm](https://github.com/marc-vdm)! \
 __April 2024__: New sub-section [Teaching Materials](./content/examples/index.md) added to the documentation. This section collects materials used to teach Brightway. Thank you, @[KarinTreyer](https://github.com/KarinTreyer)!
