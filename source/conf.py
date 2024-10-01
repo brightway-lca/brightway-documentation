@@ -44,6 +44,8 @@ extensions = [
     "sphinx_copybutton",
     # hover-over tooltips for cross-references
     # 'hoverxref.extension', # currently no support for markdown as per https://github.com/readthedocs/sphinx-hoverxref/issues/250
+    # powerful search engine
+    "sphinx_docsearch",
 ]
 
 root_doc = 'index'
@@ -146,6 +148,15 @@ html_context = {
 ####################################################################################################
 ### Extension Configuration ########################################################################
 ####################################################################################################
+
+# sphinx DocSearch configuration #########################################
+
+# "ecposed anyway", so we can just set the values here
+# https://sphinx-docsearch.readthedocs.io/credentials.html
+
+docsearch_app_id = "AB3D1FH6W0"
+docsearch_api_key = "5f985eef1633581416cd50fb544ab61c"
+docsearch_index_name = "brightway"
 
 # copybutton Configuration ###############################################
 
