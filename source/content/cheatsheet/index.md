@@ -31,6 +31,7 @@ Python is a flexible language, and there are many ways to do some of the followi
 
 ```{toctree}
 ---
+hidden:
 maxdepth: 2
 ---
 self
