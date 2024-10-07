@@ -6,6 +6,7 @@ Brightway can be installed using the [Python package installer `pip`](https://py
 Brightway supports Python >=3.9. This guide is for the current stable Brightway 2.5 release; see the [difference between `brightway2` and `brightway 25`](../faq/brightway.md).
 ```
 
+(installing-pip)=
 ## Installing Brightway using `pip`
 
 ::::{tab-set}
@@ -74,6 +75,7 @@ You can also use pip to install useful libraries like `jupyterlab`.
 
 ::::
 
+(installing-conda-mamba)=
 ## Installing Brightway using `conda` or `mamba`
 
 ```{admonition} Prerequisites
