@@ -39,11 +39,10 @@ Learn more {fas}`arrow-right`
 
 ## What's New?
 
-__September 2024__: New [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands. Thank you, @[Chris Mutel](https://github.com/cmutel) \
-__May 2024__: New section `Getting Started` added to the documentation (since replaced by the `Cheat Sheet`). This section will help you kickstart your first Brightway project. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
-__April 2024__: New section [Terminology](./content/theory/terminology.md) added to the documentation. This section explains the most important terms used in the Brightway documentation. Thank you, @[marc-vdm](https://github.com/marc-vdm)! \
-__April 2024__: New sub-section [Teaching Materials](./content/examples/index.md) added to the documentation. This section collects materials used to teach Brightway. Thank you, @[KarinTreyer](https://github.com/KarinTreyer)!
-
+__October 2024__: New AI-powered [Algolia/DocSearch](https://docsearch.algolia.com) search engine. Thank you, @[michaelweinold](https://github.com/michaelweinold)! \
+__September 2024__: Updated [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands. Thank you, @[cmutel](https://github.com/cmutel)! \
+__May 2024__: Initial [Cheat Sheet](./content/cheatsheet/index.md) with some common Brightway commands. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
+__April 2024__: New [Glossay](./content/overview/glossary.md) page explaining the most important Brightway terms. Thank you, @[marc-vdm](https://github.com/marc-vdm)!
 
 ```{toctree}
 ---

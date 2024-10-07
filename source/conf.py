@@ -83,13 +83,15 @@ html_css_files = [
 
 html_sidebars = {
     "**": [
-        "search-field.html",
         "sidebar-nav-bs.html",
     ],
+    "content/contact/contact": [],
+    "content/other/support": [],
+    "content/other/credits": [],
 }
 
 html_theme_options = {
-    "announcement": "<p><a href='https://2024.brightcon.link/'>REGISTER NOW</a>: Brightcon 2024 Hybrid Conference and Hackathon 🇩🇪 September 23 - 27 in Hamburg</p>",
+    # "announcement": "<p><a href='https://2024.brightcon.link/'>REGISTER NOW</a>: Brightcon 2024 Hybrid Conference and Hackathon 🇩🇪 September 23 - 27 in Hamburg</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
@@ -102,7 +104,7 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
-    "header_links_before_dropdown": 8,
+    "header_links_before_dropdown": 7,
     # page elements content
     "icon_links": [
         {
@@ -151,7 +153,7 @@ html_context = {
 
 # sphinx DocSearch configuration #########################################
 
-# "ecposed anyway", so we can just set the values here
+# "exposed anyway", so we can just set the values here
 # https://sphinx-docsearch.readthedocs.io/credentials.html
 
 docsearch_app_id = "AB3D1FH6W0"
@@ -224,6 +226,8 @@ autoapi_python_class_content = 'both'
 autoapi_member_order = 'groupwise'
 autoapi_root = 'content/api'
 autoapi_keep_files = True
+
+autoapi_template_dir = '_templates/autoapi' # https://sphinx-autoapi.readthedocs.io/en/latest/how_to.html#how-to-customise-the-index-page
 
 # myst_parser Configuration ############################################
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
