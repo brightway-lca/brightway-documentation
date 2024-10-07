@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.inheritance_diagram',
+    'sphinx.ext.napoleon',
     # iPython extensions
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
@@ -60,6 +61,8 @@ html_theme = "pydata_sphinx_theme"
 suppress_warnings = [
     "myst.header", # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
 ]
+
+napoleon_numpy_docstring = True
 
 # https://myst-nb.readthedocs.io/en/v0.8.4/use/myst.html#parse-extensions-other-than-md-and-ipynb
 source_suffix = {
