@@ -186,22 +186,20 @@ html_theme_options = {
         {
             "name": "GitHub",
             "url": "https://github.com/brightway-lca",
-            "icon": "fab fa-brands fa-github",
+            "icon": "fa-brands fa-github",
+            "type": "fontawesome",
         },
         {
             "name": "Conda",
-            "url": "https://anaconda.org/conda-forge/brightway2",
-            "icon": "fab fa-brands fa-python",
+            "url": "https://anaconda.org/cmutel/brightway25",
+            "icon": "fa-brands fa-python",
+            "type": "fontawesome",
         },
         {
-            "name": "StackOverflow",
-            "url": "https://stackoverflow.com/questions/tagged/brightway",
-            "icon": "fab fa-brands fa-stack-overflow",
-        },
-        {
-            "name": "Matrix",
-            "url": "https://matrix.to/#/#brightway:matrix.org",
-            "icon": "fab fa-regular fa-comments",
+            "name": "Matrix Group Chat",
+            "url": "https://app.element.io/#/room/#brightway/community:matrix.org",
+            "icon": "fa-regular fa-comments",
+            "type": "fontawesome",
         }
     ],
     # various settings
