@@ -25,6 +25,7 @@ maxdepth: 2
 ---
 self
 glossary
+structure
 ecosystem
 inventory
 matrix

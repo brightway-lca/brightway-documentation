@@ -179,7 +179,7 @@ This will update the URL in the `.gitmodules` file and in the `.git/config` file
 2. Use the [`git submodule update`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-update--init--remote-N--no-fetch--no-recommend-shallow-f--force--checkout--rebase--merge--referenceltrepositorygt--depthltdepthgt--recursive--jobsltngt--no-single-branch--filterltfilterspecgt--ltpathgt82308203) command to update the submodule:
 
 ```bash
-git submodule update --init --recursive --remote 
+git submodule update --init --recursive --remote
 ```
 
 3. Now build the documentation as described above.
