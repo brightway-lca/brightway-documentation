@@ -102,8 +102,7 @@ html_theme_options = {
     },
     # page elements
     "navbar_start": ["navbar-logo", "version-switcher"],
-    "navbar_end": ["navbar-icon-links.html"],
-    "navbar_persistent": ["theme-switcher"],
+    "navbar_end": ["theme-switcher", "navbar-icon-links.html"],
     "footer_start": ["copyright"],
     "footer_end": ["footer"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "support"],
@@ -117,8 +116,8 @@ html_theme_options = {
             "type": "fontawesome",
         },
         {
-            "name": "Conda",
-            "url": "https://anaconda.org/cmutel/brightway25",
+            "name": "PyPi",
+            "url": "https://pypi.org/project/brightway25/#description",
             "icon": "fa-brands fa-python",
             "type": "fontawesome",
         },
