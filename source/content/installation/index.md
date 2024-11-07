@@ -117,7 +117,7 @@ Brightway runs on the new Apple Silicon ARM architecture. However, the super-fas
 1. Create a new Conda environment (in this example named `brightway`):
 
 ```
-conda create -n brightway -c conda-forge -c cmutel brightway25_nosolver scikit-umfpack
+conda create -n brightway -c conda-forge -c cmutel brightway25_nosolver scikit-umfpack numpy"<1.25"
 ```
 
 2. Activate the environment:
