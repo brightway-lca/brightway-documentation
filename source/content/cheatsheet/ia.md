@@ -1,26 +1,26 @@
-## Impact Assessment
+# Impact Assessment
 
-### Impact Categories (`Method`)
+## Impact Categories (`Method`)
 
-**Q:** How do I list the installed impact categories?
+### How do I list the installed impact categories?
 
 ```python
 sorted(bd.methods)
 ```
 
-**Q:** How do I test if a given impact category is installed?
+### How do I test if a given impact category is installed?
 
 ```python
 ('<impact>', '<category>') in bd.methods
 ```
 
-**Q:** How can I get a random impact category?
+### How can I get a random impact category?
 
 ```python
 bd.methods.random()
 ```
 
-**Q:** How do I search for an impact category using list comprehensions?
+### How do I search for an impact category using list comprehensions?
 
 ```python
 [
@@ -31,7 +31,7 @@ bd.methods.random()
 ```
 
 (iterate-lcia-method)=
-**Q:** How do I see the data in a given impact category?
+### How do I see the data in a given impact category?
 
 ```python
 my_method_object = bd.Method(('<impact>', '<category>'))
@@ -39,7 +39,7 @@ list(my_method_object)
 ```
 
 (lcia-tuple-structure)=
-**Q:** How is the data in impact categories structured?
+### How is the data in impact categories structured?
 
 Iterating over a `Method` object yields tuples.
 
@@ -47,11 +47,11 @@ Iterating over a `Method` object yields tuples.
 * The second element will be the characterization factor, either as a number, or as a dictionary which includes uncertainty information
 * There could be a third element, which gives the *location* for the characterization factor. This third element is not required.
 
-**Q:** How do I interpret the uncertainty dictionary?
+### How do I interpret the uncertainty dictionary?
 
 See the [`stats_arrays` documentation](https://stats-arrays.readthedocs.io/en/latest/#mapping-parameter-array-columns-to-uncertainty-distributions).
 
-**Q:** How do I create a new impact category?
+### How do I create a new impact category?
 
 Start by defining characterization data following the tuple format defined in `How is the data in impact categories structured?`:
 
@@ -75,13 +75,13 @@ Then write the characterization factor to the `Method`:
 bd.Method(('<impact>', '<category>')).write(my_cf_data)
 ```
 
-**Q:** How do I see the impact category metadata?
+### How do I see the impact category metadata?
 
 ```python
 bd.Method(('<impact>', '<category>')).metadata
 ```
 
-**Q:** How do I change the impact category metadata?
+### How do I change the impact category metadata?
 
 ```python
 bd.Method(('<impact>', '<category>')).metadata['<some_key>'] = '<some_value>'

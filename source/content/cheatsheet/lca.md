@@ -1,8 +1,8 @@
-## LCA Calculations
+# LCA Calculations
 
-### Single Functional Unit and LCIA Set
+## Single Functional Unit and LCIA Set
 
-**Q:** How do I define a functional unit?
+### How do I define a functional unit?
 
 A functional unit is some amount of one or more products. Because chimaera process+products act like products (see the overview documentation), they can also be used as functional units.
 
@@ -12,7 +12,7 @@ Brightway wants functional units to be provided as a dictionary, with keys given
 {my_node: 42, my_other_node: 7}
 ```
 
-**Q:** How do I calculate an life cycle inventory?
+### How do I calculate an life cycle inventory?
 
 ```python
 my_functional_unit, data_objs, _ = bd.prepare_lca_inputs({my_node: 42})
@@ -22,7 +22,7 @@ my_lca.lci()
 
 This will create `my_lca.inventory`, a matrix with the life cycle inventory data, with rows of biosphere flows and columns of processes.
 
-**Q:** How do I calculate a characterized inventory?
+### How do I calculate a characterized inventory?
 
 ```python
 my_functional_unit, data_objs, _ = bd.prepare_lca_inputs(
@@ -36,7 +36,7 @@ my_lca.lcia()
 
 This will create `my_lca.characterized_inventory`, a matrix with the life cycle inventory data, with rows or biosphere flows and columns of processes.
 
-**Q:** How do I calculate a normalized inventory?
+### How do I calculate a normalized inventory?
 
 ```python
 my_functional_unit, data_objs, _ = bd.prepare_lca_inputs(
@@ -51,7 +51,7 @@ my_lca.lcia()
 
 This will create `my_lca.normalized_inventory`, a matrix with the normalized life cycle inventory data, with rows or biosphere flows and columns of processes.
 
-**Q:** How do I calculate a weighted inventory?
+### How do I calculate a weighted inventory?
 
 ```python
 my_functional_unit, data_objs, _ = bd.prepare_lca_inputs(
@@ -68,13 +68,13 @@ This will create `my_lca.weighted_inventory`, a matrix with the weighted life cy
 
 Weighting can be done with normalization, but does not require normalization.
 
-**Q:** How do I get the LCA score after calculating a characterized inventory, possibly including normalization and/or weighting?
+### How do I get the LCA score after calculating a characterized inventory, possibly including normalization and/or weighting?
 
 ```python
 my_lca.score
 ```
 
-**Q:** How do I see the most important elements in the result matrix?
+### How do I see the most important elements in the result matrix?
 
 ```python
 my_lca.to_dataframe(matrix_label="characterized_inventory")
@@ -82,7 +82,7 @@ my_lca.to_dataframe(matrix_label="characterized_inventory")
 
 See {py:obj}`bw2calc.lca.LCA.to_dataframe` for more information on this functionality.
 
-**Q:** How do I filter down to a row in the `inventory` or `<any>_inventory` matrix?
+### How do I filter down to a row in the `inventory` or `<any>_inventory` matrix?
 
 Rows in these matrices are biosphere flows.
 
@@ -94,7 +94,7 @@ filtered_matrix = lca.normalized_inventory[row_index, :]
 filtered_matrix = lca.weighted_inventory[row_index, :]
 ```
 
-**Q:** How do I filter down to a column in the `inventory` or `characterized_inventory` matrix?
+### How do I filter down to a column in the `inventory` or `characterized_inventory` matrix?
 
 Columns in these matrices are processes.
 
@@ -106,7 +106,7 @@ filtered_matrix = lca.normalized_inventory[:, col_index]
 filtered_matrix = lca.weighted_inventory[:, col_index]
 ```
 
-**Q:** How do I go from matrix indices to `Node` objects?
+### How do I go from matrix indices to `Node` objects?
 
 First, you need to find out what kind of object you need to look up. Assuming you have created an LCA instance `lca_instance`:
 
@@ -122,9 +122,9 @@ bd.get_node(id=my_lca.dicts.activity.reversed[my_column_index])
 bd.get_node(id=my_lca.dicts.product.reversed[my_row_index])
 ```
 
-### Multiple Functional Units and LCIA Sets
+## Multiple Functional Units and LCIA Sets
 
-**Q:** How do I calculate an life cycle inventory for multiple functional units?
+### How do I calculate an life cycle inventory for multiple functional units?
 
 For the `MultiLCA` class, we need to *label* each functional unit:
 
@@ -165,7 +165,7 @@ This will create `lca.inventories`, a dictionary which gives inventory matrices 
 }
 ```
 
-**Q:** How do I calculate a life cycle impact assessment for multiple functional units and a combination of LCIA impact categories, normalizations, and weightings?
+### How do I calculate a life cycle impact assessment for multiple functional units and a combination of LCIA impact categories, normalizations, and weightings?
 
 We start by describing how the impact categories, normalization, and weightings are related. The safest way to do this is by creating an instance of `bw2calc.MethodConfig`; the {py:obj}`bw2calc.method_config.MethodConfig` documentation describes how to provide this data.
 
@@ -231,18 +231,18 @@ As these dictionaries have multiple matrices at each calculation step, the `Mult
 * `weighted_inventory` ➟ `weighted_inventories`
 * `score`  ➟ `scores`
 
-### Stochastic LCA Calculations (Monte Carlo)
+## Stochastic LCA Calculations (Monte Carlo)
 
 Both `LCA` and `MultiLCA` classes support stochastic calculations using Monte Carlo. New values for all matrices can be generated from probability distribution functions, or from pre-calculated arrays of sample or population values.
 
-**Q:** How do I use probability distribution functions in stochastic LCA?
+### How do I use probability distribution functions in stochastic LCA?
 
 ```python
 bc.LCA(..., use_distributions=True)
 bc.MultiLCA(..., use_distributions=True)
 ```
 
-**Q:** How do I use presampled values from arrays in my datapackages?
+### How do I use presampled values from arrays in my datapackages?
 
 ```python
 bc.LCA(..., use_arrays=True)
@@ -251,7 +251,7 @@ bc.MultiLCA(..., use_arrays=True)
 
 You can use both `use_distributions` *and* `use_arrays` in a calculation.
 
-**Q:** How do I generate a new set of results when doing stochastic LCA?
+### How do I generate a new set of results when doing stochastic LCA?
 
 ```python
 next(lca_object)
