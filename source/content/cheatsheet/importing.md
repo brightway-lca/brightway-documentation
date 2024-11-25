@@ -70,7 +70,7 @@ Start with a basic project which has the correct set of elementary flows for you
 ```python
 importer = bi.SingleOutputEcospold2Importer(
     dirpath='<ecoinvent_database_zip_file>',
-    dbname='<database_name>'
+    db_name='<database_name>'
 )
 importer.apply_strategies()
 importer.write_database()
