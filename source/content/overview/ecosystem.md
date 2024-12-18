@@ -30,6 +30,8 @@ mindmap
         unfold
     id(💻 WebApp)
         Panel WebApp
+    id(🖥️ USER INTERFACE)
+       Activity Browser
 ```
 
 ## Core Brightway Libraries
