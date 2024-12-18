@@ -9,10 +9,10 @@ dependencies:
   # sphinx
   - sphinx=8.1.3 # core builder # https://anaconda.org/conda-forge/sphinx/files
   # theme and extensions
-  - pydata-sphinx-theme=0.16.0 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
+  - pydata-sphinx-theme=0.16.1 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
   - myst-parser=4.0.0 # Markdown support # https://anaconda.org/conda-forge/myst-parser/files
   - myst-nb=1.1.2 # Jupyter notebook support # https://anaconda.org/conda-forge/myst-nb/files
-  - sphinx-autoapi=3.3.3 # to build docs from source code instead of package import # https://anaconda.org/conda-forge/sphinx-autoapi/files
+  - sphinx-autoapi=3.4.3 # to build docs from source code instead of package import # https://anaconda.org/conda-forge/sphinx-autoapi/files
   - sphinx-design=0.6.1 # responsive web component support # https://anaconda.org/conda-forge/sphinx-design/files
   - sphinx-notfound-page=1.0.4 # custom 404 page # https://anaconda.org/conda-forge/sphinx-notfound-page/files
   - graphviz=12.0.0 # for plotting dependency diagrams with sphinx-autoapi # https://anaconda.org/conda-forge/graphviz/files
