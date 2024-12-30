@@ -94,7 +94,7 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    # "announcement": "<p><a href='https://2024.brightcon.link/'>REGISTER NOW</a>: Brightcon 2024 Hybrid Conference and Hackathon 🇩🇪 September 23 - 27 in Hamburg</p>",
+    "announcement": "<p>🌏 <a href='https://www.d-d-s.ch/schools/june-25/'>REGISTER NOW</a>: Asia Summer School 🇸🇬 June 23 - 27 in Singapore</p>",
     # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
     "switcher": {
         "json_url": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/switcher.json",
