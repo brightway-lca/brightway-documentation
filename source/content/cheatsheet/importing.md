@@ -50,8 +50,8 @@ See {py:obj}`bw2io.importers.ecospold2.SingleOutputEcospold2Importer` for additi
 bi.import_ecoinvent_release(
     version='<version_number>',
     system_model='<system_model>',
-    ecoinvent_user='<ecoinvent_user_name>',
-    ecoinvent_password='<ecoinvent_password>'
+    username='<ecoinvent_user_name>',
+    password='<ecoinvent_password>'
 )
 ```
 
