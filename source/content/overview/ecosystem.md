@@ -50,7 +50,7 @@ mindmap
 | [`bw2parameters`](https://github.com/brightway-lca/brightway2-parameters) | Library for storing, validating, and calculating with parameters |
 | [`bw_graph_tools`](https://docs.brightway.dev/projects/graphtools/) | [Path traversal](https://en.wikipedia.org/wiki/Graph_traversal) and graph manipulation |
 | [`bw_interface_schemas `](https://github.com/brightway-lca/bw_interface_schemas/) | Interface schemas for data transfer in Brightway |
-| [`bw_parameters`](https://github.com/brightway-lca/bw_processing) | Tools to create datapackages in a common format  |
+| [`bw_processing`](https://github.com/brightway-lca/bw_processing) | Tools to create datapackages in a common format  |
 | [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/) | Importing [SimaPro](http://simapro.com) CSV files into Brightway |
 | [`ecoinvent_migrate`](https://github.com/brightway-lca/ecoinvent_migrate) | Code to generate Randonneur migration files for ecoinvent releases |
 | [`ecoinvent_interface`](https://github.com/brightway-lca/ecoinvent_interface) | Unofficial python interface to ecoinvent data |
