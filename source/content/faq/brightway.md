@@ -21,4 +21,5 @@ Brightway 2.5 is the next step on the way to the next version of Brightway, as d
 | `bw2data` | < 3.99 | >= 4.0.dev11 |
 | `bw2io` | < 0.8.9 | >= 0.9.dev6 |
 
-This is specified in the respective `setup.py` files: [Brightway2 packages](https://github.com/brightway-lca/brightway25/blob/main/setup.py) and [Brightway2.5 packages](https://github.com/brightway-lca/brightway2/blob/master/setup.py).
+This is specified in the respective `setup.py` and `pyproject.toml` files: [Brightway2 packages](https://github.com/brightway-lca/brightway2/blob/master/setup.py)
+and [Brightway2.5 packages](https://github.com/brightway-lca/brightway25/blob/main/pyproject.toml).
