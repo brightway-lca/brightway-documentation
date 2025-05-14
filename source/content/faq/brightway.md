@@ -17,7 +17,7 @@ Learn about upgrading your Brightway 1 projects to Brightway 2 [here](../setup/u
 Brightway2 was a complete rewrite of the oBrightway 1. It is the most widely used version of Brightway.
 
 ```{warning}
-Brightway2 is currently the _only_ version of Brightway that is compatible with the [ActivityBrowser graphical user interface](../setup/ui.md).
+Brightway2 is currently the _only_ version of Brightway that is compatible with the [ActivityBrowser graphical user interface](../installation/ui.md).
 ```
 
 #### Brightway 2.5 (`Brightway25`)
