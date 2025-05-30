@@ -14,6 +14,7 @@ mindmap
         bw2regional
         lca_algebraic
         pathways
+        bw_timex
     id(💿 DATABASE)
         bw2data
         bw_processing
@@ -70,7 +71,7 @@ mindmap
 | [`bw_simapro_csv`](https://docs.brightway.dev/projects/bw-simapro-csv/) | Importing [SimaPro](http://simapro.com) CSV files into Brightway |
 | [`bw_processing`](https://docs.brightway.dev/projects/bw-processing/) | Creation of structured arrays in a common format |
 | [`bw_temporalis`](https://docs.brightway.dev/projects/bw-temporalis/) | [Dynamic LCA](https://doi.org/10.1021/es9030003), considering time in both inventory and impact assessment |
-| [`bw_timex`](https://docs.brightway.dev/projects/bw-timex/) | Dynamic LCA with automatic temporal linking to prospective LCIs |
+| [`bw_timex`](https://docs.brightway.dev/projects/bw-timex/) | Account for temporal distribution and evolution in [Time-explicit LCA](https://docs.brightway.dev/projects/bw-timex/en/latest/content/theory.html#terminology) |
 | [`bw_aggregation`](https://docs.brightway.dev/projects/bw_aggregation) | Flexibly use aggregated unit processes for faster calculations |
 | [`bw_regional`](https://docs.brightway.dev/projects/bw-regional/) | Regionalized LCA calculations |
 
