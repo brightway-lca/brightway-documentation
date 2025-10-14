@@ -34,10 +34,10 @@ bd.projects.delete_project(name='<project_name>', delete_dir=True or False)
 sorted(bd.projects)
 ```
 
-### How do I rename an existing project?
+### How do I rename the currently active project?
 
 ```python
-bd.projects.rename("<new_project_name>")
+bd.projects.rename_project("<new_project_name>")
 ```
 
 (initial-project-data)=
