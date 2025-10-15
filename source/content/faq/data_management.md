@@ -9,7 +9,7 @@ You can find the current project data directory with the command `projects.dir`.
 :::{tab-item} Windows
 
 ```
-C:\Documents and Settings\<User>\Application Data\Local Settings\pylca\Brightway3
+C:\Users\<User>\AppData\Local\pylca\Brightway3
 ```
 :::
 
