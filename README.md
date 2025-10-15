@@ -83,7 +83,7 @@ To manually update the submodules, use the same command again. There is no need 
 Set up a Python virtual environment that includes all packages required to build the documentation. A [Conda environment file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is provided [for convenient setup](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). The file is located at [``./environment.yml``](environment.yml). Install the environment `sphinx` by running from the repository root directory:
 
 ```bash
-conda env create -f 'environment.yml'
+conda env create -f 'environment.yaml --name sphinx'
 ```
 
 and activate the environment:
