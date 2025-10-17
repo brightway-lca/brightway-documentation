@@ -35,7 +35,7 @@ source C:/Users/me/virtualenvs/brightway/bin/activate
 pip install brightway25 pypardiso
 ```
 
-Note that `brightway25` is just an easy way to install libraries; it doesn't provide any functionality, and you shouldn't import it in Python scripts.
+Note that `brightway25` is just an easy way to install libraries; it doesn't provide any functionality, and you shouldn't import it in Python scripts. `pypardiso` is an supplementary library to speed up computationally-intensive workflows on x64 systems.
 
 You can also use pip to install useful libraries like `jupyterlab`.
 
