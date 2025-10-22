@@ -4,23 +4,25 @@ channels:
   - nodefaults
 dependencies:
   # core functionality
-  - python=3.12
+  - python=3.13
   - ipython
   # sphinx
-  - sphinx=8.1.3 # core builder # https://anaconda.org/conda-forge/sphinx/files
+  - sphinx=8.3.0 # core builder # https://anaconda.org/conda-forge/sphinx/files
   # theme and extensions
   - pydata-sphinx-theme=0.16.1 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
-  - myst-parser=4.0.0 # Markdown support # https://anaconda.org/conda-forge/myst-parser/files
-  - myst-nb=1.1.2 # Jupyter notebook support # https://anaconda.org/conda-forge/myst-nb/files
-  - sphinx-autoapi=3.4.0 # to build docs from source code instead of package import # https://anaconda.org/conda-forge/sphinx-autoapi/files
+  - myst-parser=4.0.1 # Markdown support # https://anaconda.org/conda-forge/myst-parser/files
+  - myst-nb=1.3.0 # Jupyter notebook support # https://anaconda.org/conda-forge/myst-nb/files
+  - sphinx-autoapi=3.6.1 # to build docs from source code instead of package import # https://anaconda.org/conda-forge/sphinx-autoapi/files
   - sphinx-design=0.6.1 # responsive web component support # https://anaconda.org/conda-forge/sphinx-design/files
-  - sphinx-notfound-page=1.0.4 # custom 404 page # https://anaconda.org/conda-forge/sphinx-notfound-page/files
-  - graphviz=12.0.0 # for plotting dependency diagrams with sphinx-autoapi # https://anaconda.org/conda-forge/graphviz/files
+  - sphinx-notfound-page=1.1.0 # custom 404 page # https://anaconda.org/conda-forge/sphinx-notfound-page/files
+  - graphviz=13.1.2 # for plotting dependency diagrams with sphinx-autoapi # https://anaconda.org/conda-forge/graphviz/files
   - sphinxcontrib-mermaid=1.0.0 # https://anaconda.org/conda-forge/sphinxcontrib-mermaid/files
   - sphinx-favicon=1.0.1 # for custom favicons # https://anaconda.org/conda-forge/sphinx-favicon/files
   - sphinx-copybutton=0.5.2 # for copy button in code blocks # https://anaconda.org/conda-forge/sphinx-copybutton/files
   # build process
   - sphinx-autobuild=2024.10.3 # live-html support # https://anaconda.org/conda-forge/sphinx-autobuild/files
+  # readthedocs.org bug workarounds
+  - astroid>=3
   # other packages
   - pip
   - pip:
