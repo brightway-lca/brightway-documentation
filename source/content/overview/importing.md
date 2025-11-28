@@ -417,7 +417,7 @@ has a simplified importer for Excel and CSV files: `bw2io.ExcelLCIAImporter` and
 Please note the following:
 
 * Excel workbooks should only have one worksheet.
-* Default matching to biosphere flows is based on ``name`and`categories`.
+* Default matching to biosphere flows is based on `name` and `categories`.
 
 The convention for`categories`is the same as for inventory datasets: subcategories should be separated with `::`, e.g.`natural resource::in ground`. You can also list the main category and subcategory in separate columns, and use a strategy function to combine them. * The call function to instantiate the LCIA importer objects requires`filepath`,`name`(method name as a tuple),`description`, and`unit`.  What to do with unmatched exchanges? If there are unlinked exchanges, you have several options. If you aren't sure what to do yet, you can save a temporary copy (that can be loaded later) using `.write_unlinked("some name")`. Calling `.statistics()` will show what kind of exchanges aren't linked, e.g.:
 
