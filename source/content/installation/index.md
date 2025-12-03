@@ -44,29 +44,35 @@ You can also use pip to install useful libraries like `jupyterlab`.
 :::{tab-item} MacOS (Apple Silicon/ARM)
 
 ```{note}
-Due to [an upstream bug](https://github.com/scikit-umfpack/scikit-umfpack/issues/98), there is currently no reliable way to install the fast sparse library `umfpack` on Apple Silicon using `pip`, and the `pypardiso` library is only for x64 systems. If you are doing computationally-intensive workflows, we recommend installing Brightway using `conda` or `mamba` for now. If you are doing fewer calculations or software development installation via `pip` is fine.
+Fast calculations need `SuiteSparse` through [scikit-umfpack](https://github.com/scikit-umfpack/scikit-umfpack/). This background library can be installed via [homebrew](https://brew.sh/), as shown in this section, or via `conda` or `mamba`, as shown below.
 ```
 
-1. Install `python` from [the website](https://www.python.org/downloads/), your system package manager, or [Homebrew](https://docs.brew.sh/Homebrew-and-Python).
+1. Install `python` from [Homebrew](https://docs.brew.sh/Homebrew-and-Python).
 
-2. In a terminal window, create a directory for your virtual environments. This can be anywhere; we will use the home directory here as an example:
+2. Install the requirements for `SuiteSparse` via `homebrew`:
+
+```console
+brew install swig suite-sparse
+```
+
+3. In a terminal window, create a directory for your virtual environments. This can be anywhere; we will use the home directory here as an example:
 
 ```console
 cd
 mkdir virtualenvs
 ```
 
-3. Create and activate a virtualenv:
+4. Create and activate a virtualenv:
 
 ```console
 python -m venv virtualenvs/brightway
 source virtualenvs/brightway/bin/activate
 ```
 
-4. Install Brightway:
+5. Install Brightway:
 
 ```console
-pip install brightway25
+pip install brightway25 scikit-umfpack
 ```
 
 Note that `brightway25` is just an easy way to install libraries; it doesn't provide any functionality, and you shouldn't import it in Python scripts.
@@ -117,7 +123,7 @@ Brightway runs on the new Apple Silicon ARM architecture. However, the super-fas
 1. Create a new Conda environment (in this example named `brightway`):
 
 ```
-conda create -n brightway -c conda-forge -c cmutel brightway25_nosolver scikit-umfpack numpy"<1.25"
+conda create -n brightway -c conda-forge brightway25 scikit-umfpack numpy">=2" scikit-umfpack">=0.4.2"
 ```
 
 2. Activate the environment:
