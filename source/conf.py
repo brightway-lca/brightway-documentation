@@ -195,7 +195,7 @@ notfound_context = {
 autoapi_dirs = [
     '../brightway2-io/bw2io',
     '../brightway2-data/bw2data',
-    '../brightway2-calc/bw2calc',
+    '../brightway2-calc/src/bw2calc',
     '../brightway2-analyzer/bw2analyzer',
     '../brightway2-parameters/bw2parameters',
 ]
