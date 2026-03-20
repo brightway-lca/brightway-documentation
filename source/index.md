@@ -42,7 +42,7 @@ Learn more {fas}`arrow-right`
 __October 2024__: New AI-powered [Algolia/DocSearch](https://docsearch.algolia.com) search engine. Thank you, @[michaelweinold](https://github.com/michaelweinold)! \
 __September 2024__: Updated [Cheat Sheet](./content/cheatsheet/index.md) with all common Brightway commands. Thank you, @[cmutel](https://github.com/cmutel)! \
 __May 2024__: Initial [Cheat Sheet](./content/cheatsheet/index.md) with some common Brightway commands. Thank you, @[KarinTreyer](https://github.com/KarinTreyer) and @[michaelweinold](https://github.com/michaelweinold)! \
-__April 2024__: New [Glossay](./content/overview/glossary.md) page explaining the most important Brightway terms. Thank you, @[marc-vdm](https://github.com/marc-vdm)!
+__April 2024__: New [Glossary](./content/overview/glossary.md) page explaining the most important Brightway terms. Thank you, @[marc-vdm](https://github.com/marc-vdm)!
 
 ```{toctree}
 ---
