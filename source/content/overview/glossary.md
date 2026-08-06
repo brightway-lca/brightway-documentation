@@ -77,7 +77,7 @@ Graph
     A graph is a collection of nodes, and edges which connect those nodes. Brightway uses the graph to store inventory and impact assessment information, and allows you to store additional information via the use of custom nodes.
 
 Node
-    The nouns in a graph. Nodes can have any type, but are normally processes, products, biosphere flows, and impact categories. There can be special kinds of process nodes, such as "multifunctional" and "process_with_reference_product". The *type* of the node determines what fields are required in that node. You can add custom node types to store arbitrary data in the graph.
+    The nouns in a graph. Nodes can have any type, but are normally processes, products, biosphere flows, and impact categories. There can be special kinds of process nodes, such as "multifunctional" and "processwithreferenceproduct". The *type* of the node determines what fields are required in that node. You can add custom node types to store arbitrary data in the graph.
 
 Edge
     The verbs in a graph. In Brightway, all edges have directed, i.e. they have a source and a target. Inventory and impact assessment edges must be numeric, but custom edges don't need to be.
